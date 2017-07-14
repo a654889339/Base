@@ -44,6 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_X86_;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -65,10 +66,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="JBaseDef.h" />
+    <ClInclude Include="JG_Memory.h" />
+    <ClInclude Include="JUDPBaseDef.h" />
+    <ClInclude Include="JUDPClient.h" />
     <ClInclude Include="JUDPServer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="JG_Memory.cpp" />
+    <ClCompile Include="JUDPClient.cpp" />
     <ClCompile Include="JUDPServer.cpp" />
+    <ClCompile Include="JTestUDPServerMain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

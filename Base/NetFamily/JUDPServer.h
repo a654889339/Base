@@ -2,11 +2,8 @@
 #define _JUDP_SERVER_H_
 
 #include "JBaseDef.h"
-
-#ifdef _WIN32
-#include <WINSOCK2.H>
-#pragma comment(lib, "WS2_32.lib")
-#endif
+#include "JUDPBaseDef.h"
+#include "JG_Memory.h"
 
 class JUDPServer
 {
@@ -20,21 +17,18 @@ public:
     BOOL Listen(char* pszIP, int nPort);
     void Close();
 
-    int  Recv(char& szRecvBuf, size_t uRecvBufSize);
+    BOOL Recv(IJG_Buffer* pszRecvBuf, sockaddr_in* pClientAddr, int* pnClientAddrSize);
+    BOOL Send(IJG_Buffer* pszSendBuf, size_t uSendSize, sockaddr_in* pClientAddr, int nClientAddrSize);
 
 private:
     WSADATA     m_WSAData;
     BYTE        m_byLowByteVersion;
     BYTE        m_byHightByteVersion;
-    SOCKET      m_Socket;
-    sockaddr_in m_Addr;
+    int         m_nSocketFD;
+    sockaddr_in m_ServerAddr;
     int         m_nPort;
 
-    sockaddr_in m_RemoteAddr;
-    int         m_nAddrSize;
-
-    char        m_szSendBuffer[1024];
-    size_t      m_uBufferSize;
+    IJG_Buffer  m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
 };
 
 #endif // _JUDP_SERVER_H_

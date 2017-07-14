@@ -9,18 +9,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{261dff77-e15f-4c8f-bf1e-476c74985947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUDPClient">
+      <UniqueIdentifier>{d021e864-bd45-4542-9bf0-fd0698814d35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestTools">
+      <UniqueIdentifier>{7149da1c-f1e3-4236-b016-cfdfdbe613cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JBaseDef.h">
       <Filter>Include</Filter>
     </ClInclude>
+    <ClInclude Include="JG_Memory.h">
+      <Filter>Common</Filter>
+    </ClInclude>
     <ClInclude Include="JUDPServer.h">
       <Filter>JUDPServer</Filter>
     </ClInclude>
+    <ClInclude Include="JUDPClient.h">
+      <Filter>JUDPClient</Filter>
+    </ClInclude>
+    <ClInclude Include="JUDPBaseDef.h">
+      <Filter>Include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="JG_Memory.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
     <ClCompile Include="JUDPServer.cpp">
       <Filter>JUDPServer</Filter>
+    </ClCompile>
+    <ClCompile Include="JUDPClient.cpp">
+      <Filter>JUDPClient</Filter>
+    </ClCompile>
+    <ClCompile Include="JTestUDPServerMain.cpp">
+      <Filter>TestTools</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
