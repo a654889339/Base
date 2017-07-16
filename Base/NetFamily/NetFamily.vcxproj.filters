@@ -35,6 +35,15 @@
     <ClInclude Include="JUDPBaseDef.h">
       <Filter>Include</Filter>
     </ClInclude>
+    <ClInclude Include="JTestUDPDef.h">
+      <Filter>TestTools</Filter>
+    </ClInclude>
+    <ClInclude Include="JTestUDPServer.h">
+      <Filter>TestTools</Filter>
+    </ClInclude>
+    <ClInclude Include="JTestUDPClient.h">
+      <Filter>TestTools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="JG_Memory.cpp">
@@ -46,7 +55,13 @@
     <ClCompile Include="JUDPClient.cpp">
       <Filter>JUDPClient</Filter>
     </ClCompile>
-    <ClCompile Include="JTestUDPServerMain.cpp">
+    <ClCompile Include="JTestUDPServer.cpp">
+      <Filter>TestTools</Filter>
+    </ClCompile>
+    <ClCompile Include="JTestUDPClient.cpp">
+      <Filter>TestTools</Filter>
+    </ClCompile>
+    <ClCompile Include="JTestMain.cpp">
       <Filter>TestTools</Filter>
     </ClCompile>
   </ItemGroup>

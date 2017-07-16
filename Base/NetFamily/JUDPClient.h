@@ -17,10 +17,13 @@ public:
     BOOL Connect(char* pszIP, int nPort, char* pszLocalIP, int nLocalPort);
     void Close();
 
-    BOOL Recv(IJG_Buffer* pszRecvBuf);
+    BOOL Recv(IJG_Buffer* pszRecvBuf, size_t* puDataSize);
     BOOL Send(IJG_Buffer* pszSendBuf, size_t uSendSize);
 
 private:
+    WSADATA     m_WSAData;
+    BYTE        m_byLowByteVersion;
+    BYTE        m_byHightByteVersion;
     int         m_nSocketFD;
     sockaddr_in m_ServerAddr;
     sockaddr_in m_LocalAddr;

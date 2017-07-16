@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "JG_Memory.h"
 
 IJG_Buffer *JG_MemoryCreateBuffer(unsigned uSize)
@@ -6,17 +7,17 @@ IJG_Buffer *JG_MemoryCreateBuffer(unsigned uSize)
 
     ASSERT(uSize >= 0);
 
-    pvBuffer = new IJG_Buffer(uSize);
+    pvBuffer = (IJG_Buffer*)malloc(uSize);
 
 //Exit0:
     return pvBuffer;
 }
 
-void JG_COM_RELEASE(void* pBuffer)
+void JG_COM_RELEASE(IJG_Buffer &Buffer)
 {
-    if (pBuffer)
+    if (Buffer)
     {
-        delete pBuffer;
-        pBuffer = NULL;
+        delete &Buffer;
+        Buffer = NULL;
     }
 }

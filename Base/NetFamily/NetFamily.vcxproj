@@ -67,15 +67,20 @@
   <ItemGroup>
     <ClInclude Include="JBaseDef.h" />
     <ClInclude Include="JG_Memory.h" />
+    <ClInclude Include="JTestUDPClient.h" />
+    <ClInclude Include="JTestUDPDef.h" />
+    <ClInclude Include="JTestUDPServer.h" />
     <ClInclude Include="JUDPBaseDef.h" />
     <ClInclude Include="JUDPClient.h" />
     <ClInclude Include="JUDPServer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="JG_Memory.cpp" />
+    <ClCompile Include="JTestMain.cpp" />
+    <ClCompile Include="JTestUDPClient.cpp" />
     <ClCompile Include="JUDPClient.cpp" />
     <ClCompile Include="JUDPServer.cpp" />
-    <ClCompile Include="JTestUDPServerMain.cpp" />
+    <ClCompile Include="JTestUDPServer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
