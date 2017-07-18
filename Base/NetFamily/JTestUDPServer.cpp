@@ -51,7 +51,7 @@ void JTestUDPServer::UnInit()
 BOOL JTestUDPServer::ProcessPackage()
 {
     BOOL          bResult         = false;
-    BOOL          bRetCode        = false;
+    int           nRetCode        = false;
     IJG_Buffer*   piBuffer        = NULL;
     size_t        uDataSize       = 0;
     int           nRecvCode       = 0;
@@ -59,11 +59,13 @@ BOOL JTestUDPServer::ProcessPackage()
 
     for (int i = 0; i < 5; i++)
     {
-        bRetCode = m_Server.Recv(&piBuffer, &ClientSocket.ClientAddr, &ClientSocket.nClientAddrSize);
-        JGLOG_PROCESS_ERROR(bRetCode);
+        nRetCode = m_Server.Recv(&piBuffer, &ClientSocket.ClientAddr, &ClientSocket.nClientAddrSize);
+        JG_PROCESS_SUCCESS(nRetCode == -2);
 
-        bRetCode = m_ClientSocketSet.count(ClientSocket);
-        if (bRetCode)
+        JGLOG_PROCESS_ERROR(nRetCode == 1);
+
+        nRetCode = m_ClientSocketSet.count(ClientSocket);
+        if (nRetCode)
         {
 
         }

@@ -17,7 +17,8 @@ public:
     BOOL Listen(char* pszIP, int nPort);
     void Close();
 
-    BOOL Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* pnClientAddrSize);
+    // return -1: error, 0: timeout, 1: success, -2: non-block && no data && success
+    int  Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* pnClientAddrSize);
     BOOL Send(char* pszSendBuf, size_t uSendSize, sockaddr_in* pClientAddr, int nClientAddrSize);
 
 private:
@@ -28,6 +29,7 @@ private:
     sockaddr_in m_ServerAddr;
     int         m_nPort;
 
+    fd_set      m_ReadFDSet;
     char        m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
 };
 
