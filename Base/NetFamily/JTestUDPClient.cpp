@@ -58,7 +58,7 @@ BOOL JTestUDPClient::ProcessPackage()
 
     while (true)
     {
-        piBuffer = m_Client.Recv(&bRetCode);
+        bRetCode = m_Client.Recv(&piBuffer);
         JGLOG_PROCESS_ERROR(bRetCode);
 
         JG_PROCESS_SUCCESS(piBuffer == NULL);

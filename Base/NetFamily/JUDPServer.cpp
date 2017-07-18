@@ -71,28 +71,38 @@ void JUDPServer::Close()
     closesocket(m_nSocketFD);
 }
 
-IJG_Buffer* JUDPServer::Recv(sockaddr_in* pClientAddr, int* pnClientAddrSize)
+BOOL JUDPServer::Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* pnClientAddrSize)
 {
+    BOOL        bResult  = false;
     int         nRetCode = 0;
-    IJG_Buffer* pResult  = NULL;
+    IJG_Buffer* piBuffer = NULL;
     char*       pRecv    = NULL;
 
+    JGLOG_PROCESS_ERROR(ppiRetBuffer);
     JGLOG_PROCESS_ERROR(pClientAddr);
     JGLOG_PROCESS_ERROR(pnClientAddrSize);
+
+    *ppiRetBuffer = NULL;
 
     nRetCode = recvfrom(m_nSocketFD, m_iRecvBuffer, JUDP_MAX_DATA_SIZE, 0, (sockaddr*)pClientAddr, pnClientAddrSize);
     JGLOG_PROCESS_ERROR(nRetCode != -1);
 
-    pResult = JG_MemoryCreateBuffer(nRetCode);
-    JGLOG_PROCESS_ERROR(pResult);
+    piBuffer = JG_MemoryCreateBuffer(nRetCode);
+    JGLOG_PROCESS_ERROR(piBuffer);
 
-    pRecv = (char*)pResult->GetData();
+    pRecv = (char*)piBuffer->GetData();
     JGLOG_PROCESS_ERROR(pRecv);
 
     memcpy(pRecv, m_iRecvBuffer, nRetCode);
 
+    *ppiRetBuffer = piBuffer;
+
+    (*ppiRetBuffer)->AddRef();
+
+    bResult = true;
 Exit0:
-    return pResult;
+    JG_COM_RELEASE(piBuffer);
+    return bResult;
 }
 
 BOOL JUDPServer::Send(char* pszSendBuf, size_t uSendSize, sockaddr_in* pClientAddr, int nClientAddrSize)

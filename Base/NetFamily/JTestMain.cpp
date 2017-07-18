@@ -1,4 +1,4 @@
-/**/
+/*
 #include "JTestUDPClient.h"
 
 JTestUDPClient m_Client;
@@ -30,7 +30,7 @@ Exit0:
     return bResult;
 }
 
-/*
+/**/
 #include "JTestUDPServer.h"
 
 JTestUDPServer m_Server;

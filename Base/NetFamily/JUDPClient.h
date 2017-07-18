@@ -17,8 +17,8 @@ public:
     BOOL Connect(char* pszIP, int nPort, char* pszLocalIP, int nLocalPort);
     void Close();
 
-    IJG_Buffer* Recv(BOOL *pbResult);
-    BOOL        Send(char* pszSendBuf, size_t uSendSize);
+    int  Recv(IJG_Buffer **ppiRetBuffer);
+    BOOL Send(char* pszSendBuf, size_t uSendSize);
 
 private:
     WSADATA     m_WSAData;

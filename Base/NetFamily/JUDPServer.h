@@ -17,7 +17,7 @@ public:
     BOOL Listen(char* pszIP, int nPort);
     void Close();
 
-    IJG_Buffer* Recv(sockaddr_in* pClientAddr, int* pnClientAddrSize);
+    BOOL Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* pnClientAddrSize);
     BOOL Send(char* pszSendBuf, size_t uSendSize, sockaddr_in* pClientAddr, int nClientAddrSize);
 
 private:

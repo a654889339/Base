@@ -59,8 +59,8 @@ BOOL JTestUDPServer::ProcessPackage()
 
     for (int i = 0; i < 5; i++)
     {
-        piBuffer = m_Server.Recv(&ClientSocket.ClientAddr, &ClientSocket.nClientAddrSize);
-        JGLOG_PROCESS_ERROR(piBuffer);
+        bRetCode = m_Server.Recv(&piBuffer, &ClientSocket.ClientAddr, &ClientSocket.nClientAddrSize);
+        JGLOG_PROCESS_ERROR(bRetCode);
 
         bRetCode = m_ClientSocketSet.count(ClientSocket);
         if (bRetCode)
@@ -72,6 +72,8 @@ BOOL JTestUDPServer::ProcessPackage()
             ClientSocket.nConnIndex = ++m_nClientCount;
             m_ClientSocketSet.insert(ClientSocket);
         }
+
+        JG_PROCESS_SUCCESS(piBuffer == NULL);
 
         uDataSize = piBuffer->GetSize();
         JG_PROCESS_SUCCESS(uDataSize == 0);
