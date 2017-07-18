@@ -17,8 +17,8 @@ public:
     BOOL Connect(char* pszIP, int nPort, char* pszLocalIP, int nLocalPort);
     void Close();
 
-    BOOL Recv(IJG_Buffer* pszRecvBuf, size_t* puDataSize);
-    BOOL Send(IJG_Buffer* pszSendBuf, size_t uSendSize);
+    IJG_Buffer* Recv(BOOL *pbResult);
+    BOOL        Send(char* pszSendBuf, size_t uSendSize);
 
 private:
     WSADATA     m_WSAData;
@@ -29,7 +29,7 @@ private:
     sockaddr_in m_LocalAddr;
     int         m_nPort;
 
-    IJG_Buffer  m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
+    char        m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
 };
 
 #endif //_JUDP_CLIENT_H_

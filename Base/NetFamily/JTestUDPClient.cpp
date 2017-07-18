@@ -1,4 +1,5 @@
 #include "JTestUDPClient.h"
+#include "JG_Memory.h"
 
 JTestUDPClient::JTestUDPClient()
 {
@@ -51,19 +52,27 @@ BOOL JTestUDPClient::ProcessPackage()
 {
     BOOL        bResult   = false;
     BOOL        bRetCode  = false;
+    int         nRecvCode = 0;
     IJG_Buffer* piBuffer  = NULL;
+    char*       pRecv     = NULL;
     size_t      uDataSize = 0;
 
     while (true)
     {
-        bRetCode = m_Client.Recv(piBuffer, &uDataSize);
+        piBuffer = m_Client.Recv(&bRetCode);
         JGLOG_PROCESS_ERROR(bRetCode);
 
-        JG_PROCESS_SUCCESS(uDataSize == 0);
+        JG_PROCESS_SUCCESS(piBuffer == NULL);
 
+        uDataSize = piBuffer->GetSize();
+        JG_PROCESS_SUCCESS(uDataSize == 0);
         JGLOG_PROCESS_ERROR(uDataSize == sizeof(int));
 
-        JGLogPrintf(JGLOG_INFO, "[Package] %d\n", (int)&piBuffer);
+        pRecv = (char*)piBuffer->GetData();
+
+        nRecvCode = (int)*pRecv;
+
+        JGLogPrintf(JGLOG_INFO, "[Package] %d\n", nRecvCode);
 
         JG_COM_RELEASE(piBuffer);
     }
@@ -71,6 +80,7 @@ BOOL JTestUDPClient::ProcessPackage()
 Exit1:
     bResult = true;
 Exit0:
+    JG_COM_RELEASE(piBuffer);
     return bResult;
 }
 
@@ -88,7 +98,7 @@ BOOL JTestUDPClient::Run()
         bRetCode = ProcessPackage();
         JGLOG_PROCESS_ERROR(bRetCode);
 
-        bRetCode = m_Client.Send((IJG_Buffer*)&nSendCount, sizeof(int));
+        bRetCode = m_Client.Send((char*)&nSendCount, sizeof(int));
         JGLOG_PROCESS_ERROR(bRetCode);
 
         nSendCount++;

@@ -49,4 +49,4 @@ private:
     JUDPServer m_Server;
 };
 
-#endif
+#endif // _JTEST_UDP_SERVER_MAIN_H_

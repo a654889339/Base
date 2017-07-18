@@ -78,16 +78,18 @@ void JUDPClient::Close()
     closesocket(m_nSocketFD);
 }
 
-BOOL JUDPClient::Recv(IJG_Buffer* pszRecvBuf, size_t* puDataSize)
+IJG_Buffer* JUDPClient::Recv(BOOL *pbResult)
 {
-    BOOL bResult  = false;
-    int  nRetCode = 0;
+    BOOL        bResult  = false;
+    int         nRetCode = 0;
+    IJG_Buffer* pResult  = NULL;
+    char*       pRecv    = NULL;
 
-    JGLOG_PROCESS_ERROR(puDataSize);
+    ASSERT(pbResult);
 
-    *puDataSize = 0;
+    *pbResult = false;
 
-    nRetCode = recv(m_nSocketFD, (char*)m_iRecvBuffer, JUDP_MAX_DATA_SIZE, 0);
+    nRetCode = recv(m_nSocketFD, m_iRecvBuffer, JUDP_MAX_DATA_SIZE, 0);
     if (nRetCode == SOCKET_ERROR)
     {
         nRetCode = WSAGetLastError();
@@ -100,23 +102,29 @@ BOOL JUDPClient::Recv(IJG_Buffer* pszRecvBuf, size_t* puDataSize)
         goto Exit0;
     }
 
-    memcpy(pszRecvBuf, m_iRecvBuffer, nRetCode);
-    *puDataSize = (size_t)nRetCode;
+    pResult = JG_MemoryCreateBuffer(nRetCode);
+    JGLOG_PROCESS_ERROR(pResult);
+
+    pRecv = (char*)pResult->GetData();
+    JGLOG_PROCESS_ERROR(pRecv);
+
+    memcpy(pRecv, m_iRecvBuffer, nRetCode);
 
 Exit1:
     bResult = true;
 Exit0:
-    return bResult;
+    *pbResult = bResult;
+    return pResult;
 }
 
-BOOL JUDPClient::Send(IJG_Buffer* pszSendBuf, size_t uSendSize)
+BOOL JUDPClient::Send(char* pszSendBuf, size_t uSendSize)
 {
     BOOL bResult  = false;
     int  nRetCode = 0;
 
     JGLOG_PROCESS_ERROR(pszSendBuf);
 
-    nRetCode = send(m_nSocketFD, (char*)pszSendBuf, uSendSize, 0);
+    nRetCode = send(m_nSocketFD, pszSendBuf, uSendSize, 0);
 
     bResult = true;
 Exit0:
