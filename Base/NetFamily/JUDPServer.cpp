@@ -88,7 +88,7 @@ int JUDPServer::Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* p
     FD_ZERO(&m_ReadFDSet);
     FD_SET(m_nSocketFD, &m_ReadFDSet);
 
-    nRetCode = select(m_nSocketFD, &m_ReadFDSet, NULL, NULL, &TimeOut);
+    nRetCode = select(m_nSocketFD + 1, &m_ReadFDSet, NULL, NULL, &TimeOut);
     if (nRetCode == 0)
     {
         nResult = -2;
@@ -121,16 +121,16 @@ Exit0:
     return nResult;
 }
 
-BOOL JUDPServer::Send(char* pszSendBuf, size_t uSendSize, sockaddr_in* pClientAddr, int nClientAddrSize)
+BOOL JUDPServer::Send(IJG_Buffer* piBuffer, sockaddr_in* pClientAddr, int nClientAddrSize)
 {
     BOOL bResult  = false;
     int  nRetCode = 0;
 
-    JGLOG_PROCESS_ERROR(pszSendBuf);
+    JGLOG_PROCESS_ERROR(piBuffer);
     JGLOG_PROCESS_ERROR(pClientAddr);
 
-    nRetCode = sendto(m_nSocketFD, pszSendBuf, uSendSize, 0, (sockaddr*)pClientAddr, nClientAddrSize);
-    JG_PROCESS_ERROR(nRetCode == uSendSize);
+    nRetCode = sendto(m_nSocketFD, (char *)piBuffer->GetData(), piBuffer->GetSize(), 0, (sockaddr*)pClientAddr, nClientAddrSize);
+    JG_PROCESS_ERROR(nRetCode == piBuffer->GetSize());
 
     bResult = true;
 Exit0:

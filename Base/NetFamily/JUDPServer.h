@@ -4,6 +4,7 @@
 #include "JBaseDef.h"
 #include "JUDPBaseDef.h"
 #include "JG_Memory.h"
+#include "JUDPConnection.h"
 
 class JUDPServer
 {
@@ -19,7 +20,7 @@ public:
 
     // return -1: error, 0: timeout, 1: success, -2: non-block && no data && success
     int  Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* pnClientAddrSize);
-    BOOL Send(char* pszSendBuf, size_t uSendSize, sockaddr_in* pClientAddr, int nClientAddrSize);
+    BOOL Send(IJG_Buffer* piBuffer, sockaddr_in* pClientAddr, int nClientAddrSize);
 
 private:
     WSADATA     m_WSAData;
@@ -31,6 +32,10 @@ private:
 
     fd_set      m_ReadFDSet;
     char        m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
+
+private:
+
+
 };
 
 #endif // _JUDP_SERVER_H_

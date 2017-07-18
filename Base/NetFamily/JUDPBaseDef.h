@@ -1,6 +1,8 @@
 #ifndef _JUDP_BASE_DEF_H_
 #define _JUDP_BASE_DEF_H_
 
+#include "JUDPProtocolBasic.h"
+
 #ifdef WIN32
 //#include <winsock.h>
 #include "winsock2.h"

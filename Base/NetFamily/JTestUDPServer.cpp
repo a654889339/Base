@@ -57,7 +57,7 @@ BOOL JTestUDPServer::ProcessPackage()
     int           nRecvCode       = 0;
     JClientSocket ClientSocket;
 
-    for (int i = 0; i < 5; i++)
+    while (true)
     {
         nRetCode = m_Server.Recv(&piBuffer, &ClientSocket.ClientAddr, &ClientSocket.nClientAddrSize);
         JG_PROCESS_SUCCESS(nRetCode == -2);
@@ -102,11 +102,16 @@ BOOL JTestUDPServer::Run()
     BOOL          bResult         = false;
     BOOL          bRetCode        = false;
     int           nSendCount      = 0;
+    IJG_Buffer*   piBuffer        = NULL;
+    char*         pSender         = NULL;
     time_t        nTimeNow        = time(NULL);
     JClientSocket ClientSocket;
 
     m_ClientSocketSet.clear();
     m_nClientCount = 0;
+
+    piBuffer = JG_MemoryCreateBuffer(sizeof(int));
+    JGLOG_PROCESS_ERROR(piBuffer);
 
     while (true)
     {
@@ -119,7 +124,11 @@ BOOL JTestUDPServer::Run()
         {
             ClientSocket = *itFind;
 
-            bRetCode = m_Server.Send((char*)&nSendCount, sizeof(int), &ClientSocket.ClientAddr, ClientSocket.nClientAddrSize);
+            pSender = (char *)piBuffer->GetData();
+
+            memcpy(pSender, &nSendCount, sizeof(int));
+
+            bRetCode = m_Server.Send(piBuffer, &ClientSocket.ClientAddr, ClientSocket.nClientAddrSize);
             JGLOG_PROCESS_ERROR(bRetCode);
 
             nSendCount++;

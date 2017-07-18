@@ -3,6 +3,9 @@
 
 #include <minwindef.h>
 #include <stdio.h>
+#ifdef __GNUC__
+#include <stdint.h>
+#endif
 
 #ifndef ASSERT
 #include <assert.h>
