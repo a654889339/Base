@@ -53,7 +53,6 @@ BOOL JTestUDPServer::ProcessPackage()
     BOOL          bResult         = false;
     BOOL          bRetCode        = false;
     IJG_Buffer*   piBuffer        = NULL;
-    char*         pRecv           = NULL;
     size_t        uDataSize       = 0;
     int           nRecvCode       = 0;
     JClientSocket ClientSocket;
@@ -78,10 +77,7 @@ BOOL JTestUDPServer::ProcessPackage()
         JG_PROCESS_SUCCESS(uDataSize == 0);
         JGLOG_PROCESS_ERROR(uDataSize == sizeof(int));
 
-        pRecv = (char*)piBuffer->GetData();
-        JGLOG_PROCESS_ERROR(pRecv);
-
-        nRecvCode = (int)*pRecv;
+        nRecvCode = *((int*)piBuffer->GetData());
 
         JGLogPrintf(JGLOG_INFO, "[Package] %d from %u\n", nRecvCode, 
             ClientSocket.ClientAddr.sin_addr.S_un.S_addr
@@ -125,7 +121,7 @@ BOOL JTestUDPServer::Run()
             nSendCount++;
         }
 
-        JGThread_Sleep(1000);
+        JGThread_Sleep(10);
     }
 
 

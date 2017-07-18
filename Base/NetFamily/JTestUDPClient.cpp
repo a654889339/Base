@@ -54,7 +54,6 @@ BOOL JTestUDPClient::ProcessPackage()
     BOOL        bRetCode  = false;
     int         nRecvCode = 0;
     IJG_Buffer* piBuffer  = NULL;
-    char*       pRecv     = NULL;
     size_t      uDataSize = 0;
 
     while (true)
@@ -68,9 +67,7 @@ BOOL JTestUDPClient::ProcessPackage()
         JG_PROCESS_SUCCESS(uDataSize == 0);
         JGLOG_PROCESS_ERROR(uDataSize == sizeof(int));
 
-        pRecv = (char*)piBuffer->GetData();
-
-        nRecvCode = (int)*pRecv;
+        nRecvCode = *((int*)piBuffer->GetData());
 
         JGLogPrintf(JGLOG_INFO, "[Package] %d\n", nRecvCode);
 
@@ -103,7 +100,7 @@ BOOL JTestUDPClient::Run()
 
         nSendCount++;
 
-        JGThread_Sleep(1000);
+        JGThread_Sleep(10);
     }
 
     bResult = true;
