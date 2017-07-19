@@ -44,7 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_X86_;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_X86_;WIN32;%(PreprocessorDefinitions);__GNUC__</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -72,6 +72,7 @@
     <ClInclude Include="JTestUDPServer.h" />
     <ClInclude Include="JUDPBaseDef.h" />
     <ClInclude Include="JUDPClient.h" />
+    <ClInclude Include="JUDPConnection.h" />
     <ClInclude Include="JUDPServer.h" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +80,7 @@
     <ClCompile Include="JTestMain.cpp" />
     <ClCompile Include="JTestUDPClient.cpp" />
     <ClCompile Include="JUDPClient.cpp" />
+    <ClCompile Include="JUDPConnection.cpp" />
     <ClCompile Include="JUDPServer.cpp" />
     <ClCompile Include="JTestUDPServer.cpp" />
   </ItemGroup>

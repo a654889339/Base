@@ -1,7 +1,6 @@
 #ifndef _JUDP_SERVER_H_
 #define _JUDP_SERVER_H_
 
-#include "JBaseDef.h"
 #include "JUDPBaseDef.h"
 #include "JG_Memory.h"
 #include "JUDPConnection.h"

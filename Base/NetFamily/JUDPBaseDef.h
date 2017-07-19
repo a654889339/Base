@@ -1,7 +1,7 @@
 #ifndef _JUDP_BASE_DEF_H_
 #define _JUDP_BASE_DEF_H_
 
-#include "JUDPProtocolBasic.h"
+#include "JBaseDef.h"
 
 #ifdef WIN32
 //#include <winsock.h>
@@ -16,5 +16,53 @@
 #endif
 
 #define JUDP_MAX_DATA_SIZE 548
+#define JUDP_WINDOW_DEFAULT_SIZE 128
+#define JUDP_MAXRETRANS_LIMIT    5
+#define JUDP_RETRANS_INTERVAL    3
+
+enum JUDP_STATUS_TYPE
+{
+    eustInvalid,
+
+    eustEstablished,
+    eustTimeout,
+    eustClose,
+    eustError
+};
+
+enum JUDP_PROTOCOL_TYPE
+{
+    euptUDPProtocolBegin,
+
+    euptUDPReliable,
+    euptUDPUnreliable,
+    euptUDPACK,
+
+    euptUDPProtocolEnd
+};
+
+#pragma pack(1)
+
+struct UDP_PROTOCOL_HEADER
+{
+    BYTE       byUDPProtocol;
+};
+
+struct EXTERNAL_RELIABLE_PROTOCOL_HEADER : UDP_PROTOCOL_HEADER
+{
+    DWORD      dwPacketID;
+    uint16_t   byProtocolID;
+};
+
+struct EXTERNAL_UNRELIABLE_PROTOCOL_HEADER : UDP_PROTOCOL_HEADER
+{
+    uint16_t    byProtocolID;       //–≠“È∫≈
+};
+
+struct EXTERNAL_ACK_PROTOCOL : UDP_PROTOCOL_HEADER
+{
+    DWORD      dwPacketID;
+};
+#pragma pack()
 
 #endif //_JUDP_BASE_DEF_H_

@@ -1,10 +1,11 @@
 #ifndef _JUDP_CONNECTION_H_
 #define _JUDP_CONNECTION_H_
 
-#include <map>
-#include "JBaseDef.h"
-#include "JG_Memory.h"
+#include <list>
+#include <set>
+#include <time.h>
 #include "JUDPBaseDef.h"
+#include "JG_Memory.h"
 
 class JUDPConnection
 {
@@ -15,34 +16,82 @@ public:
     BOOL Init(int nConnIndex, sockaddr_in* pAddr, int nSocketFD);
     void UnInit();
 
-    BOOL Send(IJG_Buffer* piBuffer);
+    void Activate();
+
+    BOOL SendReliablePacket(IJG_Buffer* piBuffer);
+    void Send(IJG_Buffer* piBuffer);
     BOOL ProcessPackage(int nConnIndex, BYTE* pbyData, size_t uSize);
 
 private:
-    BOOL OnAckPacket(DWORD dwPacket);
+    void RetransmitPacket();
+    BOOL AddNotAckPacket(IJG_Buffer* piBuffer);
+    BOOL AddRecvPacket(DWORD dwPacketID, BYTE* pbyData, size_t uSize);
+
+    BOOL DoAckPacket(DWORD dwPacketID);
+    void OnAckPacket(int nConnIndex, BYTE* pbyData, size_t uSize);
     void OnUDPReliable(int nConnIndex, BYTE* pbyData, size_t uSize);
     void OnUDPUnreliable(int nConnIndex, BYTE* pbyData, size_t uSize);
 
 private:
     typedef void (JUDPConnection::*PROCESS_UDP_PROTOCOL_FUNC)(int nConnIndex, BYTE* pbyData, size_t uSize);
-    PROCESS_UDP_PROTOCOL_FUNC m_ProcessUDPProtocolFunc[eUDPProtocolEnd];
-    size_t                    m_nUDPProtocolSize[eUDPProtocolEnd];
+    PROCESS_UDP_PROTOCOL_FUNC m_ProcessUDPProtocolFunc[euptUDPProtocolEnd];
+    size_t                    m_uUDPProtocolSize[euptUDPProtocolEnd];
 
-    sockaddr_in m_ConnectionAddr;
-    int         m_nConnectionAddrSize;
-    int         m_nConnIndex;
-    int         m_nSocketFD;
+    sockaddr_in      m_ConnectionAddr;
+    int              m_nConnectionAddrSize;
+    int              m_nConnIndex;
+    int              m_nSocketFD;
+    JUDP_STATUS_TYPE m_eUDPStatus;
+    size_t           m_uSendWindowSize;
 
     fd_set      m_ReadFDSet;
     char        m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
 
 private:    // maintain for reliable udp
-    typedef std::map<DWORD, IJG_Buffer*> JNOT_ACK_MAP;
-    JNOT_ACK_MAP                         m_NotACKMap;
-    JNOT_ACK_MAP::iterator               m_TempACKFind;
+    DWORD       m_dwSendPacketID;
+    DWORD       m_dwRecvPacketID;
 
-    DWORD       m_dwPacketID;
-    IJG_Buffer* m_pTempBuffer;
+    struct JNOT_ACK_PACKET
+    {
+        DWORD       dwPacketID;
+        IJG_Buffer* piBuffer;
+        DWORD       dwRetransCount;
+        clock_t     lRetransTime;
+
+        JNOT_ACK_PACKET()
+        {
+            dwPacketID     = 0;
+            piBuffer       = NULL;
+            dwRetransCount = 0;
+            lRetransTime   = 0;
+        }
+    };
+
+    typedef std::list<JNOT_ACK_PACKET> JSEND_WINDOW_LIST;
+    JSEND_WINDOW_LIST                  m_SendWindow;
+    JSEND_WINDOW_LIST::iterator        m_SendWindowFind;
+
+    struct JNON_SEQUENCE_PACKET
+    {
+        DWORD       dwPacketID;
+        IJG_Buffer* piBuffer;
+
+        JNON_SEQUENCE_PACKET()
+        {
+            dwPacketID     = 0;
+            piBuffer       = NULL;
+        }
+
+        bool operator < (const JNON_SEQUENCE_PACKET& Packet) const
+        {
+            return dwPacketID < Packet.dwPacketID;
+        }
+    };
+
+    typedef std::set<JNON_SEQUENCE_PACKET> JRECV_WINDOW_SET;
+    JRECV_WINDOW_SET                       m_RecvWindow;
+    JRECV_WINDOW_SET::iterator             m_RecvWindowFind;
+
 };
 
 #endif //_JUDP_CONNECTION_H_

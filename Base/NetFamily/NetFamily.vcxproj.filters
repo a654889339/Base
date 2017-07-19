@@ -44,6 +44,9 @@
     <ClInclude Include="JTestUDPClient.h">
       <Filter>TestTools</Filter>
     </ClInclude>
+    <ClInclude Include="JUDPConnection.h">
+      <Filter>JUDPServer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="JG_Memory.cpp">
@@ -63,6 +66,9 @@
     </ClCompile>
     <ClCompile Include="JTestMain.cpp">
       <Filter>TestTools</Filter>
+    </ClCompile>
+    <ClCompile Include="JUDPConnection.cpp">
+      <Filter>JUDPServer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
