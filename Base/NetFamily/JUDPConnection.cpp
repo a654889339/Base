@@ -12,6 +12,7 @@ JUDPConnection::JUDPConnection()
     m_dwRecvPacketID      = 0;
     m_eUDPStatus          = eustInvalid;
     m_uSendWindowSize     = JUDP_WINDOW_DEFAULT_SIZE;
+    m_ParseCallBack       = NULL;
 
 #ifdef WIN32
     memset(&m_ConnectionAddr, 0, sizeof(m_ConnectionAddr));
@@ -32,17 +33,19 @@ JUDPConnection::~JUDPConnection()
     UnInit();
 }
 
-BOOL JUDPConnection::Init(int nConnIndex, sockaddr_in* pAddr, int nSocketFD)
+BOOL JUDPConnection::Init(int nConnIndex, sockaddr_in* pAddr, int nSocketFD, JUDPParseCallBack Func)
 {
     BOOL bResult  = false;
     BOOL bRetCode = false;
 
     JGLOG_PROCESS_ERROR(pAddr);
+    JGLOG_PROCESS_ERROR(Func);
 
     m_nConnIndex          = nConnIndex;
     m_ConnectionAddr      = *pAddr;
     m_nConnectionAddrSize = sizeof(m_ConnectionAddr);
     m_nSocketFD           = nSocketFD;
+    m_ParseCallBack       = Func;
 
     bResult = true;
 Exit0:
@@ -201,29 +204,21 @@ Exit0:
 
 BOOL JUDPConnection::AddRecvPacket(DWORD dwPacketID, BYTE* pbyData, size_t uSize)
 {
-    BOOL        bResult  = false;
-    IJG_Buffer* piBuffer = NULL;
+    BOOL                 bResult  = false;
+    IJG_Buffer*          piBuffer = NULL;
+    JNON_SEQUENCE_PACKET Packet;
 
-    if (dwPacketID == m_dwRecvPacketID + 1)
-    {
+    piBuffer = JG_MemoryCreateBuffer(uSize);
+    JGLOG_PROCESS_ERROR(piBuffer);
 
-    }
-    else
-    {
-        JNON_SEQUENCE_PACKET Packet;
+    memcpy(piBuffer->GetData(), pbyData, uSize);
 
-        piBuffer = JG_MemoryCreateBuffer(uSize);
-        JGLOG_PROCESS_ERROR(piBuffer);
+    piBuffer->AddRef();
 
-        memcpy(piBuffer->GetData(), pbyData, uSize);
+    Packet.dwPacketID = dwPacketID;
+    Packet.piBuffer   = piBuffer;
 
-        piBuffer->AddRef();
-
-        Packet.dwPacketID = dwPacketID;
-        Packet.piBuffer   = piBuffer;
-
-        m_RecvWindow.insert(Packet);
-    }
+    m_RecvWindow.insert(Packet);
 
     bResult = true;
 Exit0:
@@ -288,12 +283,39 @@ void JUDPConnection::OnUDPReliable(int nConnIndex, BYTE* pbyData, size_t uSize)
 {
     BOOL                               bRetCode  = false;
     EXTERNAL_RELIABLE_PROTOCOL_HEADER* pReliable = (EXTERNAL_RELIABLE_PROTOCOL_HEADER*)pbyData;
+    JNON_SEQUENCE_PACKET               RecvPack;
 
     DoAckPacket(pReliable->dwPacketID);
 
-    bRetCode = AddRecvPacket(pReliable->dwPacketID, pbyData, uSize);
-    JGLOG_PROCESS_ERROR(bRetCode);
+    if (pReliable->dwPacketID == m_dwRecvPacketID + 1)
+    {
+        JGLOG_PROCESS_ERROR(m_ParseCallBack);
 
+        m_ParseCallBack(nConnIndex, pbyData, uSize);
+
+        m_dwRecvPacketID++;
+
+        for (m_RecvWindowFind = m_RecvWindow.begin(); m_RecvWindowFind != m_RecvWindow.end();)
+        {
+            RecvPack = *m_RecvWindowFind;
+            JG_PROCESS_SUCCESS(RecvPack.dwPacketID != m_dwRecvPacketID + 1);
+
+            m_ParseCallBack(nConnIndex, (BYTE*)RecvPack.piBuffer->GetData(), RecvPack.piBuffer->GetSize());
+
+            m_dwRecvPacketID++;
+
+            JG_COM_RELEASE(RecvPack.piBuffer);
+
+            m_RecvWindow.erase(m_RecvWindowFind++);
+        }
+    }
+    else
+    {
+        bRetCode = AddRecvPacket(pReliable->dwPacketID, pbyData, uSize);
+        JGLOG_PROCESS_ERROR(bRetCode);
+    }
+
+Exit1:
 Exit0:
     return;
 }

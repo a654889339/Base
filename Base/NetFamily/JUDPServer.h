@@ -1,6 +1,7 @@
 #ifndef _JUDP_SERVER_H_
 #define _JUDP_SERVER_H_
 
+#include <map>
 #include "JUDPBaseDef.h"
 #include "JG_Memory.h"
 #include "JUDPConnection.h"
@@ -14,12 +15,14 @@ public:
     BOOL Init();
     void UnInit();
 
+    void Activate();
+
     BOOL Listen(char* pszIP, int nPort);
     void Close();
 
     // return -1: error, 0: timeout, 1: success, -2: non-block && no data && success
     int  Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* pnClientAddrSize);
-    BOOL Send(IJG_Buffer* piBuffer, sockaddr_in* pClientAddr, int nClientAddrSize);
+    BOOL Send(int nConnIndex, IJG_Buffer* piBuffer);
 
 private:
     WSADATA     m_WSAData;
@@ -33,8 +36,10 @@ private:
     char        m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
 
 private:
+    typedef std::map<int, JUDPConnection> JUDP_CONNECTIONS_MAP;
+    JUDP_CONNECTIONS_MAP                  m_ConnectionsMap;
 
-
+    int                                   m_nConnectionCount;
 };
 
 #endif // _JUDP_SERVER_H_

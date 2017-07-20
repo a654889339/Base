@@ -7,13 +7,15 @@
 #include "JUDPBaseDef.h"
 #include "JG_Memory.h"
 
+typedef void (* JUDPParseCallBack)(int nConnIndex, BYTE* pbyData, size_t uSize);
+
 class JUDPConnection
 {
 public:
     JUDPConnection();
     virtual ~JUDPConnection();
 
-    BOOL Init(int nConnIndex, sockaddr_in* pAddr, int nSocketFD);
+    BOOL Init(int nConnIndex, sockaddr_in* pAddr, int nSocketFD, JUDPParseCallBack Func);
     void UnInit();
 
     void Activate();
@@ -37,12 +39,13 @@ private:
     PROCESS_UDP_PROTOCOL_FUNC m_ProcessUDPProtocolFunc[euptUDPProtocolEnd];
     size_t                    m_uUDPProtocolSize[euptUDPProtocolEnd];
 
-    sockaddr_in      m_ConnectionAddr;
-    int              m_nConnectionAddrSize;
-    int              m_nConnIndex;
-    int              m_nSocketFD;
-    JUDP_STATUS_TYPE m_eUDPStatus;
-    size_t           m_uSendWindowSize;
+    sockaddr_in       m_ConnectionAddr;
+    int               m_nConnectionAddrSize;
+    int               m_nConnIndex;
+    int               m_nSocketFD;
+    JUDP_STATUS_TYPE  m_eUDPStatus;
+    size_t            m_uSendWindowSize;
+    JUDPParseCallBack m_ParseCallBack;
 
     fd_set      m_ReadFDSet;
     char        m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
@@ -91,7 +94,6 @@ private:    // maintain for reliable udp
     typedef std::set<JNON_SEQUENCE_PACKET> JRECV_WINDOW_SET;
     JRECV_WINDOW_SET                       m_RecvWindow;
     JRECV_WINDOW_SET::iterator             m_RecvWindowFind;
-
 };
 
 #endif //_JUDP_CONNECTION_H_

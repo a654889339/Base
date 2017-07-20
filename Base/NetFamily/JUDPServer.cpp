@@ -4,6 +4,7 @@ JUDPServer::JUDPServer()
 {
     m_byLowByteVersion   = 1;
     m_byHightByteVersion = 1;
+    m_nConnectionCount   = 0;
 }
 
 JUDPServer::~JUDPServer()
