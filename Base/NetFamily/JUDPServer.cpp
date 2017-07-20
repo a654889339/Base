@@ -9,7 +9,7 @@ JUDPServer::JUDPServer()
 
 JUDPServer::~JUDPServer()
 {
-    WSACleanup();
+    UnInit();
 }
 
 BOOL JUDPServer::Init()
@@ -24,6 +24,8 @@ BOOL JUDPServer::Init()
 
 void JUDPServer::UnInit()
 {
+    ClearConnections();
+    WSACleanup();
 }
 
 BOOL JUDPServer::Listen(char* pszIP, int nPort)
@@ -122,18 +124,87 @@ Exit0:
     return nResult;
 }
 
-BOOL JUDPServer::Send(IJG_Buffer* piBuffer, sockaddr_in* pClientAddr, int nClientAddrSize)
+BOOL JUDPServer::Send(int nConnIndex, IJG_Buffer* piBuffer)
 {
-    BOOL bResult  = false;
-    int  nRetCode = 0;
+    BOOL            bResult      = false;
+    int             nRetCode     = 0;
+    JUDPConnection* pConnection  = NULL;
 
     JGLOG_PROCESS_ERROR(piBuffer);
-    JGLOG_PROCESS_ERROR(pClientAddr);
 
-    nRetCode = sendto(m_nSocketFD, (char *)piBuffer->GetData(), piBuffer->GetSize(), 0, (sockaddr*)pClientAddr, nClientAddrSize);
+    pConnection = GetConnection(nConnIndex);
+    JG_PROCESS_ERROR(pConnection);
+
+    nRetCode = sendto(m_nSocketFD, (char *)piBuffer->GetData(), piBuffer->GetSize(), 0, pConnection->GetSockAddr(), pConnection->GetSockAddrSize());
     JG_PROCESS_ERROR(nRetCode == piBuffer->GetSize());
 
     bResult = true;
 Exit0:
     return bResult;
+}
+
+BOOL JUDPServer::AddConnection(int *pnConnIndex, JUDPConnection* pConnection)
+{
+    BOOL bResult = false;
+
+    JGLOG_PROCESS_ERROR(pnConnIndex);
+    JGLOG_PROCESS_ERROR(pConnection);
+
+    m_nConnectionCount++;
+
+    m_ConnectionsMap[m_nConnectionCount] = pConnection;
+
+    *pnConnIndex = m_nConnectionCount;
+
+    bResult = true;
+Exit0:
+    return bResult;
+}
+
+void JUDPServer::RemoveConnection(int nConnIndex)
+{
+    JUDPConnection* pConnection = NULL;
+
+    m_ConnectionsMapFind = m_ConnectionsMap.find(nConnIndex);
+    JG_PROCESS_SUCCESS(m_ConnectionsMapFind == m_ConnectionsMap.end());
+
+    pConnection = m_ConnectionsMapFind->second;
+    JGLOG_PROCESS_ERROR(pConnection);
+
+    pConnection->UnInit();
+
+    m_ConnectionsMap.erase(m_ConnectionsMapFind);
+
+Exit1:
+Exit0:
+    return;
+}
+
+JUDPConnection* JUDPServer::GetConnection(int nConnIndex)
+{
+    JUDPConnection* pConnection = NULL;
+
+    m_ConnectionsMapFind = m_ConnectionsMap.find(nConnIndex);
+    JG_PROCESS_ERROR(m_ConnectionsMapFind != m_ConnectionsMap.end());
+
+    pConnection = m_ConnectionsMapFind->second;
+
+Exit0:
+    return pConnection;
+}
+
+void JUDPServer::ClearConnections()
+{
+    JUDPConnection* pConnection = NULL;
+
+    for (m_ConnectionsMapFind = m_ConnectionsMap.begin(); m_ConnectionsMapFind != m_ConnectionsMap.end();)
+    {
+        pConnection = m_ConnectionsMapFind->second;
+        if (pConnection)
+        {
+            pConnection->UnInit();
+        }
+
+        m_ConnectionsMap.erase(m_ConnectionsMapFind++);
+    }
 }

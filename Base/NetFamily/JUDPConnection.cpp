@@ -149,6 +149,17 @@ Exit0:
     return bResult;
 }
 
+sockaddr* JUDPConnection::GetSockAddr()
+{
+    return (sockaddr *)&m_ConnectionAddr;
+}
+
+size_t JUDPConnection::GetSockAddrSize()
+{
+    return m_uSendWindowSize;
+}
+
+
 void JUDPConnection::RetransmitPacket()
 {
     LONG lTimeNow = clock(); 
@@ -322,5 +333,10 @@ Exit0:
 
 void JUDPConnection::OnUDPUnreliable(int nConnIndex, BYTE* pbyData, size_t uSize)
 {
+    JGLOG_PROCESS_ERROR(m_ParseCallBack);
 
+    m_ParseCallBack(nConnIndex, pbyData, uSize);
+
+Exit0:
+    return;
 }

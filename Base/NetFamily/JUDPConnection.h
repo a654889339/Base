@@ -24,6 +24,9 @@ public:
     void Send(IJG_Buffer* piBuffer);
     BOOL ProcessPackage(int nConnIndex, BYTE* pbyData, size_t uSize);
 
+    sockaddr* GetSockAddr();
+    size_t    GetSockAddrSize();
+
 private:
     void RetransmitPacket();
     BOOL AddNotAckPacket(IJG_Buffer* piBuffer);

@@ -24,6 +24,11 @@ public:
     int  Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* pnClientAddrSize);
     BOOL Send(int nConnIndex, IJG_Buffer* piBuffer);
 
+    BOOL AddConnection(int *pnConnIndex, JUDPConnection* pConnection);
+    void RemoveConnection(int nConnIndex);
+    JUDPConnection* GetConnection(int nConnIndex);
+    void ClearConnections();
+
 private:
     WSADATA     m_WSAData;
     BYTE        m_byLowByteVersion;
@@ -36,10 +41,11 @@ private:
     char        m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
 
 private:
-    typedef std::map<int, JUDPConnection> JUDP_CONNECTIONS_MAP;
-    JUDP_CONNECTIONS_MAP                  m_ConnectionsMap;
+    typedef std::map<int, JUDPConnection*> JUDP_CONNECTIONS_MAP;
+    JUDP_CONNECTIONS_MAP                   m_ConnectionsMap;
+    JUDP_CONNECTIONS_MAP::iterator         m_ConnectionsMapFind;
 
-    int                                   m_nConnectionCount;
+    int                                    m_nConnectionCount;
 };
 
 #endif // _JUDP_SERVER_H_
