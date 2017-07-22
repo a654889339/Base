@@ -76,11 +76,13 @@ void JUDPServer::Close()
 
 int JUDPServer::Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* pnClientAddrSize)
 {
-    int         nResult  = -1;
-    int         nRetCode = 0;
-    IJG_Buffer* piBuffer = NULL;
-    char*       pRecv    = NULL;
-    timeval     TimeOut  = {0, 0};
+    int         nResult   = -1;
+    BOOL        bRetCode  = false;
+    int         nRetCode  = 0;
+    int         nConnIndex = 0;
+    IJG_Buffer* piBuffer  = NULL;
+    char*       pRecv     = NULL;
+    timeval     TimeOut   = {0, 0};
 
     JGLOG_PROCESS_ERROR(ppiRetBuffer);
     JGLOG_PROCESS_ERROR(pClientAddr);
@@ -105,6 +107,12 @@ int JUDPServer::Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* p
 
     nRetCode = recvfrom(m_nSocketFD, m_iRecvBuffer, JUDP_MAX_DATA_SIZE, 0, (sockaddr*)pClientAddr, pnClientAddrSize);
     JGLOG_PROCESS_ERROR(nRetCode != -1);
+
+    bRetCode = GetConnIndex(&nConnIndex, pClientAddr);
+    if (!bRetCode)
+    {
+
+    }
 
     piBuffer = JG_MemoryCreateBuffer(nRetCode);
     JGLOG_PROCESS_ERROR(piBuffer);
@@ -143,22 +151,9 @@ Exit0:
     return bResult;
 }
 
-BOOL JUDPServer::AddConnection(int *pnConnIndex, JUDPConnection* pConnection)
+BOOL JUDPServer::AddConnection(int *pnConnIndex, sockaddr_in *pAddr, size_t uAddrSize)
 {
-    BOOL bResult = false;
 
-    JGLOG_PROCESS_ERROR(pnConnIndex);
-    JGLOG_PROCESS_ERROR(pConnection);
-
-    m_nConnectionCount++;
-
-    m_ConnectionsMap[m_nConnectionCount] = pConnection;
-
-    *pnConnIndex = m_nConnectionCount;
-
-    bResult = true;
-Exit0:
-    return bResult;
 }
 
 void JUDPServer::RemoveConnection(int nConnIndex)
@@ -207,4 +202,23 @@ void JUDPServer::ClearConnections()
 
         m_ConnectionsMap.erase(m_ConnectionsMapFind++);
     }
+}
+
+BOOL JUDPServer::GetConnIndex(int *pnConnIndex, sockaddr_in *pAddr)
+{
+    BOOL bResult = false;
+
+    JGLOG_PROCESS_ERROR(pnConnIndex);
+    JGLOG_PROCESS_ERROR(pAddr);
+
+    m_ConnectionsInfo.Addr = *pAddr;
+
+    m_ConnectionsInfoSetFind = m_ConnectionsInfoSet.find(m_ConnectionsInfo);
+    JG_PROCESS_ERROR(m_ConnectionsInfoSetFind == m_ConnectionsInfoSet.end());
+
+    *pnConnIndex = m_ConnectionsInfoSetFind->nConnIndex;
+
+    bResult = true;
+Exit0:
+    return bResult;
 }
