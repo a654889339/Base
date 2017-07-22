@@ -1,10 +1,23 @@
 ﻿#include "JUDPServer.h"
+#include "JGS_Client_Protocol.h"
+
+#define REGISTER_UDP_PARSE_FUNC(ProtocolID, FuncName, ProtocolSize) \
+{m_ProcessUDPProtocolFunc[ProtocolID] = FuncName;                   \
+    m_uUDPProtocolSize[ProtocolID] = ProtocolSize;}
+
 
 JUDPServer::JUDPServer()
 {
     m_byLowByteVersion   = 1;
     m_byHightByteVersion = 1;
     m_nConnectionCount   = 0;
+    m_bWorkFlag          = false;
+
+    memset(m_ProcessUDPProtocolFunc, 0, sizeof(m_ProcessUDPProtocolFunc));
+    memset(m_uUDPProtocolSize, 0, sizeof(m_uUDPProtocolSize));
+
+    REGISTER_UDP_PARSE_FUNC(euptUDPReliable, &JUDPServer::OnUDPReliable, sizeof(EXTERNAL_RELIABLE_PROTOCOL_HEADER));
+    REGISTER_UDP_PARSE_FUNC(euptUDPUnreliable, &JUDPServer::OnUDPUnreliable, sizeof(EXTERNAL_UNRELIABLE_PROTOCOL_HEADER));
 }
 
 JUDPServer::~JUDPServer()
@@ -26,6 +39,12 @@ void JUDPServer::UnInit()
 {
     ClearConnections();
     WSACleanup();
+}
+
+void JUDPServer::Activate()
+{
+    ProcessPackage();
+    ProcessConnections();
 }
 
 BOOL JUDPServer::Listen(char* pszIP, int nPort)
@@ -60,6 +79,8 @@ BOOL JUDPServer::Listen(char* pszIP, int nPort)
     nRetCode = bind(m_nSocketFD, (sockaddr*)&m_ServerAddr, sizeof(m_ServerAddr));
     JGLOG_PROCESS_ERROR(nRetCode != SOCKET_ERROR);
 
+    m_bWorkFlag = true;
+
     bResult = true;
 Exit0:
     if (!bResult)
@@ -81,7 +102,6 @@ int JUDPServer::Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* p
     int         nRetCode  = 0;
     int         nConnIndex = 0;
     IJG_Buffer* piBuffer  = NULL;
-    char*       pRecv     = NULL;
     timeval     TimeOut   = {0, 0};
 
     JGLOG_PROCESS_ERROR(ppiRetBuffer);
@@ -96,7 +116,7 @@ int JUDPServer::Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* p
     nRetCode = select(m_nSocketFD + 1, &m_ReadFDSet, NULL, NULL, &TimeOut);
     if (nRetCode == 0)
     {
-        nResult = -2;
+        nResult = 2;
         goto Exit0;
     }
     else if (nRetCode < 0)
@@ -108,19 +128,10 @@ int JUDPServer::Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* p
     nRetCode = recvfrom(m_nSocketFD, m_iRecvBuffer, JUDP_MAX_DATA_SIZE, 0, (sockaddr*)pClientAddr, pnClientAddrSize);
     JGLOG_PROCESS_ERROR(nRetCode != -1);
 
-    bRetCode = GetConnIndex(&nConnIndex, pClientAddr);
-    if (!bRetCode)
-    {
-
-    }
-
     piBuffer = JG_MemoryCreateBuffer(nRetCode);
     JGLOG_PROCESS_ERROR(piBuffer);
 
-    pRecv = (char*)piBuffer->GetData();
-    JGLOG_PROCESS_ERROR(pRecv);
-
-    memcpy(pRecv, m_iRecvBuffer, nRetCode);
+    memcpy(piBuffer->GetData(), m_iRecvBuffer, nRetCode);
 
     *ppiRetBuffer = piBuffer;
 
@@ -132,19 +143,43 @@ Exit0:
     return nResult;
 }
 
-BOOL JUDPServer::Send(int nConnIndex, IJG_Buffer* piBuffer)
+BOOL JUDPServer::Send(int nConnIndex, BYTE* pbyData, size_t uSize)
 {
     BOOL            bResult      = false;
-    int             nRetCode     = 0;
+    BOOL            bRetCode     = false;
     JUDPConnection* pConnection  = NULL;
 
-    JGLOG_PROCESS_ERROR(piBuffer);
+    JGLOG_PROCESS_ERROR(pbyData);
 
     pConnection = GetConnection(nConnIndex);
     JG_PROCESS_ERROR(pConnection);
 
-    nRetCode = sendto(m_nSocketFD, (char *)piBuffer->GetData(), piBuffer->GetSize(), 0, pConnection->GetSockAddr(), pConnection->GetSockAddrSize());
-    JG_PROCESS_ERROR(nRetCode == piBuffer->GetSize());
+    bRetCode = pConnection->Send(pbyData, uSize);
+    JGLOG_PROCESS_ERROR(bRetCode);
+
+    bResult = true;
+Exit0:
+    return bResult;
+}
+
+BOOL JUDPServer::Broadcast(BYTE* pbyData, size_t uSize)
+{
+    BOOL            bResult      = false;
+    BOOL            bRetCode     = false;
+    JUDPConnection* pConnection  = NULL;
+
+    JGLOG_PROCESS_ERROR(pbyData);
+
+    for (m_ConnectionsMapFind = m_ConnectionsMap.begin(); m_ConnectionsMapFind != m_ConnectionsMap.end(); ++m_ConnectionsMapFind)
+    {
+        pConnection = &m_ConnectionsMapFind->second;
+
+        bRetCode = pConnection->Send(pbyData, uSize);
+        if (!bRetCode)
+        {
+            JGLOG_PROCESS_ERROR(false);
+        }
+    }
 
     bResult = true;
 Exit0:
@@ -153,7 +188,31 @@ Exit0:
 
 BOOL JUDPServer::AddConnection(int *pnConnIndex, sockaddr_in *pAddr, size_t uAddrSize)
 {
+    BOOL            bResult     = false;
+    JUDPConnection *pConnection = NULL;
 
+    JGLOG_PROCESS_ERROR(pnConnIndex);
+    JGLOG_PROCESS_ERROR(pAddr);
+
+    m_ConnectionsInfo.Addr = *pAddr;
+
+    m_ConnectionsInfoSetFind = m_ConnectionsInfoSet.find(m_ConnectionsInfo);
+    JGLOG_PROCESS_ERROR(m_ConnectionsInfoSetFind == m_ConnectionsInfoSet.end());
+
+    m_ConnectionsInfo.nConnIndex = ++m_nConnectionCount;
+    m_ConnectionsInfo.uAddrSize  = uAddrSize;
+
+    m_ConnectionsInfoSet.insert(m_ConnectionsInfo);
+
+    *pnConnIndex = m_ConnectionsInfo.nConnIndex;
+
+    pConnection = &m_ConnectionsMap[m_ConnectionsInfo.nConnIndex];
+
+    pConnection->Init(pAddr, m_nSocketFD);
+
+    bResult = true;
+Exit0:
+    return bResult;
 }
 
 void JUDPServer::RemoveConnection(int nConnIndex)
@@ -163,8 +222,15 @@ void JUDPServer::RemoveConnection(int nConnIndex)
     m_ConnectionsMapFind = m_ConnectionsMap.find(nConnIndex);
     JG_PROCESS_SUCCESS(m_ConnectionsMapFind == m_ConnectionsMap.end());
 
-    pConnection = m_ConnectionsMapFind->second;
+    pConnection = &m_ConnectionsMapFind->second;
     JGLOG_PROCESS_ERROR(pConnection);
+
+    m_ConnectionsInfo.Addr = pConnection->m_ConnectionAddr;
+
+    m_ConnectionsInfoSetFind = m_ConnectionsInfoSet.find(m_ConnectionsInfo);
+    JGLOG_PROCESS_ERROR(m_ConnectionsInfoSetFind != m_ConnectionsInfoSet.end());
+
+    m_ConnectionsInfoSet.erase(m_ConnectionsInfoSetFind);
 
     pConnection->UnInit();
 
@@ -182,7 +248,7 @@ JUDPConnection* JUDPServer::GetConnection(int nConnIndex)
     m_ConnectionsMapFind = m_ConnectionsMap.find(nConnIndex);
     JG_PROCESS_ERROR(m_ConnectionsMapFind != m_ConnectionsMap.end());
 
-    pConnection = m_ConnectionsMapFind->second;
+    pConnection = &m_ConnectionsMapFind->second;
 
 Exit0:
     return pConnection;
@@ -194,7 +260,7 @@ void JUDPServer::ClearConnections()
 
     for (m_ConnectionsMapFind = m_ConnectionsMap.begin(); m_ConnectionsMapFind != m_ConnectionsMap.end();)
     {
-        pConnection = m_ConnectionsMapFind->second;
+        pConnection = &m_ConnectionsMapFind->second;
         if (pConnection)
         {
             pConnection->UnInit();
@@ -202,6 +268,8 @@ void JUDPServer::ClearConnections()
 
         m_ConnectionsMap.erase(m_ConnectionsMapFind++);
     }
+
+    m_ConnectionsInfoSet.clear();
 }
 
 BOOL JUDPServer::GetConnIndex(int *pnConnIndex, sockaddr_in *pAddr)
@@ -221,4 +289,108 @@ BOOL JUDPServer::GetConnIndex(int *pnConnIndex, sockaddr_in *pAddr)
     bResult = true;
 Exit0:
     return bResult;
+}
+
+BOOL JUDPServer::ProcessPackage()
+{
+    BOOL                      bResult       = false;
+    BOOL                      bRetCode      = false;
+    int                       nRetCode      = 0;
+    IJG_Buffer*               piBuffer      = NULL;
+    int                       nConnIndex    = 0;
+    JUDPConnection*           pConnection   = NULL;
+    UDP_PROTOCOL_HEADER*      pUDPHear      = NULL;
+    int                       nAddrSize     = 0;
+    PROCESS_UDP_PROTOCOL_FUNC Func          = NULL;
+    size_t                    uDataSize     = 0;
+    sockaddr_in               ConnAddr;
+
+    JG_PROCESS_ERROR(m_bWorkFlag);
+
+    nRetCode = Recv(&piBuffer, &ConnAddr, &nAddrSize);
+    JG_PROCESS_SUCCESS(nRetCode == 2);
+    if (nRetCode != 1)
+    {
+        JGLogPrintf(JGLOG_ERR, "[ProcessPackage] Recv failed, Error Code = %d", nRetCode);
+        m_bWorkFlag = false;
+        goto Exit0;
+    }
+
+    JGLOG_PROCESS_ERROR(piBuffer);
+
+    bRetCode = GetConnIndex(&nConnIndex, &ConnAddr);
+    if (!bRetCode)
+    {
+        bRetCode = AddConnection(&nConnIndex, &ConnAddr, nAddrSize);
+        JGLOG_PROCESS_ERROR(bRetCode);
+    }
+
+    pConnection = GetConnection(nConnIndex);
+    JGLOG_PROCESS_ERROR(pConnection);
+
+    pUDPHear = (UDP_PROTOCOL_HEADER*)piBuffer->GetData();
+    JGLOG_PROCESS_ERROR(pUDPHear);
+    JGLOG_PROCESS_ERROR(pUDPHear->byUDPProtocol > euptUDPProtocolBegin && pUDPHear->byUDPProtocol < euptUDPProtocolEnd);
+
+    uDataSize = piBuffer->GetSize();
+    JGLOG_PROCESS_ERROR(uDataSize >= m_uUDPProtocolSize[pUDPHear->byUDPProtocol]);
+
+    switch (pUDPHear->byUDPProtocol)
+    {
+    case euptUDPACK:
+        pConnection->OnAckPacket((BYTE*)pUDPHear, uDataSize);
+        goto Exit1;
+        break;
+
+    case euptUDPReliable:
+        pConnection->OnUDPReliable((BYTE*)pUDPHear, uDataSize);
+        break;
+    }
+
+    Func = m_ProcessUDPProtocolFunc[pUDPHear->byUDPProtocol];
+    JGLOG_PROCESS_ERROR(Func);
+
+    (this->*Func)(nConnIndex, (BYTE*)pUDPHear, uDataSize);
+
+Exit1:
+    bResult = true;
+Exit0:
+    if (!bResult)
+    {
+        if (m_bWorkFlag)
+        {
+            if (nConnIndex)
+            {
+                RemoveConnection(nConnIndex);
+            }
+        }
+    }
+    return bResult;
+}
+
+void JUDPServer::ProcessConnections()
+{
+    JG_PROCESS_ERROR(m_bWorkFlag);
+
+    JUDPConnection* pConnection = NULL;
+    for (m_ConnectionsMapFind = m_ConnectionsMap.begin(); m_ConnectionsMapFind != m_ConnectionsMap.end(); ++m_ConnectionsMapFind)
+    {
+        pConnection = &(m_ConnectionsMapFind->second);
+        JGLOG_PROCESS_ERROR(pConnection);
+
+        pConnection->Activate();
+    }
+
+Exit0:
+    return;
+}
+
+void JUDPServer::OnUDPReliable(int nConnIndex, BYTE* pbyData, size_t uSize)
+{
+
+}
+
+void JUDPServer::OnUDPUnreliable(int nConnIndex, BYTE* pbyData, size_t uSize)
+{
+
 }

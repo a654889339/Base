@@ -66,6 +66,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="JBaseDef.h" />
+    <ClInclude Include="JGS_Client_Protocol.h" />
     <ClInclude Include="JG_Memory.h" />
     <ClInclude Include="JTestUDPClient.h" />
     <ClInclude Include="JTestUDPDef.h" />

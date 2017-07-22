@@ -21,9 +21,10 @@ public:
     BOOL Listen(char* pszIP, int nPort);
     void Close();
 
-    // return -1: error, 0: timeout, 1: success, -2: non-block && no data && success
+    // return -1: error, 0: timeout, 1: success, 2: non-block && no data && success
     int  Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* pnClientAddrSize);
-    BOOL Send(int nConnIndex, IJG_Buffer* piBuffer);
+    BOOL Send(int nConnIndex, BYTE* pbyData, size_t uSize);
+    BOOL Broadcast(BYTE* pbyData, size_t uSize);
 
     BOOL AddConnection(int *pnConnIndex, sockaddr_in *pAddr, size_t uAddrSize);
     void RemoveConnection(int nConnIndex);
@@ -32,6 +33,16 @@ public:
 
 private:
     BOOL GetConnIndex(int *pnConnIndex, sockaddr_in *pAddr);
+    BOOL ProcessPackage();
+    void ProcessConnections();
+
+    void OnUDPReliable(int nConnIndex, BYTE* pbyData, size_t uSize);
+    void OnUDPUnreliable(int nConnIndex, BYTE* pbyData, size_t uSize);
+
+private:
+    typedef void (JUDPServer::*PROCESS_UDP_PROTOCOL_FUNC)(int nConnIndex, BYTE* pbyData, size_t uSize);
+    PROCESS_UDP_PROTOCOL_FUNC m_ProcessUDPProtocolFunc[euptUDPProtocolEnd];
+    size_t                    m_uUDPProtocolSize[euptUDPProtocolEnd];
 
     WSADATA     m_WSAData;
     BYTE        m_byLowByteVersion;
@@ -39,12 +50,13 @@ private:
     int         m_nSocketFD;
     sockaddr_in m_ServerAddr;
     int         m_nPort;
+    BOOL        m_bWorkFlag;
 
     fd_set      m_ReadFDSet;
     char        m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
 
 private:
-    typedef std::map<int, JUDPConnection*> JUDP_CONNECTIONS_MAP;
+    typedef std::map<int, JUDPConnection> JUDP_CONNECTIONS_MAP;
     JUDP_CONNECTIONS_MAP                   m_ConnectionsMap;
     JUDP_CONNECTIONS_MAP::iterator         m_ConnectionsMapFind;
 

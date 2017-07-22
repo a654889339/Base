@@ -7,51 +7,43 @@
 #include "JUDPBaseDef.h"
 #include "JG_Memory.h"
 
-typedef void (* JUDPParseCallBack)(int nConnIndex, BYTE* pbyData, size_t uSize);
-
 class JUDPConnection
 {
 public:
     JUDPConnection();
     virtual ~JUDPConnection();
 
-    BOOL Init(int nConnIndex, sockaddr_in* pAddr, int nSocketFD, JUDPParseCallBack Func);
+    BOOL Init(sockaddr_in* pAddr, int nSocketFD);
     void UnInit();
 
     void Activate();
 
-    BOOL SendReliablePacket(IJG_Buffer* piBuffer);
-    void Send(IJG_Buffer* piBuffer);
-    BOOL ProcessPackage(int nConnIndex, BYTE* pbyData, size_t uSize);
+    BOOL Send(BYTE* pbyData, size_t uSize);
 
-    sockaddr* GetSockAddr();
-    size_t    GetSockAddrSize();
+    void OnAckPacket(BYTE* pbyData, size_t uSize);
+    void OnUDPReliable(BYTE* pbyData, size_t uSize);
+    void OnUDPUnreliable(BYTE* pbyData, size_t uSize);
 
 private:
+    BOOL SendUnreliablePacket(BYTE* pbyData, size_t uSize);
+
     void RetransmitPacket();
-    BOOL AddNotAckPacket(IJG_Buffer* piBuffer);
+    BOOL AddNotAckPacket(BYTE* pbyData, size_t uSize);
     BOOL AddRecvPacket(DWORD dwPacketID, BYTE* pbyData, size_t uSize);
 
     BOOL DoAckPacket(DWORD dwPacketID);
-    void OnAckPacket(int nConnIndex, BYTE* pbyData, size_t uSize);
-    void OnUDPReliable(int nConnIndex, BYTE* pbyData, size_t uSize);
-    void OnUDPUnreliable(int nConnIndex, BYTE* pbyData, size_t uSize);
 
-private:
-    typedef void (JUDPConnection::*PROCESS_UDP_PROTOCOL_FUNC)(int nConnIndex, BYTE* pbyData, size_t uSize);
-    PROCESS_UDP_PROTOCOL_FUNC m_ProcessUDPProtocolFunc[euptUDPProtocolEnd];
-    size_t                    m_uUDPProtocolSize[euptUDPProtocolEnd];
-
+public:
     sockaddr_in       m_ConnectionAddr;
     int               m_nConnectionAddrSize;
-    int               m_nConnIndex;
+
+private:
     int               m_nSocketFD;
     JUDP_STATUS_TYPE  m_eUDPStatus;
     size_t            m_uSendWindowSize;
-    JUDPParseCallBack m_ParseCallBack;
 
-    fd_set      m_ReadFDSet;
-    char        m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
+    fd_set            m_ReadFDSet;
+    char              m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
 
 private:    // maintain for reliable udp
     DWORD       m_dwSendPacketID;

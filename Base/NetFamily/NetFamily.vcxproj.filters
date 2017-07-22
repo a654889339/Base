@@ -47,6 +47,9 @@
     <ClInclude Include="JUDPConnection.h">
       <Filter>JUDPServer</Filter>
     </ClInclude>
+    <ClInclude Include="JGS_Client_Protocol.h">
+      <Filter>Include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="JG_Memory.cpp">
