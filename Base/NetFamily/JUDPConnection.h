@@ -18,13 +18,19 @@ public:
 
     void Activate();
 
+    void SetTimeOut();
+    void SetClose();
+    BOOL IsInvalid();
     BOOL Send(BYTE* pbyData, size_t uSize);
+    IJG_Buffer* GetRecvPacket();
 
     void OnAckPacket(BYTE* pbyData, size_t uSize);
     void OnUDPReliable(BYTE* pbyData, size_t uSize);
     void OnUDPUnreliable(BYTE* pbyData, size_t uSize);
 
+
 private:
+    void Close();
     BOOL SendUnreliablePacket(BYTE* pbyData, size_t uSize);
 
     void RetransmitPacket();

@@ -1,9 +1,21 @@
 #include "JUDPClient.h"
 
+#define REGISTER_UDP_PARSE_FUNC(ProtocolID, FuncName, ProtocolSize) \
+{m_ProcessUDPProtocolFunc[ProtocolID] = FuncName;                   \
+    m_uUDPProtocolSize[ProtocolID] = ProtocolSize;}
+
+
 JUDPClient::JUDPClient()
 {
     m_byLowByteVersion   = 1;
     m_byHightByteVersion = 1;
+    m_bWorkFlag          = false;
+
+    memset(m_ProcessUDPProtocolFunc, 0, sizeof(m_ProcessUDPProtocolFunc));
+    memset(m_uUDPProtocolSize, 0, sizeof(m_uUDPProtocolSize));
+
+    REGISTER_UDP_PARSE_FUNC(euptUDPReliable, &JUDPClient::OnUDPReliable, sizeof(EXTERNAL_RELIABLE_PROTOCOL_HEADER));
+    REGISTER_UDP_PARSE_FUNC(euptUDPUnreliable, &JUDPClient::OnUDPUnreliable, sizeof(EXTERNAL_UNRELIABLE_PROTOCOL_HEADER));
 }
 
 JUDPClient::~JUDPClient()
@@ -15,7 +27,7 @@ BOOL JUDPClient::Init()
 {
     BOOL bResult  = false;
     BOOL bRetCode = false;
-    
+
     bResult = true;
 //Exit0:
     return bResult;
@@ -23,11 +35,19 @@ BOOL JUDPClient::Init()
 
 void JUDPClient::UnInit()
 {
+    Close();
+}
+
+void JUDPClient::Activate()
+{
+    ProcessPackage();
+    ProcessConnection();
 }
 
 BOOL JUDPClient::Connect(char* pszIP, int nPort, char* pszLocalIP,int nLocalPort)
 {
     BOOL bResult  = false;
+    BOOL bRetCode = false;
     int  nRetCode = 0;
     LONG lRetCode = 1;
 
@@ -68,6 +88,11 @@ BOOL JUDPClient::Connect(char* pszIP, int nPort, char* pszLocalIP,int nLocalPort
     nRetCode = ioctlsocket(m_nSocketFD, FIONBIO, (unsigned long *)&lRetCode);//设置成非阻塞模式。
     JGLOG_PROCESS_ERROR(nRetCode != SOCKET_ERROR)
 
+    bRetCode = m_Connection.Init(&m_ServerAddr, m_nSocketFD);
+    JGLOG_PROCESS_ERROR(bRetCode);
+
+    m_bWorkFlag = true;
+
     bResult = true;
 Exit0:
     return bResult;
@@ -75,6 +100,8 @@ Exit0:
 
 void JUDPClient::Close()
 {
+    m_bWorkFlag = false;
+    m_Connection.UnInit();
     closesocket(m_nSocketFD);
 }
 
@@ -121,16 +148,129 @@ Exit0:
     return bResult;
 }
 
-BOOL JUDPClient::Send(char* pszSendBuf, size_t uSendSize)
+BOOL JUDPClient::Send(BYTE* piBuffer, size_t uSize)
 {
     BOOL bResult  = false;
-    int  nRetCode = 0;
+    BOOL bRetCode = 0;
 
-    JGLOG_PROCESS_ERROR(pszSendBuf);
+    JGLOG_PROCESS_ERROR(piBuffer);
 
-    nRetCode = send(m_nSocketFD, pszSendBuf, uSendSize, 0);
+    bRetCode = m_Connection.Send(piBuffer, uSize);
+    JGLOG_PROCESS_ERROR(bRetCode);
 
     bResult = true;
 Exit0:
+    if (!bResult)
+    {
+        m_bWorkFlag = false;
+    }
     return bResult;
+}
+
+void JUDPClient::ProcessPackage()
+{
+    BOOL                      bResult    = false;
+    BOOL                      bRetCode   = false;
+    int                       nRecvCode  = 0;
+    IJG_Buffer*               piBuffer   = NULL;
+    size_t                    uDataSize  = 0;
+    UDP_PROTOCOL_HEADER*      pUDPHeader = NULL;
+    PROCESS_UDP_PROTOCOL_FUNC Func       = NULL;
+
+    JG_PROCESS_ERROR(m_bWorkFlag);
+
+    while (true)
+    {
+        JG_COM_RELEASE(piBuffer);
+
+        bRetCode = Recv(&piBuffer);
+        JGLOG_PROCESS_ERROR(bRetCode);
+        JGLOG_PROCESS_ERROR(piBuffer);
+
+        uDataSize = piBuffer->GetSize();
+        JG_PROCESS_SUCCESS(uDataSize == 0);
+
+        switch (pUDPHeader->byUDPProtocol)
+        {
+        case euptUDPACK:
+            m_Connection.OnAckPacket((BYTE*)pUDPHeader, uDataSize);
+            continue;
+            break;
+
+        case euptUDPReliable:
+            m_Connection.OnUDPReliable((BYTE*)pUDPHeader, uDataSize);
+            continue;
+            break;
+        }
+
+        Func = m_ProcessUDPProtocolFunc[pUDPHeader->byUDPProtocol];
+        JGLOG_PROCESS_ERROR(Func);
+
+        (this->*Func)((BYTE*)pUDPHeader, uDataSize);
+    }
+
+Exit1:
+    bResult = true;
+Exit0:
+    JG_COM_RELEASE(piBuffer);
+    if (!bResult)
+    {
+        m_bWorkFlag = false;
+    }
+    return;
+}
+
+void JUDPClient::ProcessConnection()
+{
+    BOOL                      bResult       = false;
+    IJG_Buffer*               piBuffer      = NULL;
+    UDP_PROTOCOL_HEADER*      pUDPHeader    = NULL;
+    size_t                    uDataSize     = 0;
+    PROCESS_UDP_PROTOCOL_FUNC Func          = NULL;
+
+    JG_PROCESS_ERROR(m_bWorkFlag);
+
+    m_Connection.Activate();
+
+    JGLOG_PROCESS_ERROR(m_Connection.IsInvalid());
+
+    while (true)
+    {
+        JG_COM_RELEASE(piBuffer);
+
+        piBuffer = m_Connection.GetRecvPacket();
+        if (piBuffer == NULL)
+            break;
+
+        pUDPHeader = (UDP_PROTOCOL_HEADER*)piBuffer->GetData();
+        JGLOG_PROCESS_ERROR(pUDPHeader);
+        JGLOG_PROCESS_ERROR(pUDPHeader->byUDPProtocol == euptUDPReliable);
+
+        uDataSize = piBuffer->GetSize();
+        JGLOG_PROCESS_ERROR(uDataSize >= m_uUDPProtocolSize[pUDPHeader->byUDPProtocol]);
+
+        Func = m_ProcessUDPProtocolFunc[pUDPHeader->byUDPProtocol];
+        JGLOG_PROCESS_ERROR(Func);
+
+        (this->*Func)((BYTE*)pUDPHeader, uDataSize);
+    }
+
+    bResult = true;
+Exit0:
+    JG_COM_RELEASE(piBuffer);
+    if (!bResult)
+    {
+        m_bWorkFlag = false;
+    }
+    return;
+}
+
+void JUDPClient::OnUDPReliable(BYTE* pbyData, size_t uSize)
+{
+
+}
+
+void JUDPClient::OnUDPUnreliable(BYTE* pbyData, size_t uSize)
+{
+
 }

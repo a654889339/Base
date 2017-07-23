@@ -21,17 +21,18 @@ public:
     BOOL Listen(char* pszIP, int nPort);
     void Close();
 
-    // return -1: error, 0: timeout, 1: success, 2: non-block && no data && success
-    int  Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* pnClientAddrSize);
     BOOL Send(int nConnIndex, BYTE* pbyData, size_t uSize);
     BOOL Broadcast(BYTE* pbyData, size_t uSize);
+
+private:
+    // return -1: error, 0: timeout, 1: success, 2: non-block && no data && success
+    int  Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* pnClientAddrSize);
 
     BOOL AddConnection(int *pnConnIndex, sockaddr_in *pAddr, size_t uAddrSize);
     void RemoveConnection(int nConnIndex);
     JUDPConnection* GetConnection(int nConnIndex);
     void ClearConnections();
 
-private:
     BOOL GetConnIndex(int *pnConnIndex, sockaddr_in *pAddr);
     BOOL ProcessPackage();
     void ProcessConnections();
@@ -56,6 +57,9 @@ private:
     char        m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
 
 private:
+    typedef std::set<int>                 JUDP_WAIT_CLOSE_CONNECTION_SET;
+    JUDP_WAIT_CLOSE_CONNECTION_SET        m_WaitCloseSet;
+
     typedef std::map<int, JUDPConnection> JUDP_CONNECTIONS_MAP;
     JUDP_CONNECTIONS_MAP                   m_ConnectionsMap;
     JUDP_CONNECTIONS_MAP::iterator         m_ConnectionsMapFind;

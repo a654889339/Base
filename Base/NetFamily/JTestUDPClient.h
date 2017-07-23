@@ -14,7 +14,6 @@ public:
     BOOL Init();
     void UnInit();
 
-    BOOL ProcessPackage();
     BOOL Run();
 
 private:

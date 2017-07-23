@@ -59,9 +59,7 @@ BOOL JTestUDPServer::Run()
     {
         m_Server.Activate();
 
-        ++nSendCount;
-
-        Request.nTestCount = nSendCount;
+        Request.nTestCount = ++nSendCount;
 
         bRetCode = m_Server.Broadcast((BYTE *)&Request, sizeof(S2C_TEST_REQUEST));
         JGLOG_PROCESS_ERROR(bRetCode);
