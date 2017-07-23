@@ -239,8 +239,7 @@ void JUDPClient::ProcessConnection()
         JG_COM_RELEASE(piBuffer);
 
         piBuffer = m_Connection.GetRecvPacket();
-        if (piBuffer == NULL)
-            break;
+        JG_PROCESS_SUCCESS(piBuffer == NULL);
 
         pUDPHeader = (UDP_PROTOCOL_HEADER*)piBuffer->GetData();
         JGLOG_PROCESS_ERROR(pUDPHeader);
@@ -255,6 +254,7 @@ void JUDPClient::ProcessConnection()
         (this->*Func)((BYTE*)pUDPHeader, uDataSize);
     }
 
+Exit1:
     bResult = true;
 Exit0:
     JG_COM_RELEASE(piBuffer);

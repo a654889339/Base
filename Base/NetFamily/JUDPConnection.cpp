@@ -26,8 +26,8 @@ BOOL JUDPConnection::Init(sockaddr_in* pAddr, int nSocketFD)
     BOOL bRetCode = false;
 
     JGLOG_PROCESS_ERROR(pAddr);
-    JGLOG_PROCESS_ERROR(!m_SendWindow.empty());
-    JGLOG_PROCESS_ERROR(!m_RecvWindow.empty());
+    JGLOG_PROCESS_ERROR(m_SendWindow.empty());
+    JGLOG_PROCESS_ERROR(m_RecvWindow.empty());
     JGLOG_PROCESS_ERROR(m_eUDPStatus == eustInvalid);
 
     m_ConnectionAddr      = *pAddr;
@@ -158,6 +158,7 @@ IJG_Buffer* JUDPConnection::GetRecvPacket()
 {
     IJG_Buffer* pRecvPacket = NULL;
 
+    JG_PROCESS_ERROR(m_eUDPStatus == eustEstablished);
     JG_PROCESS_ERROR(!m_RecvWindow.empty());
 
     m_RecvWindowFind = m_RecvWindow.begin();
@@ -213,6 +214,8 @@ void JUDPConnection::OnUDPReliable(BYTE* pbyData, size_t uSize)
     EXTERNAL_RELIABLE_PROTOCOL_HEADER* pReliable = (EXTERNAL_RELIABLE_PROTOCOL_HEADER*)pbyData;
     JNON_SEQUENCE_PACKET               RecvPack;
 
+    JG_PROCESS_ERROR(m_eUDPStatus == eustEstablished);
+
     DoAckPacket(pReliable->dwPacketID);
 
     bRetCode = AddRecvPacket(pReliable->dwPacketID, pbyData, uSize);
@@ -231,8 +234,10 @@ void JUDPConnection::OnUDPUnreliable(BYTE* pbyData, size_t uSize)
 {
     BOOL bResult = false;
 
+    JG_PROCESS_ERROR(m_eUDPStatus == eustEstablished);
+
     bResult = true;
-//Exit0:
+Exit0:
     if (!bResult)
     {
         m_eUDPStatus = eustError;
@@ -244,8 +249,6 @@ BOOL JUDPConnection::SendUnreliablePacket(BYTE* pbyData, size_t uSize)
 {
     BOOL bResult  = false;
     int  nRetCode = 0;
-
-    JG_PROCESS_ERROR(m_eUDPStatus == eustEstablished);
 
     JGLOG_PROCESS_ERROR(pbyData);
 
@@ -351,7 +354,7 @@ BOOL JUDPConnection::DoAckPacket(DWORD dwPacketID)
     BOOL                   bResult  = false;
     EXTERNAL_ACK_PROTOCOL  ACK;
 
-    ACK.dwPacketID    = dwPacketID;
+    ACK.dwPacketID = dwPacketID;
 
     SendUnreliablePacket((BYTE *)&ACK, sizeof(ACK));
 

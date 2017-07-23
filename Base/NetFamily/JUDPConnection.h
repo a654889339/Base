@@ -28,7 +28,6 @@ public:
     void OnUDPReliable(BYTE* pbyData, size_t uSize);
     void OnUDPUnreliable(BYTE* pbyData, size_t uSize);
 
-
 private:
     void Close();
     BOOL SendUnreliablePacket(BYTE* pbyData, size_t uSize);
