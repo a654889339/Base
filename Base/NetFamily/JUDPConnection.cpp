@@ -65,18 +65,16 @@ void JUDPConnection::Close()
     {
         pSend = &m_SendWindow.front();
 
-        m_SendWindow.pop_front();
-
         JG_COM_RELEASE(pSend->piBuffer);
+        m_SendWindow.pop_front();
     }
 
     for (m_RecvWindowFind = m_RecvWindow.begin(); m_RecvWindowFind != m_RecvWindow.end();)
     {
         RecvPacket = *m_RecvWindowFind;
 
-        m_RecvWindow.erase(m_RecvWindowFind++);
-
         JG_COM_RELEASE(RecvPacket.piBuffer);
+        m_RecvWindow.erase(m_RecvWindowFind++);
     }
 
     m_RecvWindow.clear();
@@ -85,9 +83,8 @@ void JUDPConnection::Close()
     {
         piBuffer = m_SendPacketDeque.front();
 
-        m_SendPacketDeque.pop_front();
-
         JG_COM_RELEASE(piBuffer);
+        m_SendPacketDeque.pop_front();
     }
 }
 

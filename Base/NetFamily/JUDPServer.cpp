@@ -166,7 +166,6 @@ int JUDPServer::Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* p
 
     (*ppiRetBuffer)->AddRef();
 
-
     nResult = 1;
 Exit0:
     JG_COM_RELEASE(piBuffer);
@@ -200,7 +199,6 @@ BOOL JUDPServer::Broadcast(IJG_Buffer* piBuffer)
 {
     BOOL            bResult      = false;
     BOOL            bRetCode     = false;
-    BOOL            bSendFlag    = true;
     JUDPConnection* pConnection  = NULL;
 
     JGLOG_PROCESS_ERROR(piBuffer);
@@ -213,17 +211,10 @@ BOOL JUDPServer::Broadcast(IJG_Buffer* piBuffer)
             bRetCode = pConnection->Send(piBuffer);
             if (!bRetCode)
             {
-                bSendFlag = false;
                 pConnection->SetClose();
             }
         }
-        else
-        {
-            bSendFlag = false;
-        }
     }
-
-    JG_PROCESS_ERROR(bSendFlag);
 
     bResult = true;
 Exit0:
@@ -359,8 +350,7 @@ BOOL JUDPServer::ProcessPackage()
         JG_PROCESS_SUCCESS(nRetCode == 2);
         if (nRetCode != 1)
         {
-            JGLogPrintf(JGLOG_ERR, "[ProcessPackage] Recv failed, Error Code = %d", nRetCode);
-            m_bWorkFlag = false;
+            JGLogPrintf(JGLOG_ERR, "[ProcessPackage] Recv failed, Error Code = %d\n", nRetCode);
             goto Exit0;
         }
 

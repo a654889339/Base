@@ -19,10 +19,9 @@ public:
 
     BOOL Connect(char* pszIP, int nPort, char* pszLocalIP, int nLocalPort);
 
-    BOOL Send(IJG_Buffer* piBuffer);
-
 private:
     int  Recv(IJG_Buffer **ppiRetBuffer);
+    BOOL Send(IJG_Buffer* piBuffer);
     void Close();
 
     void ProcessPackage();
@@ -43,6 +42,9 @@ private:    // process reliable protocol
     size_t                         m_uReliableProtocolSize[s2c_reliable_protocol_end];
 
     void OnReliableTestRequest(BYTE* pbyData, size_t uSize);
+
+public:
+    BOOL DoReliableTestRespond(int nTestCount);
 
 private:    // process unreliable protocol
     typedef void (JUDPClient::*PROCESS_UNRELIABLE_PROTOCOL_FUNC)(BYTE* pbyData, size_t uSize);

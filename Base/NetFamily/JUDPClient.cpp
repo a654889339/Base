@@ -348,6 +348,34 @@ void JUDPClient::OnReliableTestRequest(BYTE* pbyData, size_t uSize)
     S2C_RELIABLE_TEST_REQUEST* pRequest = (S2C_RELIABLE_TEST_REQUEST *)pbyData;
 
     JGLogPrintf(JGLOG_INFO, "[OnReliableTestRequest] %d\n", pRequest->nTestCount);
+
+    DoReliableTestRespond(pRequest->nTestCount);
+}
+
+BOOL JUDPClient::DoReliableTestRespond(int nTestCount)
+{
+    BOOL                       bResult      = false;
+    BOOL                       bRetCode     = false;
+    IJG_Buffer*                piBuffer     = NULL;
+    C2S_RELIABLE_TEST_RESPOND* pRespond     = NULL;
+
+    piBuffer = JG_MemoryCreateBuffer(sizeof(C2S_RELIABLE_TEST_RESPOND));
+    JGLOG_PROCESS_ERROR(piBuffer);
+
+    pRespond = (C2S_RELIABLE_TEST_RESPOND *)piBuffer->GetData();
+    JGLOG_PROCESS_ERROR(pRespond);
+
+    pRespond->byUDPProtocol = euptUDPReliable;
+    pRespond->byProtocolID  = c2s_reliable_test_respond;
+    pRespond->nTestCount    = nTestCount;
+
+    bRetCode = Send(piBuffer);
+    JGLOG_PROCESS_ERROR(bRetCode);
+
+    bResult = true;
+Exit0:
+    JG_COM_RELEASE(piBuffer);
+    return bResult;
 }
 
 // --------------------------------------------------------------------------

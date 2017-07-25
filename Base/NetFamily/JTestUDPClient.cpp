@@ -45,38 +45,20 @@ void JTestUDPClient::UnInit()
 BOOL JTestUDPClient::Run()
 {
     BOOL              bResult      = false;
-    BOOL              bRetCode     = false;
-    int               nSendCount   = 0;
-    time_t            nTimeNow     = time(NULL);
-    IJG_Buffer*       piBuffer     = NULL;
-    C2S_RELIABLE_TEST_RESPOND* pRespond     = NULL;
-
+    BOOL              bFirst       = true;
     while (true)
     {
-        nTimeNow = time(NULL);
-
         m_Client.Activate();
-
-        JG_COM_RELEASE(piBuffer);
-
-        piBuffer = JG_MemoryCreateBuffer(sizeof(C2S_RELIABLE_TEST_RESPOND));
-        JGLOG_PROCESS_ERROR(piBuffer);
-
-        pRespond = (C2S_RELIABLE_TEST_RESPOND *)piBuffer->GetData();
-        JGLOG_PROCESS_ERROR(pRespond);
-
-        pRespond->byUDPProtocol = euptUDPReliable;
-        pRespond->byProtocolID  = c2s_reliable_test_respond;
-        pRespond->nTestCount    = ++nSendCount;
-
-        bRetCode = m_Client.Send(piBuffer);
-        JGLOG_PROCESS_ERROR(bRetCode);
-
         JGThread_Sleep(10);
+
+        if (bFirst)
+        {
+            bFirst = false;
+            m_Client.DoReliableTestRespond(123); //随便发个包，不然服务器检测不到。
+        }
     }
 
     bResult = true;
-Exit0:
-    JG_COM_RELEASE(piBuffer);
+//Exit0:
     return bResult;
 }

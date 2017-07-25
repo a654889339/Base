@@ -50,10 +50,10 @@ void JTestUDPServer::UnInit()
 
 BOOL JTestUDPServer::Run()
 {
-    BOOL                bResult         = false;
-    BOOL                bRetCode        = false;
-    int                 nSendCount      = 0;
-    IJG_Buffer*         piBuffer        = NULL;
+    BOOL                         bResult         = false;
+    BOOL                         bRetCode        = false;
+    int                          nSendCount      = 0;
+    IJG_Buffer*                  piBuffer        = NULL;
     S2C_RELIABLE_TEST_REQUEST*   pRequest        = NULL;
 
     while (true)
