@@ -39,12 +39,6 @@ BOOL JUDPConnection::Init(sockaddr_in* pAddr, int nSocketFD)
     m_eUDPStatus          = eustEstablished;
     m_uSendWindowSize     = JUDP_WINDOW_DEFAULT_SIZE;
 
-#ifdef WIN32
-    memset(&m_ConnectionAddr, 0, sizeof(m_ConnectionAddr));
-#else
-    bzero(&m_ConnectionAddr, sizeof(m_ConnectionAddr));
-#endif
-
     bResult = true;
 Exit0:
     if (!bResult)
@@ -61,10 +55,11 @@ void JUDPConnection::UnInit()
 
 void JUDPConnection::Close()
 {
-    JNOT_ACK_PACKET*      pSend = NULL;
+    IJG_Buffer*           piBuffer = NULL;
+    JNOT_ACK_PACKET*      pSend    = NULL;
     JNON_SEQUENCE_PACKET  RecvPacket;
 
-    m_eUDPStatus = eustInvalid;
+    m_eUDPStatus = eustDisable;
 
     while (!m_SendWindow.empty())
     {
@@ -85,6 +80,15 @@ void JUDPConnection::Close()
     }
 
     m_RecvWindow.clear();
+
+    while (!m_SendPacketDeque.empty())
+    {
+        piBuffer = m_SendPacketDeque.front();
+
+        m_SendPacketDeque.pop_front();
+
+        JG_COM_RELEASE(piBuffer);
+    }
 }
 
 void JUDPConnection::Activate()
@@ -117,12 +121,12 @@ Exit0:
     return;
 }
 
-BOOL JUDPConnection::IsInvalid()
+BOOL JUDPConnection::IsEnable()
 {
-    return m_eUDPStatus == eustInvalid;
+    return m_eUDPStatus != eustDisable;
 }
 
-BOOL JUDPConnection::Send(BYTE* pbyData, size_t uSize)
+BOOL JUDPConnection::Send(IJG_Buffer* piBuffer)
 {
     BOOL                 bResult  = false;
     BOOL                 bRetCode = false;
@@ -131,19 +135,18 @@ BOOL JUDPConnection::Send(BYTE* pbyData, size_t uSize)
 
     JG_PROCESS_ERROR(m_eUDPStatus == eustEstablished);
 
-    JGLOG_PROCESS_ERROR(pbyData);
+    JGLOG_PROCESS_ERROR(piBuffer);
 
-    pHeader = (UDP_PROTOCOL_HEADER*)pbyData;
+    pHeader = (UDP_PROTOCOL_HEADER*)piBuffer->GetData();
     JGLOG_PROCESS_ERROR(pHeader);
 
     if (pHeader->byUDPProtocol == euptUDPReliable)
     {
-        bRetCode = AddNotAckPacket(pbyData, uSize);
+        bRetCode = AddNotAckPacket(piBuffer);
         JGLOG_PROCESS_ERROR(bRetCode);
     }
 
-    bRetCode = SendUnreliablePacket(pbyData, uSize);
-    JGLOG_PROCESS_ERROR(bRetCode);
+    SendUnreliablePacket(piBuffer);
 
     bResult = true;
 Exit0:
@@ -175,6 +178,21 @@ Exit0:
     return pRecvPacket;
 }
 
+IJG_Buffer* JUDPConnection::GetSendPacket()
+{
+    IJG_Buffer* pSendPacket = NULL;
+
+    JG_PROCESS_ERROR(m_eUDPStatus == eustEstablished);
+    JG_PROCESS_ERROR(!m_SendPacketDeque.empty());
+
+    pSendPacket = m_SendPacketDeque.front();
+
+    m_SendPacketDeque.pop_front();
+
+Exit0:
+    return pSendPacket;
+}
+
 void JUDPConnection::OnAckPacket(BYTE* pbyData, size_t uSize)
 {
     BOOL                   bResult  = false;
@@ -192,9 +210,8 @@ void JUDPConnection::OnAckPacket(BYTE* pbyData, size_t uSize)
 
         JG_PROCESS_SUCCESS(pPacket->dwPacketID > pAck->dwPacketID);
 
-        m_SendWindow.pop_front();
-
         JG_COM_RELEASE(pPacket->piBuffer);
+        m_SendWindow.pop_front();
     }
 
 Exit1:
@@ -245,18 +262,29 @@ Exit0:
     return;
 }
 
-BOOL JUDPConnection::SendUnreliablePacket(BYTE* pbyData, size_t uSize)
+BOOL JUDPConnection::SendUnreliablePacket(IJG_Buffer* piBuffer)
 {
     BOOL bResult  = false;
-    int  nRetCode = 0;
 
-    JGLOG_PROCESS_ERROR(pbyData);
+    JGLOG_PROCESS_ERROR(piBuffer);
+    JGLOG_PROCESS_ERROR(m_SendPacketDeque.size() < JUDP_SEND_CACHE_SIZE);
 
-    nRetCode = sendto(m_nSocketFD, (char *)pbyData, uSize, 0, (sockaddr *)&m_ConnectionAddr, m_nConnectionAddrSize);
-    JGLOG_PROCESS_ERROR(nRetCode == uSize);
+    piBuffer->AddRef();
+    m_SendPacketDeque.push_back(piBuffer);
 
     bResult = true;
 Exit0:
+    if (!bResult)
+    {
+        if (piBuffer)
+        {
+            m_eUDPStatus = eustTimeout;
+        }
+        else
+        {
+            m_eUDPStatus = eustError;
+        }
+    }
     return bResult;
 }
 
@@ -283,7 +311,7 @@ void JUDPConnection::RetransmitPacket()
             piBuffer = m_SendWindowFind->piBuffer;
             JGLOG_PROCESS_ERROR(piBuffer);
 
-            SendUnreliablePacket((BYTE *)piBuffer->GetData(), piBuffer->GetSize());
+            SendUnreliablePacket(piBuffer);
         }
     }
 
@@ -291,20 +319,20 @@ Exit0:
     return ;
 }
 
-BOOL JUDPConnection::AddNotAckPacket(BYTE* pbyData, size_t uSize)
+BOOL JUDPConnection::AddNotAckPacket(IJG_Buffer* piBuffer)
 {
-    BOOL            bResult  = false;
-    IJG_Buffer*     piBuffer = NULL;
-    JNOT_ACK_PACKET Packet;
+    BOOL                               bResult   = false;
+    EXTERNAL_RELIABLE_PROTOCOL_HEADER* pReliable = NULL;
+    JNOT_ACK_PACKET                    Packet;
 
-    JGLOG_PROCESS_ERROR(pbyData);
-
-    piBuffer = JG_MemoryCreateBuffer(uSize);
     JGLOG_PROCESS_ERROR(piBuffer);
 
-    memcpy(piBuffer->GetData(), pbyData, uSize);
+    pReliable = (EXTERNAL_RELIABLE_PROTOCOL_HEADER*)piBuffer->GetData();
+    JGLOG_PROCESS_ERROR(pReliable);
 
-    Packet.dwPacketID     = ++m_dwSendPacketID;
+    pReliable->dwPacketID = ++m_dwSendPacketID;
+
+    Packet.dwPacketID     = pReliable->dwPacketID;
     Packet.dwRetransCount = 0;
     Packet.piBuffer       = piBuffer;
     Packet.lRetransTime   = clock() + JUDP_RETRANS_INTERVAL;
@@ -321,7 +349,6 @@ BOOL JUDPConnection::AddNotAckPacket(BYTE* pbyData, size_t uSize)
 
     bResult = true;
 Exit0:
-    JG_COM_RELEASE(piBuffer);
     return bResult;
 }
 
@@ -352,13 +379,22 @@ Exit0:
 BOOL JUDPConnection::DoAckPacket(DWORD dwPacketID)
 {
     BOOL                   bResult  = false;
-    EXTERNAL_ACK_PROTOCOL  ACK;
+    IJG_Buffer*            piBuffer = NULL;
+    EXTERNAL_ACK_PROTOCOL* pACK     = NULL;
 
-    ACK.dwPacketID = dwPacketID;
+    piBuffer = JG_MemoryCreateBuffer(sizeof(EXTERNAL_ACK_PROTOCOL));
+    JGLOG_PROCESS_ERROR(piBuffer);
 
-    SendUnreliablePacket((BYTE *)&ACK, sizeof(ACK));
+    pACK = (EXTERNAL_ACK_PROTOCOL *)piBuffer->GetData();
+    JGLOG_PROCESS_ERROR(pACK);
+
+    pACK->byUDPProtocol = euptUDPACK;
+    pACK->dwPacketID    = dwPacketID;
+
+    SendUnreliablePacket(piBuffer);
 
     bResult = true;
-//Exit0:
+Exit0:
+    JG_COM_RELEASE(piBuffer);
     return bResult;
 }

@@ -53,22 +53,33 @@ BOOL JTestUDPServer::Run()
     BOOL                bResult         = false;
     BOOL                bRetCode        = false;
     int                 nSendCount      = 0;
-    S2C_TEST_REQUEST    Request;
+    IJG_Buffer*         piBuffer        = NULL;
+    S2C_RELIABLE_TEST_REQUEST*   pRequest        = NULL;
 
     while (true)
     {
         m_Server.Activate();
 
-        Request.nTestCount = ++nSendCount;
+        JG_COM_RELEASE(piBuffer);
 
-        bRetCode = m_Server.Broadcast((BYTE *)&Request, sizeof(S2C_TEST_REQUEST));
+        piBuffer = JG_MemoryCreateBuffer(sizeof(S2C_RELIABLE_TEST_REQUEST));
+        JGLOG_PROCESS_ERROR(piBuffer);
+
+        pRequest = (S2C_RELIABLE_TEST_REQUEST *)piBuffer->GetData();
+        JGLOG_PROCESS_ERROR(pRequest);
+
+        pRequest->byUDPProtocol = euptUDPReliable;
+        pRequest->byProtocolID  = s2c_reliable_test_request;
+        pRequest->nTestCount    = ++nSendCount;
+
+        bRetCode = m_Server.Broadcast(piBuffer);
         JGLOG_PROCESS_ERROR(bRetCode);
 
         JGThread_Sleep(10);
     }
 
-
     bResult = true;
 Exit0:
+    JG_COM_RELEASE(piBuffer);
     return bResult;
 }

@@ -19,6 +19,8 @@
 #define JUDP_WINDOW_DEFAULT_SIZE 128
 #define JUDP_MAXRETRANS_LIMIT    5
 #define JUDP_RETRANS_INTERVAL    3
+#define JUDP_SEND_CACHE_SIZE     5000
+#define UNDEFINED_PROTOCOL_SIZE  -1
 
 enum JUDP_STATUS_TYPE
 {
@@ -27,7 +29,9 @@ enum JUDP_STATUS_TYPE
     eustEstablished,
     eustTimeout,
     eustClose,
-    eustError
+    eustError,
+
+    eustDisable
 };
 
 enum JUDP_PROTOCOL_TYPE
@@ -46,46 +50,22 @@ enum JUDP_PROTOCOL_TYPE
 struct UDP_PROTOCOL_HEADER
 {
     BYTE       byUDPProtocol;
-
-    UDP_PROTOCOL_HEADER()
-    {
-        byUDPProtocol = euptUDPProtocolBegin;
-    }
 };
 
 struct EXTERNAL_RELIABLE_PROTOCOL_HEADER : UDP_PROTOCOL_HEADER
 {
     DWORD      dwPacketID;
     uint16_t   byProtocolID;
-
-    EXTERNAL_RELIABLE_PROTOCOL_HEADER()
-    {
-        byUDPProtocol = euptUDPReliable;
-        dwPacketID    = 0;
-        byProtocolID  = 0;
-    }
 };
 
 struct EXTERNAL_UNRELIABLE_PROTOCOL_HEADER : UDP_PROTOCOL_HEADER
 {
     uint16_t    byProtocolID;       //–≠“È∫≈
-
-    EXTERNAL_UNRELIABLE_PROTOCOL_HEADER()
-    {
-        byUDPProtocol = euptUDPUnreliable;
-        byProtocolID  = 0;
-    }
 };
 
 struct EXTERNAL_ACK_PROTOCOL : UDP_PROTOCOL_HEADER
 {
     DWORD      dwPacketID;
-
-    EXTERNAL_ACK_PROTOCOL()
-    {
-        byUDPProtocol = euptUDPACK;
-        dwPacketID    = 0;
-    }
 };
 #pragma pack()
 

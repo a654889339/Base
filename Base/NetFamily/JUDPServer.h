@@ -6,6 +6,7 @@
 #include "JUDPBaseDef.h"
 #include "JG_Memory.h"
 #include "JUDPConnection.h"
+#include "JGS_Client_Protocol.h"
 
 class JUDPServer
 {
@@ -21,8 +22,8 @@ public:
     BOOL Listen(char* pszIP, int nPort);
     void Close();
 
-    BOOL Send(int nConnIndex, BYTE* pbyData, size_t uSize);
-    BOOL Broadcast(BYTE* pbyData, size_t uSize);
+    BOOL Send(int nConnIndex, IJG_Buffer* piBuffer);
+    BOOL Broadcast(IJG_Buffer* piBuffer);
 
 private:
     // return -1: error, 0: timeout, 1: success, 2: non-block && no data && success
@@ -35,16 +36,30 @@ private:
 
     BOOL GetConnIndex(int *pnConnIndex, sockaddr_in *pAddr);
     BOOL ProcessPackage();
-    void ProcessConnections();
+    void ProcessSendPacket();
+    void ProcessRecvPacket();
 
-    void OnUDPReliable(int nConnIndex, BYTE* pbyData, size_t uSize);
-    void OnUDPUnreliable(int nConnIndex, BYTE* pbyData, size_t uSize);
-
-private:
+private:    // process udp header
     typedef void (JUDPServer::*PROCESS_UDP_PROTOCOL_FUNC)(int nConnIndex, BYTE* pbyData, size_t uSize);
     PROCESS_UDP_PROTOCOL_FUNC m_ProcessUDPProtocolFunc[euptUDPProtocolEnd];
     size_t                    m_uUDPProtocolSize[euptUDPProtocolEnd];
 
+    void OnUDPReliable(int nConnIndex, BYTE* pbyData, size_t uSize);
+    void OnUDPUnreliable(int nConnIndex, BYTE* pbyData, size_t uSize);
+
+private:    // process reliable protocol
+    typedef void (JUDPServer::*PROCESS_RELIABLE_PROTOCOL_FUNC)(int nConnIndex, BYTE* pbyData, size_t uSize);
+    PROCESS_RELIABLE_PROTOCOL_FUNC m_ProcessReliableProtocolFunc[c2s_reliable_protocol_end];
+    size_t                         m_uReliableProtocolSize[c2s_reliable_protocol_end];
+
+    void OnReliableTestRespond(int nConnIndex, BYTE* pbyData, size_t uSize);
+
+private:    // process unreliable protocol
+    typedef void (JUDPServer::*PROCESS_UNRELIABLE_PROTOCOL_FUNC)(int nConnIndex, BYTE* pbyData, size_t uSize);
+    PROCESS_UNRELIABLE_PROTOCOL_FUNC m_ProcessUnreliableProtocolFunc[c2s_unreliable_protocol_end];
+    size_t                           m_uUnreliableProtocolSize[c2s_unreliable_protocol_end];
+
+private:
     WSADATA     m_WSAData;
     BYTE        m_byLowByteVersion;
     BYTE        m_byHightByteVersion;
@@ -56,7 +71,7 @@ private:
     fd_set      m_ReadFDSet;
     char        m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
 
-private:
+private:    // maintain for connections
     typedef std::set<int>                 JUDP_WAIT_CLOSE_CONNECTION_SET;
     JUDP_WAIT_CLOSE_CONNECTION_SET        m_WaitCloseSet;
 

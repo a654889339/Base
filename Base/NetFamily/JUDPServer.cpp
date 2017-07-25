@@ -1,10 +1,16 @@
 ﻿#include "JUDPServer.h"
-#include "JGS_Client_Protocol.h"
 
 #define REGISTER_UDP_PARSE_FUNC(ProtocolID, FuncName, ProtocolSize) \
 {m_ProcessUDPProtocolFunc[ProtocolID] = FuncName;                   \
     m_uUDPProtocolSize[ProtocolID] = ProtocolSize;}
 
+#define REGISTER_RELIABLE_PARSE_FUNC(ProtocolID, FuncName, ProtocolSize) \
+{m_ProcessReliableProtocolFunc[ProtocolID] = FuncName;                   \
+    m_uReliableProtocolSize[ProtocolID] = ProtocolSize;}
+
+#define REGISTER_UNRELIABLE_PARSE_FUNC(ProtocolID, FuncName, ProtocolSize) \
+{m_ProcessUnreliableProtocolFunc[ProtocolID] = FuncName;                   \
+    m_uUnreliableProtocolSize[ProtocolID] = ProtocolSize;}
 
 JUDPServer::JUDPServer()
 {
@@ -13,11 +19,22 @@ JUDPServer::JUDPServer()
     m_nConnectionCount   = 0;
     m_bWorkFlag          = false;
 
+    // --------------------------------------------------------------------------
     memset(m_ProcessUDPProtocolFunc, 0, sizeof(m_ProcessUDPProtocolFunc));
     memset(m_uUDPProtocolSize, 0, sizeof(m_uUDPProtocolSize));
 
     REGISTER_UDP_PARSE_FUNC(euptUDPReliable, &JUDPServer::OnUDPReliable, sizeof(EXTERNAL_RELIABLE_PROTOCOL_HEADER));
     REGISTER_UDP_PARSE_FUNC(euptUDPUnreliable, &JUDPServer::OnUDPUnreliable, sizeof(EXTERNAL_UNRELIABLE_PROTOCOL_HEADER));
+
+    // --------------------------------------------------------------------------
+    memset(m_ProcessReliableProtocolFunc, 0, sizeof(m_ProcessReliableProtocolFunc));
+    memset(m_uReliableProtocolSize, 0, sizeof(m_uReliableProtocolSize));
+
+    REGISTER_RELIABLE_PARSE_FUNC(c2s_reliable_test_respond, &JUDPServer::OnReliableTestRespond, sizeof(C2S_RELIABLE_TEST_RESPOND));
+
+    // --------------------------------------------------------------------------
+    memset(m_ProcessUnreliableProtocolFunc, 0, sizeof(m_ProcessUnreliableProtocolFunc));
+    memset(m_uUnreliableProtocolSize, 0, sizeof(m_uUnreliableProtocolSize));
 }
 
 JUDPServer::~JUDPServer()
@@ -43,7 +60,9 @@ void JUDPServer::UnInit()
 void JUDPServer::Activate()
 {
     ProcessPackage();
-    ProcessConnections();
+    ProcessSendPacket();
+    ProcessRecvPacket();
+    ProcessSendPacket();
 }
 
 BOOL JUDPServer::Listen(char* pszIP, int nPort)
@@ -75,7 +94,7 @@ BOOL JUDPServer::Listen(char* pszIP, int nPort)
     m_ServerAddr.sin_addr.S_un.S_addr = inet_addr(pszIP);
     m_ServerAddr.sin_port             = htons(nPort);
 
-    nRetCode = bind(m_nSocketFD, (sockaddr*)&m_ServerAddr, sizeof(m_ServerAddr));
+    nRetCode = bind(m_nSocketFD, (sockaddr *)&m_ServerAddr, sizeof(m_ServerAddr));
     JGLOG_PROCESS_ERROR(nRetCode != SOCKET_ERROR);
 
     m_bWorkFlag = true;
@@ -127,7 +146,15 @@ int JUDPServer::Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* p
         goto Exit0;
     }
 
-    nRetCode = recvfrom(m_nSocketFD, m_iRecvBuffer, JUDP_MAX_DATA_SIZE, 0, (sockaddr*)pClientAddr, pnClientAddrSize);
+    if (!FD_ISSET(m_nSocketFD, &m_ReadFDSet))
+    {
+        nResult = 2;
+        goto Exit0;
+    }
+
+    *pnClientAddrSize = sizeof(*pClientAddr);
+
+    nRetCode = recvfrom(m_nSocketFD, m_iRecvBuffer, JUDP_MAX_DATA_SIZE, 0, (sockaddr *)pClientAddr, pnClientAddrSize);
     JGLOG_PROCESS_ERROR(nRetCode != -1);
 
     piBuffer = JG_MemoryCreateBuffer(nRetCode);
@@ -139,24 +166,25 @@ int JUDPServer::Recv(IJG_Buffer** ppiRetBuffer, sockaddr_in* pClientAddr, int* p
 
     (*ppiRetBuffer)->AddRef();
 
+
     nResult = 1;
 Exit0:
     JG_COM_RELEASE(piBuffer);
     return nResult;
 }
 
-BOOL JUDPServer::Send(int nConnIndex, BYTE* pbyData, size_t uSize)
+BOOL JUDPServer::Send(int nConnIndex, IJG_Buffer* piBuffer)
 {
     BOOL            bResult      = false;
     BOOL            bRetCode     = false;
     JUDPConnection* pConnection  = NULL;
 
-    JGLOG_PROCESS_ERROR(pbyData);
+    JGLOG_PROCESS_ERROR(piBuffer);
 
     pConnection = GetConnection(nConnIndex);
     JG_PROCESS_ERROR(pConnection);
 
-    bRetCode = pConnection->Send(pbyData, uSize);
+    bRetCode = pConnection->Send(piBuffer);
     JGLOG_PROCESS_ERROR(bRetCode);
 
     bResult = true;
@@ -168,21 +196,21 @@ Exit0:
     return bResult;
 }
 
-BOOL JUDPServer::Broadcast(BYTE* pbyData, size_t uSize)
+BOOL JUDPServer::Broadcast(IJG_Buffer* piBuffer)
 {
     BOOL            bResult      = false;
     BOOL            bRetCode     = false;
     BOOL            bSendFlag    = true;
     JUDPConnection* pConnection  = NULL;
 
-    JGLOG_PROCESS_ERROR(pbyData);
+    JGLOG_PROCESS_ERROR(piBuffer);
 
     for (m_ConnectionsMapFind = m_ConnectionsMap.begin(); m_ConnectionsMapFind != m_ConnectionsMap.end(); ++m_ConnectionsMapFind)
     {
         pConnection = &m_ConnectionsMapFind->second;
         if (pConnection)
         {
-            bRetCode = pConnection->Send(pbyData, uSize);
+            bRetCode = pConnection->Send(piBuffer);
             if (!bRetCode)
             {
                 bSendFlag = false;
@@ -298,7 +326,7 @@ BOOL JUDPServer::GetConnIndex(int *pnConnIndex, sockaddr_in *pAddr)
     m_ConnectionsInfo.Addr = *pAddr;
 
     m_ConnectionsInfoSetFind = m_ConnectionsInfoSet.find(m_ConnectionsInfo);
-    JG_PROCESS_ERROR(m_ConnectionsInfoSetFind == m_ConnectionsInfoSet.end());
+    JG_PROCESS_ERROR(m_ConnectionsInfoSetFind != m_ConnectionsInfoSet.end());
 
     *pnConnIndex = m_ConnectionsInfoSetFind->nConnIndex;
 
@@ -383,7 +411,43 @@ Exit0:
     return bResult;
 }
 
-void JUDPServer::ProcessConnections()
+void JUDPServer::ProcessSendPacket()
+{
+    int                       nRetCode      = 0;
+    int                       nConnIndex    = 0;
+    JUDPConnection*           pConnection   = NULL;
+    IJG_Buffer*               piBuffer      = NULL;
+
+    JG_PROCESS_ERROR(m_bWorkFlag);
+
+    for (m_ConnectionsMapFind = m_ConnectionsMap.begin(); m_ConnectionsMapFind != m_ConnectionsMap.end(); ++m_ConnectionsMapFind)
+    {
+        pConnection = &m_ConnectionsMapFind->second;
+        JGLOG_PROCESS_ERROR(pConnection);
+
+        while (true)
+        {
+            JG_COM_RELEASE(piBuffer);
+
+            piBuffer = pConnection->GetSendPacket();
+            if (piBuffer == NULL)
+                break;
+
+            nRetCode = sendto(m_nSocketFD, (char *)piBuffer->GetData(), piBuffer->GetSize(), 0, (sockaddr *)&pConnection->m_ConnectionAddr, pConnection->m_nConnectionAddrSize);
+            if (nRetCode != piBuffer->GetSize())
+            {
+                pConnection->SetClose();
+                break;
+            }
+        }
+    }
+
+Exit0:
+    JG_COM_RELEASE(piBuffer);
+    return;
+}
+
+void JUDPServer::ProcessRecvPacket()
 {
     int                       nConnIndex    = 0;
     JUDPConnection*           pConnection   = NULL;
@@ -405,7 +469,7 @@ void JUDPServer::ProcessConnections()
 
         pConnection->Activate();
 
-        if (pConnection->IsInvalid())
+        if (!pConnection->IsEnable())
         {
             m_WaitCloseSet.insert(nConnIndex);
             continue;
@@ -444,15 +508,43 @@ void JUDPServer::ProcessConnections()
             (this->*Func)(nConnIndex, (BYTE*)pUDPHeader, uDataSize);
         }
     }
+
 Exit0:
     return;
 }
 
 void JUDPServer::OnUDPReliable(int nConnIndex, BYTE* pbyData, size_t uSize)
 {
+    EXTERNAL_RELIABLE_PROTOCOL_HEADER* pReliable = (EXTERNAL_RELIABLE_PROTOCOL_HEADER *)pbyData;
+    PROCESS_RELIABLE_PROTOCOL_FUNC     Func      = NULL;
 
+    JGLOG_PROCESS_ERROR(pReliable);
+
+    JGLOG_PROCESS_ERROR(pReliable->byProtocolID > c2s_reliable_protocol_begin);
+    JGLOG_PROCESS_ERROR(pReliable->byProtocolID < c2s_reliable_protocol_end);
+
+    if (m_uReliableProtocolSize[pReliable->byProtocolID] != UNDEFINED_PROTOCOL_SIZE)
+    {
+        JGLOG_PROCESS_ERROR(uSize == m_uReliableProtocolSize[pReliable->byProtocolID]);
+    }
+
+    Func = m_ProcessReliableProtocolFunc[pReliable->byProtocolID];
+    JGLOG_PROCESS_ERROR(Func);
+
+    (this->*Func)(nConnIndex, pbyData, uSize);
+
+Exit0:
+    return;
 }
 
+void JUDPServer::OnReliableTestRespond(int nConnIndex, BYTE* pbyData, size_t uSize)
+{
+    C2S_RELIABLE_TEST_RESPOND* pRespond = (C2S_RELIABLE_TEST_RESPOND *)pbyData;
+
+    JGLogPrintf(JGLOG_INFO, "[OnReliableTestRespond] %d\n", pRespond->nTestCount);
+}
+
+// -----------------------------------------------------------------------------------
 void JUDPServer::OnUDPUnreliable(int nConnIndex, BYTE* pbyData, size_t uSize)
 {
 

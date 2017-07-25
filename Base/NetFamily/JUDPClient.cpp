@@ -4,6 +4,14 @@
 {m_ProcessUDPProtocolFunc[ProtocolID] = FuncName;                   \
     m_uUDPProtocolSize[ProtocolID] = ProtocolSize;}
 
+#define REGISTER_RELIABLE_PARSE_FUNC(ProtocolID, FuncName, ProtocolSize) \
+{m_ProcessReliableProtocolFunc[ProtocolID] = FuncName;                   \
+    m_uReliableProtocolSize[ProtocolID] = ProtocolSize;}
+
+#define REGISTER_UNRELIABLE_PARSE_FUNC(ProtocolID, FuncName, ProtocolSize) \
+{m_ProcessUnreliableProtocolFunc[ProtocolID] = FuncName;                   \
+    m_uUnreliableProtocolSize[ProtocolID] = ProtocolSize;}
+
 
 JUDPClient::JUDPClient()
 {
@@ -16,6 +24,17 @@ JUDPClient::JUDPClient()
 
     REGISTER_UDP_PARSE_FUNC(euptUDPReliable, &JUDPClient::OnUDPReliable, sizeof(EXTERNAL_RELIABLE_PROTOCOL_HEADER));
     REGISTER_UDP_PARSE_FUNC(euptUDPUnreliable, &JUDPClient::OnUDPUnreliable, sizeof(EXTERNAL_UNRELIABLE_PROTOCOL_HEADER));
+
+    // --------------------------------------------------------------------
+    memset(m_ProcessReliableProtocolFunc, 0, sizeof(m_ProcessReliableProtocolFunc));
+    memset(m_uReliableProtocolSize, 0, sizeof(m_uReliableProtocolSize));
+
+    REGISTER_RELIABLE_PARSE_FUNC(s2c_reliable_test_request, &JUDPClient::OnReliableTestRequest, sizeof(S2C_RELIABLE_TEST_REQUEST));
+
+    // --------------------------------------------------------------------
+    memset(m_ProcessUnreliableProtocolFunc, 0, sizeof(m_ProcessUnreliableProtocolFunc));
+    memset(m_uUnreliableProtocolSize, 0, sizeof(m_uUnreliableProtocolSize));
+
 }
 
 JUDPClient::~JUDPClient()
@@ -41,7 +60,9 @@ void JUDPClient::UnInit()
 void JUDPClient::Activate()
 {
     ProcessPackage();
-    ProcessConnection();
+    ProcessSendPacket();
+    ProcessRecvPacket();
+    ProcessSendPacket();
 }
 
 BOOL JUDPClient::Connect(char* pszIP, int nPort, char* pszLocalIP,int nLocalPort)
@@ -148,14 +169,14 @@ Exit0:
     return bResult;
 }
 
-BOOL JUDPClient::Send(BYTE* piBuffer, size_t uSize)
+BOOL JUDPClient::Send(IJG_Buffer* piBuffer)
 {
     BOOL bResult  = false;
     BOOL bRetCode = 0;
 
     JGLOG_PROCESS_ERROR(piBuffer);
 
-    bRetCode = m_Connection.Send(piBuffer, uSize);
+    bRetCode = m_Connection.Send(piBuffer);
     JGLOG_PROCESS_ERROR(bRetCode);
 
     bResult = true;
@@ -185,10 +206,13 @@ void JUDPClient::ProcessPackage()
 
         bRetCode = Recv(&piBuffer);
         JGLOG_PROCESS_ERROR(bRetCode);
-        JGLOG_PROCESS_ERROR(piBuffer);
+        JG_PROCESS_SUCCESS(piBuffer == NULL);
 
         uDataSize = piBuffer->GetSize();
-        JG_PROCESS_SUCCESS(uDataSize == 0);
+        JGLOG_PROCESS_ERROR(uDataSize >= sizeof(UDP_PROTOCOL_HEADER));
+
+        pUDPHeader = (UDP_PROTOCOL_HEADER*)piBuffer->GetData();
+        JGLOG_PROCESS_ERROR(pUDPHeader);
 
         switch (pUDPHeader->byUDPProtocol)
         {
@@ -220,7 +244,37 @@ Exit0:
     return;
 }
 
-void JUDPClient::ProcessConnection()
+void JUDPClient::ProcessSendPacket()
+{
+    BOOL                      bResult       = false;
+    int                       nRetCode      = 0;
+    IJG_Buffer*               piBuffer      = NULL;
+
+    JG_PROCESS_ERROR(m_bWorkFlag);
+
+    while (true)
+    {
+        JG_COM_RELEASE(piBuffer);
+
+        piBuffer = m_Connection.GetSendPacket();
+        JG_PROCESS_SUCCESS(piBuffer == NULL);
+
+        nRetCode = send(m_nSocketFD, (char *)piBuffer->GetData(), piBuffer->GetSize(), 0);
+        JGLOG_PROCESS_ERROR(nRetCode == piBuffer->GetSize());
+    }
+
+Exit1:
+    bResult = true;
+Exit0:
+    JG_COM_RELEASE(piBuffer);
+    if (!bResult)
+    {
+        m_bWorkFlag = false;
+    }
+    return;
+}
+
+void JUDPClient::ProcessRecvPacket()
 {
     BOOL                      bResult       = false;
     IJG_Buffer*               piBuffer      = NULL;
@@ -232,7 +286,7 @@ void JUDPClient::ProcessConnection()
 
     m_Connection.Activate();
 
-    JGLOG_PROCESS_ERROR(m_Connection.IsInvalid());
+    JGLOG_PROCESS_ERROR(m_Connection.IsEnable());
 
     while (true)
     {
@@ -267,9 +321,36 @@ Exit0:
 
 void JUDPClient::OnUDPReliable(BYTE* pbyData, size_t uSize)
 {
+    EXTERNAL_RELIABLE_PROTOCOL_HEADER* pReliable = (EXTERNAL_RELIABLE_PROTOCOL_HEADER *)pbyData;
+    PROCESS_RELIABLE_PROTOCOL_FUNC     Func      = NULL;
 
+    JGLOG_PROCESS_ERROR(pReliable);
+
+    JGLOG_PROCESS_ERROR(pReliable->byProtocolID > s2c_reliable_protocol_begin);
+    JGLOG_PROCESS_ERROR(pReliable->byProtocolID < s2c_reliable_protocol_end);
+
+    if (m_uReliableProtocolSize[pReliable->byProtocolID] != UNDEFINED_PROTOCOL_SIZE)
+    {
+        JGLOG_PROCESS_ERROR(uSize == m_uReliableProtocolSize[pReliable->byProtocolID]);
+    }
+
+    Func = m_ProcessReliableProtocolFunc[pReliable->byProtocolID];
+    JGLOG_PROCESS_ERROR(Func);
+
+    (this->*Func)(pbyData, uSize);
+
+Exit0:
+    return;
 }
 
+void JUDPClient::OnReliableTestRequest(BYTE* pbyData, size_t uSize)
+{
+    S2C_RELIABLE_TEST_REQUEST* pRequest = (S2C_RELIABLE_TEST_REQUEST *)pbyData;
+
+    JGLogPrintf(JGLOG_INFO, "[OnReliableTestRequest] %d\n", pRequest->nTestCount);
+}
+
+// --------------------------------------------------------------------------
 void JUDPClient::OnUDPUnreliable(BYTE* pbyData, size_t uSize)
 {
 

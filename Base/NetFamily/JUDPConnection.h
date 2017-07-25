@@ -3,9 +3,11 @@
 
 #include <list>
 #include <set>
+#include <deque>
 #include <time.h>
 #include "JUDPBaseDef.h"
 #include "JG_Memory.h"
+
 
 class JUDPConnection
 {
@@ -20,9 +22,11 @@ public:
 
     void SetTimeOut();
     void SetClose();
-    BOOL IsInvalid();
-    BOOL Send(BYTE* pbyData, size_t uSize);
+    BOOL IsEnable();
+    BOOL Send(IJG_Buffer* piBuffer);
+
     IJG_Buffer* GetRecvPacket();
+    IJG_Buffer* GetSendPacket();
 
     void OnAckPacket(BYTE* pbyData, size_t uSize);
     void OnUDPReliable(BYTE* pbyData, size_t uSize);
@@ -30,10 +34,10 @@ public:
 
 private:
     void Close();
-    BOOL SendUnreliablePacket(BYTE* pbyData, size_t uSize);
+    BOOL SendUnreliablePacket(IJG_Buffer* piBuffer);
 
     void RetransmitPacket();
-    BOOL AddNotAckPacket(BYTE* pbyData, size_t uSize);
+    BOOL AddNotAckPacket(IJG_Buffer* piBuffer);
     BOOL AddRecvPacket(DWORD dwPacketID, BYTE* pbyData, size_t uSize);
 
     BOOL DoAckPacket(DWORD dwPacketID);
@@ -51,8 +55,8 @@ private:
     char              m_iRecvBuffer[JUDP_MAX_DATA_SIZE];
 
 private:    // maintain for reliable udp
-    DWORD       m_dwSendPacketID;
-    DWORD       m_dwRecvPacketID;
+    DWORD             m_dwSendPacketID;
+    DWORD             m_dwRecvPacketID;
 
     struct JNOT_ACK_PACKET
     {
@@ -70,9 +74,9 @@ private:    // maintain for reliable udp
         }
     };
 
-    typedef std::list<JNOT_ACK_PACKET> JSEND_WINDOW_LIST;
-    JSEND_WINDOW_LIST                  m_SendWindow;
-    JSEND_WINDOW_LIST::iterator        m_SendWindowFind;
+    typedef std::list<JNOT_ACK_PACKET>     JSEND_WINDOW_LIST;
+    JSEND_WINDOW_LIST                      m_SendWindow;
+    JSEND_WINDOW_LIST::iterator            m_SendWindowFind;
 
     struct JNON_SEQUENCE_PACKET
     {
@@ -94,6 +98,9 @@ private:    // maintain for reliable udp
     typedef std::set<JNON_SEQUENCE_PACKET> JRECV_WINDOW_SET;
     JRECV_WINDOW_SET                       m_RecvWindow;
     JRECV_WINDOW_SET::iterator             m_RecvWindowFind;
+
+    typedef std::deque<IJG_Buffer*>        JSEND_PACKET_DEQUE;
+    JSEND_PACKET_DEQUE                     m_SendPacketDeque;
 };
 
 #endif //_JUDP_CONNECTION_H_

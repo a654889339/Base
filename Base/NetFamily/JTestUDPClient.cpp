@@ -44,11 +44,12 @@ void JTestUDPClient::UnInit()
 
 BOOL JTestUDPClient::Run()
 {
-    BOOL             bResult      = false;
-    BOOL             bRetCode     = false;
-    int              nSendCount   = 0;
-    time_t           nTimeNow     = time(NULL);
-    C2S_TEST_RESPOND Respond;
+    BOOL              bResult      = false;
+    BOOL              bRetCode     = false;
+    int               nSendCount   = 0;
+    time_t            nTimeNow     = time(NULL);
+    IJG_Buffer*       piBuffer     = NULL;
+    C2S_RELIABLE_TEST_RESPOND* pRespond     = NULL;
 
     while (true)
     {
@@ -56,10 +57,19 @@ BOOL JTestUDPClient::Run()
 
         m_Client.Activate();
 
-        Respond.byProtocolID = c2s_test_respond;
-        Respond.nTestCount   = ++nSendCount;
+        JG_COM_RELEASE(piBuffer);
 
-        bRetCode = m_Client.Send((BYTE*)&Respond, sizeof(C2S_TEST_RESPOND));
+        piBuffer = JG_MemoryCreateBuffer(sizeof(C2S_RELIABLE_TEST_RESPOND));
+        JGLOG_PROCESS_ERROR(piBuffer);
+
+        pRespond = (C2S_RELIABLE_TEST_RESPOND *)piBuffer->GetData();
+        JGLOG_PROCESS_ERROR(pRespond);
+
+        pRespond->byUDPProtocol = euptUDPReliable;
+        pRespond->byProtocolID  = c2s_reliable_test_respond;
+        pRespond->nTestCount    = ++nSendCount;
+
+        bRetCode = m_Client.Send(piBuffer);
         JGLOG_PROCESS_ERROR(bRetCode);
 
         JGThread_Sleep(10);
@@ -67,33 +77,6 @@ BOOL JTestUDPClient::Run()
 
     bResult = true;
 Exit0:
+    JG_COM_RELEASE(piBuffer);
     return bResult;
 }
-/*
-int main()
-{
-BOOL bResult         = false;
-BOOL bRetCode        = false;
-BOOL bClientInitFlag = false;
-
-bRetCode = Init();
-JGLOG_PROCESS_ERROR(bRetCode);
-bClientInitFlag = true;
-
-bRetCode = Run();
-JGLOG_PROCESS_ERROR(bRetCode);
-
-bResult = true;
-Exit0:
-if (bClientInitFlag)
-{
-m_Client.Close();
-bClientInitFlag = false;
-}
-if (!bResult)
-{
-getchar();
-}
-return bResult;
-}
-*/
