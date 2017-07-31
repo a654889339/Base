@@ -12,13 +12,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component\JComponentDef.h" />
-    <ClInclude Include="Component\JContext.h" />
+    <ClInclude Include="Component\JMatch.h" />
     <ClInclude Include="Component\JIComponent.h" />
+    <ClInclude Include="Entity\JEntity.h" />
     <ClInclude Include="Entity\JIEntity.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Component\JContext.cpp" />
-    <ClCompile Include="Entity\JIEntity.cpp" />
+    <ClCompile Include="Component\JMatch.cpp" />
+    <ClCompile Include="Entity\JEntity.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{ADBD0093-AF73-48F7-A1C5-B958D591E9DA}</ProjectGuid>

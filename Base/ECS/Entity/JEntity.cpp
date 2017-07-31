@@ -1,17 +1,18 @@
-#include "JIEntity.h"
+#include "JEntity.h"
 
-JIEntity::JIEntity()
+JEntity::JEntity()
 {
     m_dwID = 0;
-    m_Context.Clear();
+    m_ActivateMatch.Clear();
+    m_InactivateMatch.Clear();
 }
 
-JIEntity::~JIEntity()
+JEntity::~JEntity()
 {
     UnInit();
 }
 
-BOOL JIEntity::Init(DWORD dwID, std::list<IJG_Buffer *>* pActivateList, std::list<IJG_Buffer *>* pInactivateList, JContext* pContext)
+BOOL JEntity::Init(DWORD dwID, std::list<IJG_Buffer *>* pActivateList, std::list<IJG_Buffer *>* pInactivateList)
 {
     BOOL                             bResult    = false;
     BOOL                             bRetCode   = false;
@@ -21,33 +22,26 @@ BOOL JIEntity::Init(DWORD dwID, std::list<IJG_Buffer *>* pActivateList, std::lis
 
     if (pActivateList)
     {
+        m_ActivateMatch.Clear();
         m_ActiveComponentManager.clear();
 
         for (itFind = pActivateList->begin(); itFind != pActivateList->end(); ++itFind)
         {
-            bRetCode = InsertActiveComponent(*itFind);
+            bRetCode = AddActiveComponent(*itFind);
             JGLOG_PROCESS_ERROR(bRetCode);
         }
     }
 
     if (pInactivateList)
     {
+        m_InactivateMatch.Clear();
         m_InactiveComponentManager.clear();
 
         for (itFind = pInactivateList->begin(); itFind != pInactivateList->end(); ++itFind)
         {
-            bRetCode = InsertInactiveComponent(*itFind);
+            bRetCode = AddInactiveComponent(*itFind);
             JGLOG_PROCESS_ERROR(bRetCode);
         }
-    }
-
-    if (pContext)
-    {
-        m_Context = *pContext;
-    }
-    else
-    {
-        m_Context.Clear();
     }
 
     bResult = true;
@@ -55,7 +49,7 @@ Exit0:
     return bResult;
 }
 
-void JIEntity::UnInit()
+void JEntity::UnInit()
 {
     ClearActivateComponents();
     ClearInactivateComponents();
@@ -63,59 +57,72 @@ void JIEntity::UnInit()
 
 // ------------------ Read Only ------------------------
 
-BOOL JIEntity::HasComponent(JCOMPONENT_TYPE eComponentType)
+BOOL JEntity::HasActivateComponent(JCOMPONENT_TYPE eComponentType)
 {
     BOOL bResult = false;
 
-    JG_PROCESS_ERROR(HasActivateComponent(eComponentType));
+    JG_PROCESS_ERROR(m_ActivateMatch.Contain(eComponentType));
 
     bResult = true;
 Exit0:
     return bResult;
 }
 
-BOOL JIEntity::HasComponents(JContext* pContext)
+BOOL JEntity::HasActivateComponents(JMatch* pMatch)
 {
-    BOOL bResult = false;
+    BOOL            bResult        = false;
+    BOOL            bRetCode       = false;
+    JCOMPONENT_TYPE eComponentType = ect_end;
 
-    JG_PROCESS_ERROR(HasActivateComponents(pContext));
+    JGLOG_PROCESS_ERROR(pMatch);
+
+    bRetCode = m_ActivateMatch.Contain(pMatch);
+    JG_PROCESS_ERROR(bRetCode);
 
     bResult = true;
 Exit0:
     return bResult;
 }
 
-BOOL JIEntity::HasAnyComponent(JContext* pContext)
+BOOL JEntity::HasAnyActivateComponent(JMatch* pMatch)
 {
-    BOOL bResult = false;
+    BOOL            bResult        = false;
+    BOOL            bRetCode       = false;
 
-    JG_PROCESS_ERROR(HasAnyActivateComponent(pContext));
+    JGLOG_PROCESS_ERROR(pMatch);
+
+    bRetCode = m_ActivateMatch.HasIntersection(pMatch);
+    JG_PROCESS_ERROR(bRetCode);
 
     bResult = true;
 Exit0:
     return bResult;
 }
 
-const IJG_Buffer* JIEntity::GetComponentReadOnly(JCOMPONENT_TYPE eComponentType)
+const IJG_Buffer* JEntity::GetComponentReadOnly(JCOMPONENT_TYPE eComponentType)
 {
+    IJG_Buffer* piBuffer = NULL;
 
+    piBuffer = GetActivateComponent(eComponentType);
+
+    return piBuffer;
 }
 
 // ------------------ Read & Write ------------------------
 
-BOOL JIEntity::AddComponent(IJG_Buffer* piBuffer, BOOL bActiveStatus)
+BOOL JEntity::AddComponent(IJG_Buffer* piBuffer, BOOL bActiveStatus)
 {
     BOOL bResult  = false;
     BOOL bRetCode = false;
 
     if (bActiveStatus)
     {
-        bRetCode = InsertActiveComponent(piBuffer);
+        bRetCode = AddActiveComponent(piBuffer);
         JGLOG_PROCESS_ERROR(bRetCode);
     }
     else
     {
-        bRetCode = InsertInactiveComponent(piBuffer);
+        bRetCode = AddInactiveComponent(piBuffer);
         JGLOG_PROCESS_ERROR(bRetCode);
     }
 
@@ -124,26 +131,38 @@ Exit0:
     return bResult;
 }
 
-BOOL JIEntity::RemoveComponent(JCOMPONENT_TYPE eComponentType)
+BOOL JEntity::RemoveComponent(JCOMPONENT_TYPE eComponentType)
 {
     BOOL bResult  = false;
     BOOL bRetCode = false;
 
-    bRetCode = EraseComponent(eComponentType);
-    JGLOG_PROCESS_ERROR(bRetCode);
+    if (HasActivateComponent(eComponentType))
+    {
+        bRetCode = RemoveActivateComponent(eComponentType);
+        JGLOG_PROCESS_ERROR(bRetCode);
+    }
+    else if (HasInactivateComponent(eComponentType))
+    {
+        bRetCode = RemoveActivateComponent(eComponentType);
+        JGLOG_PROCESS_ERROR(bRetCode);
+    }
+    else
+    {
+        goto Exit0;
+    }
 
     bResult = true;
 Exit0:
     return bResult;
 }
 
-void JIEntity::RemoveAllComponent()
+void JEntity::RemoveAllComponent()
 {
     ClearActivateComponents();
     ClearInactivateComponents();
 }
 
-BOOL JIEntity::InactivateComponent(JCOMPONENT_TYPE eComponentType)
+BOOL JEntity::InactivateComponent(JCOMPONENT_TYPE eComponentType)
 {
     BOOL        bResult  = false;
     BOOL        bRetCode = false;
@@ -154,10 +173,10 @@ BOOL JIEntity::InactivateComponent(JCOMPONENT_TYPE eComponentType)
 
     piBuffer->AddRef();
 
-    bRetCode = EraseActivateComponent(eComponentType);
+    bRetCode = RemoveActivateComponent(eComponentType);
     JGLOG_PROCESS_ERROR(bRetCode);
 
-    bRetCode = InsertInactiveComponent(piBuffer);
+    bRetCode = AddInactiveComponent(piBuffer);
     JGLOG_PROCESS_ERROR(bRetCode);
 
     bResult = true;
@@ -166,23 +185,16 @@ Exit0:
     return bResult;
 }
 
-BOOL JIEntity::InactivateComponents(JContext* pContext)
+BOOL JEntity::InactivateComponents(JMatch* pMatch)
 {
     BOOL            bResult        = false;
     BOOL            bRetCode       = false;
-    JCOMPONENT_TYPE eComponentType = ect_end;
 
-    JGLOG_PROCESS_ERROR(pContext);
+    JGLOG_PROCESS_ERROR(pMatch);
 
-    pContext->StartTraverse();
-
-    while (true)
+    for (MatchTypeManager::iterator itFind = pMatch->m_MatchType.begin(); itFind != pMatch->m_MatchType.end(); ++itFind)
     {
-        eComponentType = pContext->GetNext();
-        if (eComponentType == ect_end)
-            break;
-
-        bRetCode = InactivateComponent(eComponentType);
+        bRetCode = InactivateComponent(*itFind);
         JGLOG_PROCESS_ERROR(bRetCode);
     }
 
@@ -192,7 +204,7 @@ Exit0:
 
 }
 
-BOOL JIEntity::ReactivateComponent(JCOMPONENT_TYPE eComponentType)
+BOOL JEntity::ReactivateComponent(JCOMPONENT_TYPE eComponentType)
 {
     BOOL        bResult  = false;
     BOOL        bRetCode = false;
@@ -203,10 +215,10 @@ BOOL JIEntity::ReactivateComponent(JCOMPONENT_TYPE eComponentType)
 
     piBuffer->AddRef();
 
-    bRetCode = EraseInactivateComponent(eComponentType);
+    bRetCode = RemoveInactivateComponent(eComponentType);
     JGLOG_PROCESS_ERROR(bRetCode);
 
-    bRetCode = InsertActiveComponent(piBuffer);
+    bRetCode = AddActiveComponent(piBuffer);
     JGLOG_PROCESS_ERROR(bRetCode);
 
     bResult = true;
@@ -215,23 +227,17 @@ Exit0:
     return bResult;
 }
 
-BOOL JIEntity::ReactivateComponents(JContext* pContext)
+BOOL JEntity::ReactivateComponents(JMatch* pMatch)
 {
     BOOL            bResult        = false;
     BOOL            bRetCode       = false;
     JCOMPONENT_TYPE eComponentType = ect_end;
 
-    JGLOG_PROCESS_ERROR(pContext);
+    JGLOG_PROCESS_ERROR(pMatch);
 
-    pContext->StartTraverse();
-
-    while (true)
+    for (MatchTypeManager::iterator itFind = pMatch->m_MatchType.begin(); itFind != pMatch->m_MatchType.end(); ++itFind)
     {
-        eComponentType = pContext->GetNext();
-        if (eComponentType == ect_end)
-            break;
-
-        bRetCode = ReactivateComponent(eComponentType);
+        bRetCode = ReactivateComponent(*itFind);
         JGLOG_PROCESS_ERROR(bRetCode);
     }
 
@@ -240,7 +246,7 @@ Exit0:
     return bResult;
 }
 
-BOOL JIEntity::ReplaceComponent(IJG_Buffer* piBuffer)
+BOOL JEntity::ReplaceComponent(IJG_Buffer* piBuffer)
 {
     BOOL         bResult    = false;
     BOOL         bRetCode   = false;
@@ -249,19 +255,19 @@ BOOL JIEntity::ReplaceComponent(IJG_Buffer* piBuffer)
     pComponent = GetComponentFromBuffer(piBuffer);
     JGLOG_PROCESS_ERROR(pComponent);
 
-    bRetCode = EraseActivateComponent(pComponent->m_eType);
+    bRetCode = RemoveActivateComponent(pComponent->m_eType);
     if (bRetCode)
     {
-        bRetCode = InsertActiveComponent(piBuffer);
+        bRetCode = AddActiveComponent(piBuffer);
         JGLOG_PROCESS_ERROR(bRetCode);
 
         goto Exit1;
     }
 
-    bRetCode = EraseInactivateComponent(pComponent->m_eType);
+    bRetCode = RemoveInactivateComponent(pComponent->m_eType);
     if (bRetCode)
     {
-        bRetCode = InsertInactiveComponent(piBuffer);
+        bRetCode = AddInactiveComponent(piBuffer);
         JGLOG_PROCESS_ERROR(bRetCode);
 
         goto Exit1;
@@ -275,7 +281,7 @@ Exit0:
     return bResult;
 }
 
-IJG_Buffer* JIEntity::GetComponent(JCOMPONENT_TYPE eComponentType)
+IJG_Buffer* JEntity::GetComponent(JCOMPONENT_TYPE eComponentType)
 {
     IJG_Buffer* piBuffer = NULL;
 
@@ -290,20 +296,23 @@ Exit1:
 }
 
 
-BOOL JIEntity::InsertActiveComponent(IJG_Buffer* piBuffer)
+BOOL JEntity::AddActiveComponent(IJG_Buffer* piBuffer)
 {
     BOOL         bResult    = false;
-    int          nRetCode   = 0;
+    BOOL         bRetCode   = false;
     JIComponent* pComponent = NULL;
 
     pComponent = GetComponentFromBuffer(piBuffer);
     JGLOG_PROCESS_ERROR(pComponent);
 
-    nRetCode = m_ActiveComponentManager.count(pComponent->m_eType);
-    JG_PROCESS_ERROR(nRetCode == 0);
+    bRetCode = HasActivateComponent(pComponent->m_eType);
+    JG_PROCESS_ERROR(!bRetCode);
 
-    nRetCode = m_InactiveComponentManager.count(pComponent->m_eType);
-    JG_PROCESS_ERROR(nRetCode == 0);
+    bRetCode = HasInactivateComponent(pComponent->m_eType);
+    JG_PROCESS_ERROR(!bRetCode);
+
+    bRetCode = m_ActivateMatch.AddComponent(pComponent->m_eType);
+    JGLOG_PROCESS_ERROR(bRetCode);
 
     m_ActiveComponentManager[pComponent->m_eType] = piBuffer;
     piBuffer->AddRef();
@@ -313,20 +322,23 @@ Exit0:
     return bResult;
 }
 
-BOOL JIEntity::InsertInactiveComponent(IJG_Buffer* piBuffer)
+BOOL JEntity::AddInactiveComponent(IJG_Buffer* piBuffer)
 {
     BOOL         bResult    = false;
-    int          nRetCode   = 0;
+    BOOL         bRetCode   = false;
     JIComponent* pComponent = NULL;
 
     pComponent = GetComponentFromBuffer(piBuffer);
     JGLOG_PROCESS_ERROR(pComponent);
 
-    nRetCode = m_ActiveComponentManager.count(pComponent->m_eType);
-    JG_PROCESS_ERROR(nRetCode == 0);
+    bRetCode = HasActivateComponent(pComponent->m_eType);
+    JG_PROCESS_ERROR(!bRetCode);
 
-    nRetCode = m_InactiveComponentManager.count(pComponent->m_eType);
-    JG_PROCESS_ERROR(nRetCode == 0);
+    bRetCode = HasInactivateComponent(pComponent->m_eType);
+    JG_PROCESS_ERROR(!bRetCode);
+
+    bRetCode = m_InactivateMatch.AddComponent(pComponent->m_eType);
+    JGLOG_PROCESS_ERROR(bRetCode);
 
     m_InactiveComponentManager[pComponent->m_eType] = piBuffer;
     piBuffer->AddRef();
@@ -336,37 +348,19 @@ Exit0:
     return bResult;
 }
 
-BOOL JIEntity::EraseComponent(JCOMPONENT_TYPE eComponentType)
-{
-    BOOL bResult = false;
-
-    if (HasActivateComponent(eComponentType))
-    {
-        EraseActivateComponent(eComponentType);
-    }
-    else if (HasInactivateComponent(eComponentType))
-    {
-        EraseInactivateComponent(eComponentType);
-    }
-    else
-    {
-        goto Exit0;
-    }
-
-    bResult = true;
-Exit0:
-    return bResult;
-}
-
-BOOL JIEntity::EraseActivateComponent(JCOMPONENT_TYPE eComponentType)
+BOOL JEntity::RemoveActivateComponent(JCOMPONENT_TYPE eComponentType)
 {
     BOOL                                             bResult  = false;
+    BOOL                                             bRetCode = false;
     std::map<JCOMPONENT_TYPE, IJG_Buffer*>::iterator itFind;
 
     itFind = m_ActiveComponentManager.find(eComponentType);
     JG_PROCESS_ERROR(itFind != m_ActiveComponentManager.end());
 
     JG_COM_RELEASE(itFind->second);
+
+    bRetCode = m_ActivateMatch.RemoveComponent(eComponentType);
+    JGLOG_PROCESS_ERROR(bRetCode);
 
     m_ActiveComponentManager.erase(itFind);
 
@@ -375,15 +369,19 @@ Exit0:
     return bResult;
 }
 
-BOOL JIEntity::EraseInactivateComponent(JCOMPONENT_TYPE eComponentType)
+BOOL JEntity::RemoveInactivateComponent(JCOMPONENT_TYPE eComponentType)
 {
     BOOL                                             bResult  = false;
+    BOOL                                             bRetCode = false;
     std::map<JCOMPONENT_TYPE, IJG_Buffer*>::iterator itFind;
 
     itFind = m_InactiveComponentManager.find(eComponentType);
     JG_PROCESS_ERROR(itFind != m_InactiveComponentManager.end());
 
     JG_COM_RELEASE(itFind->second);
+
+    bRetCode = m_InactivateMatch.RemoveComponent(eComponentType);
+    JGLOG_PROCESS_ERROR(bRetCode);
 
     m_InactiveComponentManager.erase(itFind);
 
@@ -392,7 +390,7 @@ Exit0:
     return bResult;
 }
 
-void JIEntity::ClearActivateComponents()
+void JEntity::ClearActivateComponents()
 {
     std::map<JCOMPONENT_TYPE, IJG_Buffer*>::iterator itFind;
 
@@ -401,10 +399,11 @@ void JIEntity::ClearActivateComponents()
         JG_COM_RELEASE(itFind->second);
     }
 
+    m_ActivateMatch.Clear();
     m_ActiveComponentManager.clear();
 }
 
-void JIEntity::ClearInactivateComponents()
+void JEntity::ClearInactivateComponents()
 {
     std::map<JCOMPONENT_TYPE, IJG_Buffer*>::iterator itFind;
 
@@ -413,87 +412,28 @@ void JIEntity::ClearInactivateComponents()
         JG_COM_RELEASE(itFind->second);
     }
 
+    m_InactivateMatch.Clear();
     m_InactiveComponentManager.clear();
 }
 
-BOOL JIEntity::HasActivateComponent(JCOMPONENT_TYPE eComponentType)
+BOOL JEntity::HasInactivateComponent(JCOMPONENT_TYPE eComponentType)
 {
     BOOL bResult = false;
 
-    JG_PROCESS_ERROR(m_ActiveComponentManager.count(eComponentType));
+    JG_PROCESS_ERROR(m_InactivateMatch.Contain(eComponentType));
 
     bResult = true;
 Exit0:
     return bResult;
 }
 
-BOOL JIEntity::HasInactivateComponent(JCOMPONENT_TYPE eComponentType)
-{
-    BOOL bResult = false;
-
-    JG_PROCESS_ERROR(m_InactiveComponentManager.count(eComponentType));
-
-    bResult = true;
-Exit0:
-    return bResult;
-}
-
-BOOL JIEntity::HasActivateComponents(JContext* pContext)
-{
-    BOOL            bResult        = false;
-    BOOL            bRetCode       = false;
-    JCOMPONENT_TYPE eComponentType = ect_end;
-
-    JGLOG_PROCESS_ERROR(pContext);
-
-    pContext->StartTraverse();
-
-    while (true)
-    {
-        eComponentType = pContext->GetNext();
-        if (eComponentType == ect_end)
-            break;
-
-        bRetCode = HasActivateComponent(eComponentType);
-        JG_PROCESS_ERROR(bRetCode);
-    }
-
-    bResult = true;
-Exit0:
-    return bResult;
-}
-
-BOOL JIEntity::HasAnyActivateComponent(JContext* pContext)
-{
-    BOOL            bResult        = false;
-    BOOL            bRetCode       = false;
-    JCOMPONENT_TYPE eComponentType = ect_end;
-
-    JGLOG_PROCESS_ERROR(pContext);
-
-    pContext->StartTraverse();
-
-    while (true)
-    {
-        eComponentType = pContext->GetNext();
-        JG_PROCESS_ERROR(eComponentType != ect_end);
-
-        bRetCode = HasActivateComponent(eComponentType);
-        JG_PROCESS_SUCCESS(bRetCode);
-    }
-
-Exit1:
-    bResult = true;
-Exit0:
-    return bResult;
-}
-
-IJG_Buffer* JIEntity::GetActivateComponent(JCOMPONENT_TYPE eComponentType)
+IJG_Buffer* JEntity::GetActivateComponent(JCOMPONENT_TYPE eComponentType)
 {
     IJG_Buffer*                                      piBuffer = NULL;
     std::map<JCOMPONENT_TYPE, IJG_Buffer*>::iterator itFind   = m_ActiveComponentManager.find(eComponentType);
 
-    JG_PROCESS_ERROR(itFind != m_ActiveComponentManager.end());
+    JG_PROCESS_ERROR(HasActivateComponent(eComponentType));
+    JGLOG_PROCESS_ERROR(itFind != m_ActiveComponentManager.end());
 
     piBuffer = itFind->second;
 
@@ -501,12 +441,13 @@ Exit0:
     return piBuffer;
 }
 
-IJG_Buffer* JIEntity::GetInactivateComponent(JCOMPONENT_TYPE eComponentType)
+IJG_Buffer* JEntity::GetInactivateComponent(JCOMPONENT_TYPE eComponentType)
 {
     IJG_Buffer*                                      piBuffer = NULL;
     std::map<JCOMPONENT_TYPE, IJG_Buffer*>::iterator itFind   = m_InactiveComponentManager.find(eComponentType);
 
-    JG_PROCESS_ERROR(itFind != m_InactiveComponentManager.end());
+    JG_PROCESS_ERROR(HasInactivateComponent(eComponentType));
+    JGLOG_PROCESS_ERROR(itFind != m_InactiveComponentManager.end());
 
     piBuffer = itFind->second;
 

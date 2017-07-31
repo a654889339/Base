@@ -15,24 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Entity\JIEntity.h">
-      <Filter>Entity</Filter>
-    </ClInclude>
     <ClInclude Include="Component\JComponentDef.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Component\JContext.h">
       <Filter>Component</Filter>
     </ClInclude>
     <ClInclude Include="Component\JIComponent.h">
       <Filter>Component</Filter>
     </ClInclude>
+    <ClInclude Include="Entity\JEntity.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\JIEntity.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\JMatch.h">
+      <Filter>Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Entity\JIEntity.cpp">
+    <ClCompile Include="Entity\JEntity.cpp">
       <Filter>Entity</Filter>
     </ClCompile>
-    <ClCompile Include="Component\JContext.cpp">
+    <ClCompile Include="Component\JMatch.cpp">
       <Filter>Component</Filter>
     </ClCompile>
   </ItemGroup>

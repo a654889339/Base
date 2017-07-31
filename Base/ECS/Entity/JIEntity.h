@@ -2,68 +2,52 @@
 #define _JIENTITY_H_
 
 #include <list>
-#include <map>
 #include "JBaseDef.h"
 #include "JG_Memory.h"
-#include "JIComponent.h"
-#include "JContext.h"
+#include "JComponentDef.h"
+#include "JMatch.h"
 
 class JIEntity
 {
 public:
-    JIEntity();
-    virtual ~JIEntity();
+    virtual BOOL Init(DWORD dwID, std::list<IJG_Buffer *>* pActivateList, std::list<IJG_Buffer *>* pInactivateList) = 0;
+    virtual void UnInit() = 0;
 
-    BOOL Init(DWORD dwID, std::list<IJG_Buffer *>* pActivateList, std::list<IJG_Buffer *>* pInactivateList, JContext* pContext);
-    void UnInit();
+public: // ReadOnly, only check active components.
+    virtual BOOL HasActivateComponent(JCOMPONENT_TYPE eComponentType) = 0;
+    virtual BOOL HasActivateComponents(JMatch* pContext) = 0;
+    virtual BOOL HasAnyActivateComponent(JMatch* pContext) = 0;
 
-public: // ReadOnly, Only Check Activate Component.
-    BOOL HasComponent(JCOMPONENT_TYPE eComponentType);
-    BOOL HasComponents(JContext* pContext);
-    BOOL HasAnyComponent(JContext* pContext);
-
-    const IJG_Buffer* GetComponentReadOnly(JCOMPONENT_TYPE eComponentType);
+    virtual const IJG_Buffer* GetComponentReadOnly(JCOMPONENT_TYPE eComponentType) = 0;
 
 public:
-    BOOL AddComponent(IJG_Buffer* piComponent, BOOL bActiveStatus);
-    BOOL RemoveComponent(JCOMPONENT_TYPE eComponentType);
-    void RemoveAllComponent();
+    virtual BOOL AddComponent(IJG_Buffer* piComponent, BOOL bActiveStatus) = 0;
+    virtual BOOL RemoveComponent(JCOMPONENT_TYPE eComponentType) = 0;
+    virtual void RemoveAllComponent() = 0;
 
-    BOOL InactivateComponent(JCOMPONENT_TYPE eComponentType);
-    BOOL InactivateComponents(JContext* pContext);
-    BOOL ReactivateComponent(JCOMPONENT_TYPE eComponentType);
-    BOOL ReactivateComponents(JContext* pContext);
+    virtual BOOL InactivateComponent(JCOMPONENT_TYPE eComponentType) = 0;
+    virtual BOOL InactivateComponents(JMatch* pContext) = 0;
+    virtual BOOL ReactivateComponent(JCOMPONENT_TYPE eComponentType) = 0;
+    virtual BOOL ReactivateComponents(JMatch* pContext) = 0;
 
-    BOOL ReplaceComponent(IJG_Buffer* piBuffer);
+    virtual BOOL ReplaceComponent(IJG_Buffer* piBuffer) = 0;
 
-    IJG_Buffer* GetComponent(JCOMPONENT_TYPE eComponentType);
+    virtual IJG_Buffer* GetComponent(JCOMPONENT_TYPE eComponentType) = 0;
 
-private:
-    BOOL InsertActiveComponent(IJG_Buffer* piBuffer);
-    BOOL InsertInactiveComponent(IJG_Buffer* piBuffer);
+protected:
+    virtual BOOL AddActiveComponent(IJG_Buffer* piBuffer) = 0;
+    virtual BOOL AddInactiveComponent(IJG_Buffer* piBuffer) = 0;
 
-    BOOL EraseComponent(JCOMPONENT_TYPE eComponentType);
-    BOOL EraseActivateComponent(JCOMPONENT_TYPE eComponentType);
-    BOOL EraseInactivateComponent(JCOMPONENT_TYPE eComponentType);
+    virtual BOOL RemoveActivateComponent(JCOMPONENT_TYPE eComponentType) = 0;
+    virtual BOOL RemoveInactivateComponent(JCOMPONENT_TYPE eComponentType) = 0;
 
-    void ClearActivateComponents();
-    void ClearInactivateComponents();
+    virtual void ClearActivateComponents() = 0;
+    virtual void ClearInactivateComponents() = 0;
 
-    BOOL HasActivateComponent(JCOMPONENT_TYPE eComponentType);
-    BOOL HasInactivateComponent(JCOMPONENT_TYPE eComponentType);
-    BOOL HasActivateComponents(JContext* pContext);
-    BOOL HasAnyActivateComponent(JContext* pContext);
+    virtual BOOL HasInactivateComponent(JCOMPONENT_TYPE eComponentType) = 0;
 
-    IJG_Buffer* GetActivateComponent(JCOMPONENT_TYPE eComponentType);
-    IJG_Buffer* GetInactivateComponent(JCOMPONENT_TYPE eComponentType);
-
-private:
-    DWORD               m_dwID;
-    JContext            m_Context;
-
-    typedef std::map<JCOMPONENT_TYPE, IJG_Buffer*> COMPONENT_MANAGER;
-    COMPONENT_MANAGER                              m_ActiveComponentManager;
-    COMPONENT_MANAGER                              m_InactiveComponentManager;
+    virtual IJG_Buffer* GetActivateComponent(JCOMPONENT_TYPE eComponentType) = 0;
+    virtual IJG_Buffer* GetInactivateComponent(JCOMPONENT_TYPE eComponentType) = 0;
 };
 
 #endif // _JIENTITY_H_
