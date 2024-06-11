@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-11T12:37:07.592Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="-DzaGqPuLIzSo_EwnayQ" version="24.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-11T12:40:49.862Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="hh73Cd9G_i6fIcqeJHQc" version="24.5.2" type="github">
   <diagram name="第 1 页" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2383" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -307,8 +307,16 @@
         <mxCell id="34WkFXpUERWU9rlC2Q1b-37" value="&lt;div&gt;GameReplayLogic&lt;/div&gt;&lt;div&gt;OnEnter() {&lt;br&gt;&lt;/div&gt;WarClient.instance.Init();&lt;div&gt;}&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="830" y="1130" width="190" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="34WkFXpUERWU9rlC2Q1b-38" target="34WkFXpUERWU9rlC2Q1b-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1300" y="1240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="34WkFXpUERWU9rlC2Q1b-38" value="ClientGamePlay&lt;div&gt;EnterWar() {&lt;br&gt;&lt;/div&gt;&lt;div&gt;WarClient.instance.Init();&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1210" y="1125" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-41" value="GameplayLogic&lt;div&gt;OnEnter() -&amp;gt;&lt;/div&gt;&lt;div&gt;配置表加载完成后 -&amp;gt;&lt;br&gt;&lt;div&gt;WaitConfigLoaded() {&lt;br&gt;&lt;/div&gt;&lt;div&gt;ClientGamePlay.instance.EnterWar();&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="1290" width="230" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
