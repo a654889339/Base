@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-11T09:24:08.551Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="qCGK50THRnytFIppNTyd" version="24.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-11T09:31:37.404Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="ssl_HDkQHK-cbvYxCvkN" version="24.5.2" type="github">
   <diagram name="第 1 页" id="CWwmlCPiOaKa8b5ezwnc">
-    <mxGraphModel dx="2839" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1421" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -200,6 +200,21 @@
         </mxCell>
         <mxCell id="wceI3PTu90aBbahXaLu5-42" value="ClientWar" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1480" y="500" width="470" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="wceI3PTu90aBbahXaLu5-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wceI3PTu90aBbahXaLu5-44" target="wceI3PTu90aBbahXaLu5-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wceI3PTu90aBbahXaLu5-44" value="ClientWarWorld" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-350" y="1280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wceI3PTu90aBbahXaLu5-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wceI3PTu90aBbahXaLu5-45" target="wceI3PTu90aBbahXaLu5-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wceI3PTu90aBbahXaLu5-45" value="WarWorld" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-350" y="1150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wceI3PTu90aBbahXaLu5-47" value="在这里实现单例的初始化和反初始化" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-350" y="1420" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
