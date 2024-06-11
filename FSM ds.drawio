@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-11T13:31:23.138Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="SU1biVwjt-as2OiEUjOl" version="24.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-11T14:58:59.238Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="ekSNpVftWGloVvUPbb5l" version="24.5.2" type="github">
   <diagram name="第 1 页" id="CWwmlCPiOaKa8b5ezwnc">
-    <mxGraphModel dx="4733" dy="2383" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4358" dy="2181" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -24,11 +24,12 @@
         <mxCell id="iWwTwwcAO4Awf_NSYGKX-2" value="ScoringSystem" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="360" y="410" width="130" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="iWwTwwcAO4Awf_NSYGKX-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="iWwTwwcAO4Awf_NSYGKX-4" target="iWwTwwcAO4Awf_NSYGKX-7" edge="1">
+        <mxCell id="iWwTwwcAO4Awf_NSYGKX-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="iWwTwwcAO4Awf_NSYGKX-4" target="iWwTwwcAO4Awf_NSYGKX-7" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="215" y="550" />
               <mxPoint x="515" y="550" />
+              <mxPoint x="515" y="656" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -45,7 +46,7 @@
           <mxGeometry x="140" y="240" width="150" height="70" as="geometry" />
         </mxCell>
         <mxCell id="iWwTwwcAO4Awf_NSYGKX-7" value="ScoringSystemServer" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="640" y="650" width="140" height="70" as="geometry" />
+          <mxGeometry x="650" y="621" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="wceI3PTu90aBbahXaLu5-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iWwTwwcAO4Awf_NSYGKX-10" target="wceI3PTu90aBbahXaLu5-29" edge="1">
           <mxGeometry relative="1" as="geometry">
