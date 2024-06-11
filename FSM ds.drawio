@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-11T12:28:42.957Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="fYSR-qUERMIJ12_JaQtt" version="24.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-11T12:37:07.592Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="-DzaGqPuLIzSo_EwnayQ" version="24.5.2" type="github">
   <diagram name="第 1 页" id="CWwmlCPiOaKa8b5ezwnc">
-    <mxGraphModel dx="3075" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4733" dy="2383" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -73,6 +73,9 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="wceI3PTu90aBbahXaLu5-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iWwTwwcAO4Awf_NSYGKX-10" target="wceI3PTu90aBbahXaLu5-39" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="iWwTwwcAO4Awf_NSYGKX-10" target="iWwTwwcAO4Awf_NSYGKX-19">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iWwTwwcAO4Awf_NSYGKX-10" value="ScoringSystemClient" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -272,15 +275,6 @@
         <mxCell id="34WkFXpUERWU9rlC2Q1b-18" value="GameClient&lt;div&gt;Init()&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;KClientManager.instance.Init(settings);&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1925" y="1970" width="230" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="34WkFXpUERWU9rlC2Q1b-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="34WkFXpUERWU9rlC2Q1b-21" target="34WkFXpUERWU9rlC2Q1b-22">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="34WkFXpUERWU9rlC2Q1b-21" value="WarScene" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1720" y="1050" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="34WkFXpUERWU9rlC2Q1b-22" value="ClientWarScene" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1720" y="1190" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="34WkFXpUERWU9rlC2Q1b-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="34WkFXpUERWU9rlC2Q1b-28" target="34WkFXpUERWU9rlC2Q1b-30">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -295,6 +289,26 @@
         </mxCell>
         <mxCell id="34WkFXpUERWU9rlC2Q1b-32" value="WarClient&lt;div&gt;public ClientWarWorld clientWarWorld;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1600" y="811" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="34WkFXpUERWU9rlC2Q1b-36" target="34WkFXpUERWU9rlC2Q1b-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="34WkFXpUERWU9rlC2Q1b-36" target="34WkFXpUERWU9rlC2Q1b-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1170" y="1090" />
+              <mxPoint x="925" y="1090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-36" value="WarClient" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="1000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-37" value="&lt;div&gt;GameReplayLogic&lt;/div&gt;&lt;div&gt;OnEnter() {&lt;br&gt;&lt;/div&gt;WarClient.instance.Init();&lt;div&gt;}&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="1130" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-38" value="ClientGamePlay&lt;div&gt;EnterWar() {&lt;br&gt;&lt;/div&gt;&lt;div&gt;WarClient.instance.Init();&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="1125" width="180" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
