@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-11T12:16:37.251Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="PVk965yXoRfcCE8usXql" version="24.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-11T12:28:42.957Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="fYSR-qUERMIJ12_JaQtt" version="24.5.2" type="github">
   <diagram name="第 1 页" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="3075" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -198,6 +198,9 @@
         <mxCell id="wceI3PTu90aBbahXaLu5-41" value="修改后的继承关系" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="2220" y="269" width="120" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wceI3PTu90aBbahXaLu5-42" target="34WkFXpUERWU9rlC2Q1b-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="wceI3PTu90aBbahXaLu5-42" value="ClientWar" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1480" y="500" width="470" height="59" as="geometry" />
         </mxCell>
@@ -268,6 +271,30 @@
         </mxCell>
         <mxCell id="34WkFXpUERWU9rlC2Q1b-18" value="GameClient&lt;div&gt;Init()&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;KClientManager.instance.Init(settings);&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1925" y="1970" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="34WkFXpUERWU9rlC2Q1b-21" target="34WkFXpUERWU9rlC2Q1b-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-21" value="WarScene" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1720" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-22" value="ClientWarScene" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1720" y="1190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="34WkFXpUERWU9rlC2Q1b-28" target="34WkFXpUERWU9rlC2Q1b-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-28" value="ClientWarScene&lt;div&gt;public ClientWar clientWar;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1632.5" y="620" width="165" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="34WkFXpUERWU9rlC2Q1b-30" target="34WkFXpUERWU9rlC2Q1b-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-30" value="ClientWarWorld&lt;div&gt;public ClientWarScene clientWarScene;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1582.5" y="700" width="265" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-32" value="WarClient&lt;div&gt;public ClientWarWorld clientWarWorld;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="811" width="230" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
