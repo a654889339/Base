@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-11T12:10:03.531Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="FoQgGP1k5vX7osRamPG8" version="24.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-11T12:16:37.251Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="PVk965yXoRfcCE8usXql" version="24.5.2" type="github">
   <diagram name="第 1 页" id="CWwmlCPiOaKa8b5ezwnc">
-    <mxGraphModel dx="2248" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3075" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -239,6 +239,9 @@
         <mxCell id="34WkFXpUERWU9rlC2Q1b-6" value="GameModuleManage&lt;span style=&quot;background-color: initial;&quot;&gt;r&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Init() {&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;AddModule() }&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1055" y="1130" width="250" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="34WkFXpUERWU9rlC2Q1b-8" target="34WkFXpUERWU9rlC2Q1b-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="34WkFXpUERWU9rlC2Q1b-8" value="GameModuleManage&lt;span style=&quot;background-color: initial;&quot;&gt;r&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1330" y="1340" width="160" height="80" as="geometry" />
         </mxCell>
@@ -247,6 +250,24 @@
         </mxCell>
         <mxCell id="34WkFXpUERWU9rlC2Q1b-10" value="IClientStandardModule" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1335" y="1220" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="34WkFXpUERWU9rlC2Q1b-12" target="34WkFXpUERWU9rlC2Q1b-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-12" value="KClientManager" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1870" y="1880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="34WkFXpUERWU9rlC2Q1b-13" target="34WkFXpUERWU9rlC2Q1b-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-13" value="Singleton&amp;lt;KClientManager&amp;gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1890" y="1760" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-15" value="KClientManager&lt;div&gt;Init(){&lt;/div&gt;&lt;div&gt;KEngine.Instance.RegisterModule(new GameModuleManager());&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1452.5" y="1480" width="405" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="34WkFXpUERWU9rlC2Q1b-18" value="GameClient&lt;div&gt;Init()&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;KClientManager.instance.Init(settings);&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1925" y="1970" width="230" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
