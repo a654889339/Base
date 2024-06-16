@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-16T11:22:23.352Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="S9lu541mNADg58NbPnX3" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-16T11:36:57.332Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="k36V3g5_oUKk2bwRAeBX" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -502,8 +502,20 @@
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-8" value="SetNowStage&lt;div&gt;对局状态机修改状态&lt;/div&gt;&lt;div&gt;1. 先调用当前状态的&amp;nbsp;EndStage&lt;/div&gt;&lt;div&gt;2. 修改当前状态&lt;/div&gt;&lt;div&gt;2. 调用当前状态的 BeginStage&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-695" y="870" width="280" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-10" value="WarSettleStage.BeginStage&lt;div&gt;对局状态的最后一个状态，玩家撤离，结算状态&lt;/div&gt;&lt;div&gt;1. 广播状态给所有客户端和所有战斗模块(WarModule) DoWarProgressStatusChange&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1170" y="1240" width="530" height="270" as="geometry" />
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-10" target="X2hCjSS4Vl0-8XwFfeY9-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-10" target="X2hCjSS4Vl0-8XwFfeY9-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-10" value="WarSettleStage.BeginStage&lt;div&gt;对局状态的最后一个状态，玩家撤离，结算状态&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;广播状态给所有客户端&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;DoWarProgressStatusChange&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2。 广播所有战斗模块 WarModule.&lt;b&gt;OnWarProgressStatusChange&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;3. 触发状态变化事件&amp;nbsp;&lt;b&gt;eOnWarProgressStatusChange&lt;/b&gt;&lt;/div&gt;&lt;div&gt;4. 触发事件 &lt;b&gt;eOnPreSettle&lt;/b&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;5. 触发结算&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;马氏马克(&lt;/b&gt;&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;DoTakovSettle ）或普通地图（&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;DoSettle）&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1170" y="1240" width="650" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-12" value="&lt;div&gt;马氏马克结算流程&lt;/div&gt;WarSettleStage.&lt;b&gt;DoTakovSettle&lt;/b&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1510" y="1754" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-14" value="&lt;div&gt;普通结算流程&lt;/div&gt;WarSettleStage.&lt;b&gt;DoSettle&lt;/b&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-750" y="1800" width="280" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
