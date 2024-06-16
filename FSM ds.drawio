@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-16T11:39:40.244Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="s6Ybc7j3dcZLo6df5ldT" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-16T11:50:50.192Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="9Ln4dTHUapRPDRkDdg_B" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -468,7 +468,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="D4cUpWKldzLiPTz7wScZ" name="结算模块">
-    <mxGraphModel dx="2488" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2532" dy="1705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -539,6 +539,9 @@
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-14" value="&lt;div&gt;普通结算流程&lt;/div&gt;WarSettleStage.&lt;b&gt;DoSettle&lt;/b&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-760" y="1850" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-22" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;GameRoom.CheckForceEndInMashMark&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;只有ai玩家，且真人都有离开标记，则强制撤离&lt;/div&gt;&lt;/div&gt;&lt;div&gt;_serverWarscene.serverWar.ForceToEnd&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1700" width="330" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
