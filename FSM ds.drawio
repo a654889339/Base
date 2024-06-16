@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-16T12:34:34.981Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="jd8o8C2Q40TzUYcpM3a_" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-16T13:03:24.750Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="_Hpm44r5VzPv_IRl-EUa" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -481,8 +481,8 @@
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-2" target="X2hCjSS4Vl0-8XwFfeY9-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-2" value="WarUser.SetGSSettleBackInfo&lt;div&gt;1. 撤离阶段的&amp;nbsp;&lt;b&gt;未撤离的玩家集合&lt;/b&gt;&amp;nbsp;移除当前玩家 WarSettleStage.waitSettleBackUsers.Remove(userID)&lt;/div&gt;&lt;div&gt;2. 在撤离阶段模块里 保存撤离时玩家的数据&amp;nbsp;settleStage.OnSettleBack(this(WarUser), info);&lt;/div&gt;&lt;div&gt;3. 所有玩家结算完毕&amp;nbsp;if (_settleCount &amp;lt;= 0)&lt;/div&gt;&lt;div&gt;4. 若是马氏马克地图则把所有玩家都踢出去&amp;nbsp;DoKickPlayerAfterEvaluate&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-40" y="780" width="870" height="100" as="geometry" />
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-2" value="WarUser.SetGSSettleBackInfo&lt;div&gt;1. 撤离阶段的&amp;nbsp;&lt;b&gt;未撤离的玩家集合&lt;/b&gt;&amp;nbsp;移除当前玩家 WarSettleStage.waitSettleBackUsers.Remove(userID)&lt;/div&gt;&lt;div&gt;2. 在撤离阶段模块里 保存撤离时玩家的数据&amp;nbsp;settleStage.OnSettleBack(this(WarUser), info);&lt;/div&gt;&lt;div&gt;3. 所有玩家结算完毕&amp;nbsp;if (_settleCount &amp;lt;= 0)&lt;/div&gt;&lt;div&gt;4. 玩家播放结算界面UI SendSettleToClient&lt;/div&gt;&lt;div&gt;5. 若是马氏马克地图则把所有玩家都踢出去&amp;nbsp;DoKickPlayerAfterEvaluate&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="790" width="910" height="140" as="geometry" />
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-4" value="游戏4个阶段&lt;div&gt;&lt;div&gt;public enum WarProgressStatus {&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarStandby&quot;)] WarStandby = 0,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarWaitting&quot;)] WarWaitting = 1,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarInFormalBattle&quot;)] WarInFormalBattle = 2,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarSettle&quot;)] WarSettle = 3,&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-150" y="320" width="420" height="190" as="geometry" />
