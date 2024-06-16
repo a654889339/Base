@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-16T12:20:57.029Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="360V9-JujgCaemlnexXc" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-16T12:34:34.981Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="jd8o8C2Q40TzUYcpM3a_" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -546,8 +546,35 @@
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-22" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;GameRoom.CheckForceEndInMashMark&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;只有ai玩家，且真人都有离开标记，则强制撤离&lt;/div&gt;&lt;/div&gt;&lt;div&gt;_serverWarscene.serverWar.ForceToEnd&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="70" y="1700" width="330" height="110" as="geometry" />
         </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-23" target="X2hCjSS4Vl0-8XwFfeY9-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-23" value="ServerWar.ForceToEnd()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="125" y="1920" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-26" value="WarJudgments.ForceToEndJudgment" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="127.5" y="2090" width="215" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-28" value="WarJudgments.ForceAchieveWinPointWarToEnd" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="2090" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-29" target="X2hCjSS4Vl0-8XwFfeY9-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-29" value="StaticWarAgent.ForceAchieveWinPointWarToEnd" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1950" width="290" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-31" target="X2hCjSS4Vl0-8XwFfeY9-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-31" value="行为树节点&lt;div&gt;Server.BehaviorTree.Actions&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;ForceAchieveWinPointWarToEndAction.OnUpdate&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="1790" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-33" target="X2hCjSS4Vl0-8XwFfeY9-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-33" value="BehaviorDesigner.Runtime.BehaviorTypeId.Register(8074, typeof(Server.BehaviorTree.Actions.ForceAchieveWinPointWarToEndAction));" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="1690" width="400" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
