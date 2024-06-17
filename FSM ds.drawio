@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-17T09:30:49.598Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="TfgKoeWOc5eznnXTRMFc" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-17T09:32:57.097Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="awjp2fHGFj94INCWM_kr" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -577,6 +577,12 @@
         </mxCell>
         <mxCell id="Xy02D-rM18JvdIoiQVGx-11" value="SyncOneWeatherToClient()&lt;div&gt;把一个天气数据广播一下&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1720" y="840" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Xy02D-rM18JvdIoiQVGx-13" target="Xy02D-rM18JvdIoiQVGx-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-13" value="Activate()&lt;div&gt;0. 扫描每个天气&lt;br&gt;&lt;div&gt;1. 如果天气到达启动时间，并且未同步过，则同步一次&amp;nbsp;SyncOneWeatherToClient&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1595" y="400" width="450" height="240" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
