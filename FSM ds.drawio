@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-17T06:27:35.580Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="foY7xP6tQLjb44mUKUnO" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-17T06:44:30.885Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="0RIX8h68lOzr8EH3VZBg" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -332,7 +332,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="660VQV9bjZOmXcSyOBNS" name="复活模块">
-    <mxGraphModel dx="1150" dy="1843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="566" dy="2712" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -438,26 +438,38 @@
         <mxCell id="8ZhbOmAN1mw3FXku5DQu-2" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="ol9IdXqjmtpI2yGcnYGj-1" target="8ZhbOmAN1mw3FXku5DQu-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ol9IdXqjmtpI2yGcnYGj-1" value="&lt;b&gt;SoStateData&lt;/b&gt;&lt;div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/b&gt; public Dictionary&amp;lt;StateType, int&amp;gt; states = new Dictionary&amp;lt;StateType, int&amp;gt;();&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="2065.5" y="310" width="579" height="70" as="geometry" />
+        <mxCell id="ol9IdXqjmtpI2yGcnYGj-1" value="&lt;div&gt;&lt;b&gt;变量包含关系&lt;/b&gt;&lt;/div&gt;&lt;b&gt;SoStateData&lt;/b&gt;&lt;div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/b&gt; public Dictionary&amp;lt;StateType, int&amp;gt; states = new Dictionary&amp;lt;StateType, int&amp;gt;();&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1930" y="1580" width="579" height="70" as="geometry" />
         </mxCell>
         <mxCell id="ol9IdXqjmtpI2yGcnYGj-3" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="ol9IdXqjmtpI2yGcnYGj-2" target="ol9IdXqjmtpI2yGcnYGj-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ol9IdXqjmtpI2yGcnYGj-2" value="SoStateDataManagerBase&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected Dictionary&amp;lt;int, SoStateData&amp;gt; _soStateDatas = new Dictionary&amp;lt;int, &lt;b&gt;SoStateData&lt;/b&gt;&amp;gt;();&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Key为玩家ID？&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="2090" y="150" width="530" height="100" as="geometry" />
+        <mxCell id="ol9IdXqjmtpI2yGcnYGj-2" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;变量包含关系&lt;/b&gt;&lt;br&gt;&lt;/div&gt;SoStateDataManagerBase&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected Dictionary&amp;lt;int, SoStateData&amp;gt; _soStateDatas = new Dictionary&amp;lt;int, &lt;b&gt;SoStateData&lt;/b&gt;&amp;gt;();&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Key为玩家ID？&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1964.5" y="1450" width="530" height="100" as="geometry" />
         </mxCell>
         <mxCell id="ol9IdXqjmtpI2yGcnYGj-5" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="ol9IdXqjmtpI2yGcnYGj-4" target="ol9IdXqjmtpI2yGcnYGj-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ol9IdXqjmtpI2yGcnYGj-4" value="WarModule" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="2295" y="20" width="120" height="60" as="geometry" />
+        <mxCell id="ol9IdXqjmtpI2yGcnYGj-4" value="WarModule 基类" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2159.5" y="1290" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="8ZhbOmAN1mw3FXku5DQu-1" value="&lt;div&gt;同步数据&lt;/div&gt;ServerSoStateDataManager.SyncExtraData" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="2205" y="460" width="300" height="160" as="geometry" />
+        <mxCell id="8ZhbOmAN1mw3FXku5DQu-1" value="&lt;div&gt;同步数据&lt;/div&gt;ServerSoStateDataManager.SyncExtraData()" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1620" y="1770" width="300" height="160" as="geometry" />
         </mxCell>
         <mxCell id="8ZhbOmAN1mw3FXku5DQu-3" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; public enum StateType&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;无&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; None = 0,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;快捷标记&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; QuickMark = 1,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;隐藏图标&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; IconInvisible = 2,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;是否携带矿物&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; MineralOwner = 3,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;是否混乱状态&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; IsConfused = 4,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;推车NPC状态&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; DoublePushNpcState = 5,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;是否治疗&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; IsHeal = 6,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;是否携带旗帜&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; FlagOwner = 7,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;推车NPC进度(0~10000代表0%~100%)&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; DoublePushProcess = 8,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;是否正在雷达扫描&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; IsRadarScanning = 9,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;位于地下城内&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; InDungeon = 10,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;剩余使用次数&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; LifeCount = 11,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;被占领的势力Id&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; OccupyForceId = 12,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;占领的推车势力Id&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; OccupyDoublePushNpcForceId = 13,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [LabelText(&quot;单位生命周期类型&quot;)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; LifeCycleType = 14,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2760" y="-490" width="330" height="705" as="geometry" />
+        </mxCell>
+        <mxCell id="TSkOYfZsIgay2WD69a24-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TSkOYfZsIgay2WD69a24-1" target="8ZhbOmAN1mw3FXku5DQu-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TSkOYfZsIgay2WD69a24-1" value="&lt;div&gt;调用关系&lt;/div&gt;ServerSoStateDataManager.SyncExtraDataByType()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="1460" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="TSkOYfZsIgay2WD69a24-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TSkOYfZsIgay2WD69a24-3" target="TSkOYfZsIgay2WD69a24-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TSkOYfZsIgay2WD69a24-3" value="&lt;div&gt;每个类型的同步函数&lt;/div&gt;&lt;div&gt;OnExtraStateHealActsSyncTimer&lt;br&gt;&lt;/div&gt;OnExtraStateRadarRadiusSyncTimer()&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; {&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;SyncExtraDataByType(ExtraStateType.RadarRadius);&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1445" y="1230" width="430" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
