@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-17T09:43:46.571Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="m8N9UmIkSuQkc7OYCxbd" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-17T09:55:37.339Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="oz5b3AJ-tt2qAo5IuRPK" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -523,7 +523,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="inUgT6fnLxOBwQptTbOi" name="天气模块">
-    <mxGraphModel dx="1548" dy="2286" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1699" dy="2519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -559,6 +559,14 @@
         </mxCell>
         <mxCell id="Xy02D-rM18JvdIoiQVGx-1" value="FixWeather&lt;div&gt;提早出现的毒圈，会有个缩小（半径和变化时间）&lt;/div&gt;&lt;div&gt;这里运算变化后的半径和时间&lt;/div&gt;&lt;div&gt;weatherData.fixedLifeRadius&lt;br&gt;&lt;/div&gt;&lt;div&gt;weatherData.fixedLifeTick&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="470" y="910" width="410" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Xy02D-rM18JvdIoiQVGx-4" target="Xy02D-rM18JvdIoiQVGx-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-20" value="变量使用的地方" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Xy02D-rM18JvdIoiQVGx-19">
+          <mxGeometry x="0.0017" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="Xy02D-rM18JvdIoiQVGx-4" value="最终得到毒圈实际运行的半径和时间&lt;div&gt;&lt;b&gt;WeatherData.lifeTick&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;WeatherData.lifeRadius&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="291" y="1290" width="245" height="150" as="geometry" />
