@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-17T08:33:47.189Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="_kHbxC0aTRn6ddwp-pUo" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-17T08:37:35.052Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="UG14oS4aUHeV7828yxo_" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -516,7 +516,7 @@
         <mxCell id="TSkOYfZsIgay2WD69a24-17" value="DoBroadcastStateExtraDataChange&lt;div&gt;广播变更的字段&lt;/div&gt;&lt;div&gt;S2C_PROTOCOL.S2CSoStateExtraDataChange&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1580" y="2930" width="290" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="TSkOYfZsIgay2WD69a24-19" value="C2SClientProtocol.OnStateExtraDataChange" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="TSkOYfZsIgay2WD69a24-19" value="C2SClientProtocol.OnStateExtraDataChange&lt;div&gt;将协议变量保存到本地，并做相应表现&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1585" y="3110" width="280" height="70" as="geometry" />
         </mxCell>
       </root>
