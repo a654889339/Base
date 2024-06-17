@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-16T13:09:02.217Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="FLBkJKQIpeqgtq7IYC5-" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-17T02:17:30.103Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="IIOtQ34MQYCTWVAr_JR3" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -439,7 +439,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="inUgT6fnLxOBwQptTbOi" name="天气模块">
-    <mxGraphModel dx="1661" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4292" dy="2984" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -576,8 +576,14 @@
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-33" value="BehaviorDesigner.Runtime.BehaviorTypeId.Register(8074, typeof(Server.BehaviorTree.Actions.ForceAchieveWinPointWarToEndAction));" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="565" y="1690" width="400" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-35" value="&lt;div&gt;获取战局结束条件&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; var inFormalBattleState = battleState.GetStateStage(WarProgressStatus.WarInFormalBattle) as WarInFormalBattleStage;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (inFormalBattleState != null)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; type = (int)inFormalBattleState.GetGameEndType();&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="270" y="2250" width="970" height="110" as="geometry" />
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-36" value="&lt;div&gt;结算本局，&lt;span style=&quot;background-color: initial;&quot;&gt;结算剩余的每个玩家&lt;/span&gt;&lt;/div&gt;ForceSettle" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="2750" width="310" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-37" target="X2hCjSS4Vl0-8XwFfeY9-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-37" value="WarSettleStage.DoTakovGMSettle" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="2620" width="270" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
