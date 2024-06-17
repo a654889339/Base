@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-17T09:55:37.339Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="oz5b3AJ-tt2qAo5IuRPK" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-17T15:14:36.803Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="6vZWXkqFbuv4AVrAZG8I" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -332,7 +332,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="660VQV9bjZOmXcSyOBNS" name="复活模块">
-    <mxGraphModel dx="914" dy="3661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="910" dy="2578" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -603,6 +603,14 @@
         </mxCell>
         <mxCell id="Xy02D-rM18JvdIoiQVGx-17" value="CheckNPC&lt;div&gt;检查所有npc是否在毒圈内&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2220" y="710" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gJiij9rXR8iOSp0JskP7-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJiij9rXR8iOSp0JskP7-1" target="7STc2YbkeW5kZMqmHtm8-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJiij9rXR8iOSp0JskP7-1" value="OnPhase3Start" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-300" y="740" width="230" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
