@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-17T08:37:35.052Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="UG14oS4aUHeV7828yxo_" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-17T09:15:44.328Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="Rp7QB9ngeleMphVdrS0B" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -332,7 +332,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="660VQV9bjZOmXcSyOBNS" name="复活模块">
-    <mxGraphModel dx="517" dy="2578" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="914" dy="3661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -523,7 +523,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="inUgT6fnLxOBwQptTbOi" name="天气模块">
-    <mxGraphModel dx="4292" dy="2984" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1421" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -531,6 +531,9 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7STc2YbkeW5kZMqmHtm8-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="7STc2YbkeW5kZMqmHtm8-1" target="7STc2YbkeW5kZMqmHtm8-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7STc2YbkeW5kZMqmHtm8-1" target="Xy02D-rM18JvdIoiQVGx-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7STc2YbkeW5kZMqmHtm8-1" value="&lt;b&gt;Server&lt;/b&gt;MarshmackWeatherModule. CreateWeather&lt;div&gt;1. 读配置创建天气数据 CreateWeatherData&amp;nbsp;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. 先创建龙卷风（也是一个天气数据）&lt;/div&gt;&lt;div&gt;InitWeather&lt;/div&gt;&lt;div&gt;3. 再创建毒圈 （&lt;span style=&quot;background-color: initial;&quot;&gt;天气数据）&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;InitWeather&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;FIxWeather&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -542,11 +545,23 @@
         <mxCell id="7STc2YbkeW5kZMqmHtm8-3" value="天气模块基类&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; public class MarshmackWeatherModule : WarModule&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected int weatherRoundId = int.MinValue;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected List&amp;lt;WeatherData&amp;gt; weathers = new List&amp;lt;WeatherData&amp;gt;();&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected Dictionary&amp;lt;int, int&amp;gt; weatherId2StormId = new Dictionary&amp;lt;int, int&amp;gt;(); // 天气实例Id对应的龙卷风实例Id&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; //配置Id和对应的天气实例Id&amp;nbsp; &amp;nbsp;注:目前是不允许一个配置创建多个天气势力 龙卷风除外&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected Dictionary&amp;lt;int, int&amp;gt; weatherConfigId2InstanceId = new Dictionary&amp;lt;int, int&amp;gt;();&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected Dictionary&amp;lt;int, WeatherData&amp;gt; instanceId2Data = new Dictionary&amp;lt;int, WeatherData&amp;gt;();&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected Dictionary&amp;lt;int, KibbleNpcData&amp;gt; kibbleNpcDic = new Dictionary&amp;lt;int, KibbleNpcData&amp;gt;();&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-10" y="-80" width="590" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="7STc2YbkeW5kZMqmHtm8-4" value="InitWeather&lt;div&gt;1. isFixed = 恢复到最大阶段，（最终最大和提早最大都是有这个标记）则判断是否需要叠加扩大&lt;/div&gt;&lt;div&gt;2. 判断是否需要叠加扩大的标记为isWaitingUnfix(需要最终最大），若需要再次扩大则设置fixedLife**配置。&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. 若还没到最终最大或者提早最大，则视为刚出生，把每个阶段的tick时间加入&lt;b&gt;originalTick&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7STc2YbkeW5kZMqmHtm8-4" target="Xy02D-rM18JvdIoiQVGx-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7STc2YbkeW5kZMqmHtm8-4" value="InitWeather&lt;div&gt;1. isFixed = 恢复到最大阶段，（最终最大和提早最大都是有这个标记）则判断是否需要叠加扩大&lt;/div&gt;&lt;div&gt;2. 判断是否需要叠加扩大的标记为&lt;b&gt;isWaitingUnfix&lt;/b&gt;(需要最终最大），若需要再次扩大则设置fixedLife**配置。&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. 若还没到最终最大或者提早最大，则视为刚出生，把每个阶段的tick时间加入&lt;b&gt;originalTick&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;函数功能：安排好接下来阶段的变化tick&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-110" y="910" width="440" height="210" as="geometry" />
         </mxCell>
         <mxCell id="7STc2YbkeW5kZMqmHtm8-6" value="&lt;div&gt;创建天气数据&lt;/div&gt;CreateWeatherData&lt;div&gt;会保存所有阶段的绝对时间和大小&lt;/div&gt;&lt;div&gt;后续tick中直接拿来对比时间&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-200" y="570" width="250" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Xy02D-rM18JvdIoiQVGx-1" target="Xy02D-rM18JvdIoiQVGx-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-1" value="FixWeather&lt;div&gt;提早出现的毒圈，会有个缩小（半径和变化时间）&lt;/div&gt;&lt;div&gt;这里运算变化后的半径和时间&lt;/div&gt;&lt;div&gt;weatherData.fixedLifeRadius&lt;br&gt;&lt;/div&gt;&lt;div&gt;weatherData.fixedLifeTick&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="910" width="410" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-4" value="最终得到毒圈实际运行的半径和时间&lt;div&gt;WeatherData.lifeTick&lt;br&gt;&lt;/div&gt;&lt;div&gt;WeatherData.lifeRadius&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="291" y="1290" width="245" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
