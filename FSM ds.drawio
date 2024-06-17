@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-17T07:55:01.484Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="IYeWpWvobI63Yk7PEk3E" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-17T08:31:56.520Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="H0Jst4MJ6xRReKAXqvl_" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -453,6 +453,9 @@
         <mxCell id="ol9IdXqjmtpI2yGcnYGj-4" value="WarModule 基类" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2224.5" y="2210" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="TSkOYfZsIgay2WD69a24-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8ZhbOmAN1mw3FXku5DQu-1" target="TSkOYfZsIgay2WD69a24-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="8ZhbOmAN1mw3FXku5DQu-1" value="&lt;div&gt;同步数据&lt;/div&gt;ServerSoStateDataManager.SyncExtraData(ExtraStateType extraStateType, List&amp;lt;SoStateData&amp;gt; stateDatas)&lt;div&gt;将list 里的所有玩家的&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;extraStateType 类型数据同步广播&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1432.5" y="2700" width="585" height="160" as="geometry" />
         </mxCell>
@@ -506,6 +509,9 @@
         </mxCell>
         <mxCell id="TSkOYfZsIgay2WD69a24-15" value="ServerQuickMarkModule.OnClientRequestCreateMark()&lt;div&gt;[标记模块] 客户端发起标记&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1287.5" y="1430" width="315" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TSkOYfZsIgay2WD69a24-17" value="DoBroadcastStateExtraDataChange&lt;div&gt;广播变更的字段&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1580" y="2930" width="290" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
