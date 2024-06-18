@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-17T15:14:36.803Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="6vZWXkqFbuv4AVrAZG8I" version="24.5.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-06-18T13:42:28.997Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="BjV8hi_rINGPR6ebaxdN" version="24.5.4" type="github" pages="4">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -523,7 +523,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="inUgT6fnLxOBwQptTbOi" name="天气模块">
-    <mxGraphModel dx="1699" dy="2519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1661" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -533,7 +533,7 @@
         <mxCell id="7STc2YbkeW5kZMqmHtm8-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="7STc2YbkeW5kZMqmHtm8-1" target="7STc2YbkeW5kZMqmHtm8-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7STc2YbkeW5kZMqmHtm8-1" target="Xy02D-rM18JvdIoiQVGx-1">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="7STc2YbkeW5kZMqmHtm8-1" target="Xy02D-rM18JvdIoiQVGx-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7STc2YbkeW5kZMqmHtm8-1" value="&lt;b&gt;Server&lt;/b&gt;MarshmackWeatherModule. CreateWeather&lt;div&gt;1. 读配置创建天气数据 CreateWeatherData&amp;nbsp;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. 先创建龙卷风（也是一个天气数据）&lt;/div&gt;&lt;div&gt;InitWeather&lt;/div&gt;&lt;div&gt;3. 再创建毒圈 （&lt;span style=&quot;background-color: initial;&quot;&gt;天气数据）&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;InitWeather&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;FIxWeather&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -545,7 +545,7 @@
         <mxCell id="7STc2YbkeW5kZMqmHtm8-3" value="天气模块基类&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; public class MarshmackWeatherModule : WarModule&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected int weatherRoundId = int.MinValue;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected List&amp;lt;WeatherData&amp;gt; weathers = new List&amp;lt;WeatherData&amp;gt;();&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected Dictionary&amp;lt;int, int&amp;gt; weatherId2StormId = new Dictionary&amp;lt;int, int&amp;gt;(); // 天气实例Id对应的龙卷风实例Id&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; //配置Id和对应的天气实例Id&amp;nbsp; &amp;nbsp;注:目前是不允许一个配置创建多个天气势力 龙卷风除外&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected Dictionary&amp;lt;int, int&amp;gt; weatherConfigId2InstanceId = new Dictionary&amp;lt;int, int&amp;gt;();&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected Dictionary&amp;lt;int, WeatherData&amp;gt; instanceId2Data = new Dictionary&amp;lt;int, WeatherData&amp;gt;();&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected Dictionary&amp;lt;int, KibbleNpcData&amp;gt; kibbleNpcDic = new Dictionary&amp;lt;int, KibbleNpcData&amp;gt;();&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-10" y="-80" width="590" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7STc2YbkeW5kZMqmHtm8-4" target="Xy02D-rM18JvdIoiQVGx-4">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7STc2YbkeW5kZMqmHtm8-4" target="Xy02D-rM18JvdIoiQVGx-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7STc2YbkeW5kZMqmHtm8-4" value="InitWeather&lt;div&gt;1. isFixed = 恢复到最大阶段，（最终最大和提早最大都是有这个标记）则判断是否需要叠加扩大&lt;/div&gt;&lt;div&gt;2. 判断是否需要叠加扩大的标记为&lt;b&gt;isWaitingUnfix&lt;/b&gt;(需要最终最大），若需要再次扩大则设置fixedLife**配置。&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. 若还没到最终最大或者提早最大，则视为刚出生，把每个阶段的tick时间加入&lt;b&gt;originalTick&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;函数功能：安排好接下来阶段的变化tick&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -554,63 +554,69 @@
         <mxCell id="7STc2YbkeW5kZMqmHtm8-6" value="&lt;div&gt;创建天气数据&lt;/div&gt;CreateWeatherData&lt;div&gt;会保存所有阶段的绝对时间和大小&lt;/div&gt;&lt;div&gt;后续tick中直接拿来对比时间&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-200" y="515" width="250" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Xy02D-rM18JvdIoiQVGx-1" target="Xy02D-rM18JvdIoiQVGx-4">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Xy02D-rM18JvdIoiQVGx-1" target="Xy02D-rM18JvdIoiQVGx-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-1" value="FixWeather&lt;div&gt;提早出现的毒圈，会有个缩小（半径和变化时间）&lt;/div&gt;&lt;div&gt;这里运算变化后的半径和时间&lt;/div&gt;&lt;div&gt;weatherData.fixedLifeRadius&lt;br&gt;&lt;/div&gt;&lt;div&gt;weatherData.fixedLifeTick&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-1" value="FixWeather&lt;div&gt;提早出现的毒圈，会有个缩小（半径和变化时间）&lt;/div&gt;&lt;div&gt;这里运算变化后的半径和时间&lt;/div&gt;&lt;div&gt;weatherData.fixedLifeRadius&lt;br&gt;&lt;/div&gt;&lt;div&gt;weatherData.fixedLifeTick&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="470" y="910" width="410" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Xy02D-rM18JvdIoiQVGx-4" target="Xy02D-rM18JvdIoiQVGx-13">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Xy02D-rM18JvdIoiQVGx-4" target="Xy02D-rM18JvdIoiQVGx-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-20" value="变量使用的地方" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Xy02D-rM18JvdIoiQVGx-19">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-20" value="变量使用的地方" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="Xy02D-rM18JvdIoiQVGx-19" vertex="1" connectable="0">
           <mxGeometry x="0.0017" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-4" value="最终得到毒圈实际运行的半径和时间&lt;div&gt;&lt;b&gt;WeatherData.lifeTick&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;WeatherData.lifeRadius&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-4" value="最终得到毒圈实际运行的半径和时间&lt;div&gt;&lt;b&gt;WeatherData.lifeTick&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;WeatherData.lifeRadius&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="291" y="1290" width="245" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-7" value="ServerMarshmackWeatherModule.ToPb()&lt;div&gt;天气数据打包&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1450" y="1000" width="270" height="100" as="geometry" />
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-7" value="ServerMarshmackWeatherModule.ToPb()&lt;div&gt;天气数据打包&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1640" y="1320" width="270" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Xy02D-rM18JvdIoiQVGx-9" target="Xy02D-rM18JvdIoiQVGx-7">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Xy02D-rM18JvdIoiQVGx-9" target="Xy02D-rM18JvdIoiQVGx-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-9" value="ServerMarshmackWeatherModule.SyncAllData()&lt;div&gt;同步对局所有的天气数据给客户端（单播or广播)&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1250" y="830" width="340" height="100" as="geometry" />
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-9" value="ServerMarshmackWeatherModule.SyncAllData()&lt;div&gt;同步对局所有的天气数据给客户端（单播or广播)&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1440" y="1150" width="340" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Xy02D-rM18JvdIoiQVGx-11" target="Xy02D-rM18JvdIoiQVGx-7">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Xy02D-rM18JvdIoiQVGx-11" target="Xy02D-rM18JvdIoiQVGx-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-11" value="SyncOneWeatherToClient()&lt;div&gt;把一个天气数据广播一下&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1720" y="840" width="200" height="70" as="geometry" />
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-11" value="SyncOneWeatherToClient()&lt;div&gt;把一个天气数据广播一下&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1910" y="1160" width="200" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Xy02D-rM18JvdIoiQVGx-13" target="Xy02D-rM18JvdIoiQVGx-11">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Xy02D-rM18JvdIoiQVGx-13" target="Xy02D-rM18JvdIoiQVGx-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Xy02D-rM18JvdIoiQVGx-13" target="Xy02D-rM18JvdIoiQVGx-17">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Xy02D-rM18JvdIoiQVGx-13" target="Xy02D-rM18JvdIoiQVGx-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-13" value="Activate()&lt;div&gt;0. 扫描每个天气&lt;br&gt;&lt;div&gt;1. 如果天气到达启动时间，并且未同步过，则同步一次(isSynced) SyncOneWeatherToClient&lt;/div&gt;&lt;/div&gt;&lt;div&gt;2. 天气Update&amp;nbsp;weather.Update()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. 检查所有玩家是否在毒圈内&amp;nbsp;CheckIsInSafeArea&lt;/div&gt;&lt;div&gt;4. 检查所有npc是否在毒圈内&amp;nbsp;CheckNPC&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="BiNtSyXb7KPDdfa0L7t0-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Xy02D-rM18JvdIoiQVGx-13" target="BiNtSyXb7KPDdfa0L7t0-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-13" value="Activate()&lt;div&gt;0. 扫描每个天气&lt;br&gt;&lt;div&gt;1. 如果天气到达启动时间，并且未同步过，则同步一次(isSynced) SyncOneWeatherToClient&lt;/div&gt;&lt;/div&gt;&lt;div&gt;2. 天气Update&amp;nbsp;weather.Update()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. 检查所有玩家是否在毒圈内&amp;nbsp;CheckIsInSafeArea&lt;/div&gt;&lt;div&gt;4. 检查所有npc是否在毒圈内&amp;nbsp;CheckNPC&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1460" y="500" width="600" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-15" value="CheckIsInSafeArea&lt;div&gt;检查所有玩家是否在毒圈内&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-15" value="CheckIsInSafeArea&lt;div&gt;检查所有玩家是否在毒圈内&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2020" y="690" width="170" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.44;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Xy02D-rM18JvdIoiQVGx-13" target="Xy02D-rM18JvdIoiQVGx-15">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.44;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Xy02D-rM18JvdIoiQVGx-13" target="Xy02D-rM18JvdIoiQVGx-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Xy02D-rM18JvdIoiQVGx-17" value="CheckNPC&lt;div&gt;检查所有npc是否在毒圈内&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Xy02D-rM18JvdIoiQVGx-17" value="CheckNPC&lt;div&gt;检查所有npc是否在毒圈内&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2220" y="710" width="170" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="gJiij9rXR8iOSp0JskP7-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJiij9rXR8iOSp0JskP7-1" target="7STc2YbkeW5kZMqmHtm8-4">
+        <mxCell id="gJiij9rXR8iOSp0JskP7-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="gJiij9rXR8iOSp0JskP7-1" target="7STc2YbkeW5kZMqmHtm8-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint y="900" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gJiij9rXR8iOSp0JskP7-1" value="OnPhase3Start" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="gJiij9rXR8iOSp0JskP7-1" value="OnPhase3Start" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-300" y="740" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="BiNtSyXb7KPDdfa0L7t0-1" value="天气Update&lt;div&gt;获取&lt;b&gt;当前毒圈对应的大小&lt;/b&gt;GetRadius，通过lifeRadius和时间插值&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="730" width="230" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
