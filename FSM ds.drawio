@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-20T11:45:00.322Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="nr0jk6CEwve538iUK62H" version="24.5.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-20T11:50:28.171Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="kZHafiUivAkbOWUYN-xe" version="24.5.5" type="github" pages="5">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -921,6 +921,18 @@
         </mxCell>
         <mxCell id="jeA5YK_Ed9TRFlLAVQ66-18" value="SceneObject.OnAddToScene()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2650" y="1020" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jeA5YK_Ed9TRFlLAVQ66-20" target="jeA5YK_Ed9TRFlLAVQ66-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-20" value="SceneObject.AddToScene(GameLogic.WarScene warScene)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2575" y="910" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jeA5YK_Ed9TRFlLAVQ66-22" target="jeA5YK_Ed9TRFlLAVQ66-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-22" value="WarScene.AddSceneObject(SceneObject so)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2610" y="810" width="260" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
