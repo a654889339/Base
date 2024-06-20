@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-20T08:26:31.005Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="FM-4RDCbjDhpq5NPqTp9" version="24.5.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-20T08:33:15.585Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="YuvKmu4u5f3z31tOUrn8" version="24.5.5" type="github" pages="5">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -820,6 +820,17 @@
         </mxCell>
         <mxCell id="ChcU5H5cNufQpcIHxFxy-3" value="SceneObject.DoActionBeforeDelete()&lt;div&gt;移除物体的所有组件&amp;nbsp;componentContainer&lt;/div&gt;&lt;div&gt;通知所有召唤物，父节点已被删除&amp;nbsp;EEventKey.eOnSpawnObjDelete&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1685" y="1860" width="440" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ChcU5H5cNufQpcIHxFxy-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ChcU5H5cNufQpcIHxFxy-5" target="qAwerYIChVjv81fXeXq3-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ChcU5H5cNufQpcIHxFxy-7" value="CommonLogicUtils.IsServer()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ChcU5H5cNufQpcIHxFxy-6">
+          <mxGeometry x="-0.0316" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ChcU5H5cNufQpcIHxFxy-5" value="SceneObject bool &lt;b&gt;IsDelete&lt;/b&gt;&lt;div&gt;&lt;b&gt;设置物件的删除标记&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="1020" width="290" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
