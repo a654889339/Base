@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-20T08:33:15.585Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="YuvKmu4u5f3z31tOUrn8" version="24.5.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-20T09:11:27.659Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="Wf3hqyGVyWODTTRqJP4x" version="24.5.5" type="github" pages="5">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -622,122 +622,134 @@
     </mxGraphModel>
   </diagram>
   <diagram id="D4cUpWKldzLiPTz7wScZ" name="结算模块">
-    <mxGraphModel dx="2532" dy="1705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2488" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-1" target="X2hCjSS4Vl0-8XwFfeY9-2">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-1" target="X2hCjSS4Vl0-8XwFfeY9-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-1" value="OnPlayerSettleBack(PlayerId, ···）&lt;div&gt;1. 若是马氏马克，则撤离该玩家&lt;/div&gt;&lt;div&gt;2. 其他玩法则全部真实玩家都撤离&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-1" value="OnPlayerSettleBack(PlayerId, ···）&lt;div&gt;1. 若是马氏马克，则撤离该玩家&lt;/div&gt;&lt;div&gt;2. 其他玩法则全部真实玩家都撤离&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="230" y="585" width="330" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-2" target="X2hCjSS4Vl0-8XwFfeY9-5">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-2" target="X2hCjSS4Vl0-8XwFfeY9-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-2" value="WarUser.SetGSSettleBackInfo&lt;div&gt;1. 撤离阶段的&amp;nbsp;&lt;b&gt;未撤离的玩家集合&lt;/b&gt;&amp;nbsp;移除当前玩家 WarSettleStage.waitSettleBackUsers.Remove(userID)&lt;/div&gt;&lt;div&gt;2. 在撤离阶段模块里 保存撤离时玩家的数据&amp;nbsp;settleStage.OnSettleBack(this(WarUser), info);&lt;/div&gt;&lt;div&gt;3. 所有玩家结算完毕&amp;nbsp;if (_settleCount &amp;lt;= 0)&lt;/div&gt;&lt;div&gt;4. 玩家播放结算界面UI SendSettleToClient :&amp;nbsp;&lt;b&gt;S2C_PROTOCOL.S2CWarSettle&lt;/b&gt;&lt;/div&gt;&lt;div&gt;5. 若是马氏马克地图则把所有玩家都踢出去&amp;nbsp;DoKickPlayerAfterEvaluate&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-2" value="WarUser.SetGSSettleBackInfo&lt;div&gt;1. 撤离阶段的&amp;nbsp;&lt;b&gt;未撤离的玩家集合&lt;/b&gt;&amp;nbsp;移除当前玩家 WarSettleStage.waitSettleBackUsers.Remove(userID)&lt;/div&gt;&lt;div&gt;2. 在撤离阶段模块里 保存撤离时玩家的数据&amp;nbsp;settleStage.OnSettleBack(this(WarUser), info);&lt;/div&gt;&lt;div&gt;3. 所有玩家结算完毕&amp;nbsp;if (_settleCount &amp;lt;= 0)&lt;/div&gt;&lt;div&gt;4. 玩家播放结算界面UI SendSettleToClient :&amp;nbsp;&lt;b&gt;S2C_PROTOCOL.S2CWarSettle&lt;/b&gt;&lt;/div&gt;&lt;div&gt;5. 若是马氏马克地图则把所有玩家都踢出去&amp;nbsp;DoKickPlayerAfterEvaluate&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-60" y="790" width="910" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-4" value="游戏4个阶段&lt;div&gt;&lt;div&gt;public enum WarProgressStatus {&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarStandby&quot;)] WarStandby = 0,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarWaitting&quot;)] WarWaitting = 1,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarInFormalBattle&quot;)] WarInFormalBattle = 2,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarSettle&quot;)] WarSettle = 3,&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-4" value="游戏4个阶段&lt;div&gt;&lt;div&gt;public enum WarProgressStatus {&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarStandby&quot;)] WarStandby = 0,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarWaitting&quot;)] WarWaitting = 1,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarInFormalBattle&quot;)] WarInFormalBattle = 2,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarSettle&quot;)] WarSettle = 3,&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-150" y="320" width="420" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-5" value="GameRoomManager.DoKickPlayerAfterEvaluate&lt;div&gt;撤离后，删除玩家，会删除gs上的状态，断开客户端连接&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="iwHbo75aDm783HOtJ5gw-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-5" target="iwHbo75aDm783HOtJ5gw-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-5" value="GameRoomManager.DoKickPlayerAfterEvaluate&lt;div&gt;撤离后，删除玩家，会删除gs上的状态，断开客户端连接&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="192.5" y="980" width="405" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-7" target="X2hCjSS4Vl0-8XwFfeY9-8">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-7" target="X2hCjSS4Vl0-8XwFfeY9-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-7" value="StageController.Activate&lt;div&gt;1. GameRoomManager的一个模块&lt;/div&gt;&lt;div&gt;2. active 当前状态机的状态节点&lt;/div&gt;&lt;div&gt;3. 判断是否需要进入下一个状态&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-7" value="StageController.Activate&lt;div&gt;1. GameRoomManager的一个模块&lt;/div&gt;&lt;div&gt;2. active 当前状态机的状态节点&lt;/div&gt;&lt;div&gt;3. 判断是否需要进入下一个状态&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-690" y="670" width="270" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-8" target="X2hCjSS4Vl0-8XwFfeY9-10">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-8" target="X2hCjSS4Vl0-8XwFfeY9-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-8" value="SetNowStage&lt;div&gt;对局状态机修改状态&lt;/div&gt;&lt;div&gt;1. 先调用当前状态的&amp;nbsp;EndStage&lt;/div&gt;&lt;div&gt;2. 修改当前状态&lt;/div&gt;&lt;div&gt;2. 调用当前状态的 BeginStage&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-8" value="SetNowStage&lt;div&gt;对局状态机修改状态&lt;/div&gt;&lt;div&gt;1. 先调用当前状态的&amp;nbsp;EndStage&lt;/div&gt;&lt;div&gt;2. 修改当前状态&lt;/div&gt;&lt;div&gt;2. 调用当前状态的 BeginStage&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-695" y="870" width="280" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-10" target="X2hCjSS4Vl0-8XwFfeY9-12">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-10" target="X2hCjSS4Vl0-8XwFfeY9-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-18" value="大世界结算&lt;div&gt;SettleType.SceneSettle&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X2hCjSS4Vl0-8XwFfeY9-13">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-18" value="大世界结算&lt;div&gt;SettleType.SceneSettle&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X2hCjSS4Vl0-8XwFfeY9-13" vertex="1" connectable="0">
           <mxGeometry x="0.283" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-21" value="马氏马克地图" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X2hCjSS4Vl0-8XwFfeY9-13">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-21" value="马氏马克地图" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X2hCjSS4Vl0-8XwFfeY9-13" vertex="1" connectable="0">
           <mxGeometry x="-0.7067" y="-4" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-10" target="X2hCjSS4Vl0-8XwFfeY9-14">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-10" target="X2hCjSS4Vl0-8XwFfeY9-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-20" value="普通地图" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X2hCjSS4Vl0-8XwFfeY9-15">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-20" value="普通地图" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X2hCjSS4Vl0-8XwFfeY9-15" vertex="1" connectable="0">
           <mxGeometry x="-0.0022" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-10" value="WarSettleStage.BeginStage&lt;div&gt;对局状态的最后一个状态，玩家撤离，结算状态&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;广播状态给所有客户端&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;DoWarProgressStatusChange&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2。 广播所有战斗模块 WarModule.&lt;b&gt;OnWarProgressStatusChange&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;3. 触发状态变化事件&amp;nbsp;&lt;b&gt;eOnWarProgressStatusChange&lt;/b&gt;&lt;/div&gt;&lt;div&gt;4. 触发事件 &lt;b&gt;eOnPreSettle&lt;/b&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;5. 触发结算&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;马氏马克(&lt;/b&gt;&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;DoTakovSettle ）或普通地图（&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;DoSettle）&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-10" value="WarSettleStage.BeginStage&lt;div&gt;对局状态的最后一个状态，玩家撤离，结算状态&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;广播状态给所有客户端&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;DoWarProgressStatusChange&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2。 广播所有战斗模块 WarModule.&lt;b&gt;OnWarProgressStatusChange&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;3. 触发状态变化事件&amp;nbsp;&lt;b&gt;eOnWarProgressStatusChange&lt;/b&gt;&lt;/div&gt;&lt;div&gt;4. 触发事件 &lt;b&gt;eOnPreSettle&lt;/b&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;5. 触发结算&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;马氏马克(&lt;/b&gt;&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;DoTakovSettle ）或普通地图（&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;DoSettle）&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1170" y="1240" width="650" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-12" value="&lt;div&gt;马氏马克结算流程&lt;/div&gt;WarSettleStage.&lt;b&gt;DoTakovSettle&lt;/b&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-12" value="&lt;div&gt;马氏马克结算流程&lt;/div&gt;WarSettleStage.&lt;b&gt;DoTakovSettle&lt;/b&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1610" y="1810" width="360" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-14" target="X2hCjSS4Vl0-8XwFfeY9-12">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-14" target="X2hCjSS4Vl0-8XwFfeY9-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-17" value="个人结算&lt;div&gt;SettleType.PersonSettle&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X2hCjSS4Vl0-8XwFfeY9-16">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-17" value="个人结算&lt;div&gt;SettleType.PersonSettle&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X2hCjSS4Vl0-8XwFfeY9-16" vertex="1" connectable="0">
           <mxGeometry x="-0.0019" y="-3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-14" value="&lt;div&gt;普通结算流程&lt;/div&gt;WarSettleStage.&lt;b&gt;DoSettle&lt;/b&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-14" value="&lt;div&gt;普通结算流程&lt;/div&gt;WarSettleStage.&lt;b&gt;DoSettle&lt;/b&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-760" y="1850" width="280" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-22" target="X2hCjSS4Vl0-8XwFfeY9-23">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-22" target="X2hCjSS4Vl0-8XwFfeY9-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-22" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;GameRoom.CheckForceEndInMashMark&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;只有ai玩家，且真人都有离开标记，则强制撤离&lt;/div&gt;&lt;/div&gt;&lt;div&gt;_serverWarscene.serverWar.ForceToEnd&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-22" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;GameRoom.CheckForceEndInMashMark&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;只有ai玩家，且真人都有离开标记，则强制撤离&lt;/div&gt;&lt;/div&gt;&lt;div&gt;_serverWarscene.serverWar.ForceToEnd&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="70" y="1700" width="330" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-23" target="X2hCjSS4Vl0-8XwFfeY9-26">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-23" target="X2hCjSS4Vl0-8XwFfeY9-26" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-23" value="ServerWar.ForceToEnd()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-23" value="ServerWar.ForceToEnd()" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="125" y="1920" width="220" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-26" value="WarJudgments.ForceToEndJudgment" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-26" value="WarJudgments.ForceToEndJudgment" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="127.5" y="2090" width="215" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-28" value="WarJudgments.ForceAchieveWinPointWarToEnd" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-28" value="WarJudgments.ForceAchieveWinPointWarToEnd" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="630" y="2090" width="270" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-29" target="X2hCjSS4Vl0-8XwFfeY9-28">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-29" target="X2hCjSS4Vl0-8XwFfeY9-28" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-29" value="StaticWarAgent.ForceAchieveWinPointWarToEnd" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-29" value="StaticWarAgent.ForceAchieveWinPointWarToEnd" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="620" y="1950" width="290" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-31" target="X2hCjSS4Vl0-8XwFfeY9-29">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-31" target="X2hCjSS4Vl0-8XwFfeY9-29" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-31" value="行为树节点&lt;div&gt;Server.BehaviorTree.Actions&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;ForceAchieveWinPointWarToEndAction.OnUpdate&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-31" value="行为树节点&lt;div&gt;Server.BehaviorTree.Actions&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;ForceAchieveWinPointWarToEndAction.OnUpdate&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="650" y="1790" width="230" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-33" target="X2hCjSS4Vl0-8XwFfeY9-31">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-33" target="X2hCjSS4Vl0-8XwFfeY9-31" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-33" value="BehaviorDesigner.Runtime.BehaviorTypeId.Register(8074, typeof(Server.BehaviorTree.Actions.ForceAchieveWinPointWarToEndAction));" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-33" value="BehaviorDesigner.Runtime.BehaviorTypeId.Register(8074, typeof(Server.BehaviorTree.Actions.ForceAchieveWinPointWarToEndAction));" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="565" y="1690" width="400" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-36" value="&lt;div&gt;结算本局，&lt;span style=&quot;background-color: initial;&quot;&gt;结算剩余的每个玩家&lt;/span&gt;&lt;/div&gt;ForceSettle" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-36" value="&lt;div&gt;结算本局，&lt;span style=&quot;background-color: initial;&quot;&gt;结算剩余的每个玩家&lt;/span&gt;&lt;/div&gt;ForceSettle" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="590" y="2750" width="310" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-37" target="X2hCjSS4Vl0-8XwFfeY9-36">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-37" target="X2hCjSS4Vl0-8XwFfeY9-36" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-37" value="WarSettleStage.DoTakovGMSettle" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-37" value="WarSettleStage.DoTakovGMSettle" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="610" y="2620" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iwHbo75aDm783HOtJ5gw-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iwHbo75aDm783HOtJ5gw-1" target="iwHbo75aDm783HOtJ5gw-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iwHbo75aDm783HOtJ5gw-1" value="S2GClient.DoPlayerLeaveRoom" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="255" y="1169" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="iwHbo75aDm783HOtJ5gw-3" value="S2GClient.DoGsPlayerLeaveNotify" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="1290" width="220" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
