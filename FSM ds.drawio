@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-20T12:18:10.819Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="KEvjoUNL0Ryh8awzCj4e" version="24.5.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-20T12:25:28.501Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="2II3rfjOgeRTcUbM3pZ6" version="24.5.5" type="github" pages="5">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -892,20 +892,20 @@
         <mxCell id="jeA5YK_Ed9TRFlLAVQ66-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jeA5YK_Ed9TRFlLAVQ66-8" target="jeA5YK_Ed9TRFlLAVQ66-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-8" value="WarUser" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-281.25" y="329" width="120" height="60" as="geometry" />
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-8" value="WarUser&lt;div&gt;public ControlledSO controlledSo = new ControlledSO();&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-450" y="250" width="368.12" height="100" as="geometry" />
         </mxCell>
         <mxCell id="jeA5YK_Ed9TRFlLAVQ66-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jeA5YK_Ed9TRFlLAVQ66-10" target="jeA5YK_Ed9TRFlLAVQ66-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="jeA5YK_Ed9TRFlLAVQ66-10" value="soController" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-30" y="130" width="160" height="70" as="geometry" />
+          <mxGeometry x="20" y="46" width="160" height="70" as="geometry" />
         </mxCell>
         <mxCell id="jeA5YK_Ed9TRFlLAVQ66-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jeA5YK_Ed9TRFlLAVQ66-11" target="jeA5YK_Ed9TRFlLAVQ66-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-11" value="soUserController" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-25" y="285" width="150" height="75" as="geometry" />
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-11" value="&lt;div&gt;行为控制器&lt;/div&gt;soUserController" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="25" y="266" width="150" height="75" as="geometry" />
         </mxCell>
         <mxCell id="jeA5YK_Ed9TRFlLAVQ66-15" value="soPlayer.OnAddToScene()" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2640" y="1260" width="200" height="70" as="geometry" />
@@ -975,6 +975,12 @@
         </mxCell>
         <mxCell id="t9X-w_DtzS08BdtDFxEH-5" value="DoUserRespawn(ulong userID)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2550" y="10" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S6u-rpcnTjCrIoK8TIK5-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S6u-rpcnTjCrIoK8TIK5-1" target="jeA5YK_Ed9TRFlLAVQ66-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S6u-rpcnTjCrIoK8TIK5-1" value="&lt;div&gt;角色归属情况（masterId和assistId）&lt;/div&gt;ControlledSO" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-400.94" y="80" width="270" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
