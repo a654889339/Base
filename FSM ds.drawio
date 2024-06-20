@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-20T09:43:47.830Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="r_YuKnRq2J3qZAXMXuN-" version="24.5.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-20T10:00:32.566Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="pjGNPjIiUK1oJAF3JDi9" version="24.5.5" type="github" pages="5">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -870,6 +870,42 @@
         </mxCell>
         <mxCell id="ChcU5H5cNufQpcIHxFxy-5" value="SceneObject bool &lt;b&gt;IsDelete&lt;/b&gt;&lt;div&gt;&lt;b&gt;设置物件的删除标记&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1760" y="1020" width="290" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jeA5YK_Ed9TRFlLAVQ66-1" target="jeA5YK_Ed9TRFlLAVQ66-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-1" value="soUnit" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jeA5YK_Ed9TRFlLAVQ66-2" target="jeA5YK_Ed9TRFlLAVQ66-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-2" value="soPlayer : soUnit" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-4" value="SoUnitDataController&lt;div&gt;_soPlayer 变量&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="355" y="490" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-6" value="ServerWarUser&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; public soUserController userController&amp;nbsp;&amp;nbsp;= new soUserController();&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-490" y="462" width="537.5" height="123" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jeA5YK_Ed9TRFlLAVQ66-8" target="jeA5YK_Ed9TRFlLAVQ66-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-8" value="WarUser" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-281.25" y="329" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jeA5YK_Ed9TRFlLAVQ66-10" target="jeA5YK_Ed9TRFlLAVQ66-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-10" value="soController" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="130" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jeA5YK_Ed9TRFlLAVQ66-11" target="jeA5YK_Ed9TRFlLAVQ66-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jeA5YK_Ed9TRFlLAVQ66-11" value="soUserController" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-25" y="285" width="150" height="75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
