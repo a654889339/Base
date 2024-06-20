@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-20T08:24:10.313Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="_gK9DcxRMNk11xmOtydA" version="24.5.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-20T08:26:31.005Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="FM-4RDCbjDhpq5NPqTp9" version="24.5.5" type="github" pages="5">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -809,8 +809,8 @@
         <mxCell id="ChcU5H5cNufQpcIHxFxy-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qAwerYIChVjv81fXeXq3-1" target="ChcU5H5cNufQpcIHxFxy-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="qAwerYIChVjv81fXeXq3-1" value="&lt;div&gt;删除玩家&lt;/div&gt;DoActionBeforeDelete&lt;div&gt;GameDebug.Log($&quot;delete soplayer templateId:{templateID} sceneObjectID:{id} runtick:{GameWorldTime.s_RunTick}&quot;);&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1590" y="1300" width="670" height="140" as="geometry" />
+        <mxCell id="qAwerYIChVjv81fXeXq3-1" value="&lt;div&gt;删除玩家前置操作&lt;/div&gt;DoActionBeforeDelete&lt;div&gt;GameDebug.Log($&quot;delete soplayer templateId:{templateID} sceneObjectID:{id} runtick:{GameWorldTime.s_RunTick}&quot;);&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1570" y="1300" width="670" height="140" as="geometry" />
         </mxCell>
         <mxCell id="ChcU5H5cNufQpcIHxFxy-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ChcU5H5cNufQpcIHxFxy-1" target="ChcU5H5cNufQpcIHxFxy-3">
           <mxGeometry relative="1" as="geometry" />
@@ -818,8 +818,8 @@
         <mxCell id="ChcU5H5cNufQpcIHxFxy-1" value="soUnit.DoActionBeforeDelete()&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;skillComponent.inventory.&lt;/b&gt;&lt;/span&gt;&lt;b&gt;FinishAllSkill()&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;调用基类的删除&lt;/div&gt;&lt;div&gt;soUnit:SceneObject&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1770" y="1680" width="270" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="ChcU5H5cNufQpcIHxFxy-3" value="SceneObject.DoActionBeforeDelete()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1750" y="1840" width="310" height="90" as="geometry" />
+        <mxCell id="ChcU5H5cNufQpcIHxFxy-3" value="SceneObject.DoActionBeforeDelete()&lt;div&gt;移除物体的所有组件&amp;nbsp;componentContainer&lt;/div&gt;&lt;div&gt;通知所有召唤物，父节点已被删除&amp;nbsp;EEventKey.eOnSpawnObjDelete&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1685" y="1860" width="440" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
