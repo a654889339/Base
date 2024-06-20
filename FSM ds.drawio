@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-20T07:43:12.840Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="pSqJATecsurUa7Y49r8l" version="24.5.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-20T08:19:10.766Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="K-NDtX4QBemw17c2Xaab" version="24.5.5" type="github" pages="5">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -805,6 +805,9 @@
         </mxCell>
         <mxCell id="hKyG-CNHcOGt0lkQEHC8-21" value="SceneObject.RemoveFromScene()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="510" y="1510" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qAwerYIChVjv81fXeXq3-1" value="DoActionBeforeDelete" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1920" y="1300" width="180" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
