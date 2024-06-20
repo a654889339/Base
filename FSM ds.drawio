@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-20T12:25:28.501Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="2II3rfjOgeRTcUbM3pZ6" version="24.5.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-20T13:02:46.190Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="fCoEXyZUQMerj-69wKXv" version="24.5.5" type="github" pages="5">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -622,7 +622,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="D4cUpWKldzLiPTz7wScZ" name="结算模块">
-    <mxGraphModel dx="2488" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2700" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -641,10 +641,10 @@
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-4" value="游戏4个阶段&lt;div&gt;&lt;div&gt;public enum WarProgressStatus {&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarStandby&quot;)] WarStandby = 0,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarWaitting&quot;)] WarWaitting = 1,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarInFormalBattle&quot;)] WarInFormalBattle = 2,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarSettle&quot;)] WarSettle = 3,&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-150" y="320" width="420" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="iwHbo75aDm783HOtJ5gw-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-5" target="iwHbo75aDm783HOtJ5gw-1">
+        <mxCell id="iwHbo75aDm783HOtJ5gw-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-5" target="iwHbo75aDm783HOtJ5gw-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iwHbo75aDm783HOtJ5gw-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-5" target="X2hCjSS4Vl0-8XwFfeY9-22">
+        <mxCell id="iwHbo75aDm783HOtJ5gw-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-5" target="X2hCjSS4Vl0-8XwFfeY9-22" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-5" value="GameRoomManager.DoKickPlayerAfterEvaluate&lt;div&gt;撤离后，删除玩家，会删除gs上的状态，断开客户端连接&lt;br&gt;&lt;/div&gt;&lt;div&gt;S2GClientHolder.instance.DoPlayerLeaveRoom(playerID, roomId);&lt;br&gt;&lt;/div&gt;&lt;div&gt;gameRoom.CheckForceEndInMashMark();&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -686,7 +686,7 @@
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-10" value="WarSettleStage.BeginStage&lt;div&gt;对局状态的最后一个状态，玩家撤离，结算状态&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;广播状态给所有客户端&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;DoWarProgressStatusChange&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2。 广播所有战斗模块 WarModule.&lt;b&gt;OnWarProgressStatusChange&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;3. 触发状态变化事件&amp;nbsp;&lt;b&gt;eOnWarProgressStatusChange&lt;/b&gt;&lt;/div&gt;&lt;div&gt;4. 触发事件 &lt;b&gt;eOnPreSettle&lt;/b&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;5. 触发结算&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;马氏马克(&lt;/b&gt;&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;DoTakovSettle ）或普通地图（&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;DoSettle）&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1170" y="1240" width="650" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="tbXuN5tdV9wPfBtT21cm-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-12" target="X2hCjSS4Vl0-8XwFfeY9-37">
+        <mxCell id="tbXuN5tdV9wPfBtT21cm-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-12" target="X2hCjSS4Vl0-8XwFfeY9-37" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="-1430" y="2225" />
@@ -704,7 +704,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tbXuN5tdV9wPfBtT21cm-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-14" target="X2hCjSS4Vl0-8XwFfeY9-37">
+        <mxCell id="tbXuN5tdV9wPfBtT21cm-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-14" target="X2hCjSS4Vl0-8XwFfeY9-37" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-14" value="&lt;div&gt;普通结算流程&lt;/div&gt;WarSettleStage.&lt;b&gt;DoSettle&lt;/b&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -713,7 +713,7 @@
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-22" target="X2hCjSS4Vl0-8XwFfeY9-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iwHbo75aDm783HOtJ5gw-12" value="所有真人都离开时" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X2hCjSS4Vl0-8XwFfeY9-24">
+        <mxCell id="iwHbo75aDm783HOtJ5gw-12" value="所有真人都离开时" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X2hCjSS4Vl0-8XwFfeY9-24" vertex="1" connectable="0">
           <mxGeometry x="0.0364" y="4" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -760,23 +760,29 @@
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-37" value="WarSettleStage.DoTakovGMSettle" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-755" y="2200" width="270" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="iwHbo75aDm783HOtJ5gw-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iwHbo75aDm783HOtJ5gw-1" target="iwHbo75aDm783HOtJ5gw-3">
+        <mxCell id="iwHbo75aDm783HOtJ5gw-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iwHbo75aDm783HOtJ5gw-1" target="iwHbo75aDm783HOtJ5gw-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iwHbo75aDm783HOtJ5gw-1" value="S2GClient.DoPlayerLeaveRoom" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="iwHbo75aDm783HOtJ5gw-1" value="S2GClient.DoPlayerLeaveRoom" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="255" y="1169" width="280" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="iwHbo75aDm783HOtJ5gw-3" value="S2GClient.DoGsPlayerLeaveNotify&lt;div&gt;GameRoomPlayer.removedFromGs = true&lt;br&gt;&lt;/div&gt;&lt;div&gt;打上离开标记&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="iwHbo75aDm783HOtJ5gw-3" value="S2GClient.DoGsPlayerLeaveNotify&lt;div&gt;GameRoomPlayer.removedFromGs = true&lt;br&gt;&lt;/div&gt;&lt;div&gt;打上离开标记&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="242.5" y="1310" width="305" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="iwHbo75aDm783HOtJ5gw-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iwHbo75aDm783HOtJ5gw-5" target="iwHbo75aDm783HOtJ5gw-6">
+        <mxCell id="iwHbo75aDm783HOtJ5gw-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iwHbo75aDm783HOtJ5gw-5" target="iwHbo75aDm783HOtJ5gw-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iwHbo75aDm783HOtJ5gw-5" value="S2CServerProtocol.OnClosed" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="iwHbo75aDm783HOtJ5gw-5" value="S2CServerProtocol.OnClosed" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1275" y="1174" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="iwHbo75aDm783HOtJ5gw-6" value="GameRoomManager.UnBindSession" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="iwHbo75aDm783HOtJ5gw-6" value="GameRoomManager.UnBindSession" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1260" y="1320" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iwsrBmLCJyc1kqpGC0ak-1" value="&lt;div&gt;对局结束结算 结算分数结果&lt;/div&gt;SettleUpdate(ServerWarUser user, &lt;b&gt;BATTLE_SETTLEMENT_PLAYER &lt;/b&gt;settlementPlayer, BattleStatistics battleStatistics, ulong endTime, int holdeTime)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="192.5" y="2960" width="927.5" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="iwsrBmLCJyc1kqpGC0ak-2" value="&lt;div&gt;//玩家 结算结果 结算分数&lt;/div&gt;&lt;div&gt;message &lt;b&gt;BATTLE_SETTLEMENT_PLAYER&lt;/b&gt;&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; uint64 id = 1; //玩家ID&lt;/div&gt;&lt;div&gt;&amp;nbsp; string name = 2; //玩家名称&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 mechaId = 3; //机甲ID&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 campID = 4; //阵营ID&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 forceId = 5; //势力ID&lt;/div&gt;&lt;div&gt;&amp;nbsp; bool winner = 6; //是否胜利&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 gameplay = 7;//gameplay ID&lt;/div&gt;&lt;div&gt;&amp;nbsp; bool isBot = 8; // 是否机器人&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 health = 9;// 当前血量&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 maxHealth = 10;//最大血量&lt;/div&gt;&lt;div&gt;&amp;nbsp; bool isFirstBlood = 11;//是否拿到一血&lt;/div&gt;&lt;div&gt;&amp;nbsp; bool isEvacuateSuccess = 12; // 是否成功撤离&lt;/div&gt;&lt;div&gt;&amp;nbsp; uint64 teamId = 13; // 小队id&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 pilotId = 14; // 驾驶员id&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 pilotLevel = 15; // 驾驶员等级&lt;/div&gt;&lt;div&gt;&amp;nbsp; ACHIEVEMENT_SHOW achievement_show = 16;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // 废除&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 mechaLevel = 17; // 废弃&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 mechaExp = 18; // 废弃&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 mecha_syn = 19; //机甲同步率&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 rank_level = 20;//玩家段位&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 rank_star = 21;//玩家段位星数&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 individual_rank = 22; //个人排名&lt;/div&gt;&lt;div&gt;&amp;nbsp; int32 user_status = 23; //玩家结算状态&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; //map&amp;lt;string,int64&amp;gt; stats = 101;&amp;nbsp; //所有统计 保存库的数据 数据结果由策划配置（废除，key改成整数）&lt;/div&gt;&lt;div&gt;&amp;nbsp; repeated BATTLE_SETTLEMENT_SKILL skills = 102;&amp;nbsp; //所有技能&lt;/div&gt;&lt;div&gt;&amp;nbsp; //map&amp;lt;string,int64&amp;gt; scorings = 103;&amp;nbsp; &amp;nbsp; //所有评分（废除，key改成整数）&lt;/div&gt;&lt;div&gt;&amp;nbsp; //map&amp;lt;string,double&amp;gt; votings = 104;&amp;nbsp; &amp;nbsp; //所有评选（废除，key改成整数）&lt;/div&gt;&lt;div&gt;&amp;nbsp; map&amp;lt;int32,int32&amp;gt;&amp;nbsp; &amp;nbsp;mechakills = 105;&amp;nbsp; &amp;nbsp;//击杀不同机甲次数&lt;/div&gt;&lt;div&gt;&amp;nbsp; //map&amp;lt;string,int32&amp;gt;&amp;nbsp; &amp;nbsp;questscorings = 106;&amp;nbsp; &amp;nbsp;//任务用到分数（废除，key改成整数）&lt;/div&gt;&lt;div&gt;&amp;nbsp; repeated ITEM_DATA items = 107;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;// 带出局外道具&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="2880" width="590" height="530" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
