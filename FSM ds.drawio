@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-20T09:25:04.164Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="zZqNr1bC-cuAWKfb9R5E" version="24.5.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-20T09:32:58.877Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="Ya9_7srbtQrXpofPv3yn" version="24.5.5" type="github" pages="5">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -733,13 +733,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-31" value="行为树节点&lt;div&gt;Server.BehaviorTree.Actions&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;ForceAchieveWinPointWarToEndAction.OnUpdate&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="650" y="1790" width="230" height="60" as="geometry" />
+          <mxGeometry x="615" y="1790" width="300" height="60" as="geometry" />
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-33" target="X2hCjSS4Vl0-8XwFfeY9-31" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-33" value="BehaviorDesigner.Runtime.BehaviorTypeId.Register(8074, typeof(Server.BehaviorTree.Actions.ForceAchieveWinPointWarToEndAction));" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="565" y="1690" width="400" height="50" as="geometry" />
+          <mxGeometry x="542.5" y="1690" width="445" height="40" as="geometry" />
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-36" value="&lt;div&gt;结算本局，&lt;span style=&quot;background-color: initial;&quot;&gt;结算剩余的每个玩家&lt;/span&gt;&lt;/div&gt;ForceSettle" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="590" y="2750" width="310" height="90" as="geometry" />
