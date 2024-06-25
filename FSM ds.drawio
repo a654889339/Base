@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-25T03:23:57.921Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="6V_40U3p7DaX6wuF158d" version="24.5.5" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2024-06-25T03:26:09.316Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="CjmgIN2RFopyKyn-bsu9" version="24.5.5" type="github" pages="6">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1046,6 +1046,23 @@
         </mxCell>
         <mxCell id="2KOhZTdKMy7hFLQyvAgN-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.997;entryY=0.617;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2KOhZTdKMy7hFLQyvAgN-16" target="2KOhZTdKMy7hFLQyvAgN-8">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2KOhZTdKMy7hFLQyvAgN-18" target="2KOhZTdKMy7hFLQyvAgN-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-20" value="M2RGamePlayAbnormalEnd" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2KOhZTdKMy7hFLQyvAgN-19">
+          <mxGeometry x="0.0182" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-18" value="M2SClient.DoGamePLayAbnormalEnd" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="-340" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2KOhZTdKMy7hFLQyvAgN-21" target="2KOhZTdKMy7hFLQyvAgN-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-21" value="&lt;div&gt;通知主线，分线异常关闭了&lt;/div&gt;GameRoomManager.RemoveRoom&lt;div&gt;room.mirrorGameRoom.Client.DoGamePLayAbnormalEnd(reason);&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="437.5" y="-550" width="415" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
