@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-25T03:10:11.867Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="cqI7DgHlLAzDe8pHKTOV" version="24.5.5" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2024-06-25T03:23:57.921Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="6V_40U3p7DaX6wuF158d" version="24.5.5" type="github" pages="6">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -992,7 +992,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="y1CLXse2NQRBPvrjmRW8" name="房间管理">
-    <mxGraphModel dx="834" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="834" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1022,6 +1022,30 @@
         </mxCell>
         <mxCell id="2KOhZTdKMy7hFLQyvAgN-8" value="AddRemoveRoom&lt;div&gt;加入_removedRoomInfos 待删除列表，等activate实际去删&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="790" y="310" width="340" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2KOhZTdKMy7hFLQyvAgN-10" target="2KOhZTdKMy7hFLQyvAgN-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-10" value="OnGamePlayAbnormalEnd" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="10" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2KOhZTdKMy7hFLQyvAgN-12" target="2KOhZTdKMy7hFLQyvAgN-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-12" value="OnStartGamePlayResult&lt;div&gt;初始化失败就回收&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="-60" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2KOhZTdKMy7hFLQyvAgN-14" target="2KOhZTdKMy7hFLQyvAgN-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-14" value="MirrorGameRoom.DestroyGameRoom&lt;div&gt;观战房间&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="-75" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-16" value="&lt;div&gt;房间状态机-结束状态&lt;/div&gt;GameRoomCompleteStage.EndStage" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1860" y="170" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="2KOhZTdKMy7hFLQyvAgN-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.997;entryY=0.617;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2KOhZTdKMy7hFLQyvAgN-16" target="2KOhZTdKMy7hFLQyvAgN-8">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
