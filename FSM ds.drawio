@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-20T13:02:46.190Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="fCoEXyZUQMerj-69wKXv" version="24.5.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-25T03:04:38.174Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="gbRk1e4FnXlwJl-Q2HE8" version="24.5.5" type="github" pages="6">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -988,6 +988,14 @@
         <mxCell id="S6u-rpcnTjCrIoK8TIK5-1" value="&lt;div&gt;角色归属情况（masterId和assistId）&lt;/div&gt;ControlledSO" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-400.94" y="80" width="270" height="70" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="y1CLXse2NQRBPvrjmRW8" name="房间管理">
+    <mxGraphModel dx="834" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
