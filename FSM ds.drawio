@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-28T09:00:09.458Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="fsO8_65DrsBZrSAxcgN-" version="24.6.4" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2024-06-28T09:14:57.674Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="PDYgW6R5yolr4gUZVVEW" version="24.6.4" type="github" pages="8">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1100,7 +1100,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="A7umM8EDQ_CWWs76DqG0" name="WarModule">
-    <mxGraphModel dx="1661" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1873" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1256,6 +1256,27 @@
         </mxCell>
         <mxCell id="c0K3Uek04cy6gn6oDesz-52" value="N4CSListener.OnCSClosed" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="610" y="1540" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-54" value="IWarModule.OnUserReady" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2080" y="2140" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-55" target="c0K3Uek04cy6gn6oDesz-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-55" value="ServerWar._OnUserReady&lt;div&gt;遍历所有模块，调用接口&amp;nbsp;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2070" y="2020" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-57" target="c0K3Uek04cy6gn6oDesz-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-57" value="ServerWar.UserReady(ServerWarUser user)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2010" y="1920" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-59" target="c0K3Uek04cy6gn6oDesz-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-59" value="_SceneReadyContinue&lt;div&gt;场景加载完成&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2010" y="1790" width="230" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
