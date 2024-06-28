@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-28T08:38:58.708Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="hnzYABeQdqSIg21NEVYG" version="24.6.4" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2024-06-28T08:42:10.139Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="YpLmBb0Epv0VLNJZ40k4" version="24.6.4" type="github" pages="8">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1169,6 +1169,24 @@
         </mxCell>
         <mxCell id="c0K3Uek04cy6gn6oDesz-21" value="ServerWar.UserLeave" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1100" y="470" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-23" target="c0K3Uek04cy6gn6oDesz-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-23" value="&lt;div&gt;玩家离开游戏服&lt;/div&gt;ServerWarUser.DoLeaveWar" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="320" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-25" target="c0K3Uek04cy6gn6oDesz-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-25" value="ServerWar.ClearUserAndWar()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="190" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-27" target="c0K3Uek04cy6gn6oDesz-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-27" value="GameRoom.PlayerLeaveWar(GameRoomPlayer gameRoomPlayer, WAR_END_TYPE removeType)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="185" width="530" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
