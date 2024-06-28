@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-28T08:56:40.891Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="zBC3MW9wudiIqkB2LqEa" version="24.6.4" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2024-06-28T09:00:09.458Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="fsO8_65DrsBZrSAxcgN-" version="24.6.4" type="github" pages="8">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1238,6 +1238,24 @@
         </mxCell>
         <mxCell id="c0K3Uek04cy6gn6oDesz-46" value="S2CServerProtocol.OnClosed(long sessionID, string sessionName, N4CS_CLOSE_FLAG closeFlag)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="440" y="1670" width="550" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-48" target="c0K3Uek04cy6gn6oDesz-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-48" value="GameRoomManager.BindSessionToPlayer&lt;div&gt;失败反初始化&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="1680" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-50" target="c0K3Uek04cy6gn6oDesz-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-50" value="GameRoomManager.CheckClients&lt;div&gt;ping超时&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1215" y="1850" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-52" target="c0K3Uek04cy6gn6oDesz-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-52" value="N4CSListener.OnCSClosed" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="1540" width="210" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
