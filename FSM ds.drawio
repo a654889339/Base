@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-28T08:31:12.999Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="QITMVeUL9awTO7Um8sUO" version="24.6.4" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2024-06-28T08:32:53.580Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="ST32lDTbjTR0MFP_Pn1o" version="24.6.4" type="github" pages="8">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1100,7 +1100,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="A7umM8EDQ_CWWs76DqG0" name="WarModule">
-    <mxGraphModel dx="1661" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1661" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1128,8 +1128,14 @@
         <mxCell id="c0K3Uek04cy6gn6oDesz-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-8" target="c0K3Uek04cy6gn6oDesz-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="c0K3Uek04cy6gn6oDesz-8" value="&lt;b&gt;ServerWarUser&lt;/b&gt;.DoEnterWar(ServerWar war, UserEnterWarParam param)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-95" y="230" width="440" height="60" as="geometry" />
+        <mxCell id="c0K3Uek04cy6gn6oDesz-8" value="&lt;div&gt;gameserver通知加入war，会在sceneserver创建user，但是不会加入到游戏世界中&lt;br&gt;&lt;/div&gt;&lt;b&gt;ServerWarUser&lt;/b&gt;.DoEnterWar(ServerWar war, UserEnterWarParam param)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-137.5" y="220" width="525" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-10" target="c0K3Uek04cy6gn6oDesz-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-10" value="&lt;div&gt;M2R_PROTOCOL.M2RSwitchMainMirror&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;S2MSer4verProtocol.OnSwitchMainMirror" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="-30" width="250" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
