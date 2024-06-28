@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-28T08:46:10.838Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="Pl3HvePF0cfCrqmxcxuG" version="24.6.4" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2024-06-28T08:53:12.266Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="8_sqxDttWfZQMvx8W8pe" version="24.6.4" type="github" pages="8">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1199,6 +1199,21 @@
         </mxCell>
         <mxCell id="c0K3Uek04cy6gn6oDesz-31" value="GameRoom.UnInit()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1050" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-35" value="&lt;div&gt;玩家掉线&lt;/div&gt;IWarModule.OnUserOffline" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="2280" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-36" target="c0K3Uek04cy6gn6oDesz-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-36" value="ServerWar.UserOffline(ServerWarUser user)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="125" y="2180" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-38" target="c0K3Uek04cy6gn6oDesz-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-38" value="GameRoom.PlayerDetach(long session)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="2070" width="230" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
