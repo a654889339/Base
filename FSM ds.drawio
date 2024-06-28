@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-28T09:14:57.674Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="PDYgW6R5yolr4gUZVVEW" version="24.6.4" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2024-06-28T09:16:50.221Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="VXmjotFwABrJVebrJknF" version="24.6.4" type="github" pages="8">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1277,6 +1277,24 @@
         </mxCell>
         <mxCell id="c0K3Uek04cy6gn6oDesz-59" value="_SceneReadyContinue&lt;div&gt;场景加载完成&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2010" y="1790" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-61" target="c0K3Uek04cy6gn6oDesz-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-61" value="ServerWarUser._DoSceneReady()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="1680" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-63" target="c0K3Uek04cy6gn6oDesz-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-63" value="ServerWarUser.OnSceneReady()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="1560" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c0K3Uek04cy6gn6oDesz-65" target="c0K3Uek04cy6gn6oDesz-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c0K3Uek04cy6gn6oDesz-65" value="&lt;div&gt;C2S_PROTOCOL.C2SSceneReady&lt;br&gt;&lt;/div&gt;S2CServerProtocol.OnSceneReady" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1965" y="1430" width="260" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
