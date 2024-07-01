@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-01T13:54:48.193Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="06HJggFcf4G-H7DaSUxU" version="24.6.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-01T13:58:29.212Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="m4jfWfaRcmMHm1hSOMcS" version="24.6.4" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1402,6 +1402,12 @@
         </mxCell>
         <mxCell id="QsB9IsXE9MGjs1GirQlp-33" value="CommandManager.void SwitchInputGroup(string groupName)//切换输入组" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1025" y="230" width="440" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QsB9IsXE9MGjs1GirQlp-35" target="QsB9IsXE9MGjs1GirQlp-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-35" value="各个功能模块启用相关的按键组" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="590" width="210" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
