@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-01T13:31:49.470Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="Ruy2g5MwkxKA5Eq_oKBK" version="24.6.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-01T13:43:08.433Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="Fto_lnJ4wd-rtkC40KZi" version="24.6.4" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1300,10 +1300,67 @@
     </mxGraphModel>
   </diagram>
   <diagram id="yY8y8KLqNe561Y083Ux7" name="客户端输入模块">
-    <mxGraphModel dx="834" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1661" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QsB9IsXE9MGjs1GirQlp-1" target="QsB9IsXE9MGjs1GirQlp-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-1" value="CommandSystem.cs&lt;div&gt;List&amp;lt;Cmd&amp;gt; _continueTriggerLogicCmd = new List&amp;lt;Cmd&amp;gt;(64);//需要持续触发的命令&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1020" width="480" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QsB9IsXE9MGjs1GirQlp-2" target="QsB9IsXE9MGjs1GirQlp-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-2" value="CommandSystem.Update()&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="1100" width="390" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-4" value="InputActionManager.TriggerCommand(Cmd cmd)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="1180" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QsB9IsXE9MGjs1GirQlp-6" target="QsB9IsXE9MGjs1GirQlp-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-6" value="CommandSystem.void EnableCmd(Cmd cmd)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="415" y="950" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QsB9IsXE9MGjs1GirQlp-8" target="QsB9IsXE9MGjs1GirQlp-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-8" value="CommandSystem.void EnableCmd(LogicCmd logicCmd, bool isAutoTrigger = true)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="870" width="460" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QsB9IsXE9MGjs1GirQlp-10" target="QsB9IsXE9MGjs1GirQlp-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-10" value="CommandSystem.ResetCmd(LogicCmd logicCmd)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="860" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QsB9IsXE9MGjs1GirQlp-12" target="QsB9IsXE9MGjs1GirQlp-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-12" value="CommandManager.ResetCmd" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="770" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QsB9IsXE9MGjs1GirQlp-14" target="QsB9IsXE9MGjs1GirQlp-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-14" value="CommandSystem.AddCmd(InputCmdInfo cmdInfo, bool isEnable, bool isAutoTrigger = true)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-420" y="720" width="530" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QsB9IsXE9MGjs1GirQlp-15" target="QsB9IsXE9MGjs1GirQlp-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-15" value="CommandSystem.EnableAllCmd()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="720" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QsB9IsXE9MGjs1GirQlp-18" target="QsB9IsXE9MGjs1GirQlp-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsB9IsXE9MGjs1GirQlp-18" value="CommandSystem.void EnableCmd(int cmdKey, bool isAutoTrigger = true)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="720" width="410" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
