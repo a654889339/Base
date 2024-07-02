@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-02T11:35:06.833Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="p7_CAkUxMWSo-ejrqzBz" version="24.6.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-02T12:13:51.485Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="nerJuHTec_JCX64cE4lo" version="24.6.4" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1172,6 +1172,43 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-1" target="MkBecNQ7Hb0XB_extmmO-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-8" value="multiTag = false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MkBecNQ7Hb0XB_extmmO-3">
+          <mxGeometry y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-1" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;SyncMoveCtrlData&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;打包此玩家的数据，若没变更则不打包&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="580" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-2" value="&lt;div&gt;不合并发包&lt;/div&gt;BroadcastAOI" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="750" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-4" value="&lt;div&gt;合并发包&lt;/div&gt;DelayBroadcastAOI" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="760" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.563;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-1" target="MkBecNQ7Hb0XB_extmmO-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-6" value="multiTag = true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MkBecNQ7Hb0XB_extmmO-5">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-9" target="MkBecNQ7Hb0XB_extmmO-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-9" value="SyncUnitData(List&amp;lt;soUnit&amp;gt; soUnitList)&lt;div&gt;遍历同步列表所有单位的移动数据&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="460" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-11" target="MkBecNQ7Hb0XB_extmmO-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-11" value="ServerWarScene.Activate&lt;div&gt;每帧同步场景内所有单位&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="255" y="330" width="230" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
