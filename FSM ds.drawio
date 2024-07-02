@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-02T12:56:28.066Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="Iy7ufvnR8WAFPyWVv0wK" version="24.6.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-02T12:59:27.462Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="TzGpgDNPHTV11GdD1MrX" version="24.6.4" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1337,6 +1337,12 @@
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-56" value="WarSoInitDataCreator.GenerateCreateSceneObjectMsg" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2117.5" y="130" width="325" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-58" target="MkBecNQ7Hb0XB_extmmO-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-58" value="ProtocolRecorder.GenSceneObjectsInitData" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2120" y="30" width="320" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
