@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-02T12:34:33.287Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="-xTBOPxP7fD2W6oTSea_" version="24.6.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-02T12:35:50.545Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="trACIOejmgE_X7vfWWml" version="24.6.4" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1252,6 +1252,12 @@
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-26" value="soUnit.DeserializeInitData(Reader reader)&lt;div&gt;各种so的基类函数&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="980" y="1080" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-28" target="MkBecNQ7Hb0XB_extmmO-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-28" value="C2SClientNewSceneObject.DeserializeSceneObjectInitData(SceneObject so, Reader reader)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="980" width="530" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
