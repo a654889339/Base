@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-02T12:27:40.242Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="JEQSlWlvOpofzX5F0Ejs" version="24.6.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-02T12:31:18.445Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="y_GmttANN3PfEtx-VbFN" version="24.6.4" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1226,8 +1226,26 @@
         <mxCell id="MkBecNQ7Hb0XB_extmmO-14" value="C2SClientProtocol.OnSyncMoveCtrlData(byte[] data, uint size)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="190" y="1260" width="360" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="MkBecNQ7Hb0XB_extmmO-18" value="MoveCtrlData.Deserialize" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="240" y="1410" width="260" height="90" as="geometry" />
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-18" target="MkBecNQ7Hb0XB_extmmO-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-18" value="MoveCtrlData.Deserialize(CodedInputStream inputStream)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="185" y="1410" width="370" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-20" value="MoveCtrlData.Deserialize(PB_MOVE_CTRL_DATA pbMoveCtrlData)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1740" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-22" target="MkBecNQ7Hb0XB_extmmO-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-22" value="MoveCtrlData.Deserialize(Reader reader)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="825" y="1422.5" width="250" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-24" target="MkBecNQ7Hb0XB_extmmO-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MkBecNQ7Hb0XB_extmmO-24" value="MoveCtrlData.DeserializeInitData(Reader reader)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="785" y="1310" width="330" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
