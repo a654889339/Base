@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-02T13:11:44.807Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="homuQnVuF6csqEnzUlyR" version="24.6.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-02T13:15:05.875Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="kqJyllRkvoFz6ujI2gfB" version="24.6.4" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1168,7 +1168,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="-g6x7Nx4DsMFlnD3qJXo" name="MoveData发包行为">
-    <mxGraphModel dx="872" dy="1350" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2464" dy="1214" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1181,13 +1181,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-1" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;SyncMoveCtrlData&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;打包此玩家的数据，若没变更则不打包&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="260" y="580" width="220" height="60" as="geometry" />
+          <mxGeometry x="255" y="790" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-2" target="MkBecNQ7Hb0XB_extmmO-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-2" value="&lt;div&gt;不合并发包&lt;/div&gt;BroadcastAOI" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="130" y="750" width="200" height="80" as="geometry" />
+          <mxGeometry x="140" y="1010" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-4" target="MkBecNQ7Hb0XB_extmmO-14">
           <mxGeometry relative="1" as="geometry" />
@@ -1198,7 +1198,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-4" value="&lt;div&gt;合并发包&lt;/div&gt;DelayBroadcastAOI" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="470" y="760" width="160" height="60" as="geometry" />
+          <mxGeometry x="430" y="1030" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.563;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-1" target="MkBecNQ7Hb0XB_extmmO-4">
           <mxGeometry relative="1" as="geometry" />
@@ -1212,13 +1212,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-9" value="SyncUnitData(List&amp;lt;soUnit&amp;gt; soUnitList)&lt;div&gt;遍历同步列表所有单位的移动数据&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="240" y="460" width="260" height="60" as="geometry" />
+          <mxGeometry x="235" y="630" width="260" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-11" target="MkBecNQ7Hb0XB_extmmO-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-11" value="ServerWarScene.Activate&lt;div&gt;每帧同步场景内所有单位&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="255" y="330" width="230" height="60" as="geometry" />
+          <mxGeometry x="250" y="480" width="230" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-14" target="MkBecNQ7Hb0XB_extmmO-18">
           <mxGeometry relative="1" as="geometry" />
@@ -1233,7 +1233,7 @@
           <mxGeometry x="185" y="1410" width="370" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-20" value="MoveCtrlData.Deserialize(PB_MOVE_CTRL_DATA pbMoveCtrlData)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="1740" width="400" height="100" as="geometry" />
+          <mxGeometry x="490" y="1530" width="400" height="100" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-22" target="MkBecNQ7Hb0XB_extmmO-20">
           <mxGeometry relative="1" as="geometry" />
@@ -1287,7 +1287,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-38" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;S2CServer.DoSyncSceneObjectsAndRelated&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1520" y="410" width="260" height="60" as="geometry" />
+          <mxGeometry x="1540" y="510" width="260" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-42" target="MkBecNQ7Hb0XB_extmmO-36">
           <mxGeometry relative="1" as="geometry" />
@@ -1298,7 +1298,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-42" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;S2CServer.DoBroadcastCreateNewSceneObject&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1185" y="280" width="280" height="70" as="geometry" />
+          <mxGeometry x="1185" y="410" width="280" height="70" as="geometry" />
         </mxCell>
         <mxCell id="MkBecNQ7Hb0XB_extmmO-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MkBecNQ7Hb0XB_extmmO-45" target="MkBecNQ7Hb0XB_extmmO-34">
           <mxGeometry relative="1" as="geometry" />
