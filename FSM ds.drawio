@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-02T09:06:18.177Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="ViVfRM52ksmQ3JSJoWBu" version="24.6.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-02T09:06:28.014Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="pFHZ1gHmykEAoJqQN_19" version="24.6.4" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -829,7 +829,7 @@
           <mxGeometry x="-835" y="2520" width="430" height="100" as="geometry" />
         </mxCell>
         <mxCell id="8TcxuSPbjz_Wi930k5-i-2" value="&lt;div&gt;发送结算数据&lt;/div&gt;DoRoundSettle" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1580" y="2880" width="210" height="90" as="geometry" />
+          <mxGeometry x="-1535" y="2880" width="210" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
