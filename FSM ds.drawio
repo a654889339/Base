@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-03T07:57:39.780Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="g65UYozv5v8u8-kkcQWL" version="24.6.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-03T08:44:02.309Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="HAaZyaI2WIPBPphSdMta" version="24.6.4" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -526,7 +526,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="inUgT6fnLxOBwQptTbOi" name="天气模块">
-    <mxGraphModel dx="3291" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1661" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -620,6 +620,9 @@
         </mxCell>
         <mxCell id="BiNtSyXb7KPDdfa0L7t0-1" value="天气Update&lt;div&gt;获取&lt;b&gt;当前毒圈对应的大小&lt;/b&gt;GetRadius，通过lifeRadius和时间插值&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1440" y="730" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="47M9D-kVGi0SzQKrQWyL-1" value="&lt;div&gt;在圈内的玩家加上buff&lt;/div&gt;SoWeatherComponent.AddWeatherDeBuff" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2850" y="980" width="270" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
