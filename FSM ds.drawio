@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-05T09:59:27.549Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="-ptgiUolodS1_A9BFi26" version="24.6.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-05T11:46:14.876Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="MRGCnySxe1mjGGLdRo1H" version="24.6.4" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -628,7 +628,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="D4cUpWKldzLiPTz7wScZ" name="结算模块">
-    <mxGraphModel dx="3345" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3315" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -872,7 +872,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9CB4EHgEtW8BmQiwtFdJ-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8TcxuSPbjz_Wi930k5-i-11" target="9CB4EHgEtW8BmQiwtFdJ-2">
+        <mxCell id="9CB4EHgEtW8BmQiwtFdJ-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8TcxuSPbjz_Wi930k5-i-11" target="9CB4EHgEtW8BmQiwtFdJ-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-850" y="3580" as="targetPoint" />
           </mxGeometry>
@@ -883,7 +883,7 @@
         <mxCell id="8TcxuSPbjz_Wi930k5-i-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8TcxuSPbjz_Wi930k5-i-14" target="8TcxuSPbjz_Wi930k5-i-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8TcxuSPbjz_Wi930k5-i-14" value="&lt;div&gt;处理每个人的战斗结束记录&lt;/div&gt;&lt;div&gt;GameServer&lt;/div&gt;BattleStatisHandle::OnPlayerBattleEnd" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="8TcxuSPbjz_Wi930k5-i-14" value="&lt;div&gt;db回调到gs的协议不再携带结算信息，仅简洁数据&amp;nbsp;BATTLE_END_INFO&lt;/div&gt;&lt;div&gt;处理每个人的战斗结束记录&lt;/div&gt;&lt;div&gt;GameServer&lt;/div&gt;BattleStatisHandle::OnPlayerBattleEnd&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1790" y="3650" width="252.5" height="130" as="geometry" />
         </mxCell>
         <mxCell id="8TcxuSPbjz_Wi930k5-i-17" value="&lt;div&gt;保存失败回调DB&lt;/div&gt;DBHandle::OnCompetitionBattleEndFailed" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -892,7 +892,7 @@
         <mxCell id="8TcxuSPbjz_Wi930k5-i-20" value="BattleStatisData::UpdateBattleEnd" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1798.75" y="3860" width="270" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="9CB4EHgEtW8BmQiwtFdJ-2" value="&lt;div&gt;DB 保存战斗记录&lt;/div&gt;&lt;div&gt;void BattleStatisDataSSG::DBUpdateBattleHistory(MongoOperator&amp;amp; mongo, const BATTLE_SETTLEMENT_INFO&amp;amp; battleSettltment)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9CB4EHgEtW8BmQiwtFdJ-2" value="&lt;div&gt;DB 保存战斗记录&lt;/div&gt;&lt;div&gt;void BattleStatisDataSSG::DBUpdateBattleHistory(MongoOperator&amp;amp; mongo, const BATTLE_SETTLEMENT_INFO&amp;amp; battleSettltment)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-990" y="3580" width="750" height="120" as="geometry" />
         </mxCell>
       </root>
