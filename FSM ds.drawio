@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-18T12:57:25.312Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="YzgjWpKF7gbzPHmtyfQV" version="24.6.5" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-18T13:02:48.054Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="F4VDGpzujBvwNE1oyPPC" version="24.6.5" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -976,6 +976,11 @@
             <Array as="points">
               <mxPoint x="2800" y="1980" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-2" value="&lt;div&gt;WAR_END_TYPE.WarGameOver&lt;/div&gt;&lt;div&gt;WAR_END_TYPE.TeamQuit&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zetmuw1FiZot3TVMr4US-43">
+          <mxGeometry x="-0.7089" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
