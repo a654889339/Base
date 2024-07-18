@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-18T13:02:48.054Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="F4VDGpzujBvwNE1oyPPC" version="24.6.5" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-18T13:55:40.400Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="jZfiuN7XkV4bY9aquBSi" version="24.6.5" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -982,6 +982,39 @@
           <mxGeometry x="-0.7089" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="bpkGuW1O3WwiNpAyvklb-3" target="zetmuw1FiZot3TVMr4US-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-6" value="&lt;div&gt;WAR_END_TYPE.Quit&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bpkGuW1O3WwiNpAyvklb-4">
+          <mxGeometry x="-0.6742" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-3" value="&lt;div&gt;OnUserRequestSettle&lt;/div&gt;&lt;div&gt;玩家请求撤离&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2560" y="2110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bpkGuW1O3WwiNpAyvklb-7" target="zetmuw1FiZot3TVMr4US-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-10" value="&lt;div&gt;WAR_END_TYPE.ForceQuit&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bpkGuW1O3WwiNpAyvklb-8">
+          <mxGeometry x="-0.6464" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-7" value="&lt;div&gt;OnSelfKickTimeOut&lt;/div&gt;&lt;div&gt;检测挂机踢出&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3160" y="2270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bpkGuW1O3WwiNpAyvklb-11" target="bpkGuW1O3WwiNpAyvklb-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-13" value="玩家离线或挂机" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bpkGuW1O3WwiNpAyvklb-12">
+          <mxGeometry x="-0.05" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-11" value="&lt;div&gt;OnlineStatusChangedEvent&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3125" y="2450" width="190" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
