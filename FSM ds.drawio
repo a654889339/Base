@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-18T14:03:01.010Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="7-pQy9TPTLH9s4F50R0b" version="24.6.5" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-18T14:13:19.107Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="f1NXSAiCPnnDk8i6SkUh" version="24.6.5" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1018,6 +1018,17 @@
         </mxCell>
         <mxCell id="bpkGuW1O3WwiNpAyvklb-14" value="ServerWarUser.DoSettle&lt;div&gt;个人结算具体流程&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="4450" y="2380" width="270" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-15" value="若是虚拟训练，则只做关卡结算，不做个人结算&lt;div&gt;（目前此流程弃用？）&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4672" y="2650" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.593;entryY=-0.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bpkGuW1O3WwiNpAyvklb-14" target="bpkGuW1O3WwiNpAyvklb-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-17" value="&lt;div&gt;warEndType == WAR_END_TYPE.VirtualTrainingLeave&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bpkGuW1O3WwiNpAyvklb-16">
+          <mxGeometry x="-0.0015" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
