@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-18T12:43:30.222Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="WN4L9r21wjhH7uP31YF3" version="24.6.5" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-18T12:53:00.846Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="-RuTqcpbyGdCF5o2C9H4" version="24.6.5" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -933,6 +933,29 @@
         </mxCell>
         <mxCell id="zetmuw1FiZot3TVMr4US-26" value="&lt;div&gt;OnUpdate&lt;/div&gt;&lt;div&gt;行为树 吃鸡结算&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="3770" y="1650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zetmuw1FiZot3TVMr4US-30" target="zetmuw1FiZot3TVMr4US-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-30" value="CampEvacuation&lt;div&gt;行为树 小队撤离&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3440" y="1730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zetmuw1FiZot3TVMr4US-32" target="zetmuw1FiZot3TVMr4US-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-32" value="SpecifiedEvacuation&lt;div&gt;行为树 特殊撤离&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3340" y="1610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zetmuw1FiZot3TVMr4US-35" target="zetmuw1FiZot3TVMr4US-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-38" value="WAR_END_TYPE.TeamQuit" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zetmuw1FiZot3TVMr4US-36">
+          <mxGeometry x="-0.7031" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-35" value="&lt;div&gt;DoCampEvacuate&lt;/div&gt;&lt;div&gt;小队撤离&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3070" y="1600" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
