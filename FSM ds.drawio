@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-18T13:55:40.400Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="jZfiuN7XkV4bY9aquBSi" version="24.6.5" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-18T14:03:01.010Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="7-pQy9TPTLH9s4F50R0b" version="24.6.5" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -628,7 +628,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="D4cUpWKldzLiPTz7wScZ" name="结算模块">
-    <mxGraphModel dx="3527" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3353" dy="1350" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -920,7 +920,7 @@
         <mxCell id="zetmuw1FiZot3TVMr4US-23" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#880000;&quot;&gt;RemoveObPlayer&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-2280" y="1530" width="300" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="zetmuw1FiZot3TVMr4US-25" value="ServerWarUser.DoSettle&lt;div&gt;个人结算入口&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="zetmuw1FiZot3TVMr4US-25" value="ServerWarUser.DoSettle&lt;div&gt;个人结算所有入口&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="3170" y="1950" width="310" height="80" as="geometry" />
         </mxCell>
         <mxCell id="zetmuw1FiZot3TVMr4US-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="zetmuw1FiZot3TVMr4US-26" target="zetmuw1FiZot3TVMr4US-25">
@@ -1015,6 +1015,9 @@
         </mxCell>
         <mxCell id="bpkGuW1O3WwiNpAyvklb-11" value="&lt;div&gt;OnlineStatusChangedEvent&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="3125" y="2450" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bpkGuW1O3WwiNpAyvklb-14" value="ServerWarUser.DoSettle&lt;div&gt;个人结算具体流程&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4450" y="2380" width="270" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
