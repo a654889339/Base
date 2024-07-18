@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-18T12:11:20.627Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="vKjJpRKDibre82nIoLuN" version="24.6.5" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-18T12:43:30.222Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="WN4L9r21wjhH7uP31YF3" version="24.6.5" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -628,7 +628,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="D4cUpWKldzLiPTz7wScZ" name="结算模块">
-    <mxGraphModel dx="3315" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3527" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -762,14 +762,24 @@
         <mxCell id="sXqGfIYJYRPDIAsolWKU-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-36" target="sXqGfIYJYRPDIAsolWKU-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-21" value="&lt;div&gt;WAR_END_TYPE.WarGameOver&amp;nbsp;&lt;/div&gt;&lt;div&gt;WAR_END_TYPE.TeamQuit, campRank&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="sXqGfIYJYRPDIAsolWKU-2">
+          <mxGeometry x="0.0179" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-36" value="&lt;div&gt;强制结算本局，&lt;span style=&quot;background-color: initial;&quot;&gt;结算剩余的每个玩家&lt;/span&gt;&lt;/div&gt;ForceSettle&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. ServerWarUser.DoSettle()&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. 计算结算时的队伍排名&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-1260" y="2320" width="310" height="90" as="geometry" />
+          <mxGeometry x="-1528.75" y="2480" width="310" height="90" as="geometry" />
         </mxCell>
         <mxCell id="zetmuw1FiZot3TVMr4US-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-37" target="X2hCjSS4Vl0-8XwFfeY9-36">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-37" value="WarSettleStage.DoTakovGMSettle&lt;div&gt;先完成个人结算&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;ForceSettle&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;再继续场景结算&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;DoRoundSettle&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-1240" y="2190" width="270" height="50" as="geometry" />
+        <mxCell id="zetmuw1FiZot3TVMr4US-14" value="先完成个人结算" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zetmuw1FiZot3TVMr4US-6">
+          <mxGeometry x="-0.2273" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-37" value="WarSettleStage.DoTakovGMSettle&lt;div&gt;先完成个人结算&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;ForceSettle&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;再继续&lt;b&gt;场景结算&lt;/b&gt;后发送数据&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;DoRoundSettle&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1510" y="2320" width="270" height="50" as="geometry" />
         </mxCell>
         <mxCell id="iwHbo75aDm783HOtJ5gw-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iwHbo75aDm783HOtJ5gw-1" target="iwHbo75aDm783HOtJ5gw-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -806,7 +816,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="sXqGfIYJYRPDIAsolWKU-1" value="&lt;br&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;ServerWarUser.DoSettle(WAR_END_TYPE warEndType, int rank)&lt;/span&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-1230" y="2570" width="430" height="100" as="geometry" />
+          <mxGeometry x="-2300" y="2490" width="430" height="100" as="geometry" />
         </mxCell>
         <mxCell id="8TcxuSPbjz_Wi930k5-i-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8TcxuSPbjz_Wi930k5-i-2" target="8TcxuSPbjz_Wi930k5-i-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -817,7 +827,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="8TcxuSPbjz_Wi930k5-i-2" value="&lt;div&gt;发送结算数据&lt;/div&gt;S2GClientHolder.instance.DoRoundSettle" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-1560" y="2740" width="225" height="110" as="geometry" />
+          <mxGeometry x="-1700" y="2680" width="225" height="110" as="geometry" />
         </mxCell>
         <mxCell id="8TcxuSPbjz_Wi930k5-i-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8TcxuSPbjz_Wi930k5-i-8" target="8TcxuSPbjz_Wi930k5-i-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -886,7 +896,43 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="zetmuw1FiZot3TVMr4US-7" value="场景结算&lt;div&gt;&lt;div style=&quot;font-size: 11px; text-wrap: nowrap;&quot;&gt;SettleType.SceneSettle&lt;/div&gt;&lt;div style=&quot;font-size: 11px; text-wrap: nowrap;&quot;&gt;才走这里&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1430" y="2020" width="120" height="60" as="geometry" />
+          <mxGeometry x="-1455" y="2180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.004;entryY=0.682;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-37" target="8TcxuSPbjz_Wi930k5-i-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1160" y="2345" />
+              <mxPoint x="-1160" y="2755" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-17" value="再发场景结算的数据" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zetmuw1FiZot3TVMr4US-15">
+          <mxGeometry x="-0.6493" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zetmuw1FiZot3TVMr4US-22" target="zetmuw1FiZot3TVMr4US-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-22" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.0pt;&quot;&gt;OnRemoveGamePlayer&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-2270" y="1370" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-23" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#880000;&quot;&gt;RemoveObPlayer&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-2280" y="1530" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-25" value="ServerWarUser.DoSettle&lt;div&gt;个人结算入口&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3170" y="1950" width="310" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="zetmuw1FiZot3TVMr4US-26" target="zetmuw1FiZot3TVMr4US-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-29" value="WAR_END_TYPE.Quit" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zetmuw1FiZot3TVMr4US-27">
+          <mxGeometry x="-0.0169" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-26" value="&lt;div&gt;OnUpdate&lt;/div&gt;&lt;div&gt;行为树 吃鸡结算&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3770" y="1650" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
