@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-05T11:46:14.876Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="MRGCnySxe1mjGGLdRo1H" version="24.6.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-07-18T12:11:20.627Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="vKjJpRKDibre82nIoLuN" version="24.6.5" type="github" pages="9">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -692,25 +692,11 @@
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-10" value="WarSettleStage.BeginStage&lt;div&gt;对局状态的最后一个状态，玩家撤离，结算状态&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;广播状态给所有客户端&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;DoWarProgressStatusChange&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2。 广播所有战斗模块 WarModule.&lt;b&gt;OnWarProgressStatusChange&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;3. 触发状态变化事件&amp;nbsp;&lt;b&gt;eOnWarProgressStatusChange&lt;/b&gt;&lt;/div&gt;&lt;div&gt;4. 触发事件 &lt;b&gt;eOnPreSettle&lt;/b&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;5. 触发结算&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;马氏马克(&lt;/b&gt;&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;DoTakovSettle ）或普通地图（&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;）&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1170" y="1240" width="650" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="tbXuN5tdV9wPfBtT21cm-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-12" target="X2hCjSS4Vl0-8XwFfeY9-37" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="-1430" y="2225" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="zetmuw1FiZot3TVMr4US-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-12" target="zetmuw1FiZot3TVMr4US-7">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="sXqGfIYJYRPDIAsolWKU-5" value="大世界结算&lt;div&gt;SettleType.SceneSettle&lt;/div&gt;&lt;div&gt;才走这里&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="tbXuN5tdV9wPfBtT21cm-3" vertex="1" connectable="0">
-          <mxGeometry x="0.2745" y="-4" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="8TcxuSPbjz_Wi930k5-i-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-12" target="8TcxuSPbjz_Wi930k5-i-2" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1430" y="2850" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-12" value="&lt;div&gt;马氏马克结算流程&lt;/div&gt;WarSettleStage.&lt;b&gt;DoTakovSettle&lt;/b&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-1610" y="1810" width="360" height="150" as="geometry" />
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-12" value="&lt;div&gt;马氏马克结算流程&lt;/div&gt;WarSettleStage.&lt;b&gt;DoTakovSettle&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;1. 场景结算&lt;/b&gt;&lt;/div&gt;&lt;div&gt;a. 若有异常走&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;DoTakovGMSettle&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;b. 若无异常 则结算场景并发送数据&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;S2GClientHolder.instance.DoRoundSettle&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;2. 个人结算&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1730" y="1810" width="480" height="170" as="geometry" />
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-14" target="X2hCjSS4Vl0-8XwFfeY9-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -719,9 +705,6 @@
           <mxGeometry x="-0.0019" y="-3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="tbXuN5tdV9wPfBtT21cm-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-14" target="X2hCjSS4Vl0-8XwFfeY9-37" edge="1">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8TcxuSPbjz_Wi930k5-i-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-14" target="8TcxuSPbjz_Wi930k5-i-2" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -780,22 +763,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-36" value="&lt;div&gt;强制结算本局，&lt;span style=&quot;background-color: initial;&quot;&gt;结算剩余的每个玩家&lt;/span&gt;&lt;/div&gt;ForceSettle&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. ServerWarUser.DoSettle()&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. 计算结算时的队伍排名&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-775" y="2330" width="310" height="90" as="geometry" />
+          <mxGeometry x="-1260" y="2320" width="310" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-37" target="X2hCjSS4Vl0-8XwFfeY9-36" edge="1">
+        <mxCell id="zetmuw1FiZot3TVMr4US-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-37" target="X2hCjSS4Vl0-8XwFfeY9-36">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8TcxuSPbjz_Wi930k5-i-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-37" target="8TcxuSPbjz_Wi930k5-i-2" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1210" y="2880" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="-380" y="2225" />
-              <mxPoint x="-380" y="2920" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-37" value="WarSettleStage.DoTakovGMSettle" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-755" y="2200" width="270" height="50" as="geometry" />
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-37" value="WarSettleStage.DoTakovGMSettle&lt;div&gt;先完成个人结算&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;ForceSettle&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;再继续场景结算&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;DoRoundSettle&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1240" y="2190" width="270" height="50" as="geometry" />
         </mxCell>
         <mxCell id="iwHbo75aDm783HOtJ5gw-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iwHbo75aDm783HOtJ5gw-1" target="iwHbo75aDm783HOtJ5gw-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -832,7 +806,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="sXqGfIYJYRPDIAsolWKU-1" value="&lt;br&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;ServerWarUser.DoSettle(WAR_END_TYPE warEndType, int rank)&lt;/span&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-835" y="2520" width="430" height="100" as="geometry" />
+          <mxGeometry x="-1230" y="2570" width="430" height="100" as="geometry" />
         </mxCell>
         <mxCell id="8TcxuSPbjz_Wi930k5-i-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8TcxuSPbjz_Wi930k5-i-2" target="8TcxuSPbjz_Wi930k5-i-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -843,7 +817,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="8TcxuSPbjz_Wi930k5-i-2" value="&lt;div&gt;发送结算数据&lt;/div&gt;S2GClientHolder.instance.DoRoundSettle" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-1542.5" y="2868" width="225" height="110" as="geometry" />
+          <mxGeometry x="-1560" y="2740" width="225" height="110" as="geometry" />
         </mxCell>
         <mxCell id="8TcxuSPbjz_Wi930k5-i-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8TcxuSPbjz_Wi930k5-i-8" target="8TcxuSPbjz_Wi930k5-i-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -894,6 +868,25 @@
         </mxCell>
         <mxCell id="9CB4EHgEtW8BmQiwtFdJ-2" value="&lt;div&gt;DB 保存战斗记录&lt;/div&gt;&lt;div&gt;void BattleStatisDataSSG::DBUpdateBattleHistory(MongoOperator&amp;amp; mongo, const BATTLE_SETTLEMENT_INFO&amp;amp; battleSettltment)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-990" y="3580" width="750" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zetmuw1FiZot3TVMr4US-7" target="X2hCjSS4Vl0-8XwFfeY9-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-10" value="有异常" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zetmuw1FiZot3TVMr4US-9">
+          <mxGeometry x="-0.12" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zetmuw1FiZot3TVMr4US-7" target="8TcxuSPbjz_Wi930k5-i-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-13" value="无异常" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zetmuw1FiZot3TVMr4US-11">
+          <mxGeometry x="-0.7689" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zetmuw1FiZot3TVMr4US-7" value="场景结算&lt;div&gt;&lt;div style=&quot;font-size: 11px; text-wrap: nowrap;&quot;&gt;SettleType.SceneSettle&lt;/div&gt;&lt;div style=&quot;font-size: 11px; text-wrap: nowrap;&quot;&gt;才走这里&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1430" y="2020" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
