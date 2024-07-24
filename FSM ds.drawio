@@ -1812,6 +1812,9 @@
         <mxCell id="QsB9IsXE9MGjs1GirQlp-35" value="各个功能模块启用相关的按键组" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="470" y="590" width="210" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="tHRdeqpX3X-Q2mB1DSJL-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tHRdeqpX3X-Q2mB1DSJL-2" target="tHRdeqpX3X-Q2mB1DSJL-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="tHRdeqpX3X-Q2mB1DSJL-2" value="&lt;div&gt;采样，获取当前客户端的输入状态&lt;/div&gt;&lt;div&gt;ClientInputSampler.Sample(ref userCommand, int Count)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;获取 GameClient.Input.GetCrosshairHitPoint()&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1730" y="900" width="370" height="90" as="geometry" />
         </mxCell>
@@ -1826,6 +1829,15 @@
         </mxCell>
         <mxCell id="tHRdeqpX3X-Q2mB1DSJL-5" value="GameClient.Update" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1855" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tHRdeqpX3X-Q2mB1DSJL-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tHRdeqpX3X-Q2mB1DSJL-7" target="tHRdeqpX3X-Q2mB1DSJL-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tHRdeqpX3X-Q2mB1DSJL-7" value="&lt;div&gt;LocalPlayerData.command&lt;/div&gt;&lt;div&gt;采样数据存在这里&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1805" y="1070" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tHRdeqpX3X-Q2mB1DSJL-9" value="&lt;div&gt;SendCommand&lt;/div&gt;&lt;div&gt;发送输入&lt;/div&gt;&lt;div&gt;&lt;div&gt;C2S_PROTOCOL.C2SCommands&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2260" y="1070" width="510" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
