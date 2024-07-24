@@ -1815,6 +1815,18 @@
         <mxCell id="tHRdeqpX3X-Q2mB1DSJL-2" value="&lt;div&gt;采样，获取当前客户端的输入状态&lt;/div&gt;&lt;div&gt;ClientInputSampler.Sample(ref userCommand, int Count)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;获取 GameClient.Input.GetCrosshairHitPoint()&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1730" y="900" width="370" height="90" as="geometry" />
         </mxCell>
+        <mxCell id="tHRdeqpX3X-Q2mB1DSJL-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tHRdeqpX3X-Q2mB1DSJL-3" target="tHRdeqpX3X-Q2mB1DSJL-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tHRdeqpX3X-Q2mB1DSJL-3" value="ClientCommandHandler.HandlerCommand" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1775" y="730" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tHRdeqpX3X-Q2mB1DSJL-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tHRdeqpX3X-Q2mB1DSJL-5" target="tHRdeqpX3X-Q2mB1DSJL-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tHRdeqpX3X-Q2mB1DSJL-5" value="GameClient.Update" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1855" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
