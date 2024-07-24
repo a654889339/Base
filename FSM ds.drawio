@@ -1820,8 +1820,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="KNSXYwWwKWTzDD_kvqCt-2" value="DeathReplayManager.StartReplayAt&lt;div&gt;开启回放&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="420" y="550" width="260" height="80" as="geometry" />
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-2" value="DeathReplayManager.StartReplayAt&lt;div&gt;开启回放&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;设置回放启动时间 _deathReplayStart = GameWorldTime.s_RunTick + 1&amp;nbsp;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="550" width="420" height="110" as="geometry" />
         </mxCell>
         <mxCell id="KNSXYwWwKWTzDD_kvqCt-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KNSXYwWwKWTzDD_kvqCt-3" target="KNSXYwWwKWTzDD_kvqCt-2">
           <mxGeometry relative="1" as="geometry" />
@@ -1836,6 +1836,11 @@
         </mxCell>
         <mxCell id="KNSXYwWwKWTzDD_kvqCt-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KNSXYwWwKWTzDD_kvqCt-6" target="KNSXYwWwKWTzDD_kvqCt-2">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-8" value="HasDeathReplay()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KNSXYwWwKWTzDD_kvqCt-7">
+          <mxGeometry x="-0.0027" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="KNSXYwWwKWTzDD_kvqCt-6" value="MechaShowStage.PlayDeathReplay" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="820" y="325" width="320" height="80" as="geometry" />
