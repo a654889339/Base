@@ -1820,30 +1820,44 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="KNSXYwWwKWTzDD_kvqCt-2" value="DeathReplayManager.StartReplayAt&lt;div&gt;开启回放&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;设置回放启动时间 _deathReplayStart = GameWorldTime.s_RunTick + 1&amp;nbsp;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-2" value="DeathReplayManager.StartReplayAt&lt;div&gt;开启回放&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;设置回放启动时间 _deathReplayStart = GameWorldTime.s_RunTick + 1&amp;nbsp;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="310" y="550" width="420" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="KNSXYwWwKWTzDD_kvqCt-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KNSXYwWwKWTzDD_kvqCt-3" target="KNSXYwWwKWTzDD_kvqCt-2">
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KNSXYwWwKWTzDD_kvqCt-3" target="KNSXYwWwKWTzDD_kvqCt-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="KNSXYwWwKWTzDD_kvqCt-5" value="LocalMechaDeadLogic.HasDeathReplay() 玩家死亡&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;!&lt;/b&gt;&amp;nbsp; CommonLogicUtils.IsFullReplaying 不开启完整回放&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KNSXYwWwKWTzDD_kvqCt-4">
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-5" value="LocalMechaDeadLogic.HasDeathReplay() 玩家死亡&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;!&lt;/b&gt;&amp;nbsp; CommonLogicUtils.IsFullReplaying 不开启完整回放&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="KNSXYwWwKWTzDD_kvqCt-4" vertex="1" connectable="0">
           <mxGeometry x="0.0024" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KNSXYwWwKWTzDD_kvqCt-3" value="MechaShowStage.OnPlayBattlePilotTimeline1ByClient" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-3" value="MechaShowStage.OnPlayBattlePilotTimeline1ByClient" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-100" y="330" width="330" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="KNSXYwWwKWTzDD_kvqCt-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KNSXYwWwKWTzDD_kvqCt-6" target="KNSXYwWwKWTzDD_kvqCt-2">
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KNSXYwWwKWTzDD_kvqCt-6" target="KNSXYwWwKWTzDD_kvqCt-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="KNSXYwWwKWTzDD_kvqCt-8" value="HasDeathReplay()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KNSXYwWwKWTzDD_kvqCt-7">
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-8" value="HasDeathReplay()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="KNSXYwWwKWTzDD_kvqCt-7" vertex="1" connectable="0">
           <mxGeometry x="-0.0027" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KNSXYwWwKWTzDD_kvqCt-6" value="MechaShowStage.PlayDeathReplay" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-6" value="MechaShowStage.PlayDeathReplay" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="820" y="325" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rnvsf67BtvwQxQqQX9Hp-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="rnvsf67BtvwQxQqQX9Hp-1" target="rnvsf67BtvwQxQqQX9Hp-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rnvsf67BtvwQxQqQX9Hp-5" value="&lt;div&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#000080;&quot;&gt;_clientDataState &lt;/span&gt;== &lt;span style=&quot;color:#216f85;&quot;&gt;ClientDataRequestState&lt;/span&gt;.None&lt;/pre&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rnvsf67BtvwQxQqQX9Hp-3">
+          <mxGeometry x="0.0069" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rnvsf67BtvwQxQqQX9Hp-1" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251); font-family: Helvetica; font-size: 12px; white-space: normal;&quot;&gt;DeathReplayManager.&lt;/span&gt;OnCommonLateUpdate&lt;br&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="450" width="350" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="rnvsf67BtvwQxQqQX9Hp-2" value="RequestClientData，没数据就去拉&lt;div&gt;_clientDataState = ClientDataRequestState.WaitForRespond&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2100" y="730" width="380" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
