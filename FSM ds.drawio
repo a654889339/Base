@@ -1837,7 +1837,7 @@
           <mxGeometry x="1805" y="1070" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tHRdeqpX3X-Q2mB1DSJL-9" value="&lt;div&gt;SendCommand&lt;/div&gt;&lt;div&gt;发送输入&lt;/div&gt;&lt;div&gt;&lt;div&gt;C2S_PROTOCOL.C2SCommands&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2260" y="1070" width="510" height="140" as="geometry" />
+          <mxGeometry x="2260" y="1030" width="510" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
