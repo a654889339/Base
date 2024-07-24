@@ -1816,12 +1816,23 @@
     </mxGraphModel>
   </diagram>
   <diagram id="2Xb_p1ibr2iFcBDs40Th" name="死亡处决模块">
-    <mxGraphModel dx="2252" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3079" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="KNSXYwWwKWTzDD_kvqCt-2" value="DeathReplayManager.StartReplayAt&lt;div&gt;开启回放&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="420" y="550" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KNSXYwWwKWTzDD_kvqCt-3" target="KNSXYwWwKWTzDD_kvqCt-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-5" value="LocalMechaDeadLogic.HasDeathReplay() 玩家死亡&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;!&lt;/b&gt;&amp;nbsp; CommonLogicUtils.IsFullReplaying 不开启完整回放&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KNSXYwWwKWTzDD_kvqCt-4">
+          <mxGeometry x="0.0024" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KNSXYwWwKWTzDD_kvqCt-3" value="OnPlayBattlePilotTimeline1ByClient" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="330" width="280" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
