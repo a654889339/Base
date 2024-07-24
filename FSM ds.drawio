@@ -1816,7 +1816,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="2Xb_p1ibr2iFcBDs40Th" name="死亡处决模块">
-    <mxGraphModel dx="3079" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1661" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1853,11 +1853,24 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="rnvsf67BtvwQxQqQX9Hp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="rnvsf67BtvwQxQqQX9Hp-1" target="rnvsf67BtvwQxQqQX9Hp-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1470" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rnvsf67BtvwQxQqQX9Hp-8" value="&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;_clientDataState == ClientDataRequestState.Got&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rnvsf67BtvwQxQqQX9Hp-6">
+          <mxGeometry x="-0.0061" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="rnvsf67BtvwQxQqQX9Hp-1" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251); font-family: Helvetica; font-size: 12px; white-space: normal;&quot;&gt;DeathReplayManager.&lt;/span&gt;OnCommonLateUpdate&lt;br&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1620" y="450" width="350" height="90" as="geometry" />
         </mxCell>
         <mxCell id="rnvsf67BtvwQxQqQX9Hp-2" value="RequestClientData，没数据就去拉&lt;div&gt;_clientDataState = ClientDataRequestState.WaitForRespond&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2100" y="730" width="380" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="rnvsf67BtvwQxQqQX9Hp-7" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="740" width="420" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
