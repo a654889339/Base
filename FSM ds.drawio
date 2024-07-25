@@ -1914,7 +1914,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="haGJQgabh7DMs_C_VqcI" name="好友推荐">
-    <mxGraphModel dx="3079" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2114" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1952,7 +1952,7 @@
         <mxCell id="yB0Mn-ph3SlnJIdIRCVE-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yB0Mn-ph3SlnJIdIRCVE-11" target="yB0Mn-ph3SlnJIdIRCVE-16">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-11" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;FriendHandle.OnQueryFriendRecommendList&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-11" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;FriendHandle.OnQueryFriendRecommendList&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1300" y="540" width="370" height="80" as="geometry" />
         </mxCell>
         <mxCell id="yB0Mn-ph3SlnJIdIRCVE-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yB0Mn-ph3SlnJIdIRCVE-12" target="yB0Mn-ph3SlnJIdIRCVE-11">
@@ -1966,8 +1966,8 @@
         <mxCell id="yB0Mn-ph3SlnJIdIRCVE-12" value="客户端向GS请求好友推荐列表" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1345" y="350" width="280" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-16" value="FriendManager::CheckRefreshFriendRecommendList" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1305" y="700" width="360" height="80" as="geometry" />
+        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-16" value="FriendManager::CheckRefreshFriendRecommendList&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;检查操作CD&amp;nbsp;nowUtc - m_recommends_last_refresh &amp;gt; FRIEND_SHOW_DATA_REFUSE_INTERVAL&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1167.5" y="700" width="635" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
