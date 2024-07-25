@@ -1966,11 +1966,20 @@
         <mxCell id="yB0Mn-ph3SlnJIdIRCVE-12" value="客户端向GS请求好友推荐列表" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1345" y="350" width="280" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-16" value="FriendManager::CheckRefreshFriendRecommendList&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;检查操作CD&amp;nbsp;nowUtc - m_recommends_last_refresh &amp;gt; FRIEND_SHOW_DATA_REFUSE_INTERVAL&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;检查此玩家的好友推荐列表(&lt;b&gt;m_recommends&lt;/b&gt;) 内玩家是否满足条件&lt;/div&gt;&lt;div&gt;1.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1167.5" y="700" width="635" height="100" as="geometry" />
+        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yB0Mn-ph3SlnJIdIRCVE-16" target="yB0Mn-ph3SlnJIdIRCVE-20">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-18" value="好友推荐列表内玩家筛查FRIEND_RECOMMEND_DATA&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1860" y="590" width="420" height="100" as="geometry" />
+        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-16" value="FriendManager::CheckRefreshFriendRecommendList&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;检查操作CD&amp;nbsp;nowUtc - m_recommends_last_refresh &amp;gt; FRIEND_SHOW_DATA_REFUSE_INTERVAL&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;检查此玩家的好友推荐列表(&lt;b&gt;m_recommends&lt;/b&gt;) 内玩家是否满足条件&lt;/div&gt;&lt;div&gt;1. 必须是当天通过筛选&lt;/div&gt;&lt;div&gt;2. 同局对战次数大于FRIEND_CONFIG_RECOMMEND_FIGHT_COUNT&lt;/div&gt;&lt;div&gt;3. 不能已是好友或者已拉黑&lt;/div&gt;&lt;div&gt;4. 向DB请求玩家的详细数据&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1163.75" y="700" width="642.5" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-18" value="好友推荐列表内玩家筛查&lt;b&gt;FRIEND_RECOMMEND_DATA&lt;/b&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;uint64              player_id       = 1;    // 玩家id&lt;/p&gt;&lt;p&gt;string              player_name     = 2;    // 玩家名&lt;/p&gt;&lt;p&gt;int32               fight           = 3;    // 当天并肩作战次数&lt;/p&gt;&lt;p&gt;int32               day             = 4;    // 当天日期（如：20220101)&lt;/p&gt;&lt;p&gt;int64               add_time        = 11;   // 推荐时间&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;PLAYER_PICTURE_DATA        picture_data = 14;&lt;/p&gt;&lt;p&gt;PLAYER_SEASON_SHOW_DATA season_show_data = 15;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1860" y="590" width="470" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.001;entryY=0.443;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="yB0Mn-ph3SlnJIdIRCVE-18" target="yB0Mn-ph3SlnJIdIRCVE-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-20" value="&lt;div&gt;返回客户端&lt;/div&gt;DoFriendRecommendListResult&lt;div&gt;game_s2c_friend_recommend_list_result&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1345" y="940" width="280" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
