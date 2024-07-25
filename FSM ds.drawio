@@ -1966,8 +1966,11 @@
         <mxCell id="yB0Mn-ph3SlnJIdIRCVE-12" value="客户端向GS请求好友推荐列表" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1345" y="350" width="280" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-16" value="FriendManager::CheckRefreshFriendRecommendList&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;检查操作CD&amp;nbsp;nowUtc - m_recommends_last_refresh &amp;gt; FRIEND_SHOW_DATA_REFUSE_INTERVAL&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-16" value="FriendManager::CheckRefreshFriendRecommendList&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;检查操作CD&amp;nbsp;nowUtc - m_recommends_last_refresh &amp;gt; FRIEND_SHOW_DATA_REFUSE_INTERVAL&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;检查此玩家的好友推荐列表(&lt;b&gt;m_recommends&lt;/b&gt;) 内玩家是否满足条件&lt;/div&gt;&lt;div&gt;1.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1167.5" y="700" width="635" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="yB0Mn-ph3SlnJIdIRCVE-18" value="好友推荐列表内玩家筛查FRIEND_RECOMMEND_DATA&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1860" y="590" width="420" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
