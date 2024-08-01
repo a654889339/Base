@@ -1989,8 +1989,14 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="0ES-gchG60w1v8dnG3ZL-1" value="InitDroneFreshConfig&#xa;读取DroneRefreshRandom.tab" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="319" y="360" width="221" height="80" as="geometry" />
+        <mxCell id="0ES-gchG60w1v8dnG3ZL-1" value="ServerDroneFreshModule.InitDroneFreshConfig()&#xa;读取DroneRefreshRandom.tab的可用项" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="260" y="360" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="0ES-gchG60w1v8dnG3ZL-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0ES-gchG60w1v8dnG3ZL-2" target="0ES-gchG60w1v8dnG3ZL-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0ES-gchG60w1v8dnG3ZL-2" value="ServerDroneFreshModule.Init&#xa;模块初始化" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="285" y="230" width="230" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
