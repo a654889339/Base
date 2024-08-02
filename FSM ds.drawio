@@ -1985,7 +1985,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mMk6yr6r4qqI_OUw7R4J" name="撤离玩法">
-    <mxGraphModel dx="1383" dy="1117" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1633" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2043,11 +2043,38 @@
         <mxCell id="YUItX4Gc-KCX1EIMf_wt-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-14" target="YUItX4Gc-KCX1EIMf_wt-16">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-14" value="单个波次的刷新RefreshRound.UpdatePhase&#xa;_started 首次调用要先InitModules（获取一下当前工作的module保存到struct里）&#xa;GetLegalPoints 通过evacuateGroupId获得玩法点组&#xa;随机取一个玩法点 GenerateDronePosition&#xa;InitRoundData(玩法点GamePlayPointPrim)" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-5" value="!_started 首次启动" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YUItX4Gc-KCX1EIMf_wt-17">
+          <mxGeometry x="-0.0141" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-14" target="jjPBjHqxoX3JuUpOJX0V-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1480" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-14" value="单个波次的阶段刷新&#xa;&#xa;更新当前阶段的动画、位置等&#xa;判定是否进入下个阶段RefreshRound.UpdatePhase&#xa;&#xa;_started 首次调用要先InitModules（获取一下当前工作的module保存到struct里）&#xa;GetLegalPoints 通过evacuateGroupId获得玩法点组&#xa;随机取一个玩法点 GenerateDronePosition&#xa;InitRoundData(玩法点GamePlayPointPrim)" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="1615.6200000000001" y="530" width="458.75" height="370" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-16" value="InitRoundData(玩法点GamePlayPointPrim)&#xa;ServerDroneFreshModule._shrinkingPoints设置波次收缩的玩法点&#xa;_evacuateDronePos，_rotation 设置撤离点坐标和旋转" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="1610" y="1000" width="470" height="190" as="geometry" />
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-16" target="jjPBjHqxoX3JuUpOJX0V-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-16" target="jjPBjHqxoX3JuUpOJX0V-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2049.9999999999995" y="1340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-16" value="若是首次启动！&#xa;InitRoundData(玩法点GamePlayPointPrim)&#xa;ServerDroneFreshModule._shrinkingPoints设置波次收缩的玩法点&#xa;_evacuateDronePos，_rotation 设置撤离点坐标和旋转&#xa;GeneratePhaseData 计算此波次里的阶段信息&#xa;_currentPhaseIndex++当前是第几阶段&#xa;GenerateFreshData 更新此阶段数据" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="1020" width="470" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-1" value="GeneratePhaseData &#xa;计算此波次里的每个阶段的开始结束时间,和圆心&#xa;roundEndTick 计算此波次结束时间（即最后一个阶段的结束时间）&#xa;GetCenter 计算每个阶段的圆心&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="2400" y="820" width="470" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-4" value="GenerateFreshData&#xa;_centerXUpdatePerDis 计算每帧的中心点偏移量,半径偏移量" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="2450" y="1240" width="370" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-7" value="update" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="1090" width="260" height="170" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
