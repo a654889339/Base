@@ -1985,11 +1985,11 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mMk6yr6r4qqI_OUw7R4J" name="撤离玩法">
-    <mxGraphModel dx="2215" dy="814" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1237" dy="1117" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="0ES-gchG60w1v8dnG3ZL-1" value="ServerDroneFreshModule.InitDroneFreshConfig()&#xa;读取DroneRefreshRandom.tab的可用项&#xa;_refreshRoundDic 本局可用且未用过的撤离波次&#xa;_shipCount 飞船数（部分撤离波次含飞船）" style="whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="0ES-gchG60w1v8dnG3ZL-1" value="ServerDroneFreshModule.InitDroneFreshConfig()&#xa;读取DroneRefreshRandom.tab的可用项&#xa;_refreshRoundDic 本局可用且未用过的撤离波次&#xa;_shipCount 飞船数（部分撤离波次含飞船）&#xa;&#xa;_enableDroneFresh 激活配置标记" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="260" y="360" width="280" height="100" as="geometry" />
         </mxCell>
         <mxCell id="0ES-gchG60w1v8dnG3ZL-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0ES-gchG60w1v8dnG3ZL-2" target="0ES-gchG60w1v8dnG3ZL-1" edge="1">
@@ -2010,7 +2010,7 @@
         <mxCell id="YUItX4Gc-KCX1EIMf_wt-2" value="StaticWarAgent.SetWarProgressParam&#xa;设置对局进程" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="985" y="190" width="340" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-4" value="CheckMapPoint&#xa;检查具体玩法点是否合法（不合法也只能报个错）" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-4" value="CheckMapPoint&#xa;检查具体玩法点是否合法（不合法也只能报个错）&#xa;_freshStarted 激活玩法标记" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="1020" y="547" width="270" height="75" as="geometry" />
         </mxCell>
         <mxCell id="YUItX4Gc-KCX1EIMf_wt-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-6" target="YUItX4Gc-KCX1EIMf_wt-7">
@@ -2033,6 +2033,9 @@
         </mxCell>
         <mxCell id="YUItX4Gc-KCX1EIMf_wt-11" value="BroadCastSafeArea&#xa;广播当前波次的配置&#xa;_roundId, _currentPhaseIndex" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-402.5" width="305" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-13" value="Activate" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1790" y="190" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
