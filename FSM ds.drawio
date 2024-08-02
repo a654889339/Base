@@ -1985,18 +1985,27 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mMk6yr6r4qqI_OUw7R4J" name="撤离玩法">
-    <mxGraphModel dx="2012" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1388" dy="814" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="0ES-gchG60w1v8dnG3ZL-1" value="ServerDroneFreshModule.InitDroneFreshConfig()&#xa;读取DroneRefreshRandom.tab的可用项&#xa;_refreshRoundDic 本局可用且未用过的撤离波次&#xa;_shipCount 飞船数（部分撤离波次含飞船）" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="0ES-gchG60w1v8dnG3ZL-1" value="ServerDroneFreshModule.InitDroneFreshConfig()&#xa;读取DroneRefreshRandom.tab的可用项&#xa;_refreshRoundDic 本局可用且未用过的撤离波次&#xa;_shipCount 飞船数（部分撤离波次含飞船）" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="260" y="360" width="280" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="0ES-gchG60w1v8dnG3ZL-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0ES-gchG60w1v8dnG3ZL-2" target="0ES-gchG60w1v8dnG3ZL-1">
+        <mxCell id="0ES-gchG60w1v8dnG3ZL-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0ES-gchG60w1v8dnG3ZL-2" target="0ES-gchG60w1v8dnG3ZL-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0ES-gchG60w1v8dnG3ZL-2" value="ServerDroneFreshModule.Init&#xa;模块初始化" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="0ES-gchG60w1v8dnG3ZL-2" value="ServerDroneFreshModule.Init&#xa;模块初始化" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="285" y="230" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-1" value="StartFreshDrone&#xa;玩法入口" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="370" width="270" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-2" target="YUItX4Gc-KCX1EIMf_wt-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-2" value="StaticWarAgent.SetWarProgressParam&#xa;设置对局进程" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="985" y="190" width="340" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
