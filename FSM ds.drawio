@@ -2037,11 +2037,11 @@
         <mxCell id="YUItX4Gc-KCX1EIMf_wt-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-13" target="YUItX4Gc-KCX1EIMf_wt-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-13" value="Activate&#xa;遍历所有波次，收集所有在工作的波次&#xa;_activeRounds&#xa;&#xa;Update _activeRounds的波次&#xa;&#xa;检查玩家是否收波次影响，要加buff&#xa;&#xa;将结束或者出问题的波次加入_disabledRound&#xa;并在配置中移除" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-13" value="ServerDroneFreshModule.Activate&#xa;遍历所有波次，收集所有在工作的波次&#xa;_activeRounds&#xa;&#xa;Update _activeRounds的波次&#xa;&#xa;检查玩家是否收波次影响，要加buff&#xa;&#xa;将结束或者出问题的波次加入_disabledRound&#xa;并在配置中移除" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="1700" y="170" width="290" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-14" value="UpdatePhase" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="1785" y="460" width="120" height="60" as="geometry" />
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-14" value="单个波次的刷新RefreshRound.UpdatePhase&#xa;_started 首次调用要先InitModules（获取一下当前工作的module保存到struct里）&#xa;GetLegalPoints 通过evacuateGroupId获得玩法点组&#xa;随机取一个玩法点 GenerateDronePosition&#xa;InitRoundData(玩法点GamePlayPointPrim)&#xa;ServerDroneFreshModule._shrinkingPoints设置波次收缩的玩法点&#xa;_evacuateDronePos，_rotation 设置撤离点坐标和旋转" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1615.6200000000001" y="530" width="458.75" height="370" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
