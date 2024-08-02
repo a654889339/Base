@@ -2028,6 +2028,12 @@
         <mxCell id="YUItX4Gc-KCX1EIMf_wt-8" value="SyncDataToClient" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-310" y="170" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-11" target="YUItX4Gc-KCX1EIMf_wt-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-11" value="BroadCastSafeArea&#xa;广播当前波次的配置&#xa;_roundId, _currentPhaseIndex" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-402.5" width="305" height="70" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
