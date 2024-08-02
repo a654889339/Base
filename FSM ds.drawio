@@ -1998,6 +1998,9 @@
         <mxCell id="0ES-gchG60w1v8dnG3ZL-2" value="ServerDroneFreshModule.Init&#xa;模块初始化" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="285" y="230" width="230" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-1" target="YUItX4Gc-KCX1EIMf_wt-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="YUItX4Gc-KCX1EIMf_wt-1" value="StartFreshDrone&#xa;玩法入口&#xa;&#xa;_groupId2Points[撤离id,玩法点组] 设置撤离波次对应的玩法点" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="1020" y="370" width="270" height="90" as="geometry" />
         </mxCell>
@@ -2006,6 +2009,9 @@
         </mxCell>
         <mxCell id="YUItX4Gc-KCX1EIMf_wt-2" value="StaticWarAgent.SetWarProgressParam&#xa;设置对局进程" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="985" y="190" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-4" value="CheckMapPoint&#xa;检查具体玩法点是否合法（不合法也只能报个错）" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="547" width="270" height="75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
