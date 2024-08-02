@@ -2073,8 +2073,14 @@
         <mxCell id="jjPBjHqxoX3JuUpOJX0V-4" value="GenerateFreshData&#xa;_centerXUpdatePerDis 计算每帧的中心点偏移量,半径偏移量" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="2450" y="1240" width="370" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="jjPBjHqxoX3JuUpOJX0V-7" value="update" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1290" y="1090" width="260" height="170" as="geometry" />
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jjPBjHqxoX3JuUpOJX0V-7" target="jjPBjHqxoX3JuUpOJX0V-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-7" value="更新半径和buff&#xa;ShrinkRadiusAndCenter&#xa;&#xa;1. UpdateCenter 更新圆心&#xa;2. UpdateRadius更新半径&#xa;3. BroadCastSafeArea 广播 S2C_PROTOCOL.S2CDroneFreshData" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="1090" width="320" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-8" value="判断是否需要进入下一个阶段&lt;div&gt;或者此波次完全结束&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="1395" width="280" height="135" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
