@@ -1985,7 +1985,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mMk6yr6r4qqI_OUw7R4J" name="撤离玩法">
-    <mxGraphModel dx="1237" dy="1117" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1548" dy="1117" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2034,8 +2034,8 @@
         <mxCell id="YUItX4Gc-KCX1EIMf_wt-11" value="BroadCastSafeArea&#xa;广播当前波次的配置&#xa;_roundId, _currentPhaseIndex" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-402.5" width="305" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-13" value="Activate" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="1790" y="190" width="120" height="60" as="geometry" />
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-13" value="Activate&#xa;遍历所有波次，收集所有在工作的波次&#xa;_activeRounds&#xa;&#xa;Update _activeRounds的波次&#xa;&#xa;检查玩家是否收波次影响，要加buff&#xa;&#xa;将结束或者出问题的波次加入_disabledRound&#xa;并在配置中移除" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="170" width="290" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
