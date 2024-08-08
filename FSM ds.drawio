@@ -1104,11 +1104,11 @@
         <mxCell id="2hvavOLO6otYmtWDrKWa-18" value="WarSettleStage.DoSettle&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-3910" y="2120" width="250" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UVNgWaFbswL3QF8YBw_E-1" target="2hvavOLO6otYmtWDrKWa-16">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UVNgWaFbswL3QF8YBw_E-1" target="UVNgWaFbswL3QF8YBw_E-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="UVNgWaFbswL3QF8YBw_E-1" value="WarSettleStage.DoTakovPersonSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-3270" y="2190" width="280" height="100" as="geometry" />
+          <mxGeometry x="-3170" y="2060" width="280" height="100" as="geometry" />
         </mxCell>
         <mxCell id="UVNgWaFbswL3QF8YBw_E-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UVNgWaFbswL3QF8YBw_E-3" target="2hvavOLO6otYmtWDrKWa-11">
           <mxGeometry relative="1" as="geometry" />
@@ -1123,6 +1123,18 @@
           <mxGeometry x="-0.458" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UVNgWaFbswL3QF8YBw_E-9" target="2hvavOLO6otYmtWDrKWa-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-9" value="GenerateTakovGsData&#xa;生成个人结算数据，放在&#xa;_userId2SettleNotify" style="whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-3140" y="2255" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UVNgWaFbswL3QF8YBw_E-12" target="UVNgWaFbswL3QF8YBw_E-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-12" value="ServerWarUser.DoSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-3125" y="1880" width="190" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
