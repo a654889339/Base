@@ -1084,8 +1084,8 @@
         <mxCell id="2hvavOLO6otYmtWDrKWa-13" value="ServerWarUser.SendSettleMessage&#xa;(RS2GS_PLAYER_SETTLEMENT_NOTIFY playerSettleMsg, int settleCnt, WAR_END_TYPE endType)" style="whiteSpace=wrap;fontStyle=0" parent="1" vertex="1">
           <mxGeometry x="-3710" y="2600" width="830" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="2hvavOLO6otYmtWDrKWa-15" value="个人结算" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=25;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="-4426" y="2886" width="120" height="40" as="geometry" />
+        <mxCell id="2hvavOLO6otYmtWDrKWa-15" value="个人结算数据生成" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=25;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="-4476" y="2886" width="220" height="40" as="geometry" />
         </mxCell>
         <mxCell id="2hvavOLO6otYmtWDrKWa-17" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="2hvavOLO6otYmtWDrKWa-16" target="2hvavOLO6otYmtWDrKWa-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
