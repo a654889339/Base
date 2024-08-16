@@ -2186,7 +2186,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="1977" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2504" dy="983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2220,7 +2220,7 @@
         <mxCell id="bnsUtI1JdVI6vTBgHGfX-2" value="MatchManager" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-640" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-4" value="MatchHandle" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-4" value="MatchHandle&lt;div&gt;处理网络协议&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-450" y="670" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="bnsUtI1JdVI6vTBgHGfX-6" value="ServiceClient" style="whiteSpace=wrap;" vertex="1" parent="1">
@@ -2240,6 +2240,20 @@
         </mxCell>
         <mxCell id="bnsUtI1JdVI6vTBgHGfX-16" value="HttpClient" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-827" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-18" value="MatchHandle::OnMatchRequest&#xa;匹配请求接收" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1382.5" y="710" width="195" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-19" target="bnsUtI1JdVI6vTBgHGfX-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-21" value="msg_match_request" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bnsUtI1JdVI6vTBgHGfX-20">
+          <mxGeometry x="0.0308" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-19" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="520" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
