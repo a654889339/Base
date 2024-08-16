@@ -2186,74 +2186,102 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="2680" dy="983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1633" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-2">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-4">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-6">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-8">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-10">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-12">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-14">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-16">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bnsUtI1JdVI6vTBgHGfX-1" target="bnsUtI1JdVI6vTBgHGfX-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-1" value="MatchMoudle&#xa;匹配服入口，管理所有模块&#xa;MatchManager* m_pMatchManager = nullptr;&#xa;MatchHandle* m_pMatchHandle = nullptr;&#xa;ServiceClient* m_pServiceClient = nullptr;&#xa;RouterClient* m_pRouteClient = nullptr;&#xa;RoomManagerClient* m_pRoomManagerClient = nullptr;&#xa;AIClient* m_pAiClient = nullptr;&#xa;DataLogClient* m_pDataLogCli = nullptr;&#xa;HttpClient* m_pHttpClient = nullptr;" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-1" value="MatchMoudle&#xa;匹配服入口，管理所有模块&#xa;MatchManager* m_pMatchManager = nullptr;&#xa;MatchHandle* m_pMatchHandle = nullptr;&#xa;ServiceClient* m_pServiceClient = nullptr;&#xa;RouterClient* m_pRouteClient = nullptr;&#xa;RoomManagerClient* m_pRoomManagerClient = nullptr;&#xa;AIClient* m_pAiClient = nullptr;&#xa;DataLogClient* m_pDataLogCli = nullptr;&#xa;HttpClient* m_pHttpClient = nullptr;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-280" y="320" width="340" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-2" value="MatchManager" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-2" value="MatchManager" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-640" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-4" value="MatchHandle&lt;div&gt;处理网络协议&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-4" value="MatchHandle&lt;div&gt;处理网络协议&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-450" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-6" value="ServiceClient" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-6" value="ServiceClient" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-260" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-8" value="RouteClient" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-8" value="RouteClient" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-70" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-10" value="RoomManagerClient" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-10" value="RoomManagerClient" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="140" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-12" value="AiClient" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-12" value="AiClient" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="340" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-14" value="DataLogCli" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-14" value="DataLogCli" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="540" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-16" value="HttpClient" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-16" value="HttpClient" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-827" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-18" value="MatchHandle::OnMatchRequest&#xa;匹配请求接收" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="1382.5" y="710" width="195" height="60" as="geometry" />
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-18" value="MatchHandle::OnMatchRequest&#xa;匹配请求接收" style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1197.5" y="820" width="195" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-19" target="bnsUtI1JdVI6vTBgHGfX-18">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bnsUtI1JdVI6vTBgHGfX-19" target="bnsUtI1JdVI6vTBgHGfX-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-21" value="msg_match_request" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bnsUtI1JdVI6vTBgHGfX-20">
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-21" value="msg_match_request" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" parent="bnsUtI1JdVI6vTBgHGfX-20" vertex="1" connectable="0">
           <mxGeometry x="0.0308" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="bnsUtI1JdVI6vTBgHGfX-19" value="GameServer的TeamHandle::DoPlayerMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="1355" y="495" width="250" height="90" as="geometry" />
+        <mxCell id="bnsUtI1JdVI6vTBgHGfX-19" value="GameServer的TeamHandle::DoPlayerMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1170" y="470" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="nd7nTlXfQn_RabB1NInH-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nd7nTlXfQn_RabB1NInH-1" target="bnsUtI1JdVI6vTBgHGfX-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nd7nTlXfQn_RabB1NInH-6" value="&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;单人时&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;DoPlayerMatch 匹配前选机甲&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;好友界面状态切换&amp;nbsp;PlayerChangeFriendStatus&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;设置玩家的匹配模式&amp;nbsp;SetMatchMode&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nd7nTlXfQn_RabB1NInH-2">
+          <mxGeometry x="-0.0094" y="-3" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nd7nTlXfQn_RabB1NInH-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nd7nTlXfQn_RabB1NInH-1" target="nd7nTlXfQn_RabB1NInH-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nd7nTlXfQn_RabB1NInH-5" value="mode-&gt;ModeType == EModeType::Teaching" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nd7nTlXfQn_RabB1NInH-4">
+          <mxGeometry x="0.8137" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nd7nTlXfQn_RabB1NInH-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nd7nTlXfQn_RabB1NInH-1" target="nd7nTlXfQn_RabB1NInH-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nd7nTlXfQn_RabB1NInH-1" value="TeamHandle::OnTeamMatch&#xa;&#xa;&#xa;&#xa;在队伍中时" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1510" width="320" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="nd7nTlXfQn_RabB1NInH-3" value="TeamHandle::OnTeachingMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="320" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nd7nTlXfQn_RabB1NInH-7" value="TeamHandle::DoTeamMatc" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="490" width="260" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
