@@ -2291,32 +2291,44 @@
         <mxCell id="nd7nTlXfQn_RabB1NInH-7" value="TeamHandle::DoTeamMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1540" y="490" width="260" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2IEBd4UNFoXVCvHGMDbj-1" target="6W7Y4kUwUMGfBnxA2-Cv-2">
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2IEBd4UNFoXVCvHGMDbj-1" target="6W7Y4kUwUMGfBnxA2-Cv-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1520" y="1050" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-3" value="单人" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6W7Y4kUwUMGfBnxA2-Cv-1">
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-3" value="单人" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="6W7Y4kUwUMGfBnxA2-Cv-1" vertex="1" connectable="0">
           <mxGeometry y="3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2IEBd4UNFoXVCvHGMDbj-1" target="6W7Y4kUwUMGfBnxA2-Cv-4">
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2IEBd4UNFoXVCvHGMDbj-1" target="6W7Y4kUwUMGfBnxA2-Cv-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-6" value="组队" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6W7Y4kUwUMGfBnxA2-Cv-5">
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-6" value="组队" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="6W7Y4kUwUMGfBnxA2-Cv-5" vertex="1" connectable="0">
           <mxGeometry x="0.0111" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2IEBd4UNFoXVCvHGMDbj-1" value="MatchServer&#xa;检查客户端版本号是否一致&#xa;&#xa;分单人和队伍" style="whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+        <mxCell id="2IEBd4UNFoXVCvHGMDbj-1" value="TeamServer&#xa;检查客户端版本号是否一致&#xa;&#xa;分单人和队伍" style="whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="1475" y="780" width="390" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-2" value="DoDisbandTeamNotify&#xa;DoTeamRecuitmentCancelNotify&#xa;DoDisbandTeamResult&#xa;DoTeamMatchResult" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-2" value="DoDisbandTeamNotify&#xa;DoTeamRecuitmentCancelNotify&#xa;DoDisbandTeamResult&#xa;DoTeamMatchResult" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1340" y="1050" width="240" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-4" value="检查是否为队长&#xa;匹配状态&#xa;是否全队在线&#xa;是否都准备&#xa;人数不能过多&#xa;机甲数量判定&#xa;&#xa;以上判定通过&#xa;Team::SetMatching 设置全队成员状态&#xa;&#xa;必须所有队员都选完机甲FindCLM&#xa;DeleteTeamRecruitment 取消招募&#xa;&#xa;DoTeamMatch 开始匹配" style="whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6W7Y4kUwUMGfBnxA2-Cv-4" target="UYn01K3WqLhU1VW6JZGE-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-4" value="检查是否为队长&#xa;匹配状态&#xa;是否全队在线&#xa;是否都准备&#xa;人数不能过多&#xa;机甲数量判定&#xa;&#xa;以上判定通过&#xa;Team::SetMatching 设置全队成员状态&#xa;&#xa;必须所有队员都选完机甲FindCLM&#xa;DeleteTeamRecruitment 取消招募&#xa;&#xa;DoTeamMatch 开始匹配" style="whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="1730" y="1050" width="310" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UYn01K3WqLhU1VW6JZGE-1" target="UYn01K3WqLhU1VW6JZGE-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-1" value="TeamHandle::DoTeamMatch(Team&amp; team, ChooseMecha::ChooseMechaTeam&amp; clm)" style="whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1732.5" y="1370" width="305" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-3" value="MatchServer&#xa;MatchHandle::OnMatchRequest" style="whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1732.5" y="1620" width="305" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
