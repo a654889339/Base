@@ -2349,14 +2349,40 @@
         <mxCell id="UYn01K3WqLhU1VW6JZGE-5" value="MatchData&lt;div&gt;玩家或队伍的匹配数据&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-670" y="820" width="180" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="UYn01K3WqLhU1VW6JZGE-8" value="若没有匹配数据，则触发创建匹配数据流程" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1384" y="1820" width="270" height="50" as="geometry" />
+        <mxCell id="ZA4UWSXeMmtfjYLk0hYj-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UYn01K3WqLhU1VW6JZGE-8" target="ZA4UWSXeMmtfjYLk0hYj-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="2140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZA4UWSXeMmtfjYLk0hYj-3" value="组队匹配" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ZA4UWSXeMmtfjYLk0hYj-1">
+          <mxGeometry x="0.305" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZA4UWSXeMmtfjYLk0hYj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UYn01K3WqLhU1VW6JZGE-8" target="ZA4UWSXeMmtfjYLk0hYj-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1620" y="2200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZA4UWSXeMmtfjYLk0hYj-6" value="单人匹配" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ZA4UWSXeMmtfjYLk0hYj-4">
+          <mxGeometry x="0.214" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-8" value="若没有匹配数据，则触发创建匹配数据流程&#xa;MatchManager::CreateMatchData" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="1830" width="270" height="150" as="geometry" />
         </mxCell>
         <mxCell id="UYn01K3WqLhU1VW6JZGE-9" value="若有匹配数据，且有取消标记CancelFlag, 则销毁匹配数据&#xa;MatchManager::DestroyMatchData" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
           <mxGeometry x="1703.75" y="1830" width="362.5" height="40" as="geometry" />
         </mxCell>
         <mxCell id="UYn01K3WqLhU1VW6JZGE-12" value="有匹配数据，说明玩家重复发起匹配，反馈UI通知即可&#xa;e_match_already_in_match" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="2131.88" y="1820" width="250" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ZA4UWSXeMmtfjYLk0hYj-2" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="2150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZA4UWSXeMmtfjYLk0hYj-5" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1570" y="2150" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
