@@ -2186,7 +2186,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="2504" dy="983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4158" dy="983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2429,6 +2429,17 @@
         </mxCell>
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-15" value="MatchPattern&#xa;匹配模式，目前有2种&#xa;LadderMatchPattern&#xa;MashmakMatchPattern" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-590" y="820" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-16" target="pIHn8wnxRUCRlS7zdoKL-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1450" y="1700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-16" value="&lt;div&gt;普通匹配模式&lt;/div&gt;LadderMatchPattern" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1270" y="1355" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-18" value="Init&#xa;3个匹配池初始化 LadderMatchPool&#xa;MATCH_POOL_NEW_PLAYER,&#xa;MATCH_POOL_VETERAN_PLAYER,&#xa;MATCH_POOL_AI_PLAYER," style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1670" y="1700" width="300" height="200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
