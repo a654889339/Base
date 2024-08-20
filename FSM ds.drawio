@@ -2490,11 +2490,11 @@
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-31" value="处理取消匹配的请求&#xa;_WorkCancelMatchRequest&#xa;&#xa;从所有池子里移除" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1360" y="2040" width="180" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-33" value="过滤匹配数据_FetchWorkingMatchData&#xa;&#xa;将取消匹配的数据移除&#xa;最后把有效的匹配加入m_tempMatchDataList" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-33" value="过滤匹配数据_FetchWorkingMatchData&#xa;&#xa;将取消匹配和已经匹配的数据移除&#xa;最后把有效的匹配加入m_tempMatchDataList" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1100" y="2040" width="210" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-37" value="_DealMatchPreselecUpdate" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-820" y="2070" width="180" height="110" as="geometry" />
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-37" value="_DealMatchPreselecUpdate&#xa;&#xa;处理修改预选机甲的请求，&#xa;若那些请求对应的匹配已经成功，则直接返回。&#xa;匹配成功也返回，&#xa;&#xa;保存修改&#xa;MatchData::UpdatePreselect" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-827" y="2040" width="213" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
