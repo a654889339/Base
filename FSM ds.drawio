@@ -2186,7 +2186,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="1785" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3194" dy="1388" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2386,22 +2386,41 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZA4UWSXeMmtfjYLk0hYj-2" target="pIHn8wnxRUCRlS7zdoKL-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="ZA4UWSXeMmtfjYLk0hYj-2" value="获取每个人的匹配数据&#xa;DoPlayerMatchDataQuest" style="whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="880" y="2170" width="200" height="80" as="geometry" />
+          <mxGeometry x="980" y="2165" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZA4UWSXeMmtfjYLk0hYj-5" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1570" y="2150" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=0;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-2" target="ZA4UWSXeMmtfjYLk0hYj-2">
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=0;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-2" target="pIHn8wnxRUCRlS7zdoKL-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-5" value="gs2ms_player_match_data_request_result" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pIHn8wnxRUCRlS7zdoKL-4">
-          <mxGeometry x="-0.0024" relative="1" as="geometry">
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-12" value="gs2ms_player_match_data_request_result" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pIHn8wnxRUCRlS7zdoKL-4">
+          <mxGeometry x="-0.6008" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-2" value="GameServer&#xa;TeamHandle::OnPlayerMatchDataRequest&#xa;&#xa;读取玩家的排名 禁赛 黑名单 ping&#xa;Player::ToMatchMsgPlayerInfo" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="210" y="2130" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.026;entryY=0.498;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=0;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-8" target="pIHn8wnxRUCRlS7zdoKL-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="910" y="2350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-11" value="MatchData::IsAllPlayersMatchDataResponsed" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pIHn8wnxRUCRlS7zdoKL-9">
+          <mxGeometry x="0.0677" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-8" value="MatchHandle::OnPlayerMatchDataResult&#xa;MatchData::SetPlayerData 存入匹配数据" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="370" y="2338" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-10" value="所有人数据都收集完&#xa;MatchData::OnPlayerMatchReady&#xa;收集玩家战绩&#xa;判断玩家是否都解锁匹配了&#xa;&#xa;玩家选择的机甲是否可能冲突m_cantReverseChooseMechaPossibility&#xa;玩家预选的机甲：chose_mecha_ids_size&#xa;&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="890" y="2329.5" width="380" height="270.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
