@@ -2217,6 +2217,9 @@
         <mxCell id="bnsUtI1JdVI6vTBgHGfX-1" value="MatchMoudle&#xa;匹配服入口，管理所有模块&#xa;MatchManager* m_pMatchManager = nullptr;&#xa;MatchHandle* m_pMatchHandle = nullptr;&#xa;ServiceClient* m_pServiceClient = nullptr;&#xa;RouterClient* m_pRouteClient = nullptr;&#xa;RoomManagerClient* m_pRoomManagerClient = nullptr;&#xa;AIClient* m_pAiClient = nullptr;&#xa;DataLogClient* m_pDataLogCli = nullptr;&#xa;HttpClient* m_pHttpClient = nullptr;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-280" y="320" width="340" height="200" as="geometry" />
         </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-2" target="UYn01K3WqLhU1VW6JZGE-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="bnsUtI1JdVI6vTBgHGfX-2" value="MatchManager" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-640" y="670" width="120" height="60" as="geometry" />
         </mxCell>
@@ -2329,6 +2332,9 @@
         </mxCell>
         <mxCell id="UYn01K3WqLhU1VW6JZGE-3" value="MatchServer&#xa;MatchHandle::OnMatchRequest&#xa;&#xa;获取玩家或队伍的匹配数据 MatchManager::FindMatchDataById(玩家id或队伍id)" style="whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="1626.25" y="1630" width="517.5" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-5" value="MatchData&lt;div&gt;玩家或队伍的匹配数据&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="820" width="180" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
