@@ -2330,11 +2330,33 @@
         <mxCell id="UYn01K3WqLhU1VW6JZGE-1" value="TeamHandle::DoTeamMatch(Team&amp; team, ChooseMecha::ChooseMechaTeam&amp; clm)" style="whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="1732.5" y="1370" width="305" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="UYn01K3WqLhU1VW6JZGE-3" value="MatchServer&#xa;MatchHandle::OnMatchRequest&#xa;&#xa;获取玩家或队伍的匹配数据 MatchManager::FindMatchDataById(玩家id或队伍id)" style="whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1626.25" y="1630" width="517.5" height="400" as="geometry" />
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UYn01K3WqLhU1VW6JZGE-3" target="UYn01K3WqLhU1VW6JZGE-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1510" y="1890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UYn01K3WqLhU1VW6JZGE-3" target="UYn01K3WqLhU1VW6JZGE-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UYn01K3WqLhU1VW6JZGE-3" target="UYn01K3WqLhU1VW6JZGE-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2200" y="1840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-3" value="MatchServer&#xa;MatchHandle::OnMatchRequest 发起匹配操作&#xa;&#xa;获取玩家或队伍的匹配数据MatchData = MatchManager::FindMatchDataById(玩家id或队伍id)" style="whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1638.13" y="1630" width="493.75" height="100" as="geometry" />
         </mxCell>
         <mxCell id="UYn01K3WqLhU1VW6JZGE-5" value="MatchData&lt;div&gt;玩家或队伍的匹配数据&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-670" y="820" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-8" value="若没有匹配数据，则触发创建匹配数据流程" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1384" y="1820" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-9" value="若有匹配数据，且有取消标记CancelFlag, 则销毁匹配数据&#xa;MatchManager::DestroyMatchData" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1703.75" y="1830" width="362.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-12" value="有匹配数据，说明玩家重复发起匹配，反馈UI通知即可&#xa;e_match_already_in_match" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="2131.88" y="1820" width="250" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
