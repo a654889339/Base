@@ -2438,8 +2438,14 @@
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-16" value="&lt;div&gt;普通匹配模式&lt;/div&gt;LadderMatchPattern" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1270" y="1355" width="250" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-18" value="Init&#xa;3个匹配池初始化 LadderMatchPool&#xa;MATCH_POOL_NEW_PLAYER,&#xa;MATCH_POOL_VETERAN_PLAYER,&#xa;MATCH_POOL_AI_PLAYER," style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-18" target="pIHn8wnxRUCRlS7zdoKL-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-18" value="Init&#xa;匹配池初始化" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1670" y="1700" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-19" value="m_matchPoolList&#xa;3个匹配池初始化 LadderMatchPool&#xa;MATCH_POOL_NEW_PLAYER,&#xa;MATCH_POOL_VETERAN_PLAYER,&#xa;MATCH_POOL_AI_PLAYER,&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2067" y="1590" width="230" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
