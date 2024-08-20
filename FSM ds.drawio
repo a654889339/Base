@@ -2186,7 +2186,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="3079" dy="1230" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2839" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2280,10 +2280,10 @@
         <mxCell id="nd7nTlXfQn_RabB1NInH-3" value="TeamHandle::OnTeachingMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="2020" y="320" width="200" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="2IEBd4UNFoXVCvHGMDbj-2" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="nd7nTlXfQn_RabB1NInH-7" target="2IEBd4UNFoXVCvHGMDbj-1">
+        <mxCell id="2IEBd4UNFoXVCvHGMDbj-2" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="nd7nTlXfQn_RabB1NInH-7" target="2IEBd4UNFoXVCvHGMDbj-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2IEBd4UNFoXVCvHGMDbj-3" value="&lt;div&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#2f4f4f;&quot;&gt;gs2ts_team_match&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="2IEBd4UNFoXVCvHGMDbj-2">
+        <mxCell id="2IEBd4UNFoXVCvHGMDbj-3" value="gs2ts_team_match" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" parent="2IEBd4UNFoXVCvHGMDbj-2" vertex="1" connectable="0">
           <mxGeometry x="-0.003" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -2291,8 +2291,32 @@
         <mxCell id="nd7nTlXfQn_RabB1NInH-7" value="TeamHandle::DoTeamMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1540" y="490" width="260" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="2IEBd4UNFoXVCvHGMDbj-1" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#2f4f4f;&quot;&gt;TeamServer&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#2f4f4f;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1610" y="790" width="390" height="130" as="geometry" />
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2IEBd4UNFoXVCvHGMDbj-1" target="6W7Y4kUwUMGfBnxA2-Cv-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1520" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-3" value="单人" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6W7Y4kUwUMGfBnxA2-Cv-1">
+          <mxGeometry y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2IEBd4UNFoXVCvHGMDbj-1" target="6W7Y4kUwUMGfBnxA2-Cv-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-6" value="组队" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6W7Y4kUwUMGfBnxA2-Cv-5">
+          <mxGeometry x="0.0111" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2IEBd4UNFoXVCvHGMDbj-1" value="MatchServer&#xa;检查客户端版本号是否一致&#xa;&#xa;分单人和队伍" style="whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="1475" y="780" width="390" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-2" value="DoDisbandTeamNotify&#xa;DoTeamRecuitmentCancelNotify&#xa;DoDisbandTeamResult&#xa;DoTeamMatchResult" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="1050" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="6W7Y4kUwUMGfBnxA2-Cv-4" value="检查是否为队长&#xa;匹配状态&#xa;是否全队在线&#xa;是否都准备&#xa;人数不能过多&#xa;机甲数量判定&#xa;&#xa;以上判定通过&#xa;Team::SetMatching 设置全队成员状态&#xa;&#xa;必须所有队员都选完机甲FindCLM&#xa;DeleteTeamRecruitment 取消招募&#xa;&#xa;DoTeamMatch 开始匹配" style="whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1730" y="1050" width="310" height="220" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
