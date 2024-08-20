@@ -2471,8 +2471,8 @@
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-19" value="m_matchPoolList&#xa;3个匹配池初始化 LadderMatchPool&#xa;MATCH_POOL_NEW_PLAYER,&#xa;MATCH_POOL_VETERAN_PLAYER,&#xa;MATCH_POOL_AI_PLAYER,&#xa;" style="whiteSpace=wrap;" vertex="1" parent="pIHn8wnxRUCRlS7zdoKL-29">
           <mxGeometry y="30" width="230" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-31" value="处理取消匹配的请求&#xa;_WorkCancelMatchRequest" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-1380" y="2040" width="170" height="160" as="geometry" />
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-31" value="处理取消匹配的请求&#xa;_WorkCancelMatchRequest&#xa;&#xa;从所有池子里移除" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1380" y="2040" width="190" height="170" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
