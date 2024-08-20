@@ -2186,7 +2186,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="3194" dy="1388" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2504" dy="983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2219,6 +2219,11 @@
         </mxCell>
         <mxCell id="UYn01K3WqLhU1VW6JZGE-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bnsUtI1JdVI6vTBgHGfX-2" target="UYn01K3WqLhU1VW6JZGE-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bnsUtI1JdVI6vTBgHGfX-2" target="pIHn8wnxRUCRlS7zdoKL-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-530.0000000000002" y="840" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="bnsUtI1JdVI6vTBgHGfX-2" value="MatchManager" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-640" y="670" width="120" height="60" as="geometry" />
@@ -2347,7 +2352,7 @@
           <mxGeometry x="1638.13" y="1630" width="493.75" height="100" as="geometry" />
         </mxCell>
         <mxCell id="UYn01K3WqLhU1VW6JZGE-5" value="MatchData&lt;div&gt;玩家或队伍的匹配数据&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-670" y="820" width="180" height="110" as="geometry" />
+          <mxGeometry x="-780" y="820" width="180" height="110" as="geometry" />
         </mxCell>
         <mxCell id="ZA4UWSXeMmtfjYLk0hYj-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1" parent="1" source="UYn01K3WqLhU1VW6JZGE-8" target="ZA4UWSXeMmtfjYLk0hYj-2" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -2421,6 +2426,9 @@
         </mxCell>
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-10" value="所有人数据都收集完&#xa;MatchData::OnPlayerMatchReady&#xa;收集玩家战绩&#xa;判断玩家是否都解锁匹配了&#xa;&#xa;玩家选择的机甲是否可能冲突m_cantReverseChooseMechaPossibility&#xa;玩家预选的机甲：chose_mecha_ids_size&#xa;&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="890" y="2329.5" width="380" height="270.5" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-15" value="MatchPattern&#xa;匹配模式，目前有2种&#xa;LadderMatchPattern&#xa;MashmakMatchPattern" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-590" y="820" width="190" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
