@@ -2186,7 +2186,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="4158" dy="983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3153" dy="1350" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2440,25 +2440,39 @@
             <mxPoint x="-1145" y="1700" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-24" value="_RunWorking" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pIHn8wnxRUCRlS7zdoKL-22">
-          <mxGeometry x="-0.0029" y="-1" relative="1" as="geometry">
-            <mxPoint y="-1" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-16" value="&lt;div&gt;普通匹配模式&lt;/div&gt;LadderMatchPattern" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1270" y="1355" width="250" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-18" target="pIHn8wnxRUCRlS7zdoKL-19">
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-23" target="pIHn8wnxRUCRlS7zdoKL-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1280" y="2100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-23" target="pIHn8wnxRUCRlS7zdoKL-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1320" y="2040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-23" value="工作线程死循环&#xa;_RunWorking" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1322.5" y="1680" width="355" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-26" value="读取所有匹配请求&amp;nbsp;&lt;div&gt;_FetchWithNewMatchRequest&lt;/div&gt;&lt;div&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;将匹配请求插入 m_matchingDataMap&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1630" y="2040" width="210" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-29" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-2240" y="1700" width="680" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="pIHn8wnxRUCRlS7zdoKL-29" source="pIHn8wnxRUCRlS7zdoKL-18" target="pIHn8wnxRUCRlS7zdoKL-19">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-18" value="Init&#xa;匹配池初始化&#xa;启动工作线程 m_workThread&#xa;工作线程死循环 _RunWorking" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-1670" y="1700" width="300" height="200" as="geometry" />
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-18" value="Init&#xa;匹配池初始化&#xa;启动工作线程 m_workThread&#xa;工作线程死循环 _RunWorking" style="whiteSpace=wrap;" vertex="1" parent="pIHn8wnxRUCRlS7zdoKL-29">
+          <mxGeometry x="380" width="300" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-19" value="m_matchPoolList&#xa;3个匹配池初始化 LadderMatchPool&#xa;MATCH_POOL_NEW_PLAYER,&#xa;MATCH_POOL_VETERAN_PLAYER,&#xa;MATCH_POOL_AI_PLAYER,&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-2067" y="1590" width="230" height="140" as="geometry" />
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-19" value="m_matchPoolList&#xa;3个匹配池初始化 LadderMatchPool&#xa;MATCH_POOL_NEW_PLAYER,&#xa;MATCH_POOL_VETERAN_PLAYER,&#xa;MATCH_POOL_AI_PLAYER,&#xa;" style="whiteSpace=wrap;" vertex="1" parent="pIHn8wnxRUCRlS7zdoKL-29">
+          <mxGeometry y="30" width="230" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-23" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;读取所有匹配请求&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1322.5" y="1680" width="355" height="230" as="geometry" />
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-31" value="处理取消匹配的请求&#xa;_WorkCancelMatchRequest" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1380" y="2040" width="170" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
