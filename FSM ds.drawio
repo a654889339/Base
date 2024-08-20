@@ -2378,13 +2378,11 @@
         <mxCell id="UYn01K3WqLhU1VW6JZGE-12" value="有匹配数据，说明玩家重复发起匹配，反馈UI通知即可&#xa;e_match_already_in_match" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="2131.88" y="1820" width="250" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="ZA4UWSXeMmtfjYLk0hYj-2" target="pIHn8wnxRUCRlS7zdoKL-2">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="760" y="2050" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=0;" edge="1" parent="1" source="ZA4UWSXeMmtfjYLk0hYj-2" target="pIHn8wnxRUCRlS7zdoKL-2">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-3" value="ms2gs_player_match_data_request" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pIHn8wnxRUCRlS7zdoKL-1">
-          <mxGeometry x="0.2067" relative="1" as="geometry">
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-7" value="ms2gs_player_match_data_request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pIHn8wnxRUCRlS7zdoKL-6">
+          <mxGeometry x="0.0217" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -2394,8 +2392,16 @@
         <mxCell id="ZA4UWSXeMmtfjYLk0hYj-5" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1570" y="2150" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-2" value="GameServer&#xa;TeamHandle::OnPlayerMatchDataRequest&#xa;&#xa;读取玩家的排名数据和禁赛数据&#xa;Player::ToMatchMsgPlayerInfo" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="560" y="1880" width="250" height="150" as="geometry" />
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=0;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-2" target="ZA4UWSXeMmtfjYLk0hYj-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-5" value="gs2ms_player_match_data_request_result" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pIHn8wnxRUCRlS7zdoKL-4">
+          <mxGeometry x="-0.0024" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-2" value="GameServer&#xa;TeamHandle::OnPlayerMatchDataRequest&#xa;&#xa;读取玩家的排名 禁赛 黑名单 ping&#xa;Player::ToMatchMsgPlayerInfo" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="210" y="2130" width="250" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
