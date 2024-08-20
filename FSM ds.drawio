@@ -2186,7 +2186,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="2839" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2215" dy="814" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2327,8 +2327,8 @@
         <mxCell id="UYn01K3WqLhU1VW6JZGE-1" value="TeamHandle::DoTeamMatch(Team&amp; team, ChooseMecha::ChooseMechaTeam&amp; clm)" style="whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="1732.5" y="1370" width="305" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="UYn01K3WqLhU1VW6JZGE-3" value="MatchServer&#xa;MatchHandle::OnMatchRequest" style="whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1732.5" y="1620" width="305" height="120" as="geometry" />
+        <mxCell id="UYn01K3WqLhU1VW6JZGE-3" value="MatchServer&#xa;MatchHandle::OnMatchRequest&#xa;&#xa;获取玩家或队伍的匹配数据 MatchManager::FindMatchDataById(玩家id或队伍id)" style="whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1626.25" y="1630" width="517.5" height="400" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
