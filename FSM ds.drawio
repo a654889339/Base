@@ -2582,7 +2582,7 @@
           <mxGeometry x="-230" y="2620" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1XAuweGxeeL7TFOGs7bg-17" value="_RunMatchNew" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry y="2620" width="180" height="70" as="geometry" />
+          <mxGeometry x="-10" y="2620" width="180" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
