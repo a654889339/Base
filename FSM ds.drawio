@@ -2607,8 +2607,11 @@
         <mxCell id="1XAuweGxeeL7TFOGs7bg-15" value="_RunAIMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-303" y="2625" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-17" value="_RunMatchNew" style="whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-10" y="2620" width="180" height="70" as="geometry" />
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-17" target="y77fB49KBM6Oq8SHt_1x-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-17" value="_RunMatchNew&#xa;&#xa;GameMatch里按人数分组 &#xa;m_pGameMatch-&gt;BeginFetchGroup " style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="40" y="2620" width="250" height="90" as="geometry" />
         </mxCell>
         <mxCell id="haekd0vAY0x4tPLH6_PX-1" value="MatchingGroup" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-893" y="560" width="120" height="60" as="geometry" />
@@ -2664,6 +2667,9 @@
         </mxCell>
         <mxCell id="y77fB49KBM6Oq8SHt_1x-16" value="_RunAIPartMatch&#xa;不独立匹配" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-150" y="2790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-20" value="GameMatch::BeginFetchGroup&#xa;按人数和是否滞留分类&#xa;m_sortedRetentionDataList[人数] 滞留&#xa;m_sortedDataList[人数] 非滞留" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="72.5" y="2803" width="185" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
