@@ -2520,11 +2520,19 @@
             <mxPoint x="-1320" y="2840" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hfd5vDvrs0snW8-GreLH-2" target="1XAuweGxeeL7TFOGs7bg-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1090" y="2890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="hfd5vDvrs0snW8-GreLH-2" value="Update&#xa;MatchData::UpdateRegion" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1370" y="2410" width="380" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-4" value="MatchData::UpdateRegion&amp;nbsp;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;根据匹配已等待时间m_elapsedTimeSpan扩散到其他区域" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-4" value="MatchData::UpdateRegion&amp;nbsp;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;根据匹配已等待时间m_elapsedTimeSpan扩散到其他区域&lt;div&gt;&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#8b008b;&quot;&gt; &lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1570" y="2870" width="320" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-6" value="LadderMatchData::_UpdateMatchTag&#xa;&#xa;根据匹配已等待时间，逐渐打上标记&#xa;MATCH_LADDER_TAG" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1180" y="2890" width="240" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
