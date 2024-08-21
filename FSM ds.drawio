@@ -2192,7 +2192,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="5087" dy="2113" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3953" dy="2465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2696,7 +2696,7 @@
         <mxCell id="y77fB49KBM6Oq8SHt_1x-27" value="按时间取出未匹配的数据&#xa;m_orderByTimeDataList&#xa;&#xa;执行匹配&#xa;GameMatch::FetchMatchGroups&#xa;&#xa;收集匹配成功组&#xa;MatchResult::OnMatchSuccess&#xa;rRetMatchResult.push_back" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="840" y="2860.75" width="200" height="158.5" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-31" value="GameMatch::FetchMatchGroups&#xa;&#xa;取出所有可能的组合&#xa;m_pMatchTable-&gt;GetSeedSquadList&#xa;&#xa;GameMatch::_RunByCombo&#xa;尝试按相同成分取出队伍&#xa;&#xa;未成功则" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-31" value="GameMatch::FetchMatchGroups&#xa;&#xa;取出所有可能的组合&#xa;m_pMatchTable-&gt;GetSeedSquadList&#xa;&#xa;GameMatch::_RunByCombo&#xa;尝试按相同成分取出队伍&#xa;&#xa;未成功则按分散程度的组合(GetDistributeSquadList)再取一次" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="600" y="3140" width="260" height="190" as="geometry" />
         </mxCell>
       </root>
