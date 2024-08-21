@@ -2192,7 +2192,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="5242" dy="1056" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5320" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2357,7 +2357,7 @@
         <mxCell id="UYn01K3WqLhU1VW6JZGE-3" value="MatchServer&#xa;MatchHandle::OnMatchRequest 发起匹配操作&#xa;&#xa;获取玩家或队伍的匹配数据MatchData = MatchManager::FindMatchDataById(玩家id或队伍id)" style="whiteSpace=wrap;fontStyle=1;" parent="1" vertex="1">
           <mxGeometry x="1638.13" y="1630" width="493.75" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="haekd0vAY0x4tPLH6_PX-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UYn01K3WqLhU1VW6JZGE-5" target="haekd0vAY0x4tPLH6_PX-1">
+        <mxCell id="haekd0vAY0x4tPLH6_PX-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UYn01K3WqLhU1VW6JZGE-5" target="haekd0vAY0x4tPLH6_PX-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="UYn01K3WqLhU1VW6JZGE-5" value="MatchData&#xa;玩家或队伍的匹配数据&#xa;目前有两种&#xa;LadderMatchData&#xa;MashmakMatchData" style="whiteSpace=wrap;" parent="1" vertex="1">
@@ -2436,12 +2436,12 @@
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-10" value="所有人数据都收集完&#xa;MatchData::OnPlayerMatchReady&#xa;收集玩家战绩&#xa;判断玩家是否都解锁匹配了&#xa;&#xa;玩家选择的机甲是否可能冲突m_cantReverseChooseMechaPossibility&#xa;玩家预选的机甲：chose_mecha_ids_size&#xa;&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="890" y="2329.5" width="380" height="270.5" as="geometry" />
         </mxCell>
-        <mxCell id="haekd0vAY0x4tPLH6_PX-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-15">
+        <mxCell id="haekd0vAY0x4tPLH6_PX-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pIHn8wnxRUCRlS7zdoKL-15" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-490" y="1110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="haekd0vAY0x4tPLH6_PX-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-15" target="haekd0vAY0x4tPLH6_PX-6">
+        <mxCell id="haekd0vAY0x4tPLH6_PX-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pIHn8wnxRUCRlS7zdoKL-15" target="haekd0vAY0x4tPLH6_PX-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-350" y="1110" as="targetPoint" />
           </mxGeometry>
@@ -2487,12 +2487,12 @@
             <mxPoint x="-1130" y="2025" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-23" target="1XAuweGxeeL7TFOGs7bg-8">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pIHn8wnxRUCRlS7zdoKL-23" target="1XAuweGxeeL7TFOGs7bg-8" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-800" y="2425" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-23" target="1XAuweGxeeL7TFOGs7bg-10">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pIHn8wnxRUCRlS7zdoKL-23" target="1XAuweGxeeL7TFOGs7bg-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-690" y="1925" as="targetPoint" />
           </mxGeometry>
@@ -2530,7 +2530,7 @@
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-37" value="_DealMatchPreselecUpdate&#xa;&#xa;处理修改预选机甲的请求，&#xa;若那些请求对应的匹配已经成功，则直接返回。&#xa;匹配成功也返回，&#xa;&#xa;保存修改&#xa;MatchData::UpdatePreselect" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1517" y="2015" width="213" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="hfd5vDvrs0snW8-GreLH-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-39" target="hfd5vDvrs0snW8-GreLH-2">
+        <mxCell id="hfd5vDvrs0snW8-GreLH-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="pIHn8wnxRUCRlS7zdoKL-39" target="hfd5vDvrs0snW8-GreLH-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-1490" y="2545" as="targetPoint" />
           </mxGeometry>
@@ -2538,81 +2538,87 @@
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-39" value="_UpdateWorkingTempMatchData&#xa;&#xa;处理本次匹配清单&#xa;m_tempMatchDataList&#xa;&#xa;遍历每个匹配数据&#xa;更新 LadderMatchData::Update&#xa;&#xa;&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1380" y="2417.5" width="260" height="250" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hfd5vDvrs0snW8-GreLH-2" target="1XAuweGxeeL7TFOGs7bg-4">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="hfd5vDvrs0snW8-GreLH-2" target="1XAuweGxeeL7TFOGs7bg-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-2010" y="2815" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hfd5vDvrs0snW8-GreLH-2" target="1XAuweGxeeL7TFOGs7bg-6">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="hfd5vDvrs0snW8-GreLH-2" target="1XAuweGxeeL7TFOGs7bg-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-1780" y="2865" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="hfd5vDvrs0snW8-GreLH-2" value="Update&#xa;MatchData::UpdateRegion&#xa;LadderMatchData::_UpdateMatchTag&#xa;&#xa;若有更新，则同步更新滞留战斗服 UpdateRetentionRegion&#xa;&#xa;m_matchLevelInterval 扩分操作 &#xa;&#xa;m_retentionStage 设置滞留等级&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="hfd5vDvrs0snW8-GreLH-2" value="Update&#xa;MatchData::UpdateRegion&#xa;LadderMatchData::_UpdateMatchTag&#xa;&#xa;若有更新，则同步更新滞留战斗服 UpdateRetentionRegion&#xa;&#xa;m_matchLevelInterval 扩分操作 &#xa;&#xa;m_retentionStage 设置滞留等级&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-2050" y="2290" width="340" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-4" value="MatchData::UpdateRegion&amp;nbsp;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;根据匹配已等待时间m_elapsedTimeSpan扩散到其他区域" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-4" value="MatchData::UpdateRegion&amp;nbsp;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;根据匹配已等待时间m_elapsedTimeSpan扩散到其他区域" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-2250" y="2545" width="320" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-6" value="LadderMatchData::_UpdateMatchTag&#xa;&#xa;根据匹配已等待时间，逐渐打上标记&#xa;MATCH_LADDER_TAG" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-6" value="LadderMatchData::_UpdateMatchTag&#xa;&#xa;根据匹配已等待时间，逐渐打上标记&#xa;MATCH_LADDER_TAG" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1790" y="2540" width="240" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-8" value="_DealMatchPoolUpdate&#xa;&#xa;处理每个m_hasUpdate为true的池子 LadderMatchPool::DealSubPoolUpdate&#xa;&#xa;把本次Active生成的新匹配数据（m_tempMatchDataList）&#xa;加入池子" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-8" value="_DealMatchPoolUpdate&#xa;&#xa;处理每个m_hasUpdate为true的池子 LadderMatchPool::DealSubPoolUpdate&#xa;&#xa;把本次Active生成的新匹配数据（m_tempMatchDataList）&#xa;加入池子" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1090" y="2415" width="430" height="245" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-10" target="1XAuweGxeeL7TFOGs7bg-12">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1XAuweGxeeL7TFOGs7bg-10" target="1XAuweGxeeL7TFOGs7bg-12" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-200" y="2467.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-10" value="LadderMatchPool::Run&#xa;&#xa;对每个等级 执行匹配LadderSubLevelPool::RunMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-10" value="LadderMatchPool::Run&#xa;&#xa;对每个等级 执行匹配LadderSubLevelPool::RunMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-550" y="2417.5" width="220" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-12" target="1XAuweGxeeL7TFOGs7bg-15">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1XAuweGxeeL7TFOGs7bg-12" target="1XAuweGxeeL7TFOGs7bg-15" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-160" y="2590.0000000000005" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-14" value="MATCH_POOL_AI_PLAYER" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1XAuweGxeeL7TFOGs7bg-13">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-14" value="MATCH_POOL_AI_PLAYER" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1XAuweGxeeL7TFOGs7bg-13" vertex="1" connectable="0">
           <mxGeometry x="0.7268" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-12" target="1XAuweGxeeL7TFOGs7bg-17">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1XAuweGxeeL7TFOGs7bg-12" target="1XAuweGxeeL7TFOGs7bg-17" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="60" y="2620.0000000000005" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-18" value="非AI类型" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1XAuweGxeeL7TFOGs7bg-16">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-18" value="非AI类型" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1XAuweGxeeL7TFOGs7bg-16" vertex="1" connectable="0">
           <mxGeometry x="0.7638" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-12" value="LadderSubLevelPool::RunMatch&lt;div&gt;根据池子类型，选择匹配函数&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-12" value="LadderSubLevelPool::RunMatch&lt;div&gt;根据池子类型，选择匹配函数&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-200" y="2436.25" width="270" height="62.5" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-15" value="_RunAIMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-15" value="_RunAIMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-230" y="2620" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-17" value="_RunMatchNew" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-17" value="_RunMatchNew" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-10" y="2620" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="haekd0vAY0x4tPLH6_PX-1" value="MatchingGroup" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="haekd0vAY0x4tPLH6_PX-1" value="MatchingGroup" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-790" y="1140" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="haekd0vAY0x4tPLH6_PX-4" value="LadderMatchPattern" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="haekd0vAY0x4tPLH6_PX-4" value="LadderMatchPattern" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-550" y="1110" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="haekd0vAY0x4tPLH6_PX-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="haekd0vAY0x4tPLH6_PX-6" target="haekd0vAY0x4tPLH6_PX-8">
+        <mxCell id="haekd0vAY0x4tPLH6_PX-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="haekd0vAY0x4tPLH6_PX-6" target="haekd0vAY0x4tPLH6_PX-8" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-320" y="1240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="haekd0vAY0x4tPLH6_PX-6" value="MashmakMatchPattern&lt;div&gt;每个Region创建两个Pool&lt;/div&gt;&lt;div&gt;分是否为单人匹配&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="haekd0vAY0x4tPLH6_PX-6" value="MashmakMatchPattern&lt;div&gt;每个Region创建两个Pool&lt;/div&gt;&lt;div&gt;分是否为单人匹配&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-400" y="1120" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="haekd0vAY0x4tPLH6_PX-8" value="MashmakMatchPool" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-390" y="1240" width="140" height="60" as="geometry" />
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="haekd0vAY0x4tPLH6_PX-8" target="y77fB49KBM6Oq8SHt_1x-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="haekd0vAY0x4tPLH6_PX-8" value="MashmakMatchPool&#xa;MashmakGameMatch* m_pGameMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-430" y="1250" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-2" value="MashmakGameMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-400" y="1375" width="160" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
