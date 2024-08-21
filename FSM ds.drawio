@@ -2192,7 +2192,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="4696" dy="1983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3980" dy="2519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2591,8 +2591,21 @@
         <mxCell id="1XAuweGxeeL7TFOGs7bg-12" value="LadderSubLevelPool::RunMatch&lt;div&gt;根据池子类型，选择匹配函数&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-200" y="2436.25" width="270" height="62.5" as="geometry" />
         </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.456;entryY=0.044;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-15" target="y77fB49KBM6Oq8SHt_1x-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-280" y="2790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-15" target="y77fB49KBM6Oq8SHt_1x-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-15" target="y77fB49KBM6Oq8SHt_1x-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-60" y="2820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="1XAuweGxeeL7TFOGs7bg-15" value="_RunAIMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-230" y="2620" width="120" height="60" as="geometry" />
+          <mxGeometry x="-303" y="2625" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1XAuweGxeeL7TFOGs7bg-17" value="_RunMatchNew" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-10" y="2620" width="180" height="70" as="geometry" />
@@ -2636,6 +2649,21 @@
         </mxCell>
         <mxCell id="y77fB49KBM6Oq8SHt_1x-7" value="MatchTable（根据队伍和小队人数算出的固定组合）" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-233" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-11" target="y77fB49KBM6Oq8SHt_1x-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-11" value="_RunAIPartMatch&#xa;独立匹配" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-450" y="2790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-13" target="y77fB49KBM6Oq8SHt_1x-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-13" value="_RunAIFullMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-303" y="2790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-16" value="_RunAIPartMatch&#xa;不独立匹配" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="2790" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
