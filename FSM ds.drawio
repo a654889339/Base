@@ -2613,6 +2613,11 @@
         <mxCell id="y77fB49KBM6Oq8SHt_1x-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-17" target="y77fB49KBM6Oq8SHt_1x-23">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-17" target="y77fB49KBM6Oq8SHt_1x-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="870" y="2830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="1XAuweGxeeL7TFOGs7bg-17" value="_RunMatchNew&#xa;&#xa;将所有匹配数据按等级或时间排序&#xa;_PrepareData&#xa;将匹配数据分组 &#xa;m_pGameMatch-&gt;BeginFetchGroup " style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="220" y="2650" width="250" height="90" as="geometry" />
         </mxCell>
@@ -2671,11 +2676,28 @@
         <mxCell id="y77fB49KBM6Oq8SHt_1x-16" value="_RunAIPartMatch&#xa;不独立匹配" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-150" y="2790" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-20" target="y77fB49KBM6Oq8SHt_1x-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="y77fB49KBM6Oq8SHt_1x-20" value="GameMatch::BeginFetchGroup&#xa;按人数和是否滞留分类&#xa;m_sortedRetentionDataList[人数] 滞留&#xa;m_sortedDataList[人数] 非滞留" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="450" y="2810" width="257.5" height="120" as="geometry" />
+          <mxGeometry x="450" y="2880" width="257.5" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-23" target="y77fB49KBM6Oq8SHt_1x-20">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="y77fB49KBM6Oq8SHt_1x-23" value="LadderSubLevelPool::_PrepareData&#xa;&#xa;m_tempDataList 按等级排序&#xa;m_orderByTimeDataList 按时间排序" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="70" y="2810" width="210" height="75" as="geometry" />
+          <mxGeometry x="70" y="2880" width="210" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-27" target="y77fB49KBM6Oq8SHt_1x-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="820" y="3140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-27" value="按时间取出未匹配的数据&#xa;m_orderByTimeDataList&#xa;&#xa;执行匹配&#xa;GameMatch::FetchMatchGroups" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="850" y="2881.5" width="200" height="117" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-31" value="GameMatch::FetchMatchGroups&#xa;&#xa;取出所有可能的组合&#xa;m_pMatchTable-&gt;GetSeedSquadList&#xa;&#xa;_RunByCombo 尝试按组合取出队伍" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="600" y="3140" width="260" height="190" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
