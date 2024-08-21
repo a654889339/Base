@@ -2474,6 +2474,11 @@
             <mxPoint x="-440" y="2050" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pIHn8wnxRUCRlS7zdoKL-23" target="1XAuweGxeeL7TFOGs7bg-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-110" y="2450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-23" value="工作线程死循环&#xa;_RunWorking" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1322.5" y="1680" width="355" height="230" as="geometry" />
         </mxCell>
@@ -2533,6 +2538,9 @@
         </mxCell>
         <mxCell id="1XAuweGxeeL7TFOGs7bg-6" value="LadderMatchData::_UpdateMatchTag&#xa;&#xa;根据匹配已等待时间，逐渐打上标记&#xa;MATCH_LADDER_TAG" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1160" y="2870" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-8" value="_DealMatchPoolUpdate&#xa;&#xa;处理每个池子 LadderMatchPool::DealSubPoolUpdate&#xa;&#xa;把本次Active生成的新匹配数据（m_tempMatchDataList）&#xa;加入池子" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-340" y="2445" width="430" height="245" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
