@@ -2539,7 +2539,7 @@
         <mxCell id="1XAuweGxeeL7TFOGs7bg-6" value="LadderMatchData::_UpdateMatchTag&#xa;&#xa;根据匹配已等待时间，逐渐打上标记&#xa;MATCH_LADDER_TAG" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1160" y="2870" width="240" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-8" value="_DealMatchPoolUpdate&#xa;&#xa;处理每个池子 LadderMatchPool::DealSubPoolUpdate&#xa;&#xa;把本次Active生成的新匹配数据（m_tempMatchDataList）&#xa;加入池子" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-8" value="_DealMatchPoolUpdate&#xa;&#xa;处理每个m_hasUpdate为true的池子 LadderMatchPool::DealSubPoolUpdate&#xa;&#xa;把本次Active生成的新匹配数据（m_tempMatchDataList）&#xa;加入池子" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-400" y="2440" width="430" height="245" as="geometry" />
         </mxCell>
       </root>
