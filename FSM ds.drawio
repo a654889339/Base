@@ -2192,7 +2192,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="3980" dy="2519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5649" dy="2411" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2588,7 +2588,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-12" value="LadderSubLevelPool::RunMatch&lt;div&gt;根据池子类型，选择匹配函数&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-12" value="LadderSubLevelPool::RunMatch&#xa;根据池子类型，选择匹配函数&#xa;m_isRetention 是否为滞留池" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-200" y="2436.25" width="270" height="62.5" as="geometry" />
         </mxCell>
         <mxCell id="y77fB49KBM6Oq8SHt_1x-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.456;entryY=0.044;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-15" target="y77fB49KBM6Oq8SHt_1x-11">
@@ -2610,8 +2610,11 @@
         <mxCell id="y77fB49KBM6Oq8SHt_1x-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-17" target="y77fB49KBM6Oq8SHt_1x-20">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-17" value="_RunMatchNew&#xa;&#xa;将匹配数据分组 &#xa;m_pGameMatch-&gt;BeginFetchGroup " style="whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="40" y="2620" width="250" height="90" as="geometry" />
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-17" target="y77fB49KBM6Oq8SHt_1x-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-17" value="_RunMatchNew&#xa;&#xa;将所有匹配数据按等级或时间排序&#xa;_PrepareData&#xa;将匹配数据分组 &#xa;m_pGameMatch-&gt;BeginFetchGroup " style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="220" y="2650" width="250" height="90" as="geometry" />
         </mxCell>
         <mxCell id="haekd0vAY0x4tPLH6_PX-1" value="MatchingGroup" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-893" y="560" width="120" height="60" as="geometry" />
@@ -2669,7 +2672,10 @@
           <mxGeometry x="-150" y="2790" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="y77fB49KBM6Oq8SHt_1x-20" value="GameMatch::BeginFetchGroup&#xa;按人数和是否滞留分类&#xa;m_sortedRetentionDataList[人数] 滞留&#xa;m_sortedDataList[人数] 非滞留" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="36.25" y="2803" width="257.5" height="120" as="geometry" />
+          <mxGeometry x="450" y="2810" width="257.5" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-23" value="LadderSubLevelPool::_PrepareData" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="100" y="2835" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
