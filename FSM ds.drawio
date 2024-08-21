@@ -2192,7 +2192,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="4897" dy="843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4842" dy="814" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2547,8 +2547,42 @@
         <mxCell id="1XAuweGxeeL7TFOGs7bg-8" value="_DealMatchPoolUpdate&#xa;&#xa;处理每个m_hasUpdate为true的池子 LadderMatchPool::DealSubPoolUpdate&#xa;&#xa;把本次Active生成的新匹配数据（m_tempMatchDataList）&#xa;加入池子" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1090" y="2415" width="430" height="245" as="geometry" />
         </mxCell>
-        <mxCell id="1XAuweGxeeL7TFOGs7bg-10" value="LadderMatchPool::Run" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-10" target="1XAuweGxeeL7TFOGs7bg-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-200" y="2467.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-10" value="LadderMatchPool::Run&#xa;&#xa;对每个等级 执行匹配LadderSubLevelPool::RunMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-550" y="2417.5" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-12" target="1XAuweGxeeL7TFOGs7bg-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-160" y="2590.0000000000005" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-14" value="MATCH_POOL_AI_PLAYER" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1XAuweGxeeL7TFOGs7bg-13">
+          <mxGeometry x="0.7268" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-12" target="1XAuweGxeeL7TFOGs7bg-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="2620.0000000000005" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-18" value="非AI类型" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1XAuweGxeeL7TFOGs7bg-16">
+          <mxGeometry x="0.7638" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-12" value="LadderSubLevelPool::RunMatch&lt;div&gt;根据池子类型，选择匹配函数&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-200" y="2436.25" width="270" height="62.5" as="geometry" />
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-15" value="_RunAIMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-230" y="2620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-17" value="_RunMatchNew" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry y="2620" width="180" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
