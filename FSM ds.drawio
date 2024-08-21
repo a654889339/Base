@@ -2192,7 +2192,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="4705" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3287" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2515,8 +2515,16 @@
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-39" value="_UpdateWorkingTempMatchData&#xa;&#xa;处理本次匹配清单&#xa;m_tempMatchDataList&#xa;&#xa;遍历每个匹配数据&#xa;更新 LadderMatchData::Update" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-640" y="2540" width="230" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="hfd5vDvrs0snW8-GreLH-2" value="Update&#xa;MatchData::UpdateRegion 根据匹配已等待时间扩散到其他区域" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-1360" y="2420" width="380" height="320" as="geometry" />
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hfd5vDvrs0snW8-GreLH-2" target="1XAuweGxeeL7TFOGs7bg-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1320" y="2840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hfd5vDvrs0snW8-GreLH-2" value="Update&#xa;MatchData::UpdateRegion" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1370" y="2410" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="1XAuweGxeeL7TFOGs7bg-4" value="MatchData::UpdateRegion&amp;nbsp;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;根据匹配已等待时间m_elapsedTimeSpan扩散到其他区域" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1570" y="2870" width="320" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
