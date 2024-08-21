@@ -2436,7 +2436,7 @@
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-10" value="所有人数据都收集完&#xa;MatchData::OnPlayerMatchReady&#xa;收集玩家战绩&#xa;判断玩家是否都解锁匹配了&#xa;&#xa;玩家选择的机甲是否可能冲突m_cantReverseChooseMechaPossibility&#xa;玩家预选的机甲：chose_mecha_ids_size&#xa;&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="890" y="2329.5" width="380" height="270.5" as="geometry" />
         </mxCell>
-        <mxCell id="haekd0vAY0x4tPLH6_PX-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pIHn8wnxRUCRlS7zdoKL-15" edge="1">
+        <mxCell id="haekd0vAY0x4tPLH6_PX-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pIHn8wnxRUCRlS7zdoKL-15" edge="1" target="haekd0vAY0x4tPLH6_PX-4">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-490" y="1110" as="targetPoint" />
           </mxGeometry>
@@ -2601,15 +2601,20 @@
           <mxGeometry x="-790" y="1140" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="haekd0vAY0x4tPLH6_PX-4" value="LadderMatchPattern" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-550" y="1110" width="120" height="60" as="geometry" />
+          <mxGeometry x="-550" y="1120" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="haekd0vAY0x4tPLH6_PX-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="haekd0vAY0x4tPLH6_PX-6" target="haekd0vAY0x4tPLH6_PX-8" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-320" y="1240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="haekd0vAY0x4tPLH6_PX-6" target="y77fB49KBM6Oq8SHt_1x-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-70" y="1240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="haekd0vAY0x4tPLH6_PX-6" value="MashmakMatchPattern&lt;div&gt;每个Region创建两个Pool&lt;/div&gt;&lt;div&gt;分是否为单人匹配&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-400" y="1120" width="160" height="60" as="geometry" />
+          <mxGeometry x="-230" y="1130" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="y77fB49KBM6Oq8SHt_1x-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="haekd0vAY0x4tPLH6_PX-8" target="y77fB49KBM6Oq8SHt_1x-2">
           <mxGeometry relative="1" as="geometry" />
@@ -2620,11 +2625,14 @@
         <mxCell id="y77fB49KBM6Oq8SHt_1x-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-2" target="y77fB49KBM6Oq8SHt_1x-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-2" value="MashmakGameMatch&#xa;std::vector&lt;MatchGroup&gt; m_matchGroup" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-2" value="MashmakGameMatch&#xa;vector&lt;MatchGroup&gt; m_matchGroup" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-440" y="1370" width="240" height="105" as="geometry" />
         </mxCell>
         <mxCell id="y77fB49KBM6Oq8SHt_1x-4" value="MatchGroup" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-380" y="1530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-7" value="MatchTable" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="1250" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
