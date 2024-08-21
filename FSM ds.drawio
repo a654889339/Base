@@ -2693,10 +2693,10 @@
             <mxPoint x="820" y="3140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-27" value="按时间取出未匹配的数据&#xa;m_orderByTimeDataList&#xa;&#xa;执行匹配&#xa;GameMatch::FetchMatchGroups" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="850" y="2881.5" width="200" height="117" as="geometry" />
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-27" value="按时间取出未匹配的数据&#xa;m_orderByTimeDataList&#xa;&#xa;执行匹配&#xa;GameMatch::FetchMatchGroups&#xa;&#xa;收集匹配成功组&#xa;MatchResult::OnMatchSuccess&#xa;rRetMatchResult.push_back" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="840" y="2860.75" width="200" height="158.5" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-31" value="GameMatch::FetchMatchGroups&#xa;&#xa;取出所有可能的组合&#xa;m_pMatchTable-&gt;GetSeedSquadList&#xa;&#xa;_RunByCombo 尝试按组合取出队伍" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-31" value="GameMatch::FetchMatchGroups&#xa;&#xa;取出所有可能的组合&#xa;m_pMatchTable-&gt;GetSeedSquadList&#xa;&#xa;GameMatch::_RunByCombo&#xa;尝试按相同成分取出队伍&#xa;&#xa;未成功则" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="600" y="3140" width="260" height="190" as="geometry" />
         </mxCell>
       </root>
