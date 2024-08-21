@@ -2512,8 +2512,8 @@
             <mxPoint x="-800" y="2570" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-39" value="_UpdateWorkingTempMatchData&#xa;&#xa;处理本次匹配清单&#xa;m_tempMatchDataList&#xa;&#xa;遍历每个匹配数据&#xa;更新 LadderMatchData::Update&#xa;&#xa;若有更新，则同步更新滞留战斗服 UpdateRetentionRegion&#xa;&#xa;扩分操作" style="whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-640" y="2480" width="230" height="180" as="geometry" />
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-39" value="_UpdateWorkingTempMatchData&#xa;&#xa;处理本次匹配清单&#xa;m_tempMatchDataList&#xa;&#xa;遍历每个匹配数据&#xa;更新 LadderMatchData::Update&#xa;&#xa;若有更新，则同步更新滞留战斗服 UpdateRetentionRegion&#xa;&#xa;扩分操作&#xa;&#xa;m_retentionStage 设置滞留标记" style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-640" y="2445" width="260" height="250" as="geometry" />
         </mxCell>
         <mxCell id="1XAuweGxeeL7TFOGs7bg-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hfd5vDvrs0snW8-GreLH-2" target="1XAuweGxeeL7TFOGs7bg-4">
           <mxGeometry relative="1" as="geometry">
