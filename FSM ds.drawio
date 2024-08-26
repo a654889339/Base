@@ -634,14 +634,14 @@
     </mxGraphModel>
   </diagram>
   <diagram id="D4cUpWKldzLiPTz7wScZ" name="结算模块">
-    <mxGraphModel dx="6974" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6741" dy="944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-1" target="X2hCjSS4Vl0-8XwFfeY9-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-1" value="OnPlayerSettleBack(PlayerId, ···）&lt;div&gt;1. 若是马氏马克，则撤离该玩家&lt;/div&gt;&lt;div&gt;2. 其他玩法则全部真实玩家都撤离&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-1" value="Back(PlayerId, ···）&lt;div&gt;1. 若是马氏马克，则撤离该玩家&lt;/div&gt;&lt;div&gt;2. 其他玩法则全部真实玩家都撤离&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="230" y="585" width="330" height="80" as="geometry" />
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-2" target="X2hCjSS4Vl0-8XwFfeY9-5" edge="1">
@@ -1042,6 +1042,9 @@
         <mxCell id="bpkGuW1O3WwiNpAyvklb-19" value="TakovInjectPlayer&lt;div&gt;生成个人结算数据&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;本地存储&lt;span style=&quot;color: rgb(0, 0, 128); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255);&quot;&gt;_userId2SettleInfo&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255);&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255); color: rgb(0, 0, 255);&quot;&gt;ulong&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255);&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255); color: rgb(33, 111, 133);&quot;&gt;BATTLE_SETTLEMENT_PLAYER&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255);&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="4298.13" y="2820" width="513.75" height="88" as="geometry" />
         </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hvavOLO6otYmtWDrKWa-1" target="hjSpow7H0i8WtZCdUtPV-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="2hvavOLO6otYmtWDrKWa-1" value="GSBattleStatisHandle::OnPlayerSettle&#xa;将真人的个人结算数据存在tb_battle_player_history" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-4061" y="3150" width="320" height="70" as="geometry" />
         </mxCell>
@@ -1099,10 +1102,10 @@
         <mxCell id="2hvavOLO6otYmtWDrKWa-16" value="WarSettleStage.SendSettleMsgToGs" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-3492.5" y="2420" width="395" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hvavOLO6otYmtWDrKWa-18" target="UVNgWaFbswL3QF8YBw_E-3">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2hvavOLO6otYmtWDrKWa-18" target="UVNgWaFbswL3QF8YBw_E-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-8" value="SettleType.SceneSettle&#xa;场景结算类型" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UVNgWaFbswL3QF8YBw_E-5">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-8" value="SettleType.SceneSettle&#xa;场景结算类型" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" parent="UVNgWaFbswL3QF8YBw_E-5" vertex="1" connectable="0">
           <mxGeometry x="-0.395" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -1110,37 +1113,70 @@
         <mxCell id="2hvavOLO6otYmtWDrKWa-18" value="WarSettleStage.DoSettle&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-3910" y="2120" width="250" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UVNgWaFbswL3QF8YBw_E-1" target="UVNgWaFbswL3QF8YBw_E-9">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UVNgWaFbswL3QF8YBw_E-1" target="UVNgWaFbswL3QF8YBw_E-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-1" value="WarSettleStage.DoTakovPersonSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-1" value="WarSettleStage.DoTakovPersonSettle" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-3170" y="2060" width="280" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UVNgWaFbswL3QF8YBw_E-3" target="2hvavOLO6otYmtWDrKWa-11">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UVNgWaFbswL3QF8YBw_E-3" target="2hvavOLO6otYmtWDrKWa-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-3" value="ServerWarUser.BroadCastSettleMsgToGS" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-3" value="ServerWarUser.BroadCastSettleMsgToGS" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-4326" y="2360" width="260" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.335;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2hvavOLO6otYmtWDrKWa-18" target="2hvavOLO6otYmtWDrKWa-16">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.335;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="2hvavOLO6otYmtWDrKWa-18" target="2hvavOLO6otYmtWDrKWa-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-7" value="&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;SettleType.PersonSettle&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;个人结算类型&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UVNgWaFbswL3QF8YBw_E-6">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-7" value="&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;SettleType.PersonSettle&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;个人结算类型&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="UVNgWaFbswL3QF8YBw_E-6" vertex="1" connectable="0">
           <mxGeometry x="-0.458" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UVNgWaFbswL3QF8YBw_E-9" target="2hvavOLO6otYmtWDrKWa-16">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UVNgWaFbswL3QF8YBw_E-9" target="2hvavOLO6otYmtWDrKWa-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-9" value="GenerateTakovGsData&#xa;生成个人结算数据，放在&#xa;_userId2SettleNotify" style="whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-9" value="GenerateTakovGsData&#xa;生成个人结算数据，放在&#xa;_userId2SettleNotify" style="whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-3140" y="2255" width="220" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UVNgWaFbswL3QF8YBw_E-12" target="UVNgWaFbswL3QF8YBw_E-1">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UVNgWaFbswL3QF8YBw_E-12" target="UVNgWaFbswL3QF8YBw_E-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="UVNgWaFbswL3QF8YBw_E-12" value="ServerWarUser.DoSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="UVNgWaFbswL3QF8YBw_E-12" value="ServerWarUser.DoSettle" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-3125" y="1880" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-1" target="hjSpow7H0i8WtZCdUtPV-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-4220" y="3450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-1" value="GameServer::SettlementRewardManager::DealWithSettlementInfo&#xa;首胜&#xa;段位结算 道具结算 经验货币结算 &#xa;胜场加成 节日活动加成" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-4120.75" y="3270" width="440.75" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-4" target="hjSpow7H0i8WtZCdUtPV-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-4" value="段位结算&#xa;RankManager::DoPlayerRankSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-4370" y="3440" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-5" target="hjSpow7H0i8WtZCdUtPV-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-4340" y="3660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-5" target="hjSpow7H0i8WtZCdUtPV-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-4160" y="3670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-5" value="RankData::Settle&#xa;matchMode 根据匹配模式进行结算" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-4355" y="3540" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-9" value="RankData::LadderSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-4430" y="3660" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-11" value="RankData::MashmakSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-4240" y="3660" width="150" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -2091,7 +2127,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mMk6yr6r4qqI_OUw7R4J" name="撤离玩法">
-    <mxGraphModel dx="3726" dy="1388" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2880" dy="983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
