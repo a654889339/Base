@@ -1172,11 +1172,23 @@
         <mxCell id="hjSpow7H0i8WtZCdUtPV-5" value="RankData::Settle&#xa;matchMode 根据匹配模式进行结算" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-4355" y="3540" width="190" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-9" target="hjSpow7H0i8WtZCdUtPV-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="hjSpow7H0i8WtZCdUtPV-9" value="RankData::LadderSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-4430" y="3660" width="140" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-11" target="hjSpow7H0i8WtZCdUtPV-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="hjSpow7H0i8WtZCdUtPV-11" value="RankData::MashmakSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-4240" y="3660" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-12" value="LadderData::Settle" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-4420" y="3770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-14" value="MashmakData::Settle" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-4237.5" y="3780" width="145" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
