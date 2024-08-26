@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="24.7.7" pages="13">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.7" pages="13">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2091,7 +2091,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mMk6yr6r4qqI_OUw7R4J" name="撤离玩法">
-    <mxGraphModel dx="1633" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3726" dy="1388" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2104,88 +2104,88 @@
         <mxCell id="0ES-gchG60w1v8dnG3ZL-2" value="ServerDroneFreshModule.Init&#xa;模块初始化" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="285" y="230" width="230" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-1" target="YUItX4Gc-KCX1EIMf_wt-4">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YUItX4Gc-KCX1EIMf_wt-1" target="YUItX4Gc-KCX1EIMf_wt-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-1" value="StartFreshDrone&#xa;玩法入口&#xa;&#xa;_groupId2Points[撤离id,玩法点组] 设置撤离波次对应的玩法点" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="1020" y="370" width="270" height="90" as="geometry" />
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-1" value="StartFreshDrone&#xa;玩法入口&#xa;&#xa;_groupId2Points[撤离id,玩法点组] 设置撤离波次对应的玩法点" style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="895" y="354" width="270" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-2" target="YUItX4Gc-KCX1EIMf_wt-1">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YUItX4Gc-KCX1EIMf_wt-2" target="YUItX4Gc-KCX1EIMf_wt-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-2" value="StaticWarAgent.SetWarProgressParam&#xa;设置对局进程" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="985" y="190" width="340" height="90" as="geometry" />
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-2" value="StaticWarAgent.SetWarProgressParam&#xa;设置对局进程" style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="860" y="174" width="340" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-4" value="CheckMapPoint&#xa;检查具体玩法点是否合法（不合法也只能报个错）&#xa;_freshStarted 激活玩法标记" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="1020" y="547" width="270" height="75" as="geometry" />
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-4" value="CheckMapPoint&#xa;检查具体玩法点是否合法（不合法也只能报个错）&#xa;_freshStarted 激活玩法标记" style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="895" y="531" width="270" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-6" target="YUItX4Gc-KCX1EIMf_wt-7">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="YUItX4Gc-KCX1EIMf_wt-6" target="YUItX4Gc-KCX1EIMf_wt-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-6" value="OnUserReconnect&lt;div&gt;遍历所有波次，把正在运行的波次配置下发&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-6" value="OnUserReconnect&lt;div&gt;遍历所有波次，把正在运行的波次配置下发&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-780" y="170" width="230" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-7" value="GeneratePb" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-7" value="GeneratePb" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-490" y="360" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-8" target="YUItX4Gc-KCX1EIMf_wt-7">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="YUItX4Gc-KCX1EIMf_wt-8" target="YUItX4Gc-KCX1EIMf_wt-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-8" value="SyncDataToClient" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-8" value="SyncDataToClient" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-310" y="170" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-11" target="YUItX4Gc-KCX1EIMf_wt-8">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YUItX4Gc-KCX1EIMf_wt-11" target="YUItX4Gc-KCX1EIMf_wt-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-11" value="BroadCastSafeArea&#xa;广播当前波次的配置&#xa;_roundId, _currentPhaseIndex" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-11" value="BroadCastSafeArea&#xa;广播当前波次的配置&#xa;_roundId, _currentPhaseIndex" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-402.5" width="305" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-13" target="YUItX4Gc-KCX1EIMf_wt-14">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="YUItX4Gc-KCX1EIMf_wt-13" target="YUItX4Gc-KCX1EIMf_wt-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-13" value="ServerDroneFreshModule.Activate&#xa;遍历所有波次，收集所有在工作的波次&#xa;_activeRounds&#xa;&#xa;Update _activeRounds的波次&#xa;&#xa;检查玩家是否收波次影响，要加buff&#xa;&#xa;将结束或者出问题的波次加入_disabledRound&#xa;并在配置中移除" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-13" value="ServerDroneFreshModule.Activate&#xa;遍历所有波次，收集所有在工作的波次&#xa;_activeRounds&#xa;&#xa;Update _activeRounds的波次&#xa;&#xa;检查玩家是否收波次影响，要加buff&#xa;&#xa;将结束或者出问题的波次加入_disabledRound&#xa;并在配置中移除" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1700" y="170" width="290" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-14" target="YUItX4Gc-KCX1EIMf_wt-16">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YUItX4Gc-KCX1EIMf_wt-14" target="YUItX4Gc-KCX1EIMf_wt-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jjPBjHqxoX3JuUpOJX0V-5" value="!_started 首次启动" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YUItX4Gc-KCX1EIMf_wt-17">
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-5" value="!_started 首次启动" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" parent="YUItX4Gc-KCX1EIMf_wt-17" vertex="1" connectable="0">
           <mxGeometry x="-0.0141" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jjPBjHqxoX3JuUpOJX0V-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-14" target="jjPBjHqxoX3JuUpOJX0V-7">
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="YUItX4Gc-KCX1EIMf_wt-14" target="jjPBjHqxoX3JuUpOJX0V-7" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1480" y="1050" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-14" value="单个波次的阶段刷新&#xa;&#xa;更新当前阶段的动画、位置等&#xa;判定是否进入下个阶段RefreshRound.UpdatePhase&#xa;&#xa;_started 首次调用要先InitModules（获取一下当前工作的module保存到struct里）&#xa;GetLegalPoints 通过evacuateGroupId获得玩法点组&#xa;随机取一个玩法点 GenerateDronePosition&#xa;InitRoundData(玩法点GamePlayPointPrim)" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-14" value="单个波次的阶段刷新&#xa;&#xa;更新当前阶段的动画、位置等&#xa;判定是否进入下个阶段RefreshRound.UpdatePhase&#xa;&#xa;_started 首次调用要先InitModules（获取一下当前工作的module保存到struct里）&#xa;GetLegalPoints 通过evacuateGroupId获得玩法点组&#xa;随机取一个玩法点 GenerateDronePosition&#xa;InitRoundData(玩法点GamePlayPointPrim)" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1615.6200000000001" y="530" width="458.75" height="370" as="geometry" />
         </mxCell>
-        <mxCell id="jjPBjHqxoX3JuUpOJX0V-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-16" target="jjPBjHqxoX3JuUpOJX0V-1">
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YUItX4Gc-KCX1EIMf_wt-16" target="jjPBjHqxoX3JuUpOJX0V-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jjPBjHqxoX3JuUpOJX0V-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="YUItX4Gc-KCX1EIMf_wt-16" target="jjPBjHqxoX3JuUpOJX0V-4">
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="YUItX4Gc-KCX1EIMf_wt-16" target="jjPBjHqxoX3JuUpOJX0V-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2049.9999999999995" y="1340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YUItX4Gc-KCX1EIMf_wt-16" value="若是首次启动！&#xa;InitRoundData(玩法点GamePlayPointPrim)&#xa;ServerDroneFreshModule._shrinkingPoints设置波次收缩的玩法点&#xa;_evacuateDronePos，_rotation 设置撤离点坐标和旋转&#xa;GeneratePhaseData 计算此波次里的阶段信息&#xa;_currentPhaseIndex++当前是第几阶段&#xa;GenerateFreshData 更新此阶段数据" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="YUItX4Gc-KCX1EIMf_wt-16" value="若是首次启动！&#xa;InitRoundData(玩法点GamePlayPointPrim)&#xa;ServerDroneFreshModule._shrinkingPoints设置波次收缩的玩法点&#xa;_evacuateDronePos，_rotation 设置撤离点坐标和旋转&#xa;GeneratePhaseData 计算此波次里的阶段信息&#xa;_currentPhaseIndex++当前是第几阶段&#xa;GenerateFreshData 更新此阶段数据" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1760" y="1020" width="470" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="jjPBjHqxoX3JuUpOJX0V-1" value="GeneratePhaseData &#xa;计算此波次里的每个阶段的开始结束时间,和圆心&#xa;roundEndTick 计算此波次结束时间（即最后一个阶段的结束时间）&#xa;GetCenter 计算每个阶段的圆心&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-1" value="GeneratePhaseData &#xa;计算此波次里的每个阶段的开始结束时间,和圆心&#xa;roundEndTick 计算此波次结束时间（即最后一个阶段的结束时间）&#xa;GetCenter 计算每个阶段的圆心&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="2400" y="820" width="470" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="jjPBjHqxoX3JuUpOJX0V-4" value="GenerateFreshData&#xa;_centerXUpdatePerDis 计算每帧的中心点偏移量,半径偏移量" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-4" value="GenerateFreshData&#xa;_centerXUpdatePerDis 计算每帧的中心点偏移量,半径偏移量" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="2450" y="1240" width="370" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="jjPBjHqxoX3JuUpOJX0V-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jjPBjHqxoX3JuUpOJX0V-7" target="jjPBjHqxoX3JuUpOJX0V-8">
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jjPBjHqxoX3JuUpOJX0V-7" target="jjPBjHqxoX3JuUpOJX0V-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jjPBjHqxoX3JuUpOJX0V-7" value="更新半径和buff&#xa;ShrinkRadiusAndCenter&#xa;&#xa;1. UpdateCenter 更新圆心&#xa;2. UpdateRadius更新半径&#xa;3. BroadCastSafeArea 广播 S2C_PROTOCOL.S2CDroneFreshData" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-7" value="更新半径和buff&#xa;ShrinkRadiusAndCenter&#xa;&#xa;1. UpdateCenter 更新圆心&#xa;2. UpdateRadius更新半径&#xa;3. BroadCastSafeArea 广播 S2C_PROTOCOL.S2CDroneFreshData" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1270" y="1090" width="320" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="jjPBjHqxoX3JuUpOJX0V-8" value="判断是否需要进入下一个阶段&lt;div&gt;或者此波次完全结束&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="jjPBjHqxoX3JuUpOJX0V-8" value="判断是否需要进入下一个阶段&lt;div&gt;或者此波次完全结束&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1290" y="1395" width="280" height="135" as="geometry" />
         </mxCell>
       </root>
