@@ -2246,7 +2246,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="4685" dy="1898" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4860" dy="2088" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2707,7 +2707,7 @@
           <mxGeometry x="-543" y="790" width="240" height="105" as="geometry" />
         </mxCell>
         <mxCell id="y77fB49KBM6Oq8SHt_1x-4" value="MatchGroup 匹配形成的队伍" style="whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-483" y="950" width="120" height="60" as="geometry" />
+          <mxGeometry x="-524.5" y="940" width="203" height="60" as="geometry" />
         </mxCell>
         <mxCell id="y77fB49KBM6Oq8SHt_1x-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="y77fB49KBM6Oq8SHt_1x-7" target="haekd0vAY0x4tPLH6_PX-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
