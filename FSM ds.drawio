@@ -2246,7 +2246,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="3953" dy="2465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4685" dy="1898" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2487,10 +2487,10 @@
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-8" value="MatchHandle::OnPlayerMatchDataResult&#xa;MatchData::SetPlayerData 存入匹配数据" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1900" y="2388" width="260" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-10" value="所有人数据都收集完&#xa;MatchData::OnPlayerMatchReady&#xa;收集玩家战绩&#xa;判断玩家是否都解锁匹配了&#xa;&#xa;玩家选择的机甲是否可能冲突m_cantReverseChooseMechaPossibility&#xa;玩家预选的机甲：chose_mecha_ids_size&#xa;&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-10" value="所有人数据都收集完&#xa;MatchData::OnPlayerMatchReady&#xa;收集玩家战绩&#xa;判断玩家是否都解锁匹配了&#xa;计算进入福利局匹配时间_CalcMatchPredictTime&#xa;&#xa;玩家选择的机甲是否可能冲突m_cantReverseChooseMechaPossibility&#xa;玩家预选的机甲：chose_mecha_ids_size&#xa;&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="2420" y="2379.5" width="380" height="270.5" as="geometry" />
         </mxCell>
-        <mxCell id="haekd0vAY0x4tPLH6_PX-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pIHn8wnxRUCRlS7zdoKL-15" edge="1" target="haekd0vAY0x4tPLH6_PX-4">
+        <mxCell id="haekd0vAY0x4tPLH6_PX-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pIHn8wnxRUCRlS7zdoKL-15" target="haekd0vAY0x4tPLH6_PX-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-593" y="530" as="targetPoint" />
           </mxGeometry>
@@ -2645,15 +2645,15 @@
         <mxCell id="1XAuweGxeeL7TFOGs7bg-12" value="LadderSubLevelPool::RunMatch&#xa;根据池子类型，选择匹配函数&#xa;m_isRetention 是否为滞留池" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-200" y="2436.25" width="270" height="62.5" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.456;entryY=0.044;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-15" target="y77fB49KBM6Oq8SHt_1x-11">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.456;entryY=0.044;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="1XAuweGxeeL7TFOGs7bg-15" target="y77fB49KBM6Oq8SHt_1x-11" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-280" y="2790" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-15" target="y77fB49KBM6Oq8SHt_1x-13">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1XAuweGxeeL7TFOGs7bg-15" target="y77fB49KBM6Oq8SHt_1x-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-15" target="y77fB49KBM6Oq8SHt_1x-16">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1XAuweGxeeL7TFOGs7bg-15" target="y77fB49KBM6Oq8SHt_1x-16" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-60" y="2820" as="targetPoint" />
           </mxGeometry>
@@ -2661,13 +2661,13 @@
         <mxCell id="1XAuweGxeeL7TFOGs7bg-15" value="_RunAIMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-303" y="2625" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-17" target="y77fB49KBM6Oq8SHt_1x-20">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1XAuweGxeeL7TFOGs7bg-17" target="y77fB49KBM6Oq8SHt_1x-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-17" target="y77fB49KBM6Oq8SHt_1x-23">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1XAuweGxeeL7TFOGs7bg-17" target="y77fB49KBM6Oq8SHt_1x-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1XAuweGxeeL7TFOGs7bg-17" target="y77fB49KBM6Oq8SHt_1x-27">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1XAuweGxeeL7TFOGs7bg-17" target="y77fB49KBM6Oq8SHt_1x-27" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="870" y="2830" as="targetPoint" />
           </mxGeometry>
@@ -2686,7 +2686,7 @@
             <mxPoint x="-423" y="660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="haekd0vAY0x4tPLH6_PX-6" target="y77fB49KBM6Oq8SHt_1x-7">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="haekd0vAY0x4tPLH6_PX-6" target="y77fB49KBM6Oq8SHt_1x-7" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-173" y="660" as="targetPoint" />
           </mxGeometry>
@@ -2694,63 +2694,63 @@
         <mxCell id="haekd0vAY0x4tPLH6_PX-6" value="MashmakMatchPattern&lt;div&gt;每个Region创建两个Pool&lt;/div&gt;&lt;div&gt;分是否为单人匹配&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-333" y="550" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="haekd0vAY0x4tPLH6_PX-8" target="y77fB49KBM6Oq8SHt_1x-2">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="haekd0vAY0x4tPLH6_PX-8" target="y77fB49KBM6Oq8SHt_1x-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="haekd0vAY0x4tPLH6_PX-8" value="MashmakMatchPool&#xa;MashmakGameMatch* m_pGameMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-533" y="670" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-2" target="y77fB49KBM6Oq8SHt_1x-4">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="y77fB49KBM6Oq8SHt_1x-2" target="y77fB49KBM6Oq8SHt_1x-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-2" value="MashmakGameMatch&#xa;vector&lt;MatchGroup&gt; m_matchGroup" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-2" value="MashmakGameMatch&#xa;vector&lt;MatchGroup&gt; m_matchGroup" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-543" y="790" width="240" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-4" value="MatchGroup 匹配形成的队伍" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-4" value="MatchGroup 匹配形成的队伍" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-483" y="950" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-7" target="haekd0vAY0x4tPLH6_PX-8">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="y77fB49KBM6Oq8SHt_1x-7" target="haekd0vAY0x4tPLH6_PX-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-7" value="MatchTable（根据队伍和小队人数算出的固定组合）" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-7" value="MatchTable（根据队伍和小队人数算出的固定组合）" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-233" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-11" target="y77fB49KBM6Oq8SHt_1x-13">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="y77fB49KBM6Oq8SHt_1x-11" target="y77fB49KBM6Oq8SHt_1x-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-11" value="_RunAIPartMatch&#xa;独立匹配" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-11" value="_RunAIPartMatch&#xa;独立匹配" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-450" y="2790" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-13" target="y77fB49KBM6Oq8SHt_1x-16">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="y77fB49KBM6Oq8SHt_1x-13" target="y77fB49KBM6Oq8SHt_1x-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-13" value="_RunAIFullMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-13" value="_RunAIFullMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-303" y="2790" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-16" value="_RunAIPartMatch&#xa;不独立匹配" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-16" value="_RunAIPartMatch&#xa;不独立匹配" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-150" y="2790" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-20" target="y77fB49KBM6Oq8SHt_1x-27">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="y77fB49KBM6Oq8SHt_1x-20" target="y77fB49KBM6Oq8SHt_1x-27" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-20" value="GameMatch::BeginFetchGroup&#xa;按人数和是否滞留分类&#xa;m_sortedRetentionDataList[人数] 滞留&#xa;m_sortedDataList[人数] 非滞留" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-20" value="GameMatch::BeginFetchGroup&#xa;按人数和是否滞留分类&#xa;m_sortedRetentionDataList[人数] 滞留&#xa;m_sortedDataList[人数] 非滞留" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="450" y="2880" width="257.5" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-23" target="y77fB49KBM6Oq8SHt_1x-20">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="y77fB49KBM6Oq8SHt_1x-23" target="y77fB49KBM6Oq8SHt_1x-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-23" value="LadderSubLevelPool::_PrepareData&#xa;&#xa;m_tempDataList 按等级排序&#xa;m_orderByTimeDataList 按时间排序" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-23" value="LadderSubLevelPool::_PrepareData&#xa;&#xa;m_tempDataList 按等级排序&#xa;m_orderByTimeDataList 按时间排序" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="70" y="2880" width="210" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y77fB49KBM6Oq8SHt_1x-27" target="y77fB49KBM6Oq8SHt_1x-31">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="y77fB49KBM6Oq8SHt_1x-27" target="y77fB49KBM6Oq8SHt_1x-31" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="820" y="3140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-27" value="按时间取出未匹配的数据&#xa;m_orderByTimeDataList&#xa;&#xa;执行匹配&#xa;GameMatch::FetchMatchGroups&#xa;&#xa;收集匹配成功组&#xa;MatchResult::OnMatchSuccess&#xa;rRetMatchResult.push_back" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-27" value="按时间取出未匹配的数据&#xa;m_orderByTimeDataList&#xa;&#xa;执行匹配&#xa;GameMatch::FetchMatchGroups&#xa;&#xa;收集匹配成功组&#xa;MatchResult::OnMatchSuccess&#xa;rRetMatchResult.push_back" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="840" y="2860.75" width="200" height="158.5" as="geometry" />
         </mxCell>
-        <mxCell id="y77fB49KBM6Oq8SHt_1x-31" value="GameMatch::FetchMatchGroups&#xa;&#xa;取出所有可能的组合&#xa;m_pMatchTable-&gt;GetSeedSquadList&#xa;&#xa;GameMatch::_RunByCombo&#xa;尝试按相同成分取出队伍&#xa;&#xa;未成功则按分散程度的组合(GetDistributeSquadList)再取一次" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="y77fB49KBM6Oq8SHt_1x-31" value="GameMatch::FetchMatchGroups&#xa;&#xa;取出所有可能的组合&#xa;m_pMatchTable-&gt;GetSeedSquadList&#xa;&#xa;GameMatch::_RunByCombo&#xa;尝试按相同成分取出队伍&#xa;&#xa;未成功则按分散程度的组合(GetDistributeSquadList)再取一次" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="600" y="3140" width="260" height="190" as="geometry" />
         </mxCell>
       </root>
