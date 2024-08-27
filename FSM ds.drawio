@@ -2487,7 +2487,7 @@
         <mxCell id="pIHn8wnxRUCRlS7zdoKL-8" value="MatchHandle::OnPlayerMatchDataResult&#xa;MatchData::SetPlayerData 存入匹配数据" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1900" y="2388" width="260" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="pIHn8wnxRUCRlS7zdoKL-10" value="所有人数据都收集完&#xa;MatchData::OnPlayerMatchReady&#xa;收集玩家战绩&#xa;判断玩家是否都解锁匹配了&#xa;计算进入福利局匹配时间_CalcMatchPredictTime&#xa;计算是否能匹配AI _UpdateCanMatchAI&#xa;&#xa;玩家选择的机甲是否可能冲突m_cantReverseChooseMechaPossibility&#xa;玩家预选的机甲：chose_mecha_ids_size&#xa;&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="pIHn8wnxRUCRlS7zdoKL-10" value="所有人数据都收集完&#xa;MatchData::OnPlayerMatchReady&#xa;收集玩家战绩&#xa;判断玩家是否都解锁匹配了&#xa;计算进入福利局匹配时间_CalcMatchPredictTime&#xa;计算是否能匹配AI和是否为福利局 _UpdateCanMatchAI&#xa;&#xa;玩家选择的机甲是否可能冲突m_cantReverseChooseMechaPossibility&#xa;玩家预选的机甲：chose_mecha_ids_size&#xa;&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="2420" y="2379.5" width="380" height="270.5" as="geometry" />
         </mxCell>
         <mxCell id="haekd0vAY0x4tPLH6_PX-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pIHn8wnxRUCRlS7zdoKL-15" target="haekd0vAY0x4tPLH6_PX-4" edge="1">
