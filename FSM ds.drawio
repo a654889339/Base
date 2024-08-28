@@ -2245,7 +2245,7 @@
         <mxCell id="OLb3WX6LDO1iSzNmfViL-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="OLb3WX6LDO1iSzNmfViL-1" target="jjPBjHqxoX3JuUpOJX0V-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="OLb3WX6LDO1iSzNmfViL-1" value="玩法首先配置了最后阶段的圆心（最后阶段是撤离点，半径是0）&#xa;然后根据每个阶段的半径从最后一个阶段往前推算。&#xa;玩法上圆是逐渐缩小，并且下个阶段的圆都在上阶段圆的边缘&#xa;也就是下阶段圆是与上阶段圆内切的&#xa;&#xa;计算每个阶段的圆心&#xa;GetCenter(当前圆心和半径，下个圆半径，推算下个圆心)&#xa;1. 算出当前圆心在地图的上下左右哪个位置GetAreaPos&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="OLb3WX6LDO1iSzNmfViL-1" value="玩法首先配置了最后阶段的圆心（最后阶段是撤离点，半径是0）&#xa;然后根据每个阶段的半径从最后一个阶段往前推算。&#xa;玩法上圆是逐渐缩小，并且下个阶段的圆都在上阶段圆的边缘&#xa;也就是下阶段圆是与上阶段圆内切的&#xa;&#xa;计算每个阶段的圆心&#xa;GetCenter(当前圆心和半径，下个圆半径，推算下个圆心)&#xa;1. 算出当前圆心在地图的上下左右哪个位置GetAreaPos&#xa;2. 判断能否实现内切，能实现则isUnder=false" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="2980" y="826.25" width="355" height="177.5" as="geometry" />
         </mxCell>
       </root>
