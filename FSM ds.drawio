@@ -2145,7 +2145,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mMk6yr6r4qqI_OUw7R4J" name="撤离玩法">
-    <mxGraphModel dx="2880" dy="983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2058" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2241,6 +2241,12 @@
         </mxCell>
         <mxCell id="jjPBjHqxoX3JuUpOJX0V-8" value="判断是否需要进入下一个阶段&lt;div&gt;或者此波次完全结束&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1290" y="1395" width="280" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="OLb3WX6LDO1iSzNmfViL-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="OLb3WX6LDO1iSzNmfViL-1" target="jjPBjHqxoX3JuUpOJX0V-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OLb3WX6LDO1iSzNmfViL-1" value="计算每个阶段的圆心&#xa;GetCenter(当前圆心和半径，下个圆半径，推算下个圆心)&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="2980" y="826.25" width="355" height="177.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
