@@ -2801,8 +2801,8 @@
         <mxCell id="UE2Uuq9vHVAIPE-oEwek-1" value="Init" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="220" y="480" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="UE2Uuq9vHVAIPE-oEwek-2" value="_LoadConfigData&#xa;看场景是否配置了空投AirDropConfigs" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="195" y="620" width="170" height="120" as="geometry" />
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-2" value="_LoadConfigData&#xa;看场景是否配置了空投AirDropConfigs&#xa;遍历配置里的每个空投组里的每条航线，&#xa;将启动的航线加入可用航线列表 airPathID&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="107.5" y="620" width="345" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
