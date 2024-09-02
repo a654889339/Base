@@ -1200,7 +1200,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="L85grx4k__njMR5yMUTE" name="场景物体生命周期">
-    <mxGraphModel dx="1873" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2612" dy="1057" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1376,29 +1376,57 @@
         <mxCell id="jeA5YK_Ed9TRFlLAVQ66-30" value="&lt;div&gt;创建NPC&lt;/div&gt;StaticWarAgent.CreateNPC" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2840" y="380" width="210" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="t9X-w_DtzS08BdtDFxEH-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="t9X-w_DtzS08BdtDFxEH-1" target="jeA5YK_Ed9TRFlLAVQ66-26">
+        <mxCell id="t9X-w_DtzS08BdtDFxEH-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="t9X-w_DtzS08BdtDFxEH-1" target="jeA5YK_Ed9TRFlLAVQ66-26" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="t9X-w_DtzS08BdtDFxEH-1" value="&lt;div&gt;创建OB&lt;/div&gt;LaunchObserverById&lt;div&gt;warWorld.AddSceneObject(warWorld.WarScene, ob)&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="t9X-w_DtzS08BdtDFxEH-1" value="&lt;div&gt;创建OB&lt;/div&gt;LaunchObserverById&lt;div&gt;warWorld.AddSceneObject(warWorld.WarScene, ob)&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="3140" y="500" width="290" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="t9X-w_DtzS08BdtDFxEH-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="t9X-w_DtzS08BdtDFxEH-3" target="jeA5YK_Ed9TRFlLAVQ66-26">
+        <mxCell id="t9X-w_DtzS08BdtDFxEH-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="t9X-w_DtzS08BdtDFxEH-3" target="jeA5YK_Ed9TRFlLAVQ66-26" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="t9X-w_DtzS08BdtDFxEH-3" value="&lt;div&gt;创建Player&lt;/div&gt;LaunchMechaById&lt;div&gt;warWorld.AddSceneObject(WarWorld.ActiveScene, player);&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="t9X-w_DtzS08BdtDFxEH-3" value="&lt;div&gt;创建Player&lt;/div&gt;LaunchMechaById&lt;div&gt;warWorld.AddSceneObject(WarWorld.ActiveScene, player);&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2470" y="195" width="380" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="t9X-w_DtzS08BdtDFxEH-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="t9X-w_DtzS08BdtDFxEH-5" target="t9X-w_DtzS08BdtDFxEH-3">
+        <mxCell id="t9X-w_DtzS08BdtDFxEH-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="t9X-w_DtzS08BdtDFxEH-5" target="t9X-w_DtzS08BdtDFxEH-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="t9X-w_DtzS08BdtDFxEH-5" value="DoUserRespawn(ulong userID)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="t9X-w_DtzS08BdtDFxEH-5" value="DoUserRespawn(ulong userID)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2550" y="10" width="220" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="S6u-rpcnTjCrIoK8TIK5-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="S6u-rpcnTjCrIoK8TIK5-1" target="jeA5YK_Ed9TRFlLAVQ66-8">
+        <mxCell id="S6u-rpcnTjCrIoK8TIK5-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="S6u-rpcnTjCrIoK8TIK5-1" target="jeA5YK_Ed9TRFlLAVQ66-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="S6u-rpcnTjCrIoK8TIK5-1" value="&lt;div&gt;角色归属情况（masterId和assistId）&lt;/div&gt;ControlledSO" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="S6u-rpcnTjCrIoK8TIK5-1" value="&lt;div&gt;角色归属情况（masterId和assistId）&lt;/div&gt;ControlledSO" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-400.94" y="80" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="prOqBjE1RCn1LfRR_EWP-1" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;OnDeath&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-119.5" y="2210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="prOqBjE1RCn1LfRR_EWP-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="prOqBjE1RCn1LfRR_EWP-2" target="prOqBjE1RCn1LfRR_EWP-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prOqBjE1RCn1LfRR_EWP-2" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#880000;&quot;&gt;OnUnitDead&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-129.5" y="2110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="prOqBjE1RCn1LfRR_EWP-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="prOqBjE1RCn1LfRR_EWP-7" target="prOqBjE1RCn1LfRR_EWP-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-72" y="2030" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="prOqBjE1RCn1LfRR_EWP-6" value="&lt;div&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#216f85;&quot;&gt;事件：EEventKey&lt;/span&gt;.eUnitDead&lt;/pre&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="prOqBjE1RCn1LfRR_EWP-5">
+          <mxGeometry x="-0.3353" y="3" relative="1" as="geometry">
+            <mxPoint x="-8" y="21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="prOqBjE1RCn1LfRR_EWP-7" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#880000;&quot;&gt;_OnDead&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-137" y="1880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="prOqBjE1RCn1LfRR_EWP-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="prOqBjE1RCn1LfRR_EWP-9" target="prOqBjE1RCn1LfRR_EWP-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prOqBjE1RCn1LfRR_EWP-9" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#880000;&quot;&gt;_OnHealthChange&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-132" y="1780" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
