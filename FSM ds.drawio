@@ -2814,16 +2814,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="UE2Uuq9vHVAIPE-oEwek-6" value="监听战斗启动事件&lt;br&gt;eWeatherInitEnd" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="870" width="120" height="60" as="geometry" />
+          <mxGeometry x="275" y="860" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="UE2Uuq9vHVAIPE-oEwek-9" value="GenerateAirPath &#xa;生成航线&#xa;_GetAirDropPathID 计算每条航线的投放时间" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="232.5" y="1220" width="205" height="60" as="geometry" />
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-9" value="GenerateAirPath &#xa;生成航线&#xa;_GetAirDropPathID 计算每条航线的投放时间&#xa;&#xa;Log: &#xa;[空投]生成空投 开始tick:{startTick} 结束tick;{airPathInfo.airPathCompleteRunTick}" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="85" y="1240" width="500" height="200" as="geometry" />
         </mxCell>
         <mxCell id="hrSBCTaTuXATUOOWyrte-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hrSBCTaTuXATUOOWyrte-1" target="UE2Uuq9vHVAIPE-oEwek-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="hrSBCTaTuXATUOOWyrte-1" value="_GetAirDropPathID&lt;div&gt;随机给一个航线组生成航线&lt;/div&gt;&lt;div&gt;要避开毒圈区域&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="590" y="1220" width="300" height="100" as="geometry" />
+          <mxGeometry x="770" y="1250" width="300" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
