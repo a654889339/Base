@@ -2816,7 +2816,7 @@
         <mxCell id="UE2Uuq9vHVAIPE-oEwek-6" value="监听战斗启动事件&lt;br&gt;eWeatherInitEnd" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="275" y="860" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="UE2Uuq9vHVAIPE-oEwek-9" value="GenerateAirPath &#xa;生成航线&#xa;_GetAirDropPathID 计算每条航线的投放时间&#xa;&#xa;Log: &#xa;[空投]生成空投 开始tick:{startTick} 结束tick;{airPathInfo.airPathCompleteRunTick}" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-9" value="GenerateAirPath &#xa;生成航线&#xa;_GetAirDropPathID 计算每条航线的投放时间&#xa;&#xa;Log: &#xa;[空投]生成空投 开始tick:{startTick} 结束tick;{airPathInfo.airPathCompleteRunTick}&#xa;&#xa;_GetAirDropDoodadTicks 根据pathID以及航线开始时间获取所有doodad掉落时间&#xa;&#xa;遍历每条航线，生成物品掉落时间&#xa;具体航线物品log &#xa;[空投] 生成航线 pathID:" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="85" y="1240" width="500" height="200" as="geometry" />
         </mxCell>
         <mxCell id="hrSBCTaTuXATUOOWyrte-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hrSBCTaTuXATUOOWyrte-1" target="UE2Uuq9vHVAIPE-oEwek-9">
