@@ -2804,6 +2804,15 @@
         <mxCell id="UE2Uuq9vHVAIPE-oEwek-2" value="_LoadConfigData&#xa;看场景是否配置了空投AirDropConfigs&#xa;遍历配置里的每个空投组里的每条航线，&#xa;将启动的航线加入可用航线列表 airPathID&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="107.5" y="620" width="345" height="150" as="geometry" />
         </mxCell>
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-5" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#880000;&quot;&gt;StartInitAirPath&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UE2Uuq9vHVAIPE-oEwek-6" target="UE2Uuq9vHVAIPE-oEwek-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-6" value="监听战斗启动事件&lt;br&gt;eWeatherInitEnd" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="870" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
