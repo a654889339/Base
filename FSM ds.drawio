@@ -2283,7 +2283,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="5093" dy="2226" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4685" dy="1898" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2826,7 +2826,7 @@
         <mxCell id="z-CDVYYdfrNqTMj_47m7-6" value="玩家临时修改预选&#xa;_DealMatchPreselecUpdate&#xa;&#xa;临时修改预选的玩家m_preselectChangeList，若已经匹配上则通知这次修改失败。&#xa;否则更新此玩家的预选" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2620" y="3840" width="275" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-8" value="_UpdateWorkingMatchData" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-8" value="_UpdateWorkingMatchData&#xa;遍历所有匹配数据 &#xa;是否需要加入 ( 加入\移出 ) 某个池子&#xa;&#xa;在该池子中更新该数据&#xa;&#xa;MashmakMatchPool::OnMatchDataUpdate" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1890" y="3810" width="300" height="200" as="geometry" />
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-9" value="去掉取消匹配和关停的匹配请求_CheckMatchingDataStatus" style="whiteSpace=wrap;" vertex="1" parent="1">
