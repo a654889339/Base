@@ -2858,7 +2858,7 @@
         <mxCell id="z-CDVYYdfrNqTMj_47m7-17" value="MashmakGameMatch::BeginFetchGroup&#xa;遍历所有匹配数据&#xa;&#xa;更新匹配数据的时间 MashmakMatchData::Update" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1796.25" y="4290" width="302.5" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-19" value="更新匹配数据的时间&#xa;MashmakMatchData::Update(now)&#xa;&#xa;更新时间&#xa;MatchData::Update" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-19" value="更新匹配数据的时间&#xa;MashmakMatchData::Update(now)&#xa;&#xa;更新时间&#xa;MatchData::Update&#xa;&#xa;扩散区间&#xa;MatchData::UpdateRegion" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2303.5" y="4261.25" width="343.5" height="187.5" as="geometry" />
         </mxCell>
       </root>
