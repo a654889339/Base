@@ -2852,8 +2852,14 @@
         <mxCell id="z-CDVYYdfrNqTMj_47m7-16" value="MashmakMatchPool::_PrepareData&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;将匹配数据复制一份到m_tempDataList" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1790" y="4195" width="290" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-17" value="&lt;div style=&quot;background-color:#ffffff;color:#000000&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#216f85;&quot;&gt;MashmakGameMatch&lt;/span&gt;::&lt;span style=&quot;color:#880000;&quot;&gt;BeginFetchGroup&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-17" target="z-CDVYYdfrNqTMj_47m7-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-17" value="MashmakGameMatch::BeginFetchGroup&#xa;遍历所有匹配数据&#xa;&#xa;更新匹配数据的时间 MashmakMatchData::Update" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1796.25" y="4290" width="302.5" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-19" value="更新匹配数据的时间&#xa;MashmakMatchData::Update(now)&#xa;&#xa;更新时间&#xa;MatchData::Update" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2303.5" y="4261.25" width="343.5" height="187.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
