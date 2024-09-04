@@ -2283,7 +2283,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="4972" dy="2050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5045" dy="2088" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2829,7 +2829,7 @@
         <mxCell id="z-CDVYYdfrNqTMj_47m7-8" value="_UpdateWorkingMatchData&#xa;遍历所有匹配数据 &#xa;是否需要加入 ( 加入\移出 ) 某个池子&#xa;&#xa;在该池子中更新该数据&#xa;&#xa;MashmakMatchPool::OnMatchDataUpdate" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1890" y="3810" width="300" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-9" value="去掉取消匹配和关停的匹配请求_CheckMatchingDataStatus" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-9" value="剔除取消匹配和关停的匹配请求_CheckMatchingDataStatus" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2235" y="3810" width="270" height="230" as="geometry" />
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-12" target="z-CDVYYdfrNqTMj_47m7-13">
