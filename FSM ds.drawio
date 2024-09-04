@@ -2803,6 +2803,11 @@
         <mxCell id="z-CDVYYdfrNqTMj_47m7-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="km6sN-Z973gg9AoNwFgI-1" target="z-CDVYYdfrNqTMj_47m7-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="km6sN-Z973gg9AoNwFgI-1" target="z-CDVYYdfrNqTMj_47m7-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1310" y="3830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="km6sN-Z973gg9AoNwFgI-1" value="马氏马克匹配模式&#xa;MashmakMatchPattern::Update" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-2260" y="3600" width="320" height="100" as="geometry" />
         </mxCell>
@@ -2826,6 +2831,9 @@
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-9" value="_CheckMatchingDataStatus" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2235" y="3810" width="270" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-12" value="MashmakMatchPool::Run" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1410" y="3830" width="340" height="190" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
