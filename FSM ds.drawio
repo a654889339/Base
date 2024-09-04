@@ -2808,7 +2808,7 @@
             <mxPoint x="-1310" y="3830" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="km6sN-Z973gg9AoNwFgI-1" value="马氏马克匹配模式&#xa;MashmakMatchPattern::Update" style="whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="km6sN-Z973gg9AoNwFgI-1" value="马氏马克匹配模式&#xa;MashmakMatchPattern::Update&#xa;&#xa;m_matchingDataMap 匹配元数据" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-2260" y="3600" width="320" height="100" as="geometry" />
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-1" target="km6sN-Z973gg9AoNwFgI-1">
@@ -2829,7 +2829,7 @@
         <mxCell id="z-CDVYYdfrNqTMj_47m7-8" value="_UpdateWorkingMatchData" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1890" y="3810" width="300" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-9" value="_CheckMatchingDataStatus" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-9" value="去掉取消匹配和关停的匹配请求_CheckMatchingDataStatus" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2235" y="3810" width="270" height="230" as="geometry" />
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-12" value="MashmakMatchPool::Run" style="whiteSpace=wrap;" vertex="1" parent="1">
