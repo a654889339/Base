@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.8" pages="14">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.10" pages="14">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2793,39 +2793,39 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="0UYT6FdIkKlX3c382UbT" name="空投">
-    <mxGraphModel dx="1997" dy="1057" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="0UYT6FdIkKlX3c382UbT" name="空投物资">
+    <mxGraphModel dx="1785" dy="1057" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="UE2Uuq9vHVAIPE-oEwek-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="UE2Uuq9vHVAIPE-oEwek-1" target="UE2Uuq9vHVAIPE-oEwek-2">
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" parent="1" source="UE2Uuq9vHVAIPE-oEwek-1" target="UE2Uuq9vHVAIPE-oEwek-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="UE2Uuq9vHVAIPE-oEwek-1" value="Init" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-1" value="Init" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="220" y="480" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="UE2Uuq9vHVAIPE-oEwek-2" value="_LoadConfigData&#xa;看场景是否配置了空投AirDropConfigs&#xa;遍历配置里的每个空投组里的每条航线，&#xa;将启动的航线加入可用航线列表 airPathID&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-2" value="_LoadConfigData&#xa;看场景是否配置了空投AirDropConfigs&#xa;遍历配置里的每个空投组里的每条航线，&#xa;将启动的航线加入可用航线列表 airPathID&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="107.5" y="620" width="345" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="UE2Uuq9vHVAIPE-oEwek-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UE2Uuq9vHVAIPE-oEwek-5" target="UE2Uuq9vHVAIPE-oEwek-9">
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UE2Uuq9vHVAIPE-oEwek-5" target="UE2Uuq9vHVAIPE-oEwek-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="UE2Uuq9vHVAIPE-oEwek-5" value="StartInitAirPath&#xa;遍历每条航线组&#xa;若生成时间为随机，则生成一条航线group.intervalType == IntervalType.Random&#xa;若填了时间，则按填的时间生成多条航线List&lt;int&gt; generateTimes&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-5" value="StartInitAirPath&#xa;遍历每条航线组&#xa;若生成时间为随机，则生成一条航线group.intervalType == IntervalType.Random&#xa;若填了时间，则按填的时间生成多条航线List&lt;int&gt; generateTimes&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="220" y="980" width="230" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="UE2Uuq9vHVAIPE-oEwek-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UE2Uuq9vHVAIPE-oEwek-6" target="UE2Uuq9vHVAIPE-oEwek-5">
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UE2Uuq9vHVAIPE-oEwek-6" target="UE2Uuq9vHVAIPE-oEwek-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="UE2Uuq9vHVAIPE-oEwek-6" value="监听战斗启动事件&lt;br&gt;eWeatherInitEnd" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-6" value="监听战斗启动事件&lt;br&gt;eWeatherInitEnd" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="275" y="860" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="UE2Uuq9vHVAIPE-oEwek-9" value="GenerateAirPath &#xa;生成航线&#xa;_GetAirDropPathID 计算每条航线的投放时间&#xa;&#xa;Log: &#xa;[空投]生成空投 开始tick:{startTick} 结束tick;{airPathInfo.airPathCompleteRunTick}&#xa;&#xa;_GetAirDropDoodadTicks 根据pathID以及航线开始时间获取所有doodad掉落时间&#xa;&#xa;遍历每条航线，生成物品掉落时间&#xa;具体航线物品log &#xa;[空投] 生成航线 pathID:" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="UE2Uuq9vHVAIPE-oEwek-9" value="GenerateAirPath &#xa;生成航线&#xa;_GetAirDropPathID 计算每条航线的投放时间&#xa;&#xa;Log: &#xa;[空投]生成空投 开始tick:{startTick} 结束tick;{airPathInfo.airPathCompleteRunTick}&#xa;&#xa;_GetAirDropDoodadTicks 根据pathID以及航线开始时间获取所有doodad掉落时间&#xa;&#xa;遍历每条航线，生成物品掉落时间&#xa;具体航线物品log &#xa;[空投] 生成航线 pathID:" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="85" y="1240" width="500" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="hrSBCTaTuXATUOOWyrte-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hrSBCTaTuXATUOOWyrte-1" target="UE2Uuq9vHVAIPE-oEwek-9">
+        <mxCell id="hrSBCTaTuXATUOOWyrte-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="hrSBCTaTuXATUOOWyrte-1" target="UE2Uuq9vHVAIPE-oEwek-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="hrSBCTaTuXATUOOWyrte-1" value="_GetAirDropPathID&lt;div&gt;随机给一个航线组生成航线&lt;/div&gt;&lt;div&gt;要避开毒圈区域&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="hrSBCTaTuXATUOOWyrte-1" value="_GetAirDropPathID&lt;div&gt;随机给一个航线组生成航线&lt;/div&gt;&lt;div&gt;要避开毒圈区域&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="770" y="1290" width="300" height="100" as="geometry" />
         </mxCell>
       </root>
