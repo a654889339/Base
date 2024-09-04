@@ -2814,14 +2814,14 @@
         <mxCell id="z-CDVYYdfrNqTMj_47m7-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-1" target="km6sN-Z973gg9AoNwFgI-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-1" value="MatchManager::Update" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-2165" y="3490" width="130" height="60" as="geometry" />
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-1" value="遍历所有匹配模式&#xa;更新匹配MatchManager::Update&#xa;&#xa;收集匹配结果&#xa;MashmakMatchPattern::FetchMatchResult&#xa;&#xa;处理所有匹配结果&#xa;MatchManager::UpdateMatchResult" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2222.5" y="3320" width="245" height="230" as="geometry" />
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-3" target="z-CDVYYdfrNqTMj_47m7-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-3" value="MatchManager::Update" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-2165" y="3380" width="130" height="60" as="geometry" />
+          <mxGeometry x="-2165" y="3240" width="130" height="60" as="geometry" />
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-6" value="玩家临时修改预选&#xa;_DealMatchPreselecUpdate&#xa;&#xa;临时修改预选的玩家m_preselectChangeList，若已经匹配上则通知这次修改失败。&#xa;否则更新此玩家的预选" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2620" y="3840" width="275" height="190" as="geometry" />
