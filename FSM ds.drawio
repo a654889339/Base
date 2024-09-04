@@ -2823,8 +2823,8 @@
         <mxCell id="z-CDVYYdfrNqTMj_47m7-3" value="MatchManager::Update" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2165" y="3380" width="130" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-6" value="_DealMatchPreselecUpdate" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-2630" y="3840" width="275" height="190" as="geometry" />
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-6" value="_DealMatchPreselecUpdate&#xa;临时修改预选的玩家m_preselectChangeList，若已经匹配上则通知这次修改失败。&#xa;否则更新此玩家的预选" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2620" y="3840" width="275" height="190" as="geometry" />
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-8" value="_UpdateWorkingMatchData" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1890" y="3810" width="300" height="200" as="geometry" />
