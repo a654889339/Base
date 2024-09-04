@@ -2838,8 +2838,22 @@
         <mxCell id="z-CDVYYdfrNqTMj_47m7-12" value="MashmakMatchPool::Run" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1410" y="3830" width="340" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-13" value="MashmakMatchPool::_RunMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-1410" y="4100" width="340" height="190" as="geometry" />
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-13" target="z-CDVYYdfrNqTMj_47m7-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1620" y="4205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-13" value="MashmakMatchPool::_RunMatch&#xa;&#xa;_PrepareData&#xa;BeginFetchGroup" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1410" y="4120" width="340" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-16" target="z-CDVYYdfrNqTMj_47m7-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-16" value="MashmakMatchPool::_PrepareData&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;将匹配数据复制一份到m_tempDataList" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1790" y="4195" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-17" value="&lt;div style=&quot;background-color:#ffffff;color:#000000&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#216f85;&quot;&gt;MashmakGameMatch&lt;/span&gt;::&lt;span style=&quot;color:#880000;&quot;&gt;BeginFetchGroup&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1796.25" y="4290" width="302.5" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
