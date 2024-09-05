@@ -2283,7 +2283,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="5045" dy="2088" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4796" dy="2050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2790,7 +2790,7 @@
         <mxCell id="y77fB49KBM6Oq8SHt_1x-31" value="GameMatch::FetchMatchGroups&#xa;&#xa;取出所有可能的组合&#xa;m_pMatchTable-&gt;GetSeedSquadList&#xa;&#xa;GameMatch::_RunByCombo&#xa;尝试按相同成分取出队伍&#xa;&#xa;未成功则按分散程度的组合(GetDistributeSquadList)再取一次" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="600" y="3140" width="260" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="km6sN-Z973gg9AoNwFgI-1" target="z-CDVYYdfrNqTMj_47m7-6">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" source="km6sN-Z973gg9AoNwFgI-1" target="z-CDVYYdfrNqTMj_47m7-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-2200" y="3790" as="targetPoint" />
           </mxGeometry>
@@ -2798,78 +2798,78 @@
         <mxCell id="km6sN-Z973gg9AoNwFgI-1" value="马氏马克匹配模式&#xa;MashmakMatchPattern::Update&#xa;&#xa;m_matchingDataMap 匹配元数据" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-2260" y="3600" width="320" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-1" target="km6sN-Z973gg9AoNwFgI-1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="z-CDVYYdfrNqTMj_47m7-1" target="km6sN-Z973gg9AoNwFgI-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-1" value="遍历所有匹配模式&#xa;更新匹配MatchManager::Update&#xa;&#xa;收集匹配结果&#xa;MashmakMatchPattern::FetchMatchResult&#xa;&#xa;处理所有匹配结果&#xa;MatchManager::UpdateMatchResult" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-1" value="遍历所有匹配模式&#xa;更新匹配MatchManager::Update&#xa;&#xa;收集匹配结果&#xa;MashmakMatchPattern::FetchMatchResult&#xa;&#xa;处理所有匹配结果&#xa;MatchManager::UpdateMatchResult" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-2222.5" y="3320" width="245" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-3" target="z-CDVYYdfrNqTMj_47m7-1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="z-CDVYYdfrNqTMj_47m7-3" target="z-CDVYYdfrNqTMj_47m7-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-3" value="MatchModule::Update" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-3" value="MatchModule::Update" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-2165" y="3240" width="130" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-6" target="z-CDVYYdfrNqTMj_47m7-9">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" source="z-CDVYYdfrNqTMj_47m7-6" target="z-CDVYYdfrNqTMj_47m7-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-6" value="玩家临时修改预选&#xa;_DealMatchPreselecUpdate&#xa;&#xa;临时修改预选的玩家m_preselectChangeList，若已经匹配上则通知这次修改失败。&#xa;否则更新此玩家的预选" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-2620" y="3840" width="275" height="190" as="geometry" />
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-6" value="玩家临时修改预选&#xa;_DealMatchPreselecUpdate&#xa;&#xa;临时修改预选的玩家m_preselectChangeList，若已经匹配上则通知这次修改失败。&#xa;否则更新此玩家的预选" style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-2620" y="3825" width="275" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-8" value="_UpdateWorkingMatchData&#xa;遍历所有匹配数据 &#xa;是否需要加入 ( 加入\移出 ) 某个池子&#xa;&#xa;在该池子中更新该数据&#xa;&#xa;MashmakMatchPool::OnMatchDataUpdate" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-1890" y="3810" width="300" height="200" as="geometry" />
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-8" value="_UpdateWorkingMatchData&#xa;遍历所有匹配数据 &#xa;是否需要加入 ( 加入\移出 ) 某个池子&#xa;&#xa;在该池子中更新该数据&#xa;&#xa;MashmakMatchPool::OnMatchDataUpdate" style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-1890" y="3820" width="300" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-9" target="z-CDVYYdfrNqTMj_47m7-8">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" source="z-CDVYYdfrNqTMj_47m7-9" target="z-CDVYYdfrNqTMj_47m7-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-9" value="剔除取消匹配和关停的匹配请求_CheckMatchingDataStatus" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-2235" y="3810" width="270" height="230" as="geometry" />
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-9" value="剔除取消匹配和关停的匹配请求_CheckMatchingDataStatus" style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-2230" y="3805" width="270" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-12" target="z-CDVYYdfrNqTMj_47m7-13">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="z-CDVYYdfrNqTMj_47m7-12" target="z-CDVYYdfrNqTMj_47m7-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-12" target="km6sN-Z973gg9AoNwFgI-1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" source="z-CDVYYdfrNqTMj_47m7-12" target="km6sN-Z973gg9AoNwFgI-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-12" value="MashmakMatchPool::Run" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-12" value="MashmakMatchPool::Run" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1410" y="3830" width="340" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-13" target="z-CDVYYdfrNqTMj_47m7-16">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="z-CDVYYdfrNqTMj_47m7-13" target="z-CDVYYdfrNqTMj_47m7-16" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-1620" y="4205" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-13" value="MashmakMatchPool::_RunMatch&#xa;&#xa;_PrepareData&#xa;BeginFetchGroup&#xa;&#xa;遍历所有匹配数据，尝试匹配&#xa;_RunOneMatch&#xa;&#xa;收集匹配结果" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-13" value="MashmakMatchPool::_RunMatch&#xa;&#xa;_PrepareData&#xa;BeginFetchGroup&#xa;&#xa;遍历所有匹配数据，尝试匹配&#xa;_RunOneMatch&#xa;&#xa;收集匹配结果" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1410" y="4120" width="340" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-16" target="z-CDVYYdfrNqTMj_47m7-17">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="z-CDVYYdfrNqTMj_47m7-16" target="z-CDVYYdfrNqTMj_47m7-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-16" value="MashmakMatchPool::_PrepareData&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;将匹配数据复制一份到m_tempDataList" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-16" value="MashmakMatchPool::_PrepareData&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;将匹配数据复制一份到m_tempDataList" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1790" y="4195" width="290" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#82b366;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-17" target="z-CDVYYdfrNqTMj_47m7-19">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#82b366;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" parent="1" source="z-CDVYYdfrNqTMj_47m7-17" target="z-CDVYYdfrNqTMj_47m7-19" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-17" target="z-CDVYYdfrNqTMj_47m7-22">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="z-CDVYYdfrNqTMj_47m7-17" target="z-CDVYYdfrNqTMj_47m7-22" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-17" value="MashmakGameMatch::BeginFetchGroup&#xa;遍历所有匹配数据&#xa;&#xa;更新匹配数据&#xa;MashmakMatchData::Update" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-17" value="MashmakGameMatch::BeginFetchGroup&#xa;遍历所有匹配数据&#xa;&#xa;更新匹配数据&#xa;MashmakMatchData::Update" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1796.25" y="4290" width="302.5" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-19" target="z-CDVYYdfrNqTMj_47m7-17">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="z-CDVYYdfrNqTMj_47m7-19" target="z-CDVYYdfrNqTMj_47m7-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-19" value="更新匹配数据的时间&#xa;MashmakMatchData::Update(now)&#xa;&#xa;更新时间&#xa;MatchData::Update&#xa;&#xa;扩散区间&#xa;MatchData::UpdateRegion&#xa;&#xa;更新标签&#xa;MashmakMatchData::_UpdateMatchTag&#xa;&#xa;更新匹配等级&#xa;MashmakMatchData::_UpdateMatchLevelInterval" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-19" value="更新匹配数据的时间&#xa;MashmakMatchData::Update(now)&#xa;&#xa;更新时间&#xa;MatchData::Update&#xa;&#xa;扩散区间&#xa;MatchData::UpdateRegion&#xa;&#xa;更新标签&#xa;MashmakMatchData::_UpdateMatchTag&#xa;&#xa;更新匹配等级&#xa;MashmakMatchData::_UpdateMatchLevelInterval" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-2320" y="4270" width="353.5" height="228.75" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-22" target="z-CDVYYdfrNqTMj_47m7-13">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="z-CDVYYdfrNqTMj_47m7-22" target="z-CDVYYdfrNqTMj_47m7-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-22" value="遍历所有匹配数据，尝试匹配&#xa;MashmakMatchPool::_RunOneMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-22" value="遍历所有匹配数据，尝试匹配&#xa;MashmakMatchPool::_RunOneMatch" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1410" y="4410" width="340" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.001;entryY=0.472;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-8" target="z-CDVYYdfrNqTMj_47m7-12">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.001;entryY=0.472;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" source="z-CDVYYdfrNqTMj_47m7-8" target="z-CDVYYdfrNqTMj_47m7-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
