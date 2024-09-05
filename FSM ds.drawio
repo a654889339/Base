@@ -2790,22 +2790,9 @@
         <mxCell id="y77fB49KBM6Oq8SHt_1x-31" value="GameMatch::FetchMatchGroups&#xa;&#xa;取出所有可能的组合&#xa;m_pMatchTable-&gt;GetSeedSquadList&#xa;&#xa;GameMatch::_RunByCombo&#xa;尝试按相同成分取出队伍&#xa;&#xa;未成功则按分散程度的组合(GetDistributeSquadList)再取一次" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="600" y="3140" width="260" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="km6sN-Z973gg9AoNwFgI-1" target="z-CDVYYdfrNqTMj_47m7-6">
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="km6sN-Z973gg9AoNwFgI-1" target="z-CDVYYdfrNqTMj_47m7-6">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-2200" y="3790" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="km6sN-Z973gg9AoNwFgI-1" target="z-CDVYYdfrNqTMj_47m7-8">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1900" y="3810" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="km6sN-Z973gg9AoNwFgI-1" target="z-CDVYYdfrNqTMj_47m7-9">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="z-CDVYYdfrNqTMj_47m7-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="km6sN-Z973gg9AoNwFgI-1" target="z-CDVYYdfrNqTMj_47m7-12">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1310" y="3830" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="km6sN-Z973gg9AoNwFgI-1" value="马氏马克匹配模式&#xa;MashmakMatchPattern::Update&#xa;&#xa;m_matchingDataMap 匹配元数据" style="whiteSpace=wrap;" parent="1" vertex="1">
@@ -2823,16 +2810,25 @@
         <mxCell id="z-CDVYYdfrNqTMj_47m7-3" value="MatchModule::Update" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2165" y="3240" width="130" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-6" target="z-CDVYYdfrNqTMj_47m7-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-6" value="玩家临时修改预选&#xa;_DealMatchPreselecUpdate&#xa;&#xa;临时修改预选的玩家m_preselectChangeList，若已经匹配上则通知这次修改失败。&#xa;否则更新此玩家的预选" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2620" y="3840" width="275" height="190" as="geometry" />
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-8" value="_UpdateWorkingMatchData&#xa;遍历所有匹配数据 &#xa;是否需要加入 ( 加入\移出 ) 某个池子&#xa;&#xa;在该池子中更新该数据&#xa;&#xa;MashmakMatchPool::OnMatchDataUpdate" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1890" y="3810" width="300" height="200" as="geometry" />
         </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-9" target="z-CDVYYdfrNqTMj_47m7-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-9" value="剔除取消匹配和关停的匹配请求_CheckMatchingDataStatus" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2235" y="3810" width="270" height="230" as="geometry" />
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-12" target="z-CDVYYdfrNqTMj_47m7-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-12" target="km6sN-Z973gg9AoNwFgI-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-12" value="MashmakMatchPool::Run" style="whiteSpace=wrap;" vertex="1" parent="1">
@@ -2872,6 +2868,9 @@
         </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-22" value="遍历所有匹配数据，尝试匹配&#xa;MashmakMatchPool::_RunOneMatch" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1410" y="4410" width="340" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="z-CDVYYdfrNqTMj_47m7-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.001;entryY=0.472;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-8" target="z-CDVYYdfrNqTMj_47m7-12">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
