@@ -332,7 +332,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="660VQV9bjZOmXcSyOBNS" name="复活模块">
-    <mxGraphModel dx="1785" dy="2226" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1115" dy="2942" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -439,19 +439,19 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ol9IdXqjmtpI2yGcnYGj-1" value="&lt;div&gt;&lt;b&gt;变量包含关系&lt;/b&gt;&lt;/div&gt;&lt;b&gt;SoStateData&lt;/b&gt;&lt;div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/b&gt; public Dictionary&amp;lt;StateType, int&amp;gt; states = new Dictionary&amp;lt;StateType, int&amp;gt;();&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1995" y="2500" width="579" height="70" as="geometry" />
+          <mxGeometry x="1902" y="2490" width="579" height="70" as="geometry" />
         </mxCell>
         <mxCell id="ol9IdXqjmtpI2yGcnYGj-3" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="ol9IdXqjmtpI2yGcnYGj-2" target="ol9IdXqjmtpI2yGcnYGj-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ol9IdXqjmtpI2yGcnYGj-2" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;变量包含关系&lt;/b&gt;&lt;br&gt;&lt;/div&gt;SoStateDataManagerBase&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; protected Dictionary&amp;lt;int, SoStateData&amp;gt; _soStateDatas = new Dictionary&amp;lt;int, &lt;b&gt;SoStateData&lt;/b&gt;&amp;gt;();&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Key为玩家ID？&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="2029.5" y="2370" width="530" height="100" as="geometry" />
+          <mxGeometry x="1936.5" y="2360" width="530" height="100" as="geometry" />
         </mxCell>
         <mxCell id="ol9IdXqjmtpI2yGcnYGj-5" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="ol9IdXqjmtpI2yGcnYGj-4" target="ol9IdXqjmtpI2yGcnYGj-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ol9IdXqjmtpI2yGcnYGj-4" value="WarModule 基类" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="2224.5" y="2210" width="120" height="60" as="geometry" />
+          <mxGeometry x="2131.5" y="2200" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="TSkOYfZsIgay2WD69a24-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8ZhbOmAN1mw3FXku5DQu-1" target="TSkOYfZsIgay2WD69a24-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -496,7 +496,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="TSkOYfZsIgay2WD69a24-11" value="CreateOrAddSoStateData" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1360" y="1590" width="170" height="90" as="geometry" />
+          <mxGeometry x="1452.5" y="1590" width="170" height="90" as="geometry" />
         </mxCell>
         <mxCell id="TSkOYfZsIgay2WD69a24-13" value="OnSoStateDataCreate" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1670" y="1590" width="150" height="80" as="geometry" />
@@ -508,7 +508,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="TSkOYfZsIgay2WD69a24-15" value="ServerQuickMarkModule.OnClientRequestCreateMark()&lt;div&gt;[标记模块] 客户端发起标记&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1287.5" y="1430" width="315" height="70" as="geometry" />
+          <mxGeometry x="1380" y="1430" width="315" height="70" as="geometry" />
         </mxCell>
         <mxCell id="TSkOYfZsIgay2WD69a24-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="TSkOYfZsIgay2WD69a24-17" target="TSkOYfZsIgay2WD69a24-19" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -2283,7 +2283,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="4132" dy="2479" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5045" dy="2132" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
