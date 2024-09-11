@@ -2176,7 +2176,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mMk6yr6r4qqI_OUw7R4J" name="撤离玩法">
-    <mxGraphModel dx="2612" dy="1057" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3182" dy="1113" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2256,28 +2256,28 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="YUItX4Gc-KCX1EIMf_wt-16" value="若是首次启动！&#xa;InitRoundData(玩法点GamePlayPointPrim)&#xa;ServerDroneFreshModule._shrinkingPoints设置波次收缩的玩法点&#xa;_evacuateDronePos，_rotation 设置撤离点坐标和旋转&#xa;GeneratePhaseData 计算此波次里的阶段信息&#xa;_currentPhaseIndex++当前是第几阶段&#xa;GenerateFreshData 更新此阶段数据" style="whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1760" y="1020" width="470" height="190" as="geometry" />
+          <mxGeometry x="1610" y="1020" width="470" height="190" as="geometry" />
         </mxCell>
         <mxCell id="jjPBjHqxoX3JuUpOJX0V-1" value="GeneratePhaseData &#xa;计算此波次里的每个阶段的开始结束时间,和圆心&#xa;roundEndTick 计算此波次结束时间（即最后一个阶段的结束时间）&#xa;GetCenter 计算每个阶段的圆心&#xa;" style="whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="2400" y="820" width="470" height="190" as="geometry" />
+          <mxGeometry x="2230" y="770" width="470" height="190" as="geometry" />
         </mxCell>
         <mxCell id="jjPBjHqxoX3JuUpOJX0V-4" value="GenerateFreshData&#xa;_centerXUpdatePerDis 计算每帧的中心点偏移量,半径偏移量" style="whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="2450" y="1240" width="370" height="240" as="geometry" />
+          <mxGeometry x="2280" y="1190" width="370" height="240" as="geometry" />
         </mxCell>
         <mxCell id="jjPBjHqxoX3JuUpOJX0V-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jjPBjHqxoX3JuUpOJX0V-7" target="jjPBjHqxoX3JuUpOJX0V-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="jjPBjHqxoX3JuUpOJX0V-7" value="更新半径和buff&#xa;ShrinkRadiusAndCenter&#xa;&#xa;1. UpdateCenter 更新圆心&#xa;2. UpdateRadius更新半径&#xa;3. BroadCastSafeArea 广播 S2C_PROTOCOL.S2CDroneFreshData" style="whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1270" y="1090" width="320" height="170" as="geometry" />
+          <mxGeometry x="1260" y="810" width="320" height="170" as="geometry" />
         </mxCell>
         <mxCell id="jjPBjHqxoX3JuUpOJX0V-8" value="判断是否需要进入下一个阶段&lt;div&gt;或者此波次完全结束&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1290" y="1395" width="280" height="135" as="geometry" />
+          <mxGeometry x="1280" y="1115" width="280" height="135" as="geometry" />
         </mxCell>
         <mxCell id="OLb3WX6LDO1iSzNmfViL-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" source="OLb3WX6LDO1iSzNmfViL-1" target="jjPBjHqxoX3JuUpOJX0V-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OLb3WX6LDO1iSzNmfViL-1" value="玩法首先配置了最后阶段的圆心（最后阶段是撤离点，半径是0）&#xa;然后根据每个阶段的半径从最后一个阶段往前推算。&#xa;玩法上圆是逐渐缩小，并且下个阶段的圆都在上阶段圆的边缘&#xa;也就是下阶段圆是与上阶段圆内切的&#xa;&#xa;计算每个阶段的圆心&#xa;GetCenter" style="whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="2980" y="826.25" width="440" height="177.5" as="geometry" />
+          <mxGeometry x="2740" y="776.25" width="440" height="177.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
