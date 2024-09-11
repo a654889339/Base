@@ -634,7 +634,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="D4cUpWKldzLiPTz7wScZ" name="结算模块">
-    <mxGraphModel dx="6741" dy="944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6987" dy="1057" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1042,7 +1042,7 @@
         <mxCell id="bpkGuW1O3WwiNpAyvklb-19" value="TakovInjectPlayer&lt;div&gt;生成个人结算数据&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;本地存储&lt;span style=&quot;color: rgb(0, 0, 128); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255);&quot;&gt;_userId2SettleInfo&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255);&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255); color: rgb(0, 0, 255);&quot;&gt;ulong&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255);&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255); color: rgb(33, 111, 133);&quot;&gt;BATTLE_SETTLEMENT_PLAYER&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt; background-color: rgb(255, 255, 255);&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="4298.13" y="2820" width="513.75" height="88" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hvavOLO6otYmtWDrKWa-1" target="hjSpow7H0i8WtZCdUtPV-1">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2hvavOLO6otYmtWDrKWa-1" target="hjSpow7H0i8WtZCdUtPV-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="2hvavOLO6otYmtWDrKWa-1" value="GSBattleStatisHandle::OnPlayerSettle&#xa;将真人的个人结算数据存在tb_battle_player_history" style="whiteSpace=wrap;" parent="1" vertex="1">
@@ -1145,55 +1145,55 @@
         <mxCell id="UVNgWaFbswL3QF8YBw_E-12" value="ServerWarUser.DoSettle" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-3125" y="1880" width="190" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-1" target="hjSpow7H0i8WtZCdUtPV-4">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="hjSpow7H0i8WtZCdUtPV-1" target="hjSpow7H0i8WtZCdUtPV-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-4220" y="3450" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-1" value="GameServer::SettlementRewardManager::DealWithSettlementInfo&#xa;首胜&#xa;段位结算 道具结算 经验货币结算 &#xa;胜场加成 节日活动加成" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-1" value="GameServer::SettlementRewardManager::DealWithSettlementInfo&#xa;首胜&#xa;段位结算 道具结算 经验货币结算 &#xa;胜场加成 节日活动加成" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-4120.75" y="3270" width="440.75" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-4" target="hjSpow7H0i8WtZCdUtPV-5">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="hjSpow7H0i8WtZCdUtPV-4" target="hjSpow7H0i8WtZCdUtPV-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-4" value="段位结算&#xa;RankManager::DoPlayerRankSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-4" value="段位结算&#xa;RankManager::DoPlayerRankSettle" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-4370" y="3440" width="220" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-5" target="hjSpow7H0i8WtZCdUtPV-9">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="hjSpow7H0i8WtZCdUtPV-5" target="hjSpow7H0i8WtZCdUtPV-9" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-4340" y="3660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-5" target="hjSpow7H0i8WtZCdUtPV-11">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="hjSpow7H0i8WtZCdUtPV-5" target="hjSpow7H0i8WtZCdUtPV-11" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-4160" y="3670" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-5" value="RankData::Settle&#xa;matchMode 根据匹配模式进行结算" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-5" value="RankData::Settle&#xa;matchMode 根据匹配模式进行结算" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-4355" y="3540" width="190" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-9" target="hjSpow7H0i8WtZCdUtPV-12">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="hjSpow7H0i8WtZCdUtPV-9" target="hjSpow7H0i8WtZCdUtPV-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-9" value="RankData::LadderSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-9" value="RankData::LadderSettle" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-4430" y="3660" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-11" target="hjSpow7H0i8WtZCdUtPV-14">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="hjSpow7H0i8WtZCdUtPV-11" target="hjSpow7H0i8WtZCdUtPV-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-11" value="RankData::MashmakSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-11" value="RankData::MashmakSettle" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-4240" y="3660" width="150" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hjSpow7H0i8WtZCdUtPV-12" target="hjSpow7H0i8WtZCdUtPV-16">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="hjSpow7H0i8WtZCdUtPV-12" target="hjSpow7H0i8WtZCdUtPV-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-12" value="LadderData::Settle" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-12" value="LadderData::Settle" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-4420" y="3770" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-14" value="MashmakData::Settle" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-14" value="MashmakData::Settle" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-4237.5" y="3780" width="145" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hjSpow7H0i8WtZCdUtPV-16" value="LadderData::MatchMakingRaingSettle" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="hjSpow7H0i8WtZCdUtPV-16" value="LadderData::MatchMakingRaingSettle" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-4520" y="3910" width="220" height="60" as="geometry" />
         </mxCell>
       </root>
