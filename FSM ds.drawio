@@ -2943,7 +2943,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="KvKo4FAbhzukAey486Aq" name="Asset加载">
-    <mxGraphModel dx="1633" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2460" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2973,6 +2973,21 @@
         </mxCell>
         <mxCell id="2hKwdD-Aj5_0dFCZV5SV-10" value="AssetBundleHandle.LoadAsync" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-235" y="550" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-12" target="2hKwdD-Aj5_0dFCZV5SV-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-12" value="MainThreadManager.OnEndFrame&#xa;&#xa;执行所有异步任务" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1390" y="10" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-13" target="2hKwdD-Aj5_0dFCZV5SV-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-13" value="MainThreadAsyncTask.ProcessQueue&#xa;&#xa;处理异步任务队列&#xa;&#xa;Queue&lt;MainThreadRunItem&gt; actionQueue" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1380" y="180" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-15" value="&lt;div style=&quot;background-color:#ffffff;color:#000000&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.8pt;&quot;&gt;MainThreadRunItem.Run&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1375" y="350" width="250" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
