@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17" pages="15">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.8.1" pages="15">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2943,56 +2943,62 @@
     </mxGraphModel>
   </diagram>
   <diagram id="KvKo4FAbhzukAey486Aq" name="Asset加载">
-    <mxGraphModel dx="1499" dy="1350" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1633" dy="2789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-1" target="2hKwdD-Aj5_0dFCZV5SV-2">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-1" target="2hKwdD-Aj5_0dFCZV5SV-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-1" value="AssetBundle.Load(ulong)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-1" value="AssetBundle.Load(ulong)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="270" y="555" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-2" target="2hKwdD-Aj5_0dFCZV5SV-4">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-2" target="2hKwdD-Aj5_0dFCZV5SV-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-2" value="AssetBundleData._LoadAssetBundleData(bundleID.Item1, bundleID.Item2)&#xa;&#xa;item1为包编号，item2为资源号&#xa;&#xa;若没加载过或者有依赖，则去异步加载及其依赖&#xa;否则返回本资源" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-2" value="AssetBundleData._LoadAssetBundleData(bundleID.Item1, bundleID.Item2)&#xa;&#xa;item1为包编号，item2为资源号&#xa;&#xa;若没加载过或者有依赖，则去异步加载及其依赖&#xa;否则返回本资源" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="135" y="730" width="430" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-4" value="AssetBundleManager._OnAssetBundleLoadAsync&#xa;&#xa;若本资源存在依赖，则优先递归加载依赖资源，完成后再加载本资源" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-4" value="AssetBundleManager._OnAssetBundleLoadAsync&#xa;&#xa;若本资源存在依赖，则优先递归加载依赖资源，完成后再加载本资源" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-110" y="1140" width="405" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-6" target="2hKwdD-Aj5_0dFCZV5SV-4">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-6" target="2hKwdD-Aj5_0dFCZV5SV-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-6" value="AssetBundleData._LoadAssetBundleDataAsync(index,bundle,priority)&#xa;&#xa;异步加载资源 (包编号,资源编号,优先级)" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-6" value="AssetBundleData._LoadAssetBundleDataAsync(index,bundle,priority)&#xa;&#xa;异步加载资源 (包编号,资源编号,优先级)" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-330" y="730" width="400" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-10" target="2hKwdD-Aj5_0dFCZV5SV-6">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-10" target="2hKwdD-Aj5_0dFCZV5SV-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-10" value="AssetBundleHandle.LoadAsync" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-10" value="AssetBundleHandle.LoadAsync" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-235" y="550" width="210" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-12" target="2hKwdD-Aj5_0dFCZV5SV-13">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-12" target="2hKwdD-Aj5_0dFCZV5SV-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-12" value="MainThreadManager.OnEndFrame&#xa;&#xa;帧结束时，执行所有异步任务" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-12" value="MainThreadManager.OnEndFrame&#xa;&#xa;帧结束时，执行所有异步任务" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-270" y="40" width="280" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-13" target="2hKwdD-Aj5_0dFCZV5SV-15">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-13" target="2hKwdD-Aj5_0dFCZV5SV-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-13" value="MainThreadAsyncTask.ProcessQueue&#xa;&#xa;处理异步任务队列&#xa;&#xa;Queue&lt;MainThreadRunItem&gt; actionQueue" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-13" value="MainThreadAsyncTask.ProcessQueue&#xa;&#xa;处理异步任务队列&#xa;&#xa;Queue&lt;MainThreadRunItem&gt; actionQueue" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-260" y="210" width="260" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-15" target="2hKwdD-Aj5_0dFCZV5SV-10">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2hKwdD-Aj5_0dFCZV5SV-15" target="2hKwdD-Aj5_0dFCZV5SV-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-120" y="490" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-15" value="MainThreadRunItem.Run" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="2hKwdD-Aj5_0dFCZV5SV-15" value="MainThreadRunItem.Run" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-255" y="380" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KSKufPL3NbeyG-7Xnq0W-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KSKufPL3NbeyG-7Xnq0W-1" target="2hKwdD-Aj5_0dFCZV5SV-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KSKufPL3NbeyG-7Xnq0W-1" value="MainThreadUtil.WaitForEndOfFrame" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="-110" width="220" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
