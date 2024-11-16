@@ -2946,7 +2946,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="KvKo4FAbhzukAey486Aq" name="Asset加载">
-    <mxGraphModel dx="5315" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4354" dy="2823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3026,7 +3026,7 @@
             <mxPoint x="-1510" y="1180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dO-a0u7ZIJJXSe9V7Ri6-7" value="已加载过" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dO-a0u7ZIJJXSe9V7Ri6-6">
+        <mxCell id="dO-a0u7ZIJJXSe9V7Ri6-7" value="已加载过，同步调用" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dO-a0u7ZIJJXSe9V7Ri6-6">
           <mxGeometry x="0.0787" y="3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -3052,6 +3052,11 @@
         </mxCell>
         <mxCell id="c5bdCe7pWxvnxydbhBh3-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c5bdCe7pWxvnxydbhBh3-3" target="dO-a0u7ZIJJXSe9V7Ri6-8">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-27" value="回调" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="c5bdCe7pWxvnxydbhBh3-4">
+          <mxGeometry x="-0.0476" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="c5bdCe7pWxvnxydbhBh3-3" value="资源异步加载&#xa;LogicResManager.LoadAsync" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1370" y="1270" width="240" height="60" as="geometry" />
