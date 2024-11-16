@@ -3083,8 +3083,31 @@
         <mxCell id="c5bdCe7pWxvnxydbhBh3-13" value="usage：物理模的长宽数据，是个配置，不需要读prefab" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-2270" y="1050" width="390" height="100" as="geometry" />
         </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c5bdCe7pWxvnxydbhBh3-14" target="c5bdCe7pWxvnxydbhBh3-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-18" value="ePhysicsInstanceChanged" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="c5bdCe7pWxvnxydbhBh3-17">
+          <mxGeometry x="0.037" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="c5bdCe7pWxvnxydbhBh3-14" value="调用基类的创建函数&#xa;soPhysicsComponentBase.CreatePhysics&#xa;&#xa;创建obj&#xa;CreatePhysicsGameObject&#xa;&#xa;OnCreatePhysicsFinish&#xa;&#xa;若有物理模 collider 则触发相关事件&#xa;ePrePhysicsInstanceChanged&#xa;ePhysicsInstanceChanged" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2030" y="2040" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c5bdCe7pWxvnxydbhBh3-16" target="c5bdCe7pWxvnxydbhBh3-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-16" value="UnitPhysicsDataComponent.OnSelfColliderChange" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2229" y="2338" width="308" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c5bdCe7pWxvnxydbhBh3-19" target="c5bdCe7pWxvnxydbhBh3-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-19" value="MovementUnit.SetCollider" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2176.5" y="2480" width="203" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-21" value="UnitPhysiceData.SetCollider" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2157.5" y="2610" width="165" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
