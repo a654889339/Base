@@ -2946,7 +2946,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="KvKo4FAbhzukAey486Aq" name="Asset加载">
-    <mxGraphModel dx="4488" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5315" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3044,6 +3044,9 @@
         <mxCell id="dO-a0u7ZIJJXSe9V7Ri6-2" value="判断资源是否已加载&#xa;LogicResManager.Instance.IsLoadFinished" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1595" y="1020" width="410" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dO-a0u7ZIJJXSe9V7Ri6-8" target="c5bdCe7pWxvnxydbhBh3-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dO-a0u7ZIJJXSe9V7Ri6-8" value="PhysicsInstanceRequest.RequestPhysicsInstance" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1800" y="1260" width="325" height="80" as="geometry" />
         </mxCell>
@@ -3053,8 +3056,35 @@
         <mxCell id="c5bdCe7pWxvnxydbhBh3-3" value="资源异步加载&#xa;LogicResManager.LoadAsync" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1370" y="1270" width="240" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c5bdCe7pWxvnxydbhBh3-5" target="c5bdCe7pWxvnxydbhBh3-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="c5bdCe7pWxvnxydbhBh3-5" value="soPhysicsComponent.OnInit&#xa;_physicsInstanceRequest.Init(OnGameObjectInstanceFinish)" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-2430" y="705" width="380" height="140" as="geometry" />
+          <mxGeometry x="-2620" y="1630" width="380" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shape=arrow;" edge="1" parent="1" source="c5bdCe7pWxvnxydbhBh3-6" target="c5bdCe7pWxvnxydbhBh3-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-6" value="创建一个加载obj的handle，并加入异步队列。&#xa;在本地_requestObj 存储此handle&#xa;&#xa;回调是为了处理设置了usage的情况" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2020" y="1460" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c5bdCe7pWxvnxydbhBh3-8" target="c5bdCe7pWxvnxydbhBh3-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-8" value="异步队列回调 handle&#xa;PhysicsInstanceRequest._OnGameObjectInstanceFinished&#xa;&#xa;回调调用init时的callback" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2080" y="1630" width="360" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c5bdCe7pWxvnxydbhBh3-10" target="c5bdCe7pWxvnxydbhBh3-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-10" value="soPhysicsComponent.OnGameObjectInstanceFinish&#xa;&#xa;设置 pendingUsage _pendingPhysicsPrefabUsage = 0&#xa;设置usage _physicsPrefabUsage&#xa;就是将usage 切换状态" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2070" y="1850" width="340" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-13" value="usage：物理模的长宽数据，是个配置，不需要读prefab" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-2270" y="1050" width="390" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-14" value="调用基类的创建函数&#xa;soPhysicsComponentBase.CreatePhysics&#xa;&#xa;创建obj&#xa;CreatePhysicsGameObject&#xa;&#xa;OnCreatePhysicsFinish&#xa;&#xa;若有物理模 collider 则触发相关事件&#xa;ePrePhysicsInstanceChanged&#xa;ePhysicsInstanceChanged" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2030" y="2040" width="260" height="170" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
