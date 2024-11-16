@@ -2946,7 +2946,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="KvKo4FAbhzukAey486Aq" name="Asset加载">
-    <mxGraphModel dx="4354" dy="2823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5767" dy="2383" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3096,7 +3096,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="c5bdCe7pWxvnxydbhBh3-14" value="&#xa;&#xa;soPhysicsComponent.OnGameObjectInstanceFinish&#xa;调用基类的创建函数&#xa;soPhysicsComponentBase.CreatePhysics&#xa;&#xa;创建obj&#xa;CreatePhysicsGameObject&#xa;&#xa;OnCreatePhysicsFinish&#xa;&#xa;若有物理模 collider 则触发相关事件&#xa;ePrePhysicsInstanceChanged&#xa;ePhysicsInstanceChanged" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-14" value="soPhysicsComponent.OnGameObjectInstanceFinish&#xa;&#xa;调用基类的创建函数&#xa;soPhysicsComponentBase.CreatePhysics&#xa;&#xa;创建obj&#xa;CreatePhysicsGameObject&#xa;&#xa;OnCreatePhysicsFinish&#xa;&#xa;Collider collider = GetComponent&lt;Collider&gt;();&#xa;若有物理模 collider 则触发相关事件&#xa;ePrePhysicsInstanceChanged&#xa;ePhysicsInstanceChanged" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-2070" y="1980" width="340" height="240" as="geometry" />
         </mxCell>
         <mxCell id="c5bdCe7pWxvnxydbhBh3-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c5bdCe7pWxvnxydbhBh3-16" target="c5bdCe7pWxvnxydbhBh3-19">
