@@ -3083,7 +3083,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="c5bdCe7pWxvnxydbhBh3-10" value="soPhysicsComponent.OnGameObjectInstanceFinish&#xa;&#xa;设置 pendingUsage _pendingPhysicsPrefabUsage = 0&#xa;设置usage _physicsPrefabUsage&#xa;就是将usage 切换状态" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-2070" y="1850" width="340" height="80" as="geometry" />
+          <mxGeometry x="-2070" y="1810" width="340" height="120" as="geometry" />
         </mxCell>
         <mxCell id="c5bdCe7pWxvnxydbhBh3-13" value="usage：物理模的长宽数据，是个配置，不需要读prefab" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-2270" y="1050" width="390" height="100" as="geometry" />
@@ -3096,8 +3096,8 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="c5bdCe7pWxvnxydbhBh3-14" value="调用基类的创建函数&#xa;soPhysicsComponentBase.CreatePhysics&#xa;&#xa;创建obj&#xa;CreatePhysicsGameObject&#xa;&#xa;OnCreatePhysicsFinish&#xa;&#xa;若有物理模 collider 则触发相关事件&#xa;ePrePhysicsInstanceChanged&#xa;ePhysicsInstanceChanged" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-2030" y="2040" width="260" height="170" as="geometry" />
+        <mxCell id="c5bdCe7pWxvnxydbhBh3-14" value="&#xa;&#xa;soPhysicsComponent.OnGameObjectInstanceFinish&#xa;调用基类的创建函数&#xa;soPhysicsComponentBase.CreatePhysics&#xa;&#xa;创建obj&#xa;CreatePhysicsGameObject&#xa;&#xa;OnCreatePhysicsFinish&#xa;&#xa;若有物理模 collider 则触发相关事件&#xa;ePrePhysicsInstanceChanged&#xa;ePhysicsInstanceChanged" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-2070" y="1980" width="340" height="240" as="geometry" />
         </mxCell>
         <mxCell id="c5bdCe7pWxvnxydbhBh3-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c5bdCe7pWxvnxydbhBh3-16" target="c5bdCe7pWxvnxydbhBh3-19">
           <mxGeometry relative="1" as="geometry" />
