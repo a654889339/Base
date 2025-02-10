@@ -3139,10 +3139,15 @@
         <mxCell id="iEgEIoFewOHy6eMrCQCa-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iEgEIoFewOHy6eMrCQCa-2" target="iEgEIoFewOHy6eMrCQCa-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="iEgEIoFewOHy6eMrCQCa-9" value="ach_handle.go Init 初始化协议句柄" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="iEgEIoFewOHy6eMrCQCa-6">
+          <mxGeometry x="-0.0125" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="iEgEIoFewOHy6eMrCQCa-2" value="app.Init" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="210" y="915" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="iEgEIoFewOHy6eMrCQCa-5" value="run.go Run()" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="iEgEIoFewOHy6eMrCQCa-5" value="run.go Run(port, 协议handle)" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="210" y="1055" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
