@@ -3121,7 +3121,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="86O8jEHe_pXoGgHQaRAR" name="golang框架">
-    <mxGraphModel dx="954" dy="2260" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="795" dy="1883" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3136,8 +3136,14 @@
         <mxCell id="iEgEIoFewOHy6eMrCQCa-1" value="&lt;div&gt;入口&lt;/div&gt;ace_server.go main()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="190" y="760" width="160" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="iEgEIoFewOHy6eMrCQCa-2" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;app.Init&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="iEgEIoFewOHy6eMrCQCa-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iEgEIoFewOHy6eMrCQCa-2" target="iEgEIoFewOHy6eMrCQCa-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iEgEIoFewOHy6eMrCQCa-2" value="app.Init" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="210" y="915" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iEgEIoFewOHy6eMrCQCa-5" value="run.go Run()" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="210" y="1055" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
