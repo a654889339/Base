@@ -3154,7 +3154,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="xtiAD-1JU0K1YePwAoic" name="交易行">
-    <mxGraphModel dx="2832" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2832" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3167,8 +3167,11 @@
         <mxCell id="DWsmJ10lnh7At93Z0QQi-3" value="App" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-260" y="710" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="DWsmJ10lnh7At93Z0QQi-4" value="App" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-260" y="850" width="120" height="60" as="geometry" />
+        <mxCell id="DWsmJ10lnh7At93Z0QQi-4" value="Mall&lt;div&gt;1. 扣除库存表数据&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-330" y="860" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="DWsmJ10lnh7At93Z0QQi-6" value="DB 数据表&lt;br&gt;1. 玩家背包表&lt;br&gt;2. 上架道具表" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-210" y="-30" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
