@@ -3154,21 +3154,21 @@
     </mxGraphModel>
   </diagram>
   <diagram id="xtiAD-1JU0K1YePwAoic" name="交易行">
-    <mxGraphModel dx="2832" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3659" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="DWsmJ10lnh7At93Z0QQi-2" value="跨服购买&lt;div&gt;卖家离线时，卖方服行为&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-280" y="500" width="190" height="110" as="geometry" />
+          <mxGeometry x="-1200" y="720" width="190" height="110" as="geometry" />
         </mxCell>
         <mxCell id="DWsmJ10lnh7At93Z0QQi-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DWsmJ10lnh7At93Z0QQi-3" target="DWsmJ10lnh7At93Z0QQi-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="DWsmJ10lnh7At93Z0QQi-3" value="App" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-260" y="710" width="120" height="60" as="geometry" />
+          <mxGeometry x="-1180" y="930" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="DWsmJ10lnh7At93Z0QQi-4" value="Mall&lt;div&gt;1. 扣除库存表数据&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-330" y="860" width="260" height="70" as="geometry" />
+          <mxGeometry x="-1250" y="1080" width="260" height="70" as="geometry" />
         </mxCell>
         <mxCell id="DWsmJ10lnh7At93Z0QQi-8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-790" y="-255" width="1380" height="520" as="geometry" />
@@ -3176,7 +3176,7 @@
         <mxCell id="DWsmJ10lnh7At93Z0QQi-6" value="MongoDB 数据表&lt;br&gt;1. 玩家背包表（普通玩家背包）&lt;br&gt;2. 上架道具表（背包道具上架后移至此表，售出行为从此表扣除，仅做增量操作，支持多地读写）" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-710" y="-80" width="670" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="DWsmJ10lnh7At93Z0QQi-7" value="Redis 数据表&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. 订单状态表（用于给app查询订单结果）&lt;br&gt;2. 跨服发货出售表 （&lt;b&gt;跨服售卖&lt;/b&gt;，卖方将道具转移此处）&lt;br&gt;3. 跨服发货接受表（&lt;b&gt;跨服售卖&lt;/b&gt;，买方接受跨服来的道具）&lt;br&gt;4. 本服发货表（&lt;b&gt;本服售卖操作&lt;/b&gt;和 3. 的道具转移此处，等待发邮件给买家）&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="DWsmJ10lnh7At93Z0QQi-7" value="Redis 数据表&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;订单状态表（用于给app查询订单结果）&lt;/div&gt;&lt;div&gt;本服发货表（&lt;b&gt;本服售卖操作&amp;nbsp;&lt;/b&gt;的道具转移此处，等待发邮件给买家）&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;跨服订单用：&lt;/div&gt;&lt;div&gt;跨服订单状态（用于监控跨服订单的行为）&lt;/div&gt;&lt;div&gt;跨服发货出售表 （&lt;b&gt;跨服售卖&lt;/b&gt;，卖方服 将道具转移此处）&lt;br&gt;跨服发货接受表（&lt;b&gt;跨服售卖&lt;/b&gt;，买方服 接受对方服来的道具）&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="30" y="-40" width="510" height="170" as="geometry" />
         </mxCell>
         <mxCell id="DWsmJ10lnh7At93Z0QQi-9" value="数据存储相关" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=42;" vertex="1" parent="1">
