@@ -3235,6 +3235,11 @@
         <mxCell id="DWsmJ10lnh7At93Z0QQi-14" value="【订单传输列表】 修改订单状态为 =&amp;gt; 传输中&lt;div&gt;【跨服发货表】 写入道具&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;--------------------------------------&amp;nbsp;&lt;/div&gt;&lt;div&gt;以上失败，都会进行&lt;b&gt;【库存表】回滚&lt;/b&gt;&lt;/div&gt;&lt;div&gt;以后失败，不再回滚【库存表】&lt;/div&gt;&lt;div&gt;--------------------------------------&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;开始http传输&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-880" y="1300" width="350" height="160" as="geometry" />
         </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DWsmJ10lnh7At93Z0QQi-19" target="Oo6iRAlg17RxCN4LxruI-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1020" y="2000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="DWsmJ10lnh7At93Z0QQi-19" value="完成&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;[订单状态表] 修改&lt;b&gt; 订单状态 =&amp;gt; 完成&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1420" y="1754" width="220" height="60" as="geometry" />
         </mxCell>
@@ -3254,6 +3259,11 @@
         </mxCell>
         <mxCell id="Oo6iRAlg17RxCN4LxruI-4" value="http传输成功" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=22;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="-705" y="1530" as="geometry" />
+        </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Oo6iRAlg17RxCN4LxruI-5" target="Oo6iRAlg17RxCN4LxruI-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1010" y="2000" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="Oo6iRAlg17RxCN4LxruI-5" value="&lt;div&gt;【订单状态表】 修改状态为 &lt;b&gt;完成&lt;/b&gt;&lt;/div&gt;【订单传输表】删除此订单" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-807.5" y="1745" width="205" height="115" as="geometry" />
@@ -3327,6 +3337,9 @@
         </mxCell>
         <mxCell id="Oo6iRAlg17RxCN4LxruI-31" value="离线释放锁" style="whiteSpace=wrap;html=1;fontSize=22;" vertex="1" parent="1">
           <mxGeometry x="790" y="2440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-36" value="订单备份流程" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1090" y="2010" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
