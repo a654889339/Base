@@ -3338,7 +3338,7 @@
         <mxCell id="Oo6iRAlg17RxCN4LxruI-31" value="离线释放锁" style="whiteSpace=wrap;html=1;fontSize=22;" vertex="1" parent="1">
           <mxGeometry x="790" y="2440" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Oo6iRAlg17RxCN4LxruI-36" value="订单备份流程" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-36" value="订单备份流程，和订单号查重流程" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1090" y="2010" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
