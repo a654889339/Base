@@ -3281,6 +3281,33 @@
         <mxCell id="Oo6iRAlg17RxCN4LxruI-13" value="【订单传输表】移除订单" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="425" y="1420" width="230" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Oo6iRAlg17RxCN4LxruI-17" target="Oo6iRAlg17RxCN4LxruI-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Oo6iRAlg17RxCN4LxruI-17" target="Oo6iRAlg17RxCN4LxruI-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-17" value="&lt;b&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;app上架&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-946.25" y="2238" width="482.5" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Oo6iRAlg17RxCN4LxruI-19" target="Oo6iRAlg17RxCN4LxruI-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-19" value="&lt;span style=&quot;font-size: 22px;&quot;&gt;&lt;b&gt;mallServer拿到玩家在线锁（玩家离线）&lt;/b&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1490" y="2490" width="482.5" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Oo6iRAlg17RxCN4LxruI-21" target="Oo6iRAlg17RxCN4LxruI-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-21" value="&lt;span style=&quot;font-size: 22px;&quot;&gt;&lt;b&gt;拿不到锁，就转发GameServer（玩家在线）&lt;/b&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-360" y="2480" width="482.5" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-23" value="GS将道具从【玩家背包表】转移到【库存表】" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-248.12" y="2680" width="258.75" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Oo6iRAlg17RxCN4LxruI-25" value="MallServer将道具从【玩家背包表】转移到【库存表】" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1437.81" y="2680" width="378.12" height="90" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
