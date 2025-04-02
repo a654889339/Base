@@ -3117,11 +3117,11 @@
         <mxCell id="c5bdCe7pWxvnxydbhBh3-21" value="UnitPhysiceData.SetCollider" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-2157.5" y="2610" width="165" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="gcpnNU9IXexXXWU_x9yI-1" value="LoadSceneUnityAssets" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-4340" y="-230" width="180" height="50" as="geometry" />
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-1" value="LoadSceneUnityAssets&#xa;增加 unityAssetRefCount 计数" style="whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-4410" y="-220" width="180" height="50" as="geometry" />
         </mxCell>
         <mxCell id="gcpnNU9IXexXXWU_x9yI-2" value="场景资源文件，分成根据配置加载和根据场景加载两套入口，&lt;br&gt;分别对应两个引用计数" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-3690" y="-550" width="190" height="60" as="geometry" />
+          <mxGeometry x="-3590" y="-1090" width="190" height="60" as="geometry" />
         </mxCell>
         <mxCell id="gcpnNU9IXexXXWU_x9yI-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gcpnNU9IXexXXWU_x9yI-3" target="gcpnNU9IXexXXWU_x9yI-1">
           <mxGeometry relative="1" as="geometry" />
@@ -3133,7 +3133,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="gcpnNU9IXexXXWU_x9yI-5" value="LoadGarageTourLogicScene" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-4360" y="-470" width="220" height="70" as="geometry" />
+          <mxGeometry x="-4330" y="-510" width="220" height="70" as="geometry" />
         </mxCell>
         <mxCell id="gcpnNU9IXexXXWU_x9yI-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gcpnNU9IXexXXWU_x9yI-9" target="gcpnNU9IXexXXWU_x9yI-1">
           <mxGeometry relative="1" as="geometry" />
@@ -3169,6 +3169,33 @@
         </mxCell>
         <mxCell id="gcpnNU9IXexXXWU_x9yI-13" value="SortieLogic.Enter" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-4660" y="-620" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gcpnNU9IXexXXWU_x9yI-17" target="gcpnNU9IXexXXWU_x9yI-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-17" value="手动按钮加载&#xa;LoadLogicScene" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-4380" y="-700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gcpnNU9IXexXXWU_x9yI-19" target="gcpnNU9IXexXXWU_x9yI-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-19" value="LoadGarageTourScene&#xa;[GarageTour] 开始加载格纳库巡游场景&#xa;未调用" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-4150" y="-700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-22" value="LoadSceneConfigAssets&#xa;增加 configRefCount 计数" style="whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-3570" y="-190" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gcpnNU9IXexXXWU_x9yI-23" target="gcpnNU9IXexXXWU_x9yI-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-23" value="LoadSceneMainConfigAssetsAsync" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-3810" y="-310" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gcpnNU9IXexXXWU_x9yI-25" target="gcpnNU9IXexXXWU_x9yI-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-25" value="InitWarScenePrepareInfo" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-3775" y="-430" width="150" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
