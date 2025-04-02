@@ -2949,7 +2949,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="KvKo4FAbhzukAey486Aq" name="Asset加载">
-    <mxGraphModel dx="6131" dy="3321" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5902" dy="3321" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3117,7 +3117,7 @@
         <mxCell id="c5bdCe7pWxvnxydbhBh3-21" value="UnitPhysiceData.SetCollider" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-2157.5" y="2610" width="165" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="gcpnNU9IXexXXWU_x9yI-1" value="&lt;div style=&quot;background-color:#262626;color:#d0d0d0&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#39cc9b;&quot;&gt;LoadSceneUnityAssets&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-1" value="LoadSceneUnityAssets" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-4340" y="-230" width="180" height="50" as="geometry" />
         </mxCell>
         <mxCell id="gcpnNU9IXexXXWU_x9yI-2" value="场景资源文件，分成根据配置加载和根据场景加载两套入口，&lt;br&gt;分别对应两个引用计数" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -3126,19 +3126,19 @@
         <mxCell id="gcpnNU9IXexXXWU_x9yI-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gcpnNU9IXexXXWU_x9yI-3" target="gcpnNU9IXexXXWU_x9yI-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="gcpnNU9IXexXXWU_x9yI-3" value="&lt;div style=&quot;background-color:#262626;color:#d0d0d0&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#39cc9b;&quot;&gt;LoadLogicScene&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-3" value="LoadLogicScene" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-4640" y="-360" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="gcpnNU9IXexXXWU_x9yI-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gcpnNU9IXexXXWU_x9yI-5" target="gcpnNU9IXexXXWU_x9yI-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="gcpnNU9IXexXXWU_x9yI-5" value="&lt;div style=&quot;background-color:#262626;color:#d0d0d0&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#39cc9b;&quot;&gt;LoadGarageTourLogicScene&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-5" value="LoadGarageTourLogicScene" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-4360" y="-470" width="220" height="70" as="geometry" />
         </mxCell>
         <mxCell id="gcpnNU9IXexXXWU_x9yI-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gcpnNU9IXexXXWU_x9yI-9" target="gcpnNU9IXexXXWU_x9yI-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="gcpnNU9IXexXXWU_x9yI-9" value="&lt;div style=&quot;background-color:#262626;color:#d0d0d0&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:11.3pt;&quot;&gt;&lt;span style=&quot;color:#39cc9b;&quot;&gt;DoLoadGarageTourLogicScene&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-9" value="DoLoadGarageTourLogicScene" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-4080" y="-360" width="220" height="60" as="geometry" />
         </mxCell>
       </root>
