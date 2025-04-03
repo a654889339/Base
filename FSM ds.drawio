@@ -2949,7 +2949,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="KvKo4FAbhzukAey486Aq" name="Asset加载">
-    <mxGraphModel dx="6127" dy="3434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6954" dy="3434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3211,6 +3211,24 @@
         </mxCell>
         <mxCell id="kwJrlkoMvjkNrSfkzsFH-3" value="UnLoadSceneAssets&#xa;减少 unityAssetRefCount 计数" style="whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="-4800" y="1210" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kwJrlkoMvjkNrSfkzsFH-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kwJrlkoMvjkNrSfkzsFH-4" target="kwJrlkoMvjkNrSfkzsFH-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwJrlkoMvjkNrSfkzsFH-4" value="SceneLoader.UnLoadLogicScene" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-5080" y="1030" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kwJrlkoMvjkNrSfkzsFH-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="kwJrlkoMvjkNrSfkzsFH-6" target="kwJrlkoMvjkNrSfkzsFH-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwJrlkoMvjkNrSfkzsFH-6" value="GarageTourManager.UnloadGarageTourLogicScene" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-4670" y="920" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="kwJrlkoMvjkNrSfkzsFH-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kwJrlkoMvjkNrSfkzsFH-8" target="kwJrlkoMvjkNrSfkzsFH-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwJrlkoMvjkNrSfkzsFH-8" value="GarageTourManager.DoUnloadGarageTourLogicScene" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-4200" y="1017.5" width="310" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
