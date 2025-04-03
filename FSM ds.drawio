@@ -3197,6 +3197,12 @@
         <mxCell id="gcpnNU9IXexXXWU_x9yI-25" value="InitWarScenePrepareInfo" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-3775" y="-430" width="150" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gcpnNU9IXexXXWU_x9yI-27" target="gcpnNU9IXexXXWU_x9yI-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gcpnNU9IXexXXWU_x9yI-27" value="GameRoom.StartGamePlay&#xa;GameRoom.StartGamePlayInMirror" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-3350" y="-310" width="220" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
