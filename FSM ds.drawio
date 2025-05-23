@@ -3474,8 +3474,14 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="psskiHUP94MA0t7EmP0p-1" value="CreatePhysics(soPHYSICS_INIT_DATA data)" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="psskiHUP94MA0t7EmP0p-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="psskiHUP94MA0t7EmP0p-1" target="psskiHUP94MA0t7EmP0p-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psskiHUP94MA0t7EmP0p-1" value="soPhysicsComponentBase.csCreatePhysics(soPHYSICS_INIT_DATA data)" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="330" y="520" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="psskiHUP94MA0t7EmP0p-2" value="soPhysicsColliderComponent.cs&#xa;CreatePhysicsGameObject(soPHYSICS_INIT_DATA data)" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="325" y="740" width="370" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
