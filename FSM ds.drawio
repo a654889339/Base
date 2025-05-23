@@ -3477,11 +3477,23 @@
         <mxCell id="psskiHUP94MA0t7EmP0p-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="psskiHUP94MA0t7EmP0p-1" target="psskiHUP94MA0t7EmP0p-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="psskiHUP94MA0t7EmP0p-1" value="soPhysicsComponentBase.csCreatePhysics(soPHYSICS_INIT_DATA data)" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="330" y="520" width="360" height="60" as="geometry" />
+        <mxCell id="psskiHUP94MA0t7EmP0p-1" value="soPhysicsComponentBase.cs&#xa;CreatePhysics(soPHYSICS_INIT_DATA data)" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="330" y="470" width="360" height="110" as="geometry" />
         </mxCell>
         <mxCell id="psskiHUP94MA0t7EmP0p-2" value="soPhysicsColliderComponent.cs&#xa;CreatePhysicsGameObject(soPHYSICS_INIT_DATA data)" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="325" y="740" width="370" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="psskiHUP94MA0t7EmP0p-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="psskiHUP94MA0t7EmP0p-4" target="psskiHUP94MA0t7EmP0p-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psskiHUP94MA0t7EmP0p-4" value="soPhysicsComponent.cs&#xa;OnGameObjectInstanceFinish" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="660" y="250" width="290" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="psskiHUP94MA0t7EmP0p-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="psskiHUP94MA0t7EmP0p-6" target="psskiHUP94MA0t7EmP0p-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="psskiHUP94MA0t7EmP0p-6" value="soPhysicsColliderComponent.cs&#xa;CreatePhysics(soPHYSICS_INIT_DATA data)" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="220" y="250" width="250" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
