@@ -3593,6 +3593,12 @@
         <mxCell id="QuOwT1ZngdR0lYqbph2L-33" value="soUnitStage.cs&#xa;&#xa;base.OnPostAddToScene" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="1287.5" y="1020" width="155" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QuOwT1ZngdR0lYqbph2L-35" target="QuOwT1ZngdR0lYqbph2L-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-35" value="WarScene.cs&#xa;AddSceneObject(SceneObject so)&#xa;so.AddToScene" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="2570" y="710" width="290" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
