@@ -3538,6 +3538,40 @@
         <mxCell id="QuOwT1ZngdR0lYqbph2L-18" value="&#xa;so.PhysicsComponent._physicsInstanceRequest 是归属于SO下的一个队列&#xa;&#xa;PhysicsInstanceRequest&#xa;&#xa;_requestObjs 注册每个类型的回调&#xa;&#xa;ActivatePhysicsInstance 执行回调" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="1550" y="-300" width="530" height="160" as="geometry" />
         </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QuOwT1ZngdR0lYqbph2L-19" target="QuOwT1ZngdR0lYqbph2L-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1735" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-19" value="soPhysicsComponent.cs&#xa;CreatePhysics(soPHYSICS_INIT_DATA data, int usage, bool createImmediately)&#xa;&#xa;_physicsInstanceRequest.RequestPhysicsInstance(data.prefabServer.Asset, usage, data, sceneID, createImmediately)" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="430" width="470" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-21" value="&#xa;so.PhysicsComponent._physicsInstanceRequest.RequestPhysicsInstance" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1405" y="630" width="660" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QuOwT1ZngdR0lYqbph2L-22" target="QuOwT1ZngdR0lYqbph2L-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-22" value="SceneObject.cs&#xa;CreatePhysics" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1645" y="280" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QuOwT1ZngdR0lYqbph2L-24" target="QuOwT1ZngdR0lYqbph2L-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-24" value="SoLifeCycleComponent.cs&#xa;&#xa;&#xa;SoLifeCycleType LifeCycleType set {}" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="110" width="350" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QuOwT1ZngdR0lYqbph2L-26" target="QuOwT1ZngdR0lYqbph2L-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1960" y="240" />
+              <mxPoint x="1735" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-26" value="SceneObject.cs&#xa;&#xa;OnAddToScene" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="125" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
