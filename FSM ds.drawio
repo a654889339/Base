@@ -3474,12 +3474,12 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="QuOwT1ZngdR0lYqbph2L-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="psskiHUP94MA0t7EmP0p-1" target="QuOwT1ZngdR0lYqbph2L-8">
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="psskiHUP94MA0t7EmP0p-1" target="QuOwT1ZngdR0lYqbph2L-11">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="410" y="780" as="targetPoint" />
+            <mxPoint x="340" y="690" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="psskiHUP94MA0t7EmP0p-1" value="soPhysicsComponentBase.cs&#xa;CreatePhysics(soPHYSICS_INIT_DATA data)&#xa;&#xa;DestroyPhysicsObj&#xa;CreatePhysicsGameObjectOnCreatePhysicsFinish&#xa;&#xa;事件:&#xa;so事件 ePrePhysicsInstanceChanged&#xa;so事件 ePhysicsInstanceChanged&#xa;全局事件 ePhysicsInstanceChanged" style="whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="psskiHUP94MA0t7EmP0p-1" value="soPhysicsComponentBase.cs&#xa;CreatePhysics(soPHYSICS_INIT_DATA data)&#xa;&#xa;DestroyPhysicsObj&#xa;&#xa;CreatePhysicsGameObject&#xa;OnCreatePhysicsFinish&#xa;&#xa;事件:&#xa;so事件 ePrePhysicsInstanceChanged&#xa;so事件 ePhysicsInstanceChanged&#xa;全局事件 ePhysicsInstanceChanged" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="330" y="300" width="360" height="270" as="geometry" />
         </mxCell>
         <mxCell id="QuOwT1ZngdR0lYqbph2L-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="psskiHUP94MA0t7EmP0p-4" target="psskiHUP94MA0t7EmP0p-1">
@@ -3506,8 +3506,28 @@
         <mxCell id="psskiHUP94MA0t7EmP0p-10" value="soPhysicsColliderComponent.cs&#xa;AddTrigger(TriggerComponentData tcd)" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-230" y="70" width="250" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="QuOwT1ZngdR0lYqbph2L-8" value="soPhysicsComponentBase.cs&#xa;CreatePhysicsGameObject(data)" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="730" width="330" height="70" as="geometry" />
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QuOwT1ZngdR0lYqbph2L-8" target="QuOwT1ZngdR0lYqbph2L-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-8" value="soPhysicsComponentBase.cs&#xa;CreatePhysicsGameObject(data)" style="whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="460" y="695" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QuOwT1ZngdR0lYqbph2L-11" target="QuOwT1ZngdR0lYqbph2L-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-11" value="soPhysicsComponentBase.cs&#xa;DestroyPhysicsObj&#xa;&#xa;so事件 eBeforePhysicsInstanceDestroy &#xa;全局事件 eBeforePhysicsInstanceDestroy" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="690" width="310" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="QuOwT1ZngdR0lYqbph2L-13" target="psskiHUP94MA0t7EmP0p-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1098" y="630" />
+              <mxPoint x="510" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-13" value="soPhysicsComponentBase.cs&#xa;OnCreatePhysicsFinish" style="whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="882.5" y="700" width="245" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
