@@ -3569,7 +3569,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="QuOwT1ZngdR0lYqbph2L-26" value="SceneObject.cs&#xa;&#xa;OnAddToScene&#xa;&#xa;if (soPhysicsConfig != null &amp;&amp; soPhysicsConfig.NeedPrefabServer &amp;&amp; soPhysicsConfig.prefabServer != null &amp;&amp; !string.IsNullOrEmpty(soPhysicsConfig.prefabServer.AssetPath))&#xa;            {&#xa;#if _CLIENT&#xa;                if (!soPhysicsConfig.closeClientPhysicsLoad || CommonLogicUtils.IsServer())&#xa;#endif&#xa;                {&#xa;                    CreatePhysics(soPhysicsConfig.prefabServer, (int)SoPhysicsPrefabUsage.Normal, false);" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-26" value="                                                                                                  SceneObject.cs&#xa;&#xa;                                                                                                OnAddToScene&#xa;&#xa;if (soPhysicsConfig != null &amp;&amp; soPhysicsConfig.NeedPrefabServer &amp;&amp; soPhysicsConfig.prefabServer != null &amp;&amp; !string.IsNullOrEmpty(soPhysicsConfig.prefabServer.AssetPath))&#xa;            {&#xa;                        CreatePhysics(soPhysicsConfig.prefabServer, (int)SoPhysicsPrefabUsage.Normal, false);&#xa;    CreateExternPhysics();&#xa;}&#xa;" style="whiteSpace=wrap;align=left;" vertex="1" parent="1">
           <mxGeometry x="2260" y="980" width="750" height="215" as="geometry" />
         </mxCell>
       </root>
