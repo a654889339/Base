@@ -3535,6 +3535,9 @@
         <mxCell id="QuOwT1ZngdR0lYqbph2L-16" value="soPhysicsComponent.cs&#xa;OnInit 初始化完成回调 OnGameObjectInstanceFinish&#xa;&#xa;_physicsInstanceRequest 加入请求队列" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="851.25" y="-130" width="307.5" height="170" as="geometry" />
         </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-18" value="&lt;div style=&quot;background-color: rgb(38, 38, 38); color: rgb(208, 208, 208);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.8pt;&quot;&gt;&lt;span style=&quot;color: rgb(193, 145, 255);&quot;&gt;PhysicsInstanceRequest&lt;br/&gt;&lt;br/&gt;&lt;div style=&quot;color: rgb(208, 208, 208);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.8pt;&quot;&gt;&lt;span style=&quot;color:#66c3cc;&quot;&gt;_requestObjs 注册每个类型的回调&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.8pt;&quot;&gt;&lt;span style=&quot;color:#66c3cc;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="-270" width="370" height="70" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
