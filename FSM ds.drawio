@@ -3532,8 +3532,8 @@
         <mxCell id="QuOwT1ZngdR0lYqbph2L-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QuOwT1ZngdR0lYqbph2L-16" target="psskiHUP94MA0t7EmP0p-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="QuOwT1ZngdR0lYqbph2L-16" value="soPhysicsComponent.cs&#xa;OnInit&#xa;&#xa;_physicsInstanceRequest 加入请求队列" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="932.5" y="-100" width="307.5" height="170" as="geometry" />
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-16" value="soPhysicsComponent.cs&#xa;OnInit 初始化完成回调 OnGameObjectInstanceFinish&#xa;&#xa;_physicsInstanceRequest 加入请求队列" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="851.25" y="-130" width="307.5" height="170" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
