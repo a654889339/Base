@@ -3546,8 +3546,8 @@
         <mxCell id="QuOwT1ZngdR0lYqbph2L-19" value="soPhysicsComponent.cs&#xa;CreatePhysics(soPHYSICS_INIT_DATA data, int usage, bool createImmediately)&#xa;&#xa;_physicsInstanceRequest.RequestPhysicsInstance(data.prefabServer.Asset, usage, data, sceneID, createImmediately)" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="1750" y="1310" width="470" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="QuOwT1ZngdR0lYqbph2L-21" value="&#xa;so.PhysicsComponent._physicsInstanceRequest.RequestPhysicsInstance" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="1655" y="1510" width="660" height="100" as="geometry" />
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-21" value="&#xa;so.PhysicsComponent._physicsInstanceRequest.RequestPhysicsInstance(GameObject resource, int usage, object userData, long sceneID, bool createImmediately)&#xa;&#xa;每种类型usage只有一个回调，&#xa;若此时添加usage进入队列，发现此类型已有别的回调，则需作如下判断：&#xa;&#xa;是否资源实例id相同，&#xa;若不同，说明是两个资源，&#xa;则放弃旧资源的回调（若旧资源已加载则立刻删除，未加载则直接剔除)&#xa;" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1655" y="1510" width="660" height="150" as="geometry" />
         </mxCell>
         <mxCell id="QuOwT1ZngdR0lYqbph2L-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QuOwT1ZngdR0lYqbph2L-22" target="QuOwT1ZngdR0lYqbph2L-19">
           <mxGeometry relative="1" as="geometry" />
