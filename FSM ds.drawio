@@ -3529,6 +3529,12 @@
         <mxCell id="QuOwT1ZngdR0lYqbph2L-13" value="soPhysicsComponentBase.cs&#xa;OnCreatePhysicsFinish" style="whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="882.5" y="700" width="245" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QuOwT1ZngdR0lYqbph2L-16" target="psskiHUP94MA0t7EmP0p-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QuOwT1ZngdR0lYqbph2L-16" value="&lt;div style=&quot;background-color: rgb(38, 38, 38); color: rgb(208, 208, 208);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.8pt;&quot;&gt;&lt;span style=&quot;color: rgb(57, 204, 155);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; white-space: normal; background-color: rgb(236, 236, 236);&quot;&gt;soPhysicsComponent.cs&lt;/span&gt;&lt;br/&gt;OnInit&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="945" y="10" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
