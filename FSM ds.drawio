@@ -634,7 +634,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="D4cUpWKldzLiPTz7wScZ" name="结算模块">
-    <mxGraphModel dx="7198" dy="1185" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6959" dy="1185" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -647,7 +647,7 @@
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X2hCjSS4Vl0-8XwFfeY9-2" target="X2hCjSS4Vl0-8XwFfeY9-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-2" value="WarUser.SetGSSettleBackInfo&lt;div&gt;1. 撤离阶段的&amp;nbsp;&lt;b&gt;未撤离的玩家集合&lt;/b&gt;&amp;nbsp;移除当前玩家 WarSettleStage.waitSettleBackUsers.Remove(userID)&lt;/div&gt;&lt;div&gt;2. 在撤离阶段模块里 保存撤离时玩家的数据&amp;nbsp;settleStage.OnSettleBack(this(WarUser), info);&lt;/div&gt;&lt;div&gt;3. 所有玩家结算完毕&amp;nbsp;if (_settleCount &amp;lt;= 0)&lt;/div&gt;&lt;div&gt;4. 玩家播放结算界面UI SendSettleToClient :&amp;nbsp;&lt;b&gt;S2C_PROTOCOL.S2CWarSettle&lt;/b&gt;&lt;/div&gt;&lt;div&gt;5. 若是马氏马克地图则把所有玩家都踢出去&amp;nbsp;DoKickPlayerAfterEvaluate&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="X2hCjSS4Vl0-8XwFfeY9-2" value="WarUser.SetGSSettleBackInfo&lt;div&gt;1. 撤离阶段的&amp;nbsp;&lt;b&gt;未撤离的玩家集合&lt;/b&gt;&amp;nbsp;移除当前玩家 WarSettleStage.waitSettleBackUsers.Remove(userID)&lt;/div&gt;&lt;div&gt;2. 在撤离阶段模块里 保存撤离时玩家的数据&amp;nbsp;settleStage.OnSettleBack(this(WarUser), info);&lt;/div&gt;&lt;div&gt;3. 所有玩家结算完毕&amp;nbsp;if (_settleCount &amp;lt;= 0)&lt;/div&gt;&lt;div&gt;4. 玩家播放结算界面UI SendSettleToClient :&amp;nbsp;&lt;b&gt;S2C_PROTOCOL.&lt;font style=&quot;color: rgb(255, 6, 6);&quot;&gt;S2CWarSettle&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;5. 若是马氏马克地图则把所有玩家都踢出去&amp;nbsp;DoKickPlayerAfterEvaluate&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="-60" y="790" width="910" height="140" as="geometry" />
         </mxCell>
         <mxCell id="X2hCjSS4Vl0-8XwFfeY9-4" value="游戏4个阶段&lt;div&gt;&lt;div&gt;public enum WarProgressStatus {&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarStandby&quot;)] WarStandby = 0,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarWaitting&quot;)] WarWaitting = 1,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarInFormalBattle&quot;)] WarInFormalBattle = 2,&lt;/div&gt;&lt;div&gt;&amp;nbsp; [pbr::OriginalName(&quot;WarSettle&quot;)] WarSettle = 3,&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -1199,8 +1199,8 @@
         <mxCell id="f7qhDMWV73_ZibBp8juU-1" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.8pt;&quot;&gt;GS2RS_PLAYER_SETTLE_BACK_NOTIFY&lt;/pre&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.8pt;&quot;&gt;结算完成后 gs给roomsvr回包&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-3700" y="3570" width="410" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="i3qLsqpjkSqh0jPNfVeN-2" value="Active-&amp;gt;&lt;br&gt;WarSettleStage.CheckEnd&lt;br&gt;&lt;div&gt;处于对局结算状态时，实时检查 是否 所有人都完成了结算&lt;br&gt;若超过5秒，强制结束此阶段，并输出多少人未完成结算。&lt;/div&gt;&lt;div&gt;结束此阶段&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-1670" y="4140" width="650" height="330" as="geometry" />
+        <mxCell id="i3qLsqpjkSqh0jPNfVeN-2" value="Active-&amp;gt;&lt;br&gt;WarSettleStage.CheckEnd&lt;br&gt;&lt;div&gt;处于对局结算状态时，实时检查 是否 所有人都完成了结算&lt;br&gt;若超过5秒，强制结束此阶段，并输出多少人未完成结算。&lt;/div&gt;&lt;div&gt;结束此阶段&lt;br&gt;&lt;br&gt;若此时某客户端没有收到S2CWarSettle 协议，就会出现各种异常&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1270" y="4270" width="650" height="330" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
