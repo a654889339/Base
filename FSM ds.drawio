@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.0" pages="18">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.4" pages="18">
   <diagram name="计分系统" id="CWwmlCPiOaKa8b5ezwnc">
     <mxGraphModel dx="4733" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1199,7 +1199,7 @@
         <mxCell id="f7qhDMWV73_ZibBp8juU-1" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.8pt;&quot;&gt;GS2RS_PLAYER_SETTLE_BACK_NOTIFY&lt;/pre&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.8pt;&quot;&gt;结算完成后 gs给roomsvr回包&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-3700" y="3570" width="410" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="i3qLsqpjkSqh0jPNfVeN-2" value="WarSettleStage.CheckEnd&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="i3qLsqpjkSqh0jPNfVeN-2" value="Active-&amp;gt;&lt;br&gt;WarSettleStage.CheckEnd&lt;br&gt;&lt;div&gt;处于对局结算状态时，实时检查 是否 所有人都完成了结算&lt;br&gt;若超过5秒，强制结束此阶段，并输出多少人未完成结算。&lt;/div&gt;&lt;div&gt;对局走向下一个结算BattleEnd&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1670" y="4140" width="650" height="330" as="geometry" />
         </mxCell>
       </root>
