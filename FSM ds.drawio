@@ -1202,7 +1202,7 @@
         <mxCell id="i3qLsqpjkSqh0jPNfVeN-2" value="Active-&amp;gt;&lt;br&gt;WarSettleStage.CheckEnd&lt;br&gt;&lt;div&gt;处于对局结算状态时，实时检查 是否 所有人都完成了结算&lt;br&gt;若超过5秒，强制结束此阶段，并输出多少人未完成结算。&lt;/div&gt;&lt;div&gt;结束此阶段&lt;br&gt;&lt;br&gt;若此时某客户端没有收到S2CWarSettle 协议，就会出现各种异常&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1270" y="4270" width="650" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="4lsJqs3TGVHzaBRxfMnQ-1" value="ServerWarUser的Activate" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="4lsJqs3TGVHzaBRxfMnQ-1" value="ServerWarUser的Activate，&#xa;会检测超过5秒未回结算协议，就补发一个手动填的结算协议" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-500" y="4300" width="420" height="120" as="geometry" />
         </mxCell>
       </root>
