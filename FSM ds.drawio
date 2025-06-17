@@ -3672,8 +3672,8 @@
         <mxCell id="ZRoetZviDDUU2PYH6Nng-14" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.4;" vertex="1" parent="1">
           <mxGeometry x="510" y="250" width="80" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ZRoetZviDDUU2PYH6Nng-15" value="RoomSvr" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="700" y="250" width="80" height="80" as="geometry" />
+        <mxCell id="ZRoetZviDDUU2PYH6Nng-15" value="RoomSvr" style="ellipse;whiteSpace=wrap;html=1;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="657" y="190" width="170" height="150" as="geometry" />
         </mxCell>
         <mxCell id="ZRoetZviDDUU2PYH6Nng-23" value="内网" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=32;fontColor=#FF0000;" vertex="1" parent="1">
           <mxGeometry x="-100" y="140" width="90" height="50" as="geometry" />
