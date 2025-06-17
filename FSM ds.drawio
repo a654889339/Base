@@ -3698,6 +3698,12 @@
         <mxCell id="i8Mi5RreLki6nulf4pJx-2" value="PlayerHandle::OnRoleIDResult" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="310" y="230" width="200" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="i8Mi5RreLki6nulf4pJx-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="i8Mi5RreLki6nulf4pJx-4" target="i8Mi5RreLki6nulf4pJx-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i8Mi5RreLki6nulf4pJx-4" value="PlayerHandle::_OnRpcPlayerVerify&#xa;&#xa;DB验证角色" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="310" y="50" width="200" height="70" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
