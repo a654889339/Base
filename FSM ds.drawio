@@ -3676,7 +3676,7 @@
         <mxCell id="ZRoetZviDDUU2PYH6Nng-24" value="外网" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=32;fontColor=#FF0000;" parent="1" vertex="1">
           <mxGeometry x="-240" y="620" width="90" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="pPZq2oNtRACg64Lftwad-1" value="控制器网关" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="pPZq2oNtRACg64Lftwad-1" value="控制器网关1" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="190" y="500" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pPZq2oNtRACg64Lftwad-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" parent="1" source="pPZq2oNtRACg64Lftwad-1" target="ZRoetZviDDUU2PYH6Nng-12" edge="1">
@@ -3689,6 +3689,9 @@
           <mxGeometry x="0.0048" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="FEK9dEDyH8yGLUuL6Qbm-1" value="控制器网关2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="500" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
