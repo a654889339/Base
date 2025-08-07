@@ -2948,8 +2948,8 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dRBmHMTsPE01A1FM8HG2-5" value="生成匹配结果后，搜集房间，信息等&#xa;&#xa;MatchManager::UpdateMatchResult" style="whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-1450" y="4980" width="420" height="75" as="geometry" />
+        <mxCell id="dRBmHMTsPE01A1FM8HG2-5" value="生成匹配结果后，搜集房间，信息等&#xa;&#xa;MatchManager::UpdateMatchResult&#xa;&#xa;从异步线程中取出匹配完成的结果" style="whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-1450" y="4900" width="420" height="125" as="geometry" />
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3fK3-NJlga3w_KKdaohe-3" target="3fK3-NJlga3w_KKdaohe-10">
           <mxGeometry relative="1" as="geometry">
