@@ -3026,8 +3026,14 @@
         <mxCell id="nncR2_VrT4PNfGOO_7GX-4" value="继续执行&#xa;&#xa;1. 计算AI的机甲等数据MatchManager::DealWithAIRandomInfo&#xa;&#xa;2. 计算所有人的机甲选择 MatchResult::RecalPreselectMechas&#xa;&#xa;3. 等待房间服&#xa;MatchManager::WaitRoomServer" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1020" y="6640" width="330" height="160" as="geometry" />
         </mxCell>
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nncR2_VrT4PNfGOO_7GX-7" target="nncR2_VrT4PNfGOO_7GX-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="nncR2_VrT4PNfGOO_7GX-7" value="MatchManager::WaitRoomServer&#xa;&#xa;状态：MATCH_WAITROOM&#xa;&#xa;向GS或Team广播通知e_match_wait_room&#xa;&#xa;置于m_waitQueue队列" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="-980" y="6880" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-8" value="MatchManager::UpdateWaitMatchResult&#xa;&#xa;检测m_waitQueue队列&#xa;&#xa;定时将队列里的所有匹配结果打包发给房间服，获取房间&#xa;&#xa;将发送过请求的匹配结果 挪到 m_waitingQueue 等待房间服回包" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="-1052.5" y="7110" width="395" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
