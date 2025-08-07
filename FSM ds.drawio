@@ -3040,7 +3040,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nncR2_VrT4PNfGOO_7GX-15" value="超时重试" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nncR2_VrT4PNfGOO_7GX-11">
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-15" value="未回包，超时重试" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nncR2_VrT4PNfGOO_7GX-11">
           <mxGeometry x="-0.0026" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
