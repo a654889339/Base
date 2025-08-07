@@ -3018,8 +3018,16 @@
         <mxCell id="nncR2_VrT4PNfGOO_7GX-2" value="MatchManager::WaitPlayerShowInfoTimeOut&#xa;&#xa;超时处理：遍历所有匹配单元，&#xa;1. 若该匹配单元信息都搜集成功则重新匹配&#xa;&#xa;2. 若该匹配单元有人没数据则取消匹配" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1450" y="6640" width="300" height="130" as="geometry" />
         </mxCell>
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nncR2_VrT4PNfGOO_7GX-4" target="nncR2_VrT4PNfGOO_7GX-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-855.0000000000005" y="6940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="nncR2_VrT4PNfGOO_7GX-4" value="继续执行&#xa;&#xa;1. 计算AI的机甲等数据MatchManager::DealWithAIRandomInfo&#xa;&#xa;2. 计算所有人的机甲选择 MatchResult::RecalPreselectMechas&#xa;&#xa;3. 等待房间服&#xa;MatchManager::WaitRoomServer" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-1020" y="6650" width="330" height="160" as="geometry" />
+          <mxGeometry x="-1020" y="6640" width="330" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-7" value="MatchManager::WaitRoomServer&#xa;&#xa;状态：MATCH_WAITROOM&#xa;&#xa;向GS或Team广播通知e_match_wait_player_show_info&#xa;&#xa;向GS获取玩家数据ms2gs_player_match_show_request&#xa;&#xa;置于m_playerShowInfoQueue队列" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="-980" y="6880" width="250" height="210" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
