@@ -2949,7 +2949,7 @@
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-7" value="没有" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3fK3-NJlga3w_KKdaohe-6">
           <mxGeometry x="0.7145" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint y="-517" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-11" value="是否有AI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3fK3-NJlga3w_KKdaohe-6">
