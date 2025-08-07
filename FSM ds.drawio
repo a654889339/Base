@@ -3060,11 +3060,16 @@
         <mxCell id="nncR2_VrT4PNfGOO_7GX-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nncR2_VrT4PNfGOO_7GX-16" target="nncR2_VrT4PNfGOO_7GX-18">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-22" value="&lt;span style=&quot;font-size: 12px; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;超时&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nncR2_VrT4PNfGOO_7GX-19">
+          <mxGeometry x="0.008" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="nncR2_VrT4PNfGOO_7GX-16" value="MatchManager::OnRoomServersResult&#xa;&#xa;1. 若无房间，有AI则重新匹配，无AI则MatchManager::WaitRoomServer 继续等待房间（这里可能有漏洞，此时在等待请求时应该加回waitingQueue队列）&#xa;&#xa;2. 成功则 继续执行确认房间流程 MatchHandle::MatchedRoomConfirm&#xa;&#xa;广播 e_match_confirm_room&#xa;&#xa;置于m_confirmQueue 队列&#xa;&#xa;状态改为：MATCH_CONFIRM" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
           <mxGeometry x="-830" y="7359" width="260" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="nncR2_VrT4PNfGOO_7GX-18" value="MatchManager::UpdateConfirmMatchResult&#xa;&#xa;检测m_confirmQueue 队列&#xa;&#xa;定时将队列里的所有匹配结果打包发给房间服，获取房间&#xa;&#xa;将发送过请求的匹配结果 挪到 m_waitingQueue 等待房间服回包" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
-          <mxGeometry x="-897.5" y="7640" width="395" height="150" as="geometry" />
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-18" value="MatchManager::UpdateConfirmMatchResult&#xa;&#xa;检测m_confirmQueue 队列&#xa;&#xa;超时重新匹配" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="-1020" y="7720" width="250" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
