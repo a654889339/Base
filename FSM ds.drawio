@@ -2940,11 +2940,22 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="3fK3-NJlga3w_KKdaohe-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dRBmHMTsPE01A1FM8HG2-5" target="3fK3-NJlga3w_KKdaohe-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3fK3-NJlga3w_KKdaohe-7" value="没有" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3fK3-NJlga3w_KKdaohe-6">
+          <mxGeometry x="0.7145" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="dRBmHMTsPE01A1FM8HG2-5" value="生成匹配结果后，搜集房间，信息等&#xa;&#xa;MatchManager::UpdateMatchResult" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1450" y="4980" width="420" height="75" as="geometry" />
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-3" value="MatchManager::BeforeWaitAi" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1517" y="5200" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3fK3-NJlga3w_KKdaohe-5" value="MatchManager::BeforeWaitRoomServer" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1240" y="5200" width="240" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
