@@ -2295,7 +2295,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fkPzsQHlDRJjYMcP2zhc" name="匹配">
-    <mxGraphModel dx="4493" dy="3434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4473" dy="3434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2886,6 +2886,9 @@
         <mxCell id="z-CDVYYdfrNqTMj_47m7-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="z-CDVYYdfrNqTMj_47m7-22" target="z-CDVYYdfrNqTMj_47m7-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="dRBmHMTsPE01A1FM8HG2-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-CDVYYdfrNqTMj_47m7-22" target="dRBmHMTsPE01A1FM8HG2-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="z-CDVYYdfrNqTMj_47m7-22" value="遍历所有匹配数据，取出最早匹配的单元进行匹配&#xa;尝试匹配&#xa;MashmakMatchPool::_RunOneMatch&#xa;&#xa;计算这局最少几个队&#xa;_GetLowestGroupCount&#xa;&#xa;尝试匹配一局&#xa;MashmakGameMatch::FetchMatchGroups&#xa;&#xa;若匹配成功生成结果&#xa;MatchResult::Init" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1410" y="4640" width="340" height="210" as="geometry" />
         </mxCell>
@@ -2921,6 +2924,9 @@
         </mxCell>
         <mxCell id="dRBmHMTsPE01A1FM8HG2-4" value="匹配成功后，获取数据的状态机" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="180" y="3460" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dRBmHMTsPE01A1FM8HG2-5" value="生成匹配结果后，搜集房间，信息等&#xa;&#xa;MatchManager::UpdateMatchResult" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1450" y="4980" width="420" height="75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
