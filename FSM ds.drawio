@@ -3032,8 +3032,27 @@
         <mxCell id="nncR2_VrT4PNfGOO_7GX-7" value="MatchManager::WaitRoomServer&#xa;&#xa;状态：MATCH_WAITROOM&#xa;&#xa;向GS或Team广播通知e_match_wait_room&#xa;&#xa;置于m_waitQueue队列" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="-980" y="6880" width="250" height="150" as="geometry" />
         </mxCell>
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nncR2_VrT4PNfGOO_7GX-8" target="nncR2_VrT4PNfGOO_7GX-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-14" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; background-color: rgb(236, 236, 236);&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%E8%B6%85%E6%97%B6%E9%87%8D%E8%AF%95%22%20style%3D%22edgeLabel%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3B%22%20vertex%3D%221%22%20connectable%3D%220%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22-1419.9999999999995%22%20y%3D%227285%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nncR2_VrT4PNfGOO_7GX-11">
+          <mxGeometry x="0.0047" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-15" value="超时重试" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nncR2_VrT4PNfGOO_7GX-11">
+          <mxGeometry x="-0.0026" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="nncR2_VrT4PNfGOO_7GX-8" value="MatchManager::UpdateWaitMatchResult&#xa;&#xa;检测m_waitQueue队列&#xa;&#xa;定时将队列里的所有匹配结果打包发给房间服，获取房间&#xa;&#xa;将发送过请求的匹配结果 挪到 m_waitingQueue 等待房间服回包" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="-1052.5" y="7110" width="395" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="nncR2_VrT4PNfGOO_7GX-10" target="nncR2_VrT4PNfGOO_7GX-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-10" value="MatchManager::UpdateWaitingMatchResult&#xa;&#xa;检测m_waitingQueue 队列&#xa;&#xa;将超时未回包的匹配结果，重新加回m_waitQueue" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="-1400" y="7370" width="395" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
