@@ -2976,8 +2976,14 @@
         <mxCell id="3fK3-NJlga3w_KKdaohe-14" value="MatchManager::WaitPlayerShowInfo&#xa;&#xa;状态：MATCH_WAITSHOWINFO&#xa;&#xa;向GS或Team广播通知e_match_wait_player_show_info&#xa;&#xa;向GS获取玩家数据ms2gs_player_match_show_request&#xa;&#xa;置于m_playerShowInfoQueue队列" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="-1220" y="5380" width="250" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="3fK3-NJlga3w_KKdaohe-15" value="MatchManager::UpdateWatiBattleInfoResult&#xa;&#xa;检测m_playerBattleInfoQueue队列&#xa;&#xa;" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="-1612.5" y="5640" width="255" height="200" as="geometry" />
+        <mxCell id="3fK3-NJlga3w_KKdaohe-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3fK3-NJlga3w_KKdaohe-15" target="3fK3-NJlga3w_KKdaohe-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3fK3-NJlga3w_KKdaohe-15" value="MatchManager::UpdateWatiBattleInfoResult&#xa;检测m_playerBattleInfoQueue队列&#xa;&#xa;超时或者获取到所有人的数据则继续执行" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="-1612.5" y="5640" width="255" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="3fK3-NJlga3w_KKdaohe-17" value="MatchManager::WaitAI" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="-1572.5" y="5830" width="175" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
