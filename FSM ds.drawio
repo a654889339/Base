@@ -2951,11 +2951,19 @@
         <mxCell id="dRBmHMTsPE01A1FM8HG2-5" value="生成匹配结果后，搜集房间，信息等&#xa;&#xa;MatchManager::UpdateMatchResult" style="whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1450" y="4980" width="420" height="75" as="geometry" />
         </mxCell>
+        <mxCell id="3fK3-NJlga3w_KKdaohe-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3fK3-NJlga3w_KKdaohe-3" target="3fK3-NJlga3w_KKdaohe-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1397" y="5385" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-3" value="MatchManager::BeforeWaitAi" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1517" y="5200" width="240" height="90" as="geometry" />
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-5" value="MatchManager::BeforeWaitRoomServer" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1240" y="5200" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3fK3-NJlga3w_KKdaohe-10" value="MatchManager::WaitPlayerBattleInfo" style="whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1600" y="5380" width="240" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
