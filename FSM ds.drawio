@@ -2930,11 +2930,6 @@
             <mxPoint x="-1390" y="5190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="3fK3-NJlga3w_KKdaohe-2" value="是否有AI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3fK3-NJlga3w_KKdaohe-1">
-          <mxGeometry x="-0.7504" y="3" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-4" value="有" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3fK3-NJlga3w_KKdaohe-1">
           <mxGeometry x="0.755" relative="1" as="geometry">
             <mxPoint as="offset" />
@@ -2945,6 +2940,11 @@
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-7" value="没有" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3fK3-NJlga3w_KKdaohe-6">
           <mxGeometry x="0.7145" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3fK3-NJlga3w_KKdaohe-11" value="是否有AI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3fK3-NJlga3w_KKdaohe-6">
+          <mxGeometry x="-0.7384" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -2962,7 +2962,7 @@
         <mxCell id="3fK3-NJlga3w_KKdaohe-5" value="MatchManager::BeforeWaitRoomServer" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1240" y="5200" width="240" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="3fK3-NJlga3w_KKdaohe-10" value="MatchManager::WaitPlayerBattleInfo" style="whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="3fK3-NJlga3w_KKdaohe-10" value="MatchManager::WaitPlayerBattleInfo&#xa;&#xa;状态：MATCH_WAITBATTLEINFO" style="whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="-1600" y="5380" width="240" height="90" as="geometry" />
         </mxCell>
       </root>
