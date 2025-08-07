@@ -3002,8 +3002,8 @@
         <mxCell id="3fK3-NJlga3w_KKdaohe-17" value="MatchManager::WaitAI&#xa;&#xa;向AI服请求数据 ra2am_ai_players_request&#xa;1. 若AI服失败则回收本次使用的ID AIClient::RecycleAIs&#xa;2. 若成功则记录ID MatchResult::AddAiInfo 并执行回调&#xa;&#xa;回调处理&#xa;1. 若失败则 重新匹配 OnReMatching&#xa;2. 若成功则 MatchManager::BeforeWaitRoomServer" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
           <mxGeometry x="-1681.25" y="5820" width="392.5" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="3fK3-NJlga3w_KKdaohe-22" value="MatchManager::UpdateWaitMatchShowResult&#xa;&#xa;检测m_playerShowInfoQueue队列&#xa;" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
-          <mxGeometry x="-1175" y="6330" width="250" height="210" as="geometry" />
+        <mxCell id="3fK3-NJlga3w_KKdaohe-22" value="MatchManager::UpdateWaitMatchShowResult&#xa;&#xa;检测m_playerShowInfoQueue队列&#xa;&#xa;1. 若所有人信息都回包了 MatchResult::DealWithAIRandomInfo" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="-1247.5" y="6330" width="395" height="210" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
