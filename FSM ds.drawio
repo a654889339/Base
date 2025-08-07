@@ -3057,7 +3057,7 @@
         <mxCell id="nncR2_VrT4PNfGOO_7GX-10" value="MatchManager::UpdateWaitingMatchResult&#xa;&#xa;检测m_waitingQueue 队列&#xa;&#xa;将超时未回包的匹配结果，重新加回m_waitQueue" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="-1400" y="7370" width="395" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="nncR2_VrT4PNfGOO_7GX-16" value="MatchManager::OnRoomServersResult&#xa;&#xa;1. 若无房间，有AI则重新匹配，无AI则MatchManager::WaitRoomServer 继续等待房间（这里可能有漏洞，此时在等待请求时应该加回waitingQueue队列）&#xa;&#xa;2. 成功则 继续执行确认房间流程 MatchHandle::MatchedRoomConfirm&#xa;&#xa;广播 e_match_confirm_room&#xa;" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-16" value="MatchManager::OnRoomServersResult&#xa;&#xa;1. 若无房间，有AI则重新匹配，无AI则MatchManager::WaitRoomServer 继续等待房间（这里可能有漏洞，此时在等待请求时应该加回waitingQueue队列）&#xa;&#xa;2. 成功则 继续执行确认房间流程 MatchHandle::MatchedRoomConfirm&#xa;&#xa;广播 e_match_confirm_room&#xa;&#xa;置于m_confirmQueue 队列" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
           <mxGeometry x="-830" y="7370" width="260" height="200" as="geometry" />
         </mxCell>
       </root>
