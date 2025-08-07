@@ -2962,8 +2962,8 @@
         <mxCell id="3fK3-NJlga3w_KKdaohe-5" value="MatchManager::BeforeWaitRoomServer" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1240" y="5200" width="240" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="3fK3-NJlga3w_KKdaohe-10" value="MatchManager::WaitPlayerBattleInfo&#xa;&#xa;状态：MATCH_WAITBATTLEINFO&#xa;&#xa;向GS或Team广播e_match_wait_player_battle_info&#xa;获取玩家数据" style="whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="-1600" y="5380" width="240" height="90" as="geometry" />
+        <mxCell id="3fK3-NJlga3w_KKdaohe-10" value="MatchManager::WaitPlayerBattleInfo&#xa;&#xa;状态：MATCH_WAITBATTLEINFO&#xa;&#xa;向GS或Team广播通知e_match_wait_player_battle_info&#xa;&#xa;向GS获取玩家数据ms2gs_player_match_battle_info_request" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="-1610" y="5370" width="250" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
