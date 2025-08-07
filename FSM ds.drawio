@@ -2945,7 +2945,7 @@
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-11" value="是否有AI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3fK3-NJlga3w_KKdaohe-6">
           <mxGeometry x="-0.7384" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint y="-87" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="dRBmHMTsPE01A1FM8HG2-5" value="生成匹配结果后，搜集房间，信息等&#xa;&#xa;MatchManager::UpdateMatchResult&#xa;&#xa;从异步线程中取出匹配完成的结果" style="whiteSpace=wrap;" parent="1" vertex="1">
@@ -2965,7 +2965,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-5" value="MatchManager::BeforeWaitRoomServer" style="whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-1240" y="5200" width="240" height="90" as="geometry" />
+          <mxGeometry x="-1170" y="5840" width="240" height="90" as="geometry" />
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3fK3-NJlga3w_KKdaohe-10" target="3fK3-NJlga3w_KKdaohe-15">
           <mxGeometry relative="1" as="geometry" />
@@ -2974,7 +2974,7 @@
           <mxGeometry x="-1610" y="5370" width="250" height="210" as="geometry" />
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-14" value="MatchManager::WaitPlayerShowInfo&#xa;&#xa;状态：MATCH_WAITSHOWINFO&#xa;&#xa;向GS或Team广播通知e_match_wait_player_show_info&#xa;&#xa;向GS获取玩家数据ms2gs_player_match_show_request&#xa;&#xa;置于m_playerShowInfoQueue队列" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
-          <mxGeometry x="-1220" y="5380" width="250" height="210" as="geometry" />
+          <mxGeometry x="-1175" y="5990" width="250" height="210" as="geometry" />
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3fK3-NJlga3w_KKdaohe-15" target="3fK3-NJlga3w_KKdaohe-17">
           <mxGeometry relative="1" as="geometry" />
@@ -2982,8 +2982,11 @@
         <mxCell id="3fK3-NJlga3w_KKdaohe-15" value="MatchManager::UpdateWatiBattleInfoResult&#xa;检测m_playerBattleInfoQueue队列&#xa;&#xa;超时或者获取到所有人的数据则继续执行" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
           <mxGeometry x="-1612.5" y="5640" width="255" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="3fK3-NJlga3w_KKdaohe-17" value="MatchManager::WaitAI" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry x="-1572.5" y="5830" width="175" height="80" as="geometry" />
+        <mxCell id="3fK3-NJlga3w_KKdaohe-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3fK3-NJlga3w_KKdaohe-17" target="3fK3-NJlga3w_KKdaohe-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3fK3-NJlga3w_KKdaohe-17" value="MatchManager::WaitAI&#xa;&#xa;向AI服请求数据 ra2am_ai_players_request&#xa;1. 若AI服失败则回收本次使用的ID AIClient::RecycleAIs&#xa;2. 若成功则记录ID MatchResult::AddAiInfo 并执行回调&#xa;&#xa;回调处理&#xa;1. 若失败则 重新匹配 OnReMatching&#xa;2. 若成功则 MatchManager::BeforeWaitRoomServer" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="-1681.25" y="5820" width="392.5" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
