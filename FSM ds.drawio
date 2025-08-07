@@ -2967,11 +2967,17 @@
         <mxCell id="3fK3-NJlga3w_KKdaohe-5" value="MatchManager::BeforeWaitRoomServer" style="whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-1240" y="5200" width="240" height="90" as="geometry" />
         </mxCell>
+        <mxCell id="3fK3-NJlga3w_KKdaohe-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3fK3-NJlga3w_KKdaohe-10" target="3fK3-NJlga3w_KKdaohe-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-10" value="MatchManager::WaitPlayerBattleInfo&#xa;&#xa;状态：MATCH_WAITBATTLEINFO&#xa;&#xa;向GS或Team广播通知e_match_wait_player_battle_info&#xa;&#xa;向GS获取玩家数据ms2gs_player_match_battle_info_request&#xa;&#xa;置于m_playerBattleInfoQueue队列" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="-1610" y="5370" width="250" height="210" as="geometry" />
         </mxCell>
         <mxCell id="3fK3-NJlga3w_KKdaohe-14" value="MatchManager::WaitPlayerShowInfo&#xa;&#xa;状态：MATCH_WAITSHOWINFO&#xa;&#xa;向GS或Team广播通知e_match_wait_player_show_info&#xa;&#xa;向GS获取玩家数据ms2gs_player_match_show_request&#xa;&#xa;置于m_playerShowInfoQueue队列" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="-1220" y="5380" width="250" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="3fK3-NJlga3w_KKdaohe-15" value="MatchManager::UpdateWatiBattleInfoResult&#xa;&#xa;检测m_playerBattleInfoQueue队列&#xa;&#xa;" style="whiteSpace=wrap;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="-1612.5" y="5640" width="255" height="200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
