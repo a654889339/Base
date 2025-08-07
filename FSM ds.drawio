@@ -3054,6 +3054,11 @@
         <mxCell id="nncR2_VrT4PNfGOO_7GX-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="nncR2_VrT4PNfGOO_7GX-10" target="nncR2_VrT4PNfGOO_7GX-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="nncR2_VrT4PNfGOO_7GX-25" value="重试" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nncR2_VrT4PNfGOO_7GX-12">
+          <mxGeometry x="-0.5356" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="nncR2_VrT4PNfGOO_7GX-10" value="MatchManager::UpdateWaitingMatchResult&#xa;&#xa;检测m_waitingQueue 队列&#xa;&#xa;将超时未回包的匹配结果，重新加回m_waitQueue" style="whiteSpace=wrap;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="-1400" y="7370" width="395" height="150" as="geometry" />
         </mxCell>
